@@ -1,0 +1,205 @@
+[
+    {
+        "id": "mt-01-basic-no_errors",
+        "prompt": "### Translate this sentence to [target language], Source:\\n[source sentence]\\n### Target:",
+        "comment": "Hendy et al. 2023, shortened"
+    },
+    {
+        "id": "mt-01-src-no_errors",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "comment": "Hendy et al. 2023"
+    },
+    {
+        "id": "mt-01-polite-no_errors",
+        "prompt": "### Please translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "comment": "Hendy et al. 2023"
+    },
+    {
+        "id": "mt-02-basic-no_errors",
+        "prompt": "Provide the [target language] translation for this sentence: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-02-src-no_errors",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-02-polite-no_errors",
+        "prompt": "Please provide the [target language] translation for this sentence: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-03-basic-no_errors",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-03-src-no_errors",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-03-polite-no_errors",
+        "prompt": "You are a machine translation system. Please provide the [target language] translation for this sentence: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+    {
+        "id": "mt-04-basic-no_errors",
+        "prompt": "Answer with no quotes. What does this sentence mean in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+    {
+        "id": "mt-04-src-no_errors",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+    {
+        "id": "mt-04-polite-no_errors",
+        "prompt": "Please answer with no quotes. What does this sentence mean in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+	{
+        "id": "mt-01-basic-typos",
+        "prompt": "### Translate this entence to [target language], Source:\\n[source sentence]\\n### Trget:"
+    },
+    {
+        "id": "mt-01-src-typos",
+        "prompt": "### Translate htsi sentence from [source language] to [target language], Soruce:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-01-polite-typos",
+        "prompt": "### Please translate this sentence from [source language] to [target language], Souce:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-02-basic-typos",
+        "prompt": "Provide the [target language] translation for this sntence: [source sentence]\\"
+    },
+    {
+        "id": "mt-02-src-typos",
+        "prompt": "Provide the [target language] translation fo this [source language] sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-02-polite-typos",
+        "prompt": "Please provide the [target language] translation for this setnence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-basic-typos",
+        "prompt": "You are a machine translation system. Provide the [target language] traslation for this sentecne: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-typos",
+        "prompt": "You ar a machine trnslatoin system. Porvide the [target language] translation for this sentence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-polite-typos",
+        "prompt": "You ae a machine rnslation system. Please provide teh [target language] translation for this setnence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-basic-typos",
+        "prompt": "Answr wih no quotes. What does this sentence maen in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-typos",
+        "prompt": "Answer with on qute. What does this [source language] sentence mean in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-polite-typos",
+        "prompt": "Please answer with n quotes. What does this sentence mean in [target language]? [source sentence]\\n"
+    },
+	{
+        "id": "mt-01-basic-word_grammar",
+        "prompt": "### Translate these sentence to [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-01-src-word_grammar",
+        "prompt": "### Translate these sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-01-polite-word_grammar",
+        "prompt": "### Please translate these sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-02-basic-word_grammar",
+        "prompt": "Provide the [target language] translation for this sentences: [source sentence]\\n"
+    },
+    {
+        "id": "mt-02-src-word_grammar",
+        "prompt": "Provide the [target language] translation for this [source language] sentences: [source sentence]\\n"
+    },
+    {
+        "id": "mt-02-polite-word_grammar",
+        "prompt": "Please provide the [target language] translation for this sentences: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-basic-word_grammar",
+        "prompt": "You are a machine translating system. Provide the [target language] translation for this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-word_grammar",
+        "prompt": "You are a machine translating system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-polite-word_grammar",
+        "prompt": "You are a machine translating system. Please provide the [target language] translation for this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-basic-word_grammar",
+        "prompt": "Answer with no quotes. What does this sentence means in [target language]? [source sentence]\\n"
+    {
+        "id": "mt-04-src-word_grammar",
+        "prompt": "Answer with no quotes. What does this [source language] sentence means in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-polite-word_grammar",
+        "prompt": "Please answer with no quotes. What does this sentence means in [target language]? [source sentence]\\n"
+    },
+	{
+        "id": "mt-01-basic-phrase_grammar",
+        "prompt": "### Translate this sentence in [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-01-src-phrase_grammar",
+        "prompt": "### Translate this sentence from [source language] in [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-01-polite-phrase_grammar",
+        "prompt": "### Please translate this sentence from [source language] in [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-02-basic-phrase_grammar",
+        "prompt": "Provide [target language] translation to this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-02-src-phrase_grammar",
+        "prompt": "Provide [target language] translation to this [source language] sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-02-polite-phrase_grammar",
+        "prompt": "Please provide [target language] translation to this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-basic-phrase_grammar",
+        "prompt": "You are machine translation system. Provide [target language] translation to this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-phrase_grammar",
+        "prompt": "You are machine translation system. Provide [target language] translation to this sentence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-polite-phrase_grammar",
+        "prompt": "You are machine translation system. Please provide [target language] translation to this sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-basic-phrase_grammar",
+        "prompt": "Answer to me with no quotes. What do this sentence mean in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-phrase_grammar",
+        "prompt": "Answer to me with no quotes. What do this [source language] sentence mean in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-polite-phrase_grammar",
+        "prompt": "Please answer to me with no quotes. What do this sentence mean in [target language]? [source sentence]\\n"
+    }
+]
