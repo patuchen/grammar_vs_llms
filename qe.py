@@ -1,6 +1,5 @@
 # qual_est.py
 from comet import download_model, load_from_checkpoint
-from transformers import pipeline
 from tqdm import tqdm
 import argparse
 import os
@@ -37,21 +36,22 @@ class QualityEstimator:
 
         for i in tqdm(range(0, len(src_sentences), args.batch_size)):
 
-            # score referencing
+            # score references
             ref_data = ref_inputs[i:i+args.batch_size]
             ref_model_output = self.model.predict(ref_data, batch_size=args.batch_size, gpus=1)[0]
 
+            # score hypotheses, if we have them
             hyp_data = hyp_inputs[i:i+args.batch_size] if hyp_inputs else None
             if hyp_data:
                 hyp_model_output = self.model.predict(hyp_data, batch_size=args.batch_size, gpus=1)[0]
 
             qual_est.extend(ref_model_output)
 
-        # # score analysis
             
         ref_qual_est = qual_est
         _list2file(ref_qual_est, f"{self.data_path}/{self.source_language}-{self.target_language}/test-ref-qe_scores.txt")
 
+        # sorting
         zipped = list(zip(src_sentences, ref_sentences, ref_qual_est))
         sorted_zip = sorted(zipped, key=lambda x: x[2], reverse=True)
         sorted_src = [item[0] for item in sorted_zip]
