@@ -27,15 +27,14 @@ for langs in glob.glob(args.data + "/*"):
             }
             for x in data
         ]
-        model.predict(data, gpus=0)["scores"]
-        scores_all[fname] = scores
+        scores_all[fname] = model.predict(data, gpus=1)["scores"]
 
     fname_special = [x for x in scores_all.keys() if "polite-no_errors" in x][0]
     scores_special = scores_all[fname_special]
     for fname, scores in scores_all.items():
         print(
             f"{fname:>40}",
-            f"{np.average(scores):.2f}",
+            f"{np.average(scores):.4f}",
             f"p={scipy.stats.ttest_ind(scores, scores_special).pvalue:.5f}",
             sep=" | ",
         )
