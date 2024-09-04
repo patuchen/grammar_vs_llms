@@ -1,0 +1,178 @@
+[
+    {
+        "id": "mt-01-src-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-02-src-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-10",
+        "prompt": "### Tarnslate htis sentence from [source language] to [target language], Soucre:\\[source sentence]\\n### Target:"
+    },
+    {
+        "id": "mt-02-src-10",
+        "prompt": "Porvide teh [target language] trasnlation for this [source language] setnence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-10",
+        "prompt": "You are a machine tarsnlation sytse. Provide hte [target language] translation for this estnence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-10",
+        "prompt": "Answer with no quote. hWat does this [source language] sentnece eman ni [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-20",
+        "prompt": "### Tranlsate this sentnece from [source language] to [target language], oSurec:\\n[source sentence]\\n### Traget:"
+    },
+    {
+        "id": "mt-02-src-20",
+        "prompt": "Prvoide the [target language] translatoin for this [source language] setnenc: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-20",
+        "prompt": "oYu are a macihne tarnsltaino system. Provdie hte [target language] translaiton for htis senetnc in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-20",
+        "prompt": "Asnwre wtih no quotes. What deo thsi [source language] sentnece mean in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-30",
+        "prompt": "### Tarsnlat this esnetnce form [source language] t [target language], oSucre:\\n[source sentence]\\n### aTrgte:"
+    },
+    {
+        "id": "mt-02-src-30",
+        "prompt": "Proivd hte [target language] tarsnalitno ofr thi [source language] sentenec: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-30",
+        "prompt": "You rae a mahcine trasnlatio ssytme. Prvoid the [target language] rtnalstaoin for htsi snetence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-30",
+        "prompt": "Answer iwth n quotes. Waht ode htsi [source language] esntecn emna i [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-40",
+        "prompt": "### rTnaslta htsi esntence frmo [source language] to [target language], Soucre:\\[source sentence]\\### aTreg:"
+    },
+    {
+        "id": "mt-02-src-40",
+        "prompt": "Porvied teh [target language] tranlstaion for htis [source language] esntecn: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-40",
+        "prompt": "Yuo rae  mahcien rtansltaoi ystsme. Provdi th [target language] trasnlation ofr thsi esntence in [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-40",
+        "prompt": "nAswre iwht on uqote. hWa doe tihs [source language] sneetcne ema in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-50",
+        "prompt": "### Tarsnlta htsi esnetnec form [source language] t [target language], Sourec:\\n[source sentence]\\### aTregt:"
+    },
+    {
+        "id": "mt-02-src-50",
+        "prompt": "Proived ht [target language] rtnasltaino ofr thsi [source language] sentence: [source sentence]\\n"
+    },
+    {
+        "id": "mt-03-src-50",
+        "prompt": "oYu ra a mahcien transltaoin ssytme. Provdi th [target language] tarnsaliton for thsi estnecne in [source language]: [source sentence]\\"
+    },
+    {
+        "id": "mt-04-src-50",
+        "prompt": "nAwsre iwth no uqotse. Waht deos thsi [source language] sneetcne mea ni [target language]? [source sentence]\\"
+    },
+    {
+        "id": "mt-01-src-60",
+        "prompt": "### rTnalsta htsi senetcne rfmo [source language] ot [target language], oSruec:\\n[source sentence]\\### aTreg:"
+    },
+    {
+        "id": "mt-02-src-60",
+        "prompt": "Porived ht [target language] tarsnalito of htsi [source language] sneetcne: [source sentence]\\"
+    },
+    {
+        "id": "mt-03-src-60",
+        "prompt": "You ra a mahcni tarsnltaino ystse. rPoived ht [target language] tarsnaltoi of htsi snetecn ni [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-60",
+        "prompt": "nAwsre wiht n uqoet. hWat dose htsi [source language] estnecn emna i [target language]? [source sentence]\\"
+    },
+    {
+        "id": "mt-01-src-70",
+        "prompt": "### Tarsnalet thsi sneetcn rfmo [source language] t [target language], oSruec:\\[source sentence]\\### Traeg:"
+    },
+    {
+        "id": "mt-02-src-70",
+        "prompt": "rPvoied ht [target language] rtnasaltoin of hti [source language] estnecne: [source sentence]\\"
+    },
+    {
+        "id": "mt-03-src-70",
+        "prompt": "oY aer a amhcni tranlstaino sytse. rPvodi hte [target language] tarsnltaoi of tih estnnece ni [source language]: [source sentence]\\n"
+    },
+    {
+        "id": "mt-04-src-70",
+        "prompt": "Anwsre iwht on uqote. hWta odse htsi [source language] snetneec emna ni [target language]? [source sentence]\\"
+    },
+    {
+        "id": "mt-01-src-80",
+        "prompt": "### rTnalsaet htsi setnnec rfmo [source language] to [target language], oSruec:\\[source sentence]\\n### aTgrte:"
+    },
+    {
+        "id": "mt-02-src-80",
+        "prompt": "rPvodi ht [target language] rtnaslaito of htsi [source language] estnneec: [source sentence]\\"
+    },
+    {
+        "id": "mt-03-src-80",
+        "prompt": "oYu aer  amcihen rtnalsaitno sytsme. rPoivd ht [target language] rtnalstaino of htsi esnetcn ni [source language]: [source sentence]\\"
+    },
+    {
+        "id": "mt-04-src-80",
+        "prompt": "Anwsre iwht on uqtose. hWta odse tih [source language] esnetcn ema in [target language]? [source sentence]\\n"
+    },
+    {
+        "id": "mt-01-src-90",
+        "prompt": "### rTnalsta htsi estnneec rfmo [source language] ot [target language], oSucr:\\[source sentence]\\### aTgrte:"
+    },
+    {
+        "id": "mt-02-src-90",
+        "prompt": "rPvodie teh [target language] rtnalstaino of tih [source language] estnnec: [source sentence]\\"
+    },
+    {
+        "id": "mt-03-src-90",
+        "prompt": "oY ra  amhcni rtnalstaoi ystsme. rPoived hte [target language] rtnalstaoi of htsi estnnec ni [source language]: [source sentence]\\"
+    },
+    {
+        "id": "mt-04-src-90",
+        "prompt": "nAsew iwht on uqtose. hWa odse htsi [source language] estnneec emna ni [target language]? [source sentence]\\"
+    },
+    {
+        "id": "mt-01-src-100",
+        "prompt": "### rTnalsta htsi estnneec rfmo [source language] ot [target language], oSruec:\\[source sentence]\\### aTgrte:"
+    },
+    {
+        "id": "mt-02-src-100",
+        "prompt": "rPvodi ht [target language] rtnalstaoi of htsi [source language] estnneec: [source sentence]\\"
+    },
+    {
+        "id": "mt-03-src-100",
+        "prompt": "oY ra  amhcni rtnalstaoi ystsme. rPvodi ht [target language] rtnalstaoi of htsi estnneec ni [source language]: [source sentence]\\"
+    },
+    {
+        "id": "mt-04-src-100",
+        "prompt": "nAwsre iwht on uqtose. hWta odse htsi [source language] estnneec emna ni [target language]? [source sentence]\\"
+    }
+]
