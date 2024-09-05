@@ -146,6 +146,7 @@
     {
         "id": "mt-04-basic-word_grammar",
         "prompt": "Answer with no quotes. What does this sentence means in [target language]? [source sentence]\\n"
+    },
     {
         "id": "mt-04-src-word_grammar",
         "prompt": "Answer with no quotes. What does this [source language] sentence means in [target language]? [source sentence]\\n"
