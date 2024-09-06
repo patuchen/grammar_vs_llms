@@ -1,9 +1,21 @@
 import json
 import matplotlib.pyplot as plt
 import argparse
+import numpy as np
+import scipy.stats
+
+
+def confidence_interval(data, confidence=0.99):
+    return scipy.stats.t.interval(
+        confidence=confidence,
+        df=len(data)-1,
+        loc=np.mean(data),
+        scale=scipy.stats.sem(data)
+    )
 
 # python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en.jsonl -f mt-01
 # python3 ./scripts/04-plot_basic.py computed/evals/kathy-v1---de-en.jsonl -f prompt_01
+
 
 args = argparse.ArgumentParser()
 args.add_argument("jsonl")
@@ -20,7 +32,8 @@ data = [
 data = [
     (
         int(x["fname"].removesuffix(".csv").split("_")[-1]),
-        x["score"]
+        np.average(x["score"]),
+        x["langs"]
     )
     for x in data
 ]
@@ -32,9 +45,19 @@ plt.plot(
     marker=".",
     markersize=20,
 )
+for line in data:
+    plt.text(
+        line[0],
+        line[1]+2,
+        f"{np.average([x[0][0] == "en" for x in line[2]]):.0%}",
+        ha="center", va="center"
+    )
 plt.ylabel("ChrF")
 plt.xlabel("Noise level")
-plt.title(args.jsonl.removeprefix("computed/evals/").removesuffix(".jsonl") + " FILTER " + args.filter)
+plt.title((
+    args.jsonl.removeprefix("computed/evals/").removesuffix(".jsonl")
+    + " FILTER " + args.filter
+))
 plt.tight_layout()
 
 plt.show()

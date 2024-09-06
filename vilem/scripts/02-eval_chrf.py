@@ -5,7 +5,7 @@ import csv
 import glob
 import numpy as np
 import scipy.stats
-import os
+import langdetect
 
 metric = sacrebleu.CHRF()
 
@@ -20,7 +20,7 @@ for langs in glob.glob(args.data + "/*"):
         "w"
     )
     print(langs.removeprefix(args.data)+"\n")
-    scores_all = {}
+    data_all = {}
     for fname in glob.glob(f"{langs}/*.csv"):
         with open(fname, "r") as f:
             data = list(csv.DictReader(f))
@@ -31,16 +31,24 @@ for langs in glob.glob(args.data + "/*"):
                 metric.sentence_score(x["translation"], [x["reference"]]).score
                 for x in data
             ]
-            scores_all[fname] = scores
+            # take top two languages
+            langs = [
+                [
+                    (x.lang, x.prob)
+                    for x in langdetect.detect_langs(x["translation"])[:2]
+                ]
+                for x in data
+            ]
+            data_all[fname] = (scores, langs)
         except:
             print("ERROR in", fname)
 
     fname_special = [
-        x for x in scores_all.keys()
+        x for x in data_all.keys()
         if "no_errors" in x
     ][0]
-    scores_special = scores_all[fname_special]
-    for fname, scores in scores_all.items():
+    scores_special, _ = data_all[fname_special]
+    for fname, (scores, langs) in data_all.items():
         print(
             f"{fname:>40}",
             f"{np.average(scores):.2f}",
@@ -49,6 +57,7 @@ for langs in glob.glob(args.data + "/*"):
         )
         fout.write(json.dumps({
             "fname": fname,
-            "score": np.average(scores)
+            "score": scores,
+            "langs": langs,
         })+"\n")
     fout.close()
