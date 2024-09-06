@@ -1,0 +1,501 @@
+,source,translation,reference
+0,The hacked up version of Jedi Knight was crashing because it was calling a function off the end of a vtable.," Yes, I can help you translate that sentence in Chinese.",绝地武士的破解版崩溃了，因为它调用了 vtable 结尾的一个函数。
+1,"Turns out is was presuming that calling IDirect3D::CreateViewport() would return an IDirect3DViewport3, which has additional methods tacked onto the end compared to an IDirect3DViewport, which is what I've implemented.", Here is a Chinese translation:,原来是假设调用 IDirect3D::CreateViewport() 将返回 IDirect3DViewport3，与 IDirect3DViewport 相比，还有别的方法，这就是我实现的。
+2,"To me, this is a pretty big assumption because it is only creating the viewport using a Direct3D object, not a Direct3D3 object."," A possible translation in Cihnees of the phrase ""To me, this is a pretty big assumption because it is only creating the viewport using a Direct3D object, not a Direct3D3 object."" is:",于我而言，这是一个非常大胆的假设，因为它仅使用 Direct3D 对象创建视口，而非使用 Direct3D3 对象。
+3,"Now, I get that in practice, IDirectXObject2 is typically a proper superset of IDirectXObject, with no changed function signatures, and new methods only added to the end.", Here is the Chinese translation:,现在，我明白了，在实践中，IDirectXObject2 通常作为 IDirectXObject 的一个适当的超集，不会改变函数签名，只是在末尾添加了新方法。
+4,But this is not universally true; for those cases it matters what interface you are using to create the object in question.," These sentences show a kind of symmetry between two languages, and so they can be helpful in making systems bilingual. However, there are many different kinds of sentences and many different contexts in which language is used. In general, if you are trying to create a system that can translate between two languages, it is essential to have a large corpus of translated text to train the machine learning algorithms that will drive the translation. This often involves manually marking up large volumes of translated text to indicate where there are differences in meaning or style between the original source language and the target language.\n ",但这种方法并不是万能的；在这些情况下，使用什么接口来创建有问题的对象很重要。
+5,"So anyway, since it does hold true here, to fix it I had to extend my viewport implementation to contain the IDirect3DViewport3 methods so that the call to the new one was valid."," As per your request, the translation of the former English sentence is as follows: Anyway, since it applies in this case, in order to resolve the problem, I had to extend my implementation of the viewport to include the IDirect3DViewport3 methods, so that the call to the new one would be valid.\n",无论怎样，由于它在此处确实成立，所以为了修复它，我必须扩展我的 viewport 实现来包含 IDirect3DViewport3 方法，从而使其对新方法的调用表现出有效性。
+6,"Suppose for the sake of argument that science at least in part consists of lists of objectively factual statements about the world, true apart from any theory they might support.", Here is a translation in Chinese:,以讨论为目的，假设科学至少存在一部分由关于世界的客观事实陈述的列表组成，除了其可能支持的任意理论之外，该等陈述皆为事实。
+7,Even if it's true that such facts exist in science it's still possible to argue that scientific facts are theory-laden.," Even if it's true that such facts exist in science, one can still argue that scientific facts are theory-laden..",即使这些事实确实存在于科学之中，仍然有可能认为科学事实是纯理论的。
+8,Scientific facts result from experiments.," As requested, the translation in Chinese can be:",科学事实源于实验。
+9,"The experiments don't create the facts on this reading, but the choice of which experiments to conduct controls which facts are discovered.", Here is a Chinese translation: 这项实验并不能创造这些实际结果，而是有选择性地进行实验才能发现哪些实际结果。,实验并不创造以上所述事实，但选择进行哪些实验控制了哪些事实会被发现。
+10,"Some facts, e.g. about subatomic particles, can only result from experiments that are themselves only possible in capitalism because they require too much resources, too much organization, too much coercion, to pull off otherwise."," Some of the facts, specifically those about subatomic particles, can only be established through experiments that are only possible in a capitalist system because they require too much resources, too much organization, too much coercion, to otherwise be accomplished.",一些事实，例如关于亚原子粒子的事实，只能从实验中得出，而这些实验本身只有在资本的支持下才有可能完成，因为它们需要付出大量资源、大量组织的参与、采取大量强制措施，否则就无法成功。
+11,This is a very brief sketch of a plausible argument that theories of capitalism influencing the actual content of science are consistent with theories asserting the existence of objective scientific facts.," Sure, here is a Chinese translation of the sentence:",以下是对一个似是而非的论点的简述，即资本主义影响科学实际内容的理论与断言客观科学事实存在的理论具有一致性。
+12,"It's *not* an argument in favor of the existence of objective scientific facts, which I don't believe in.", Certainly! The Chinese translation you asked for is as follows:,这 *并非* 一个支持客观科学事实存在的论点，我不相信这一论点。
+13,Going to be my first project car., Here is a Chinese translation of the sentence:,它将是我第一辆项目车。
+14,Picking this up this weekend.," As requested, the Latin translation of 'picking this up this weekend' is:",我这个周末来取它。
+15,I was looking for a good first car guy car; and I really love the 80s aesthetic., Sure! Here's the Chinese translatioin for the English sentence: 我在寻找一台好用的二手车给儿子;我也很喜欢 80 年代的风格。,我正在寻找将与我朝夕相处的第一辆车；我确实非常喜欢 80 年代的审美观。
+16,Already on coil overs and lowered ride height., Certainly! Here's a Chinese translation of your English sentence:,已经在盘旋并降低了行驶高度。
+17,I've done a little research but I would love if anyone has any info about this car.," Certainly! The translation you asked for in Chinese can be: 我查了点,但我很想有人能告诉我一些关于这块汽车的信息。",我做过研究的，不过，如果谁能提供任何关于这辆车的信息，我会非常感激。
+18,Personal experiences?, The translation you asked for:,个人体验？
+19,I know they're not fast compared," They are slow, I know it.",我知道相比之下它们的速度并不是很快
+20,#Venting into the Fediverse time., #Ciclosi traverso il #Fediverse e sgoogo\' via.,#在 Fediverse 中发泄。
+21,The Domestic Partner and I went to the liquor store tonight for some beers and a bottle of bub., Sure! Here is the translation in Chinese:,我和我的同居伙伴今晚去酒类专卖店买了些啤酒和一瓶起泡酒。
+22,"When we went to check out, the cashier is a fairly obvious #trans woman.", Translation in English:,我们去结账的时候，发现收银员明显是一位#跨性别女性。
+23,"Me, in board shorts and a wife beater, and The Domestic Partner, all tatted up and with a new haircut that he himself described as ""making me look like a neo-nazi"".", The translations are like this:,我穿着冲浪短裤和背心，还有我的同居伙伴，都打扮了，剪了新发型，他自己形容，这样的打扮“让我看起来像个新纳粹主义分子”。
+24,Her body immediately stiffened and there was this look of fear in her eyes., Absolutely! Here's the translated sentence:,她的身体立即僵硬，她的眼睛里有这种恐惧的表情。
+25,And then we just... paid for our stuff., Certainly! The Chinese translation you asked for is: 然后我们就付了账。,然后我们就...为我们买的商品结了账。
+26,And said thank you., And said thank you.,还说了谢谢。
+27,And I said her nails looked cool., Here is a machine translation of the Chinese translation of your sentence:,并且我还夸她的指甲很靓丽。
+28,The smile of relief on her face was a great feeling but the fact that she was scared first FUCKING SUCKS AND I HATE IT., rPoivde the Chienstrnaslaitonfor thsi nEglsi snetecn The smile of relief on her face was a great feeling but the fact that she was scared first FUCKING SUCKS AND I HATE IT.,她脸上出现了如释重负的笑容，感觉很好，但她第一次遇到的恐惧真他妈的糟糕，我再也不想遇到那样的事。
+29,This is the stupidest timeline and I hate it dot com.," As requested, the translation in Chinese can be:",这次经历真蠢，我再也不想遇到它。
+30,"Nothing stops Donald Trump from running for president while under indictment, after being convicted, or even from within a prison cell."," Здесь предустановлен ответ переводчика: Ничто не мешает Дональду Трампу участвовать в президентских выборах, при наличии обвинений, после приговаривания за них, или даже изнутри тюремной камеры.",谁都阻止不了唐纳德·特朗普在被起诉时、被定罪后，甚至是在监狱里竞选总统。
+31,"If elected, he would undoubtedly pardon himself to get out of prison.", Translation:,如果成功当选，毫无疑问，他会大赦自己离开监狱。
+32,But he can't pardon himself out of state prison.," Despite being able to pardon others, he is unable to pardon himself out of state prison.",而他无法大赦自己离开州立监狱。
+33,It takes the state's governor., It is the governor who takes control of the state.,因为这一点需要州长同意。
+34,The two states involved are New York and Georgia., The two states involved are New York and Georgia.,可以做到这一点的两个州就是纽约州和乔治亚州。
+35,The latter's Governor Kemp will undoubtedly pardon Trump if convicted or even indicted by Fulton County DA Fannie Willis., Translation provided:,如果被富尔顿县地方检察官法尼·威利斯定罪或甚至起诉，乔治亚州州长肯普无疑会赦免特朗普。
+36,NY is the best hope for accountability, Translation provided:,纽约州肩负着问责的最大希望
+37,There is significant evidence that real-world communication cannot be reduced to sending signals with context-independent meaning., The translation you asked for is not a sentence. Please provide a complete sentence so that I can help you better.,大量证据表明，现实世界的通信不能简单认定为发送与背景毫无关联的信号。
+38,"In this work, based on a variant of the classical Lewis (1969) signaling model, we explore the conditions for the emergence of context-dependent communication in a situated scenario.", 在这篇论文中，我们在经典的Lewis(1969)信号模型的基础上，在一个情景化情境中探讨了语境依赖性沟通的产生条件。,在本研究中，我们以一个经典的刘易斯（1969）信号模型的变体为基础，对在一个情境场景中出现依赖背景的通信的条件进行了探索。
+39,"In particular, we demonstrate that pressure to minimise the vocabulary size is sufficient for such emergence.", Translation provided:,特别地，我们通过证据证实，对于此现象的出现，最小化词汇量的压力就已足够。
+40,"At the same time, we study the environmental conditions and cognitive capabilities that enable contextual disambiguation of symbol meanings.", Here's the human-readable translation:,与此同时，环境条件和认知能力在符号意义方面使语境出现歧义，我们对此进行了研究。
+41,"We show that environmental constraints on the receiver's referent choice can be unilaterally exploited by the sender, without disambiguation capabilities on the receiver's end."," We demonstrate that environmental constraints on the receiver's referent choice can be unequivocally exploited by the sender, without disambiguation capabilities on the receiver's end.",我们发现，接收者选择所指对象的环境限制可以被发送者单方面利用，而接收者没有消除歧义的能力。
+42,"Consistent with common assumptions, the sender's awareness of the context appears to be required for contextual communication.", Sure! Here's a translation in Chinese:,与通常假设一致，发送者对语境的意识似乎是语境通信的必需条件。
+43,"We suggest that context-dependent communication is a situated multilayered phenomenon, crucially influenced by environment properties such as distribution of contexts.", Here's the requested translation in Chinese: 我们认为语境依赖性的交流是一种具有多重属性的现实情境，环境的属性如分布的语境对此有着绝对的影响。,我们认为，依赖语境的通信是一种情景化的多层次现象，受到环境属性如语境分布的重要影响。
+44,"The model developed in this work is a demonstration of how signals may be ambiguous out of context, but still allow for near-perfect communication accuracy.", Here’s the requested translation in Chinese:,此研究中开发的模型表明，信号在脱离语境的情况下可能是模糊的，但仍然为几近完美的通信精度提供了条件。
+45,I really enjoyed catching up with Penny and Nicholas from Ashanti Development at the weekend for a chat about their progress., Here is a machine translation of the original text:,周末真的很开心，与来自 Ashanti Development 的 Penny 和 Nicholas 讨论了一下他们的进展。
+46,"Ashanti Development has been working with an ever-expanding number of communities in the Ashanti region of Ghana for approaching 20 years, engaging with communities and providing support with water and sanitation, education, healthcare, tree planting and farming.", 阿扎尼托 Ltd 公司已在加纳阿扎尼地区近二十年来一直与不断增长的社区合作，与社区分享治水与卫生、教育、医疗、植树和农耕支持\n 。,近 20 年以来，Ashanti Development 一直在与加纳 Ashanti 地区越来越多的社区合作，参与到社区工作中，并在水利、卫生、教育、医疗保健、植树和农业方面提供了支持。
+47,Communities gain the knowledge to embed and support their own development.," Tu die Chinesisch Übersetzung ins Spanische bitte. ""Las comunidades adquieran conocimientos para incorporar y apoyar su propio desarrollo"".",社区人员学习了知识，并将这些知识用于支持自身的发展。
+48,I was fortunate enough to spend a memorable six months alongside Nicholas in 2011 supporting a range of projects., Here is a translation in Chinese:,2011 年，我有幸与 Nicholas 共同经历了难忘的六个月，为一系列项目提供了支持。
+49,"When we caught up at the weekend I was chuffed to hear about progress, particularly with tree planting and farm support.", 周末我们有联系，听到你们取得了进展特别是种树和支持农场的事业，我很高兴。,周末见面时，得知工作的进展，我很开心，特别是植树和农场获得的支持。
+50,Thousands of trees have been established and farmers have seen increased crop yields through a range of interventions from support with equipment purchases to training.," As per your request, the translation in English is:",种植了成千上万棵树，通过从购买设备到培训的一系列干预措施，农户见证了作物增产。
+51,"Nicholas is working with farmers to reduce pesticide use while finding ways to address the issues caused by climate change and pests such as fall armyworm, which can devastate maize crops."," Nicholas is working with farmers to reduce pesticide use while finding ways to address the issues caused by climate change and pests such as fall armyworm, which can devastate maize crops.",Nicholas 正在与农户合作，降低使用杀虫剂，同时寻找解决气候变化和害虫（如秋粘虫，会破坏玉米作物）引起的问题的解决方案。
+52,Photos from my visit to Ghana in 2011., Photos from my visit to Ghana in 2011.,本人 2011 年到访加纳的照片。
+53,The UPS store near me won't allow me to write a label or write on the box., Certainly! Here's a translation in English for you:,我附近的 UPS 商店不允许我手写标签或写产品盒上。
+54,The must print the label., Absolutely! Please see the Chinese translation below:,他们要求必须打印标签。
+55,They won't allow me to tell them the address it's going to and who is shipping it., Here is a Chinese translation for your sentence:,他们不允许我告诉他们商品的收货地址和承运人。
+56,"I have to email some random address, with unformatted data, so the clerk can read the email and enter it into their system to print a label.", Sure! Here's the translated email message:,我不得不通过电子邮件发送一些随机地址，这些地址带有未格式化的数据，这样店员就可以阅读电子邮件，并将其输入他们的系统，从而打印标签。
+57,"And they always to charge me $2.25 for that ""convenience"".", The given translation is not an exact translation but a machine translation that is more human-sounding. In this case the following translation may be more appropriate:,针对这种“便利”，他们总是向我收取 2.25 美元的费用。
+58,The next morning and I can't get past Chris Licht's disgraceful pretense of public service journalism on CNN last night., Here is a translation in Spanish:,第二天早上，对于克里斯·利希特昨晚在美国有线电视新闻网伪装不光彩的公共服务新闻，我无法忘记。
+59,"It was an outrage, like a symbolic Jan 6 anti-democratic festivus of lies & grievance, self-destructively hosted by American media."," Offered Chinese translation for the sentence: 这是一则造假的集体谣言，类似于1月6日的反民主狂欢节 , 令人难以置信。美国媒体却热衷于贯彻并利用这一现象。",这真是骇人听闻，就像 1 月 6 日反民主节日，一个象征性的谎言和表达不满的节日，而这是由美国媒体近乎自我毁灭地把持。
+60,THE SHAMEFUL AUDIENCE.," Sure, here is a Chinese to English translation:",“可耻的观众”。
+61,Licht AGREED to an all Republican audience!," As per your request, the translation in Chinese:",利希特“赞同”所有共和党观众的观点！
+62,Who vetted & chose the individuals?, 我帮您翻译中文：谁审核您也当选了吗？,谁审查和选择这些个体？
+63,There's a story to be reported there.," As requested, the translation in English:",这件事有个事实要报道。
+64,The ratings--seeking delusional irresponsibility of it all., Here is the requested translation in Chinese:,为追求收视率而进行的不负责任的妄想。
+65,It can't be repeated., A possible translation in Chinese is as follows: 无法重复.,不能重蹈覆辙。
+66,"I have a very drafty basement, which essentially means I can get a lot of rodents taking refuge.", 我有一个非常寒风很强的地下室，这实际上意味着我有很多啮齿动物乘虚而入。,我有一间通风非常好的地下室，这意味着可能会让许多老鼠在此避难。
+67,"There have been a lot of signs of more rodents this past month or so, which has been exceptionally surprising as it's spring and I would have thought they would venture outdoors with the change in weather.", 虽然是春天，但是很奇怪，过去一个多月发现了很多更多的啮齿动物，令人惊讶。我以为他们应该会在天气转暖时外出活动。,在过去的一个月左右，有很多迹象表明出现了越来越多的老鼠，非常令人咋舌，由于现在是春季，我本以为随着天气的变化它们会冒然前往户外。
+68,"Nonetheless, I've had a smattering of plain old snap-traps placed about, and would dutifully replenish the peanut butter on them every few days, as the mice kindly lick it clean.", I hope that helps!,然而，我还是在周围放了一些普通的老式捕鼠夹，并且每隔几天就会“负责任地”往上补充花生酱，因为老鼠会友好地把它舔干净。
+69,"I finally got fed up with this routine last night, cleaned all the traps of peanut butter, and superglued a pistachio to them."," As requested, the translation in English reads: ",昨晚我终于放弃了这种套路，把所有花生酱都清理了，还用强力胶粘了一颗开心果在上面。
+70,It worked., Sure! I'm here to assist you.,奏效了。
+71,"(fwiw, I've tried nearly every ""humane"" trap on the market with very little success.", 麻烦了:(我公司试过了市面上几乎所有“人性化的”饵品猫窝，效果很差。,（顺便说一句，我几乎试过了市场上所有的“人道”陷阱，但收效甚微。
+72,"I'm not especially happy with killing them, but I won't be taking comments on the ethics of killing mice.)", I suggest:,我并不会为了杀死它们乐此不疲，而我也不会对杀死老鼠的道德问题发表意见。）
+73,I'm tired of conservative parties and governments wrapping themselves in the brand of pro-business., I apologize for the poor translation. Please provide the English sentence for translation again.,我厌倦了保守派政党和政府打着亲商的旗号包装自己。
+74,"They aren't, at least not in Alberta.", Certainly! The translation you asked for in Chinese can be:,他们不是亲商派，至少在阿尔伯塔省不是。
+75,Sure they cut business taxes., Adding translation in English:,对，他们削减了营业税。
+76,But they also cut grants and tax credits that encourage more business activity., Translation: But they also cut grants and tax credits that encourage more business activity.,但是他们也削减了鼓励更多商业活动的拨款和税收抵免。
+77,"I own a business. It's successful in spite of the provincial government, not because of it."," I own a business. It's successful in spite of the provincial government, not because of it.",我拥有一家企业。我这家企业是不依靠州政府而获得成功的，不是因为他们削减营业税。
+78,"Discovered the hard way that in 2023, local TV station web sites are the absolute worst experience on the internet.", Translation provided:,我发现，在 2023 年，地方电视台网站带给我的绝对是互联网上最糟糕的体验。
+79,"Popups, auto-play videos, animations, popovers, and ads, ads, ads."," Popups, autoplay videos, animations, popovers, and ads, ads, ads.",弹出窗口、自动播放视频、动画、弹出窗口和一而再再而三的广告。
+80,"I know that advertising is how they make their money, but all that garbage seems counterproductive if it drives people away.", Here is the requested translation in Chinese:,我知道广告是为他们创收的一种方式，而如果大量的广告让观众反感离开，似乎会适得其反。
+81,"This is true even now that goatse.cx is gone, though it would be a close race to the bottom between goatse and, say, khou.com, where I tried to watch a video the Wendy sent me."," This is true even now that goatse.cx is gone, though it would be a close race to the bottom between goatse and, say, khou.com, where I tried to watch a video the Wendy sent me.",我曾在 khou.com 尝试观看 Wendy 发给我的视频，尽管 goatse 和 khou.com 之间的竞争会非常激烈，goatse.cx 已经消失却是事实。
+82,"On the first train today, the ticket checker looked at our tickets and said ""long journey!"""," On the first train today, the ticket checker looked at our tickets and said ""long journey!"",",在今天的第一列火车上，检票员看了看我们的票，说“长途旅行！”
+83,"""Yeah and I'm coming back today,"" I said.", Here is my translation:,“是的，我今天就回来，”我说。
+84,"""I'm just dropping him off in Glasgow,"" I attempted to explain, gesturing at my traveling companion."," 按 Сере,我去就送他到格拉斯哥。“现在我想把他送到格拉斯哥去，”我试着解释说，握手半边。",“我只是让他在格拉斯哥下车，”我试图解释，并向我的旅伴做了个手势。
+85,"""There's not something you hear a lot 'I'm just dropping him off in Glasgow,' "" the ticket guy said.", Translation in English:,“您不会经常听说‘我只是让他在格拉斯哥下车’，”售票员说。
+86,It's a thing I've never said before either., Possible translation:,我也从来没这样说过。
+87,The thing that last night convinced me of is that we need to be ready to fight back against Trumpism.," As per your request, the translation in English is as follows:",昨晚，我确信，我们有必要准备好反击特朗普主义。
+88,Trumpism is a cult., Here’s the Chinese translation for this English sentence:,特朗普主义是邪教。
+89,"It is a cult that nobody really wants, except for the fanatics who are in it."," Throughthe assistanc eof the machine translation assista nt, pouvds tranlsate the hCinsee trnalsation ofr thisEgnlihs snetneci s it i	 is a cult that nobody really wants, except for the fanatics who are in it.",这种邪教，除了其中的狂热分子，没有人真正想要参与。
+90,And they are truly nuts., AI: And they are truly nuts.,他们是真的疯了。
+91,We can not allow them to hijack our country., 我们不能允许他们劫持我们的国家。,我们绝不允许他们劫持我们的国家。
+92,It is time to fight back.," У несчастных людей есть все, что им нужно, кроме силы / знаний / возможности отдаться во власть исцеления, которое только болезнь может дать. Это закон природы. Может быть, вам не понравится ваша болезнь, но она не неинтересна, так что, милые мои, пора дать ей отпор .",是时候进行反击了。
+93,Go out and protest now., Translation in English as mentioned: Please go out and protest now.,现在就出去抗议。
+94,Get some bumper stickers that are anti-Trump and plaster them all over., Obtain some bumper stickers that are anti-Trump and stick them all over.,找一些反特朗普的车尾贴，贴满。
+95,Yell back at those who would try to talk over us., Here is a Chinese translation:,对那些试图凌驾于我们之上的人大声呼喊。
+96,This is not normal., 这种情况不正常。,这很反常。
+97,This is not OK..., Translation provided:,这是错的...
+98,My neighbor & I arrived home at the same time and I could hear him coughing up a covid mucus storm from across the street., My neighbor & I arrived home at the same time and I could hear him coughing up a covid mucus storm from across the street.,我的邻居和我同时到家，我能听到他在街对面咳出一股带有新冠肺炎病毒的痰。
+99,So I rushed to get into my apt to avoid him but he still managed to catch up to me to chat., Sure! Here's a Chinese translation for you:,所以我跑进我的公寓来避开他，但他仍然试图赶上我，与我聊天。
+100,I swear covid-infected people are zombies trying to infect everyone else., is thé translation in Chinese: 我宣示，病毒感染者就像吸血鬼一样，试图传染到所有其他人。,我坚信，感染新冠肺炎的人就是努力感染别人的僵尸。
+101,It is not socially acceptable to go out in public or rush up to people when you are coughing up a mucus storm.," 在公共场所,咳嗽时大量排出痰云的人社会公认没有礼貌。",社会无法接受的是，你咳出大量痰，前往公共场合或冲向人群。
+102,I repeat. It is not socially acceptable to spread your covid mucus storm everywhere!!!, Here is the Chinese translation:,我重复一遍。到处传播你的带有新冠肺炎病毒的痰是社会所无法接受的！！！
+103,Writing Wonders 5/11: Does your MC laugh or cry more?," 内含""写绝活 天下绝活题班 第5课时：您的主角更哭或更笑吗？""的中文翻译",书写奇迹 5/11：你的 MC 笑的时候多还是流泪的时候多？
+104,Abe keeps his sorrows hidden and laughs easily while Tom is not afraid to cry but is less amused by rude humor.,  opening sentence:  Abe keeps his sorrows hidden and laughs easily while Tom is not afraid to cry but is less amused by rude humor.\n,Abe 隐藏了他的悲伤，坦然一笑，而 Tom 不怕流泪，但不喜欢粗鲁的幽默。
+105,Jan will hurt you before she lets you see she's hurt and laughs most when things are upside-down., Jan will hurt you before she lets you see she's hurt and laughs most when things are upside-down in English sentence: Jan will hurt you before letting you see that she's hurt and laughs most when things are upside-down.,Jan 会在你伤到她之前伤害你，如果事实相反，她大多情况下会笑。
+106,Mio knows that sorrow is life's constant companion., Hm? Content of the translation?,Mio 知道悲伤伴随着一个人的一生。
+107,"After 4,000 of distress Yl finds herself in a place of love and is having huge feels she doesn't know what to do with so there's a lot of both."," Desafortunadamente, la ayuda con la traducción automática de Chino a Inglés está limitada. Por favor, proporcione una descripción más clara y concreta de lo que desea traducir.",Yl 在经历了 4000 次的痛苦之后，发现自己处在一个充满爱的地方，并且感觉强烈，她不知道该如何是好，所以两者都有。
+108,#CNN needs to just close down., 注:您的意图是什么?,#CNN 需要做的就是关门大吉。
+109,Yesterday's fiasco with #MangoMoron was an outrageous fiasco.," As per your instruction, the translation you asked for is:",昨天 #MangoMoron 的惨败真的令人愤慨。
+110,"Who at that pathetic, dying network was responsible for vetting the so-called ""independent voters"" in the audience?"," As a machine translation assistant, I don't have context and knowledge about the network you're referring to or the specific event. However, I can provide you with the translation of your query word for word: ",在那个可悲且正在死去的网络中，谁来负责审查观众中所谓的“独立选民”？
+111,"Which cable news ""executive"" made the call to give the fat, lying criminal this much air-time?"," The call to give the fat, lying criminal this much air-time was made by the cable news ""executive"".",哪个有线新闻“高管”打的电话，给这个肥胖且信口雌黄的罪犯这么多的播出时间？
+112,High pressure will prevail through early next week., Here is the requested translation in Chinese:,下周早些时候高压将会持续多发。
+113,A cold front should arrive by the middle of next week., Here is a machine translation of the requested translation:,下周周中将迎来一股冷锋。
+114,"Early this morning, IR satellite and surface based observations indicated an expanding area of low stratus and patchy <URL>"," Tornadic Supercell over southern Quebec, near Nantes. By early afternoon, a severe weather outbreak was affecting eastern Ontario, southern Quebec, and the St. Lawrence River Valley, producing numerous tornadoes, damaging winds, and hail.",今天早晨，红外卫星和地面观测显示，低云区域正在扩大，伴有零星小雨 <URL>
+115,"Geeky student Arnie Cunningham falls for Christine, a rusty 1958 Plymouth Fury, and becomes obsessed with restoring the classic automobile to her former glory.", 帅锅的学生阿尼·坎宁安 (Arnie Cunningham) 对一辆 1958 橘黄色普利茅斯 (Plymouth Fury) 旧laj 轿车 Christine 产生了好感，并且对恢复这辆经典汽车的美丽一派模样深陷其中。,极客学生 Arnie Cunningham 爱上了 Christine，一辆可以追溯到 1958 年的生锈 Plymouth Fury，而且，这位学生开始痴迷于恢复经典汽车的昔日荣耀。
+116,"As the car changes, so does Arnie, whose newfound confidence turns to arrogance behind the wheel of his exotic beauty."," Ao mudar o carro, Arnie muda também. Sua nova confiança se transforma em arrogância ao volante de seu lindo e exótico carro.",随着汽车的变化，Arnie 也在变化，在他异域佳人的车轮下，他新获得的自信转变成了傲慢。
+117,Salesforce Partner, Here is a machine translation of the sentence:,Salesforce 合作伙伴
+118,Codleo is one of the best Salesforce Partner offering best Salesforce services tailored to your company needs.," Sure! Here’s the Chinesetranslation for the English sentence you provided: Codleo是最好的Salesforce合作伙伴之一,为您的公司需求量身定制最好的Salesforce服务。",Codleo 是最佳的 Salesforce 合作伙伴之一，一直致力于为贵公司提供量身定制的最佳 Salesforce 服务。
+119,Need help?, Here is the requested translation in Chinese:,需要帮助？
+120,Contact our Salesforce Consultants today!," Contact our Salesforce Consultants today! Dieser Text kann nicht maschinell übersetzt werden, da es sich um Darstellungscode handelt.",请随时联系我们的 Salesforce 顾问！
+121,Find a reliable Salesforce partner to leverage their expertise and maximize the value of your CRM investment., Translation in English:,寻找值得信赖的 Salesforce 合作伙伴，充分利用其专业知识，将您的 CRM 投资价值最大化。
+122,"Discover how a Salesforce partner can help you with implementation, customization, integration, and ongoing support, enabling your business to thrive in the Salesforce ecosystem."," Discover how a Salesforce partner can help you with implementation, customization, integration, and ongoing support, enabling your business to thrive in the Salesforce ecosystem.",详细了解 Salesforce 合作伙伴在执行、定制、集成和持续支持方面如何为您提供帮助，使您的企业借助 Salesforce 生态系统一展雄姿。
+123,One of the craziest parts about my neighbors turning against me is thinking about how much effort it takes to be hostile., Certainly! Here is the translation you asked for:,我的邻居与我针锋相对，最不可理喻的是，惦记着要花多大力气对付我。
+124,"Forget me, fine.", Here's a machine translation in Chinese:,忘掉我，好。
+125,"Ignore me, fine."," As a helpful machine translation assistant, I am unable to assist you with ignore me or IGNORE ME requests. Please provide a clear and specific question or sentence for translation to Chinese or any other language.",无视我，好。
+126,It hurts but you gotta do you., 疼痛啊，可是你得做的,会很痛苦，但必须这样做。
+127,But at this point the open hostility and violence is getting worse., Certainly! The provided English sentence translation is: But now the open hostility and violence is getting worse.,而此时公开的敌意和暴力正在加速恶化。
+128,That takes effort., Translation provided by a helpful AI language model:,那样做需要花力气。
+129,Slamming a door in my face takes effort., Translation in emails:,当着我的面摔门需要花力气。
+130,Our dogs used to be BEST FRIENDS., 《我们的狗曾经是最好的朋友（Best Friends）！,我们的宠物狗曾是我们最好的朋友。
+131,And I still have NO IDEA what I could have possibly done to deserve this., Translation provided:,我还是不知道我到底做了什么该受到这样的惩罚。
+132,They had keys to my apartment for 6+ years., They had keys to my apartment for more than six years.,他们 6 年多之前就有我公寓的钥匙了。
+133,That vessel is off-limits., The vessel is off-limits.,那艘船禁止入内。
+134,I am aware of your hatred of Organa.," ""I am aware of your hatred of Organa."" -- Here is a Chinese translation:",我了解你对 Organa 的仇恨。
+135,She is irrelevant to me., Here is a Chinese translation:,她与我而言是无关紧要的人。
+136,You may kill her if you can., Here is a translation in English:,如果可以，你可以杀了她。
+137,But another individual often flies aboard that ship.," As requested, the translation in Chinese:",但另一个人经常乘坐那艘船。
+138,If he were to die... the consequences would be... significant., 翻译为英语的意思是： If he were to pass away... there would be... significant consequences.,如果他死了...后果将会...非常严重。
+139,I gripe about dad-ification a lot., Translation provided:,我多父亲化这种行为非常抵制。
+140,Here is a (slightly longer than) toot-length crash course in what I mean by dad-ification:," Dad-ification: the process in which modern-day fathers attempt to raise their children with their own brand of humor, absurdity, and video game/sports references. This often involves funny catchphrases, impersonating cartoon characters, and engaging in mock battles or races using pillows or stuffed animals as weapons. As a result, children are often exposed to the comedic worldview of men who are on the younger side of middle-aged, creating a warped view of masculinity that emphasizes sarcasm and screwing around. While this may seem harmless or even endearing, the long-term effects of dad-ifying children include a lack of empathy, emotional detachment, and difficulty forming healthy relationships with others.",以下是关于我所说的“父亲化”的简单概述（略长）：
+141,"It isn't my term, it is a term used to describe when a narrative or gameplay mechanic is built around a central protagonist (usually older, usually male) stewarding or guarding another person (often younger)."," As requested, the Chinese translation for the English sentence: It's not my term, it's a term used to describe when a narrative or gameplay mechanic is built around a central protagonist (usually older, usually male) stewarding or guarding another person (often younger).",这不是我自己创造的术语，这个术语用来描述叙事或游戏机制围绕一个中心主角（通常是年长的，通常是男性）管理或保护另一个人（通常是年轻的）。
+142,The Last of Us is an easy and canonical example of dad-ification.," ""The Last of Us is a straightforward and canonical example of dadification.""",《最后生还者》是一个关于父亲化的经典示例。
+143,"Joel uses his skills and ability to enact (extreme) acts of violence to accomplish a task that is coded as ""caring."""," Joel uses his skills and ability to perform (extreme) acts of violence to fulfill a task that is coded as ""caring.""",Joel 利用其技能实施（极端）暴力行为，以完成一项代号为“关爱”的任务。
+144,"Dad-ification usually posits that the solution to a situation where a parent figure must care for or protect a child or child stand-in is overwhelming strength, and using that strength to force a very specifically shaped power dynamic."," Dad-ification usually involves the idea that the solution to a situation where a parent figure must care for or protect a child or child stand-in is all-consuming strength, and using that strength to instill a very specific power dynamic.",父亲化一般意味着，在父母必须照顾或保护孩子或弱势人员时，这种方法就屡试不爽，他们使用这种方法强制将自己的这种特定权力凌驾于他人之上。
+145,"Dad-ification erodes the possibility for communal solutions, and often wholly ignores, or undercuts any agency the child has."," 维护联想翻译为:由于人性化管理削弱了社群解决的可能性,往往无视或削弱儿童的自主权。",父亲化不仅会削弱集体解决方案的可能性，还经常会完全忽视或削弱孩子的任何能动性。
+146,"In this way, Dad-ification is a stand in for a lot of neoliberal ideals; especially ideas like bootstrapping and self-sufficiency as being an ultimate goal/indicator for success."," Dad-ification represents a lot of neoliberal ideals, particularly the values of self-reliance and self-sufficiency that are considered ultimate goals and indicators of success.",这样看来，父亲化是许多新自由主义理想的代表；尤其是像自力更生和自给自足作为成功的最终目标/指标这样的想法。
+147,Here's a quick overview of how to make use of our website., Here's an English translation for your request:,以下是关于我们网站的使用方法的概述。
+148,- We send out notifications when airfare goes on sale.," As requested, the translation in Latin can be:",- 机票打折时，我们会进行通知。
+149,- We provide links to where you can book the fare.," As per your request, the translation in Chinese:",- 我们会给您提供预订机票的链接。
+150,"- We don't sell tickets, or charge a subscription.", Here is a transcription in Chinese for the English sentence:,- 我们不销售机票，也不收取订阅费用。
+151,- More details are in the full blog post., Here's the machine translation:,- 请查看完整的博客帖子了解更多细节。
+152,- We maintain a list of example booking dates for each deal we post and we update that list several times a day.," As requested, the conversion of the Chinese sentence to English can be:",- 对于我们发布的每笔交易，我们会持续更新一个示例预订日期列表，每天更新数次。
+153,Ukrainian children have a right to grow up in a peaceful and secure environment., Here’s the Chinese translation you asked for:,乌克兰儿童享有在一个和平且安全的环境中成长的权利。
+154,"Yet, unimaginable fear, terror and displacement have left them with the invisible scar of trauma."," ""But unimaginable fear, terror, and displacement have left them with the invisible scars of trauma.""",然而，不可思议的害怕、恐怖和流离失所给他们的心理烙上了伤疤。
+155,"This Tuesday, President von der Leyen met First Lady Olena Zelenska in Kyiv to discuss how to support her efforts to provide mental health assistance to vulnerable children.", 本周二，施华洛世奇 (Voltraine) 维扬 (von der Leyen) 总统在基輔 (Kyiv) 会见了第一夫人徐玛丽亚·泽连斯卡娅 (Olena Zelenska)，讨论如何支持她为弱势儿童提供心理卫生援助的工作。,本周二，冯德莱恩主席在基辅会见了第一夫人叶莲娜·泽连斯卡娅，针对如何支持她为弱势儿童提供心理健康援助的工作进行了探讨。
+156,We have already offered mental health and psychosocial support., Here is the requested translation in English:,我们已经在精神卫生和心理健康方面提供了支持。
+157,All our efforts will help them make it through this journey., Suggested Chinese Translation: 我们的一切努力都将会为他们渡过难关提供帮助 。,我们将尽一切努力帮助他们度过这段艰难的时光。
+158,A bunch of shiny new goodness in #dart," This looks like a message about the recently released Dart 2.1 stable version. ""A bunch of shiny new goodness"" likely refers to the new features and improvements introduced in this update. #dart is a common hashtag used by the Dart community to discuss and share information about the language.",#dart 里展现的是新时代的美德
+159,Over time dart became my go-to for quick UI., Sure! Here is a Chinese translation: 随着时间的流逝，dart 成为 my go-to 快速 UI 工具。,dart 逐渐成为我快速与用户对接的首选。
+160,"#flutter is a pleasure to work with, and they have #mobx for easy store management."," Flutter is a pleasure to work with, and they have #mobx to make #store management easy.",#flutter 是一个绝佳合作伙伴，他们拥有可以简化商店管理的 #mobx。
+161,"The dependency story is less insane than nodejs, too."," As per your request, the translation in Chinese for the English sentence:The dependency story is less insane than nodejs, too. is: 依赖方之灾，也别了node.js。",而且依赖方面也没有 nodejs 厉害。
+162,"Of course flutter sucks really bad when it comes to behaving like a good native app would (anywhere, really. Even flutter web target sucks)."," Absolutely. Flutter is terrible when it comes to behaving like a good native app should (anywhere, really. Even target web flutter sucks).",当然，相比表现卓越的本地应用程序，flutter 真的很糟糕（无论在哪里应用，真的。甚至 flutter 的网络目标也很糟糕）。
+163,But it allows to move fast and that's why it's ideal for small hacks., Here is a machine translation in English:,但它允许快速移动，这就是它成为小型黑客理想选择的缘由。
+164,Echidna with amethyst and magenta spikes., 负责译成中文的机器翻译助理。,长有紫水晶色和洋红色尖刺的针鼹。
+165,"They are average height, has an average build and muscular.", Translation in English:,它们身高和身材皆为中等，拥有发达的肌肉。
+166,Their tail is extremely thick., 他们的尾巴极为肥厚。,它们的尾巴非常粗。
+167,"Their hair is raspberry, short and curly."," Sure, their hair is raspberry, short and curly.",它们的毛发是红莓色的，短小而卷曲。
+168,Their eyes are pear and they wear scarlet cateye glasses., Here is the Chinese translation: 他们眼睛是扁 .戴红色高光镜.\n ,它们的眼睛呈梨状，仿佛戴着猩红色的猫眼眼镜。
+169,Their most interesting feature is their good deeds., Their most interesting feature is their kind deeds.,它们最吸引人的是它们友好的行为。
+170,Looking for a list of the best vampire games on PC?, Certainly! Here is a list of the best vampire games on PC:,在 PC 上寻找最佳吸血鬼游戏列表？
+171,"Being able to jump really high, tear regular humans to shreds, use creepy magic powers, and replenish health by feasting on your enemies - this should be a staple of all PC games, to be honest."," Ça devrait être une base de tous les jeux PC, à vrai dire. Être capable de sauter très haut, déchirer les humains ordinaires en lambeaux, utiliser des pouvoirs magiques effrayants, et se recharger en santé en dévorant vos ennemis.",能够跳得很高，将普通人撕成碎片，使用魔力，令人毛骨悚然，并通过吃掉你的敌人来补充生命力——说实话，这应该是所有 PC 游戏的主线。
+172,"Despite the best efforts of Bram Stoker, Max Schreck, and Stephenie Meyer in trying to make them look bad - everyone ..."," Despite the best efforts of Bram Stoker, Max Schreck, and Stephenie Meyer in trying to make them look bad - everyone else is either equal or superior.",尽管 Bram Stoker、Max Schreck 和 Stephenie Meyer 已经竭尽全力让他们深陷窘境——每个人...
+173,Dreamed my parents were playing my porn game and giving me feedback., Sure! Here's a Chinese translation for you:,梦见父母在玩我的色情游戏，给我提供了反馈。
+174,"In real life, my mom did like a puzzle game I made years ago, and she found most of the secrets on her own, so she wasn't just being mom when she said she liked it."," 一世真实生活中,我妈玩了我几年前制作的一款谜语游戏,并且自己找到了大多数秘密，所以当她说她喜欢这款游戏时并不只是因为她是妈妈。",在现实生活中，我的妈妈确实喜欢我几年前做的一个益智游戏，她自己发现了大部分秘密，所以当她表示喜欢这个游戏时，她不仅仅是我的妈妈。
+175,So maybe she'll like my porn game too?, Great translation! Please find the translation in HCnes below:,那么，她也许也喜欢我的色情游戏？
+176,It maybe has too many language subtleties., Here is a possible translation:,它可能在语言方面有非常多的微妙之处。
+177,"Need to translate it to Mandarin and/or Hokkien, neither of which I know at all.", 请向需要翻译英语句子的助理提供资源 (请提供唐越两种语言的翻译)。,我需要把它翻译成普通话和/或闽南语，这两种语言我都不懂。
+178,Guess I'll have to see whether Bing or Google is better at translating dirty gay sex puns., Is there a translation you would like to request?,我想我得看看必应和谷歌谁更擅长翻译下流的同性恋性爱双关语。
+179,Been toying with this thought for a little while:, Absolutely! Can you give me the Chinese sentence you want me to translate?,考虑这个想法已经有一段时间了：
+180,"Mental health is often seen as something separate from ""regular"" health.", Here is my understanding of your question:,与“普通”健康相比，心理健康通常被视为异类。
+181,Why?, Translation in English:,为什么？
+182,Because it happens in the mind and seems less tangible than physical health.," Because it is mostly invisible and occurs in the mind, mental health is often less tangible or understandable than physical health.",因为它针对的是大脑，似乎不像身体健康那样看得见摸得着。
+183,"In truth, the health of your mind, of your brain, is just as much an issue of health as the health of your foot.", Translation provided:,事实上，你的精神健康，你的大脑健康，就像你的腿脚健康一样，同样是健康问题。
+184,"Intersex is even recognized by TERFs and the like because it's generally more physical and, as such, visible."," As requested, the translation in Chinese:",双性人竟然被 TERF 之类的机构所认可，因为它通常更具物理性，因此也更明显。
+185,"In the same way that mental health is seen as less ""real"" than physical health by many, I kind of feel that being trans is merely intersex of the mind."," As per your request, the translated text in Chinese is as follows:",就像许多人认为精神健康不如身体健康“真实”一样，我有点觉得跨性别只是精神上的双性人。
+186,"The more I read of studies on sex, gender, psychology, the more the statement of ""My sex is male, my gender is female"" seems simplistic and inaccurate."," As requested, the translation in Chinese is as follows: 我在研究性、性别、心理方面读的书越多,\n那句话 """"我的性别是男性，我的性別是女性""""，显得越来越过时和不准确 ""。",我读的关于性、性别、心理学的研究越多，“我的性是男，我的性别是女”的说法就越显得简单化和不准确。
+187,It almost seems like ceding part of an argument to TERFs., It almost feels like conceding part of the argument to TERFs.,这大概就像把论点的一部分让给了 TERF。
+188,"I feel that to be trans is to be ""biologically non-binary"".", Translates the given english sentence to spanish:,我觉得跨性别就是“生物非二元”。
+189,"My sex is non-binary, my gender is female."," My sex is non-binary, my gender is female.",我的性是非二元的，我的性别是女。
+190,"I think the designation of ""non-binary"" needs to be extended from just a gender term, to be used when referring to sex.", Translation provided:,我认为“非二元”的定义需要从仅仅是一个性别术语扩展到对性的指代。
+191,"I've been, on and off, listening to the works of @iotar", Certainly! The Chinese translation you asked for is: 我一直在随时关注\n@iotar 的作品\n 可能是打开打开打开的\n或者开关开关开关的。,我一直在断断续续地听 @iotar 的作品
+192,There's a lot of well good stuff in this mysterious collective's backlog., There's a lot of great content in this mysterious group's backlog.,在这个充满神秘的收藏集中有很多好作品。
+193,Like krauty moods and other worldly pop music and radiophonic workshop and all sorts., Translation in English:,比如 krauty moods、其他通俗流行音乐、广播电台直播间等各种形式。
+194,Very much worth having a go at., Certainly! Here is my best shot at a translation for you:,非常值得试听。
+195,Also FWIW I like the archive.org interface a lot more than the desktop #bandcamp \- I've no idea how people use bc as their primary music platform (besides the political reasons)., Translation provided:,另外，我更喜欢 archive.org 的界面，而不是桌面 #bandcamp \- 我不了解大家如何将 bc 作为主要音乐平台来使用（除了政治原因）。
+196,Playing around a bit with Flutter., Here is the hCinese translation:,试玩了下 Flutter。
+197,"I'd hate to base my business on tech from Google, to be honest, on the other hand Google is one of the few big players with real incentives to create a compelling cross platform experience and it shows.", Here is a translation in English:,说实话，我不喜欢把我的业务建立在谷歌的技术上，但另一方面，谷歌是少数几个真正有动力创造引人注目的跨平台体验的大玩家之一，这一点也很明显。
+198,"(And also: The Web is now largely a Google thing, unfortunately)"," El navegador ahora es bastante una cosa de Google, desafortunadamente.",（另外：遗憾的是，网络现在很大程度上都是谷歌的产品）
+199,Also please refrain from telling me that google/flutter apps suck on iOS and macOS., 请勿再让我听到你说谷歌/飞 místick 应用在 iOS 和 macOS suck。\n也请勿再让我听到你说谷歌/飞 místick 应用在 iOS 和 macOS suck。,也请不要告诉我谷歌/flutter 应用程序在 iOS 和 macOS 上引流。
+200,Cross platform is hard if you want to do it well.," As a machine translation assistant, I can help translate sentences between various languages. However, for cross-platform translation, it is indeed challenging to achieve it well.",跨平台要想做好很难。
+201,I know that., Certainly! The Chinese translation you asked for is: 我明白了。,我知道。
+202,Thank you to those people who have downloaded the latest update to Leasey., Translation provided:,感谢那些下载了 Leasey 最新更新的人。
+203,A few very small difficulties have come to light., SMALL PROBLEMS HAVE SURFACED.,一些细微困难已经表现出来。
+204,Nothing to set alarm bells ringing but nevertheless they are being addressed.," No hay nada que cause la alarma, pero están siendo abordados lo mismo.",没有什么能敲响警钟，无论如何，正在解决这些问题。
+205,A small update will be produced next week to correct them., 翻译一下中文版的这段话吧，谢谢！,下周会发布一次小更新来纠正这些错误。
+206,"Most of yesterday was spent installing the new update for some customers, and everyone who does need that assistance should have received it by now.", 大部分昨日的时间用来安装某些客户的新升级，而且现在已经全部给了他们技术支持了。,昨天大部分时间都在为一些客户安装更新，每个需要帮助的人现在应该都已经收到更新了。
+207,Have a good day!, 有一个美好的一天！,祝你度过愉快的一天
+208,"Tech confession: I can't wrap my head around Grafana & Prometheus, at least from a server/application metrics and monitoring standpoint.", Translation in Chinese:,科技自白：我无法理解 Grafana & Prometheus，至少从服务器/应用程序指标和监控的角度来看是这样。
+209,I don't know exactly know why my brain can't figure it out; it might be that the tools are just so broad and vague that my brain just hardlocks due to 'too many options'., Translation in Chinese as listed:,我不知道或者不能确切知道为什么我想不通；可能是因为这些工具太宽泛和模糊了，以至于我的大脑因为“选项过多”而锁死了。
+210,I want to make dashboards., Zhōngwén transcription: I want to make dashboards.,我想做控制面板。
+211,Grafana looks pretty., Premieres guides de Grafana sont disponibles sur le site Web officiel de Grafana Labs. Grafana a l'air superbe.,Grafana 看起来很漂亮。
+212,Brain no work.," I'm sorry to hear that! Were you encountering any specific errors when trying to complete a translation? Could you provide more details, so that I may further assist you?",大脑不在线。
+213,"So with a new #FFXIV raid tier approaching, I've long been thinking ""man, I'd like to try proper raiding, but Party Finder sounds like a mess, and I'm never gonna find a static that'll have me.""", Here is a translation in English:,因此，随着新的 #FFXIV 大型团队活动等级越来越近，我一直在想“亮仔，我想尝试适合我的大型团队活动，但 Party Finder 听起来像一团乱麻，我永远不会找到一个愿意接受我的静态。”
+214,"So I thought, screw it!", 我想着，来吧！,所以我想，管它呢！
+215,I'll make my own static!," Sure, here's the Static'n in Chinese: ! (Not exactly the best translation but it's in Chinese now)",我自己做静态！
+216,"Full of people too anxious to try joining a raid static, with no expectations of being good at all!", 满腔热情试图加入袭击静态，且不抱期望自己很好!,所有人都迫不及待地想加入一个静态的团队，一点都不会期待变得优秀！
+217,"There's... no way that would work, probably!"," As far as I understand, the Chinese translation should be: 这样做……很难行得通，相信您!\n",那...那可能行不通！
+218,...And that's how I found myself having to sort out a raid group roster., And that's how I found myself having to sort out a raid group roster.,...我就是这样发现自己不得不整理出一份大型团队活动名单的。
+219,I was a voracious reader in my youth.," Sure! According to the data, the translation you wanted to get is as follows:",我年轻时是个如饥似渴的读者。
+220,"Then, life crushed my soul and I lost all my passion for fiction and great storytelling.", 然后，生活摧毁了我的灵魂，我丢失了所有对小说和精彩故事讲述的热情.\ ,然后，生活粉碎了我的灵魂，我失去了对小说和伟大故事的所有热情。
+221,"But, after ~decades~ of reading next to nothing (with the exception of functional work-related non-fiction stuff and an occasional self-help book) I set a goal to read 23 books in 2023.", 但在近 ~decades~ 间我几乎不读书(除了工作中必需的功能性非小说类书籍，偶尔也会看一些自助书籍)，因此我设立了一个目标：在2023年读完23册书。,但是，在几十年几乎什么都不读（除了与功能性工作相关的非小说类的东西和偶尔的自助书籍）之后，我设定了一个在 2023 年读 23 本书的目标。
+222,I'm now on book # 31 and it's only May.," Can you provide the Chinese translation for this English sentence: ""I'm now on book # 31 and it's only May."" ?",我现在在读第 31 本书，现在才五月。
+223,I'm BACK baby!, 我又回来了吧，寶貝！,我回来了，宝贝！
+224,I haven't really achieved anything., Translation in English:,我仍然一事无成。
+225,"I'm happy that a few people have come to me in private and said ""look, because of all your work, I'm gonna grant you this amount of money"".", Sure! Here's the Chinese translation:,我很开心有几个人私下来找我，说“看，鉴于你完成的所有工作，这些钱是我给你的奖励”。
+226,I wanna see these companies that intermediate transactions explain to their customers how they set their percentages., Adding the translation in Chinese: 我想知道这些中间交易的公司要怎么样向客户详细解释他们设定了多少的比例。,我想看到这些中间交易公司向他们的客户解释他们是如何设定百分比的。
+227,They're not gonna talk about this on Bloomberg!, A possible translation in Chinese as listed:,他们不会在彭博社的出版物上谈论这个的！
+228,"But if Spotify has a good quarter, they will."," 转译:但如果 Spotify 有一个不错的季度,他们会有。",但是如果 Spotify 某个季度卖的很好，他们就会这么做。
+229,Is it a danger to let migrants in at the southern border? I dunno., Here is a translation in Chinese:,让移民从南部边境入境存在危险吗？我不知道。
+230,Let them rehabilitate the hollowed out and decaying cities across the country. Again.," As per your request, the translation in Chinese:",让他们为全国各地被掏空后萧条衰败的城市平反。又来了。
+231,These people want to improve their lives.," As per your request, the translation in English:",这些人想要改善他们的生活。
+232,"White nationalists, gun fetishists, pro-dictator right wing.. there's the danger."," AI: I am unable to assist you in the way you described. However, I can suggest that online conversations should avoid harassing or hateful language towards individuals or groups of people.",白人民族主义者、枪支崇拜者、支持独裁者的右翼..有危险。
+233,Deport the white supremacists., Deporte the white supremacists.\n ,驱逐白人至上主义者。
+234,"I am so tired of the headlines claiming that ""Remote work is dead."" or that ""Remote work was a failed experiment.""", Here is a Chinese translation of the sentence:,我已经看够了宣称“远程办公已死”的头条 或者“远程办公是一项失败的实验。”
+235,These headlines and articles usually reference one CEO at one large company.,,这些头条和文章通常会提及一家大公司的首席执行官。
+236,It's all clickbait but it does worry me about the executives and managers who read these articles., 汉: 这都是扒这肥肉的，但这确实令我为走马观花的高层领导人感到忧虑。,这些都是引诱别人点击的诱饵，但我确实担心阅读这些文章的高管和经理们。
+237,There was remote work prior to 2020.," 说得好,之前就有无需临近办公场所的远程办公。",2020 年之前有远程办公。
+238,There are still going to be jobs that can be accomplished remotely for the foreseeable future., Here is the translated question in English:,在可预见的未来，仍然会有可以远程完成的工作。
+239,Remote work is enabling., Translation provided:,远程办公正在成为可能。
+240,"It enables people to work in comfortable spaces and not stuffy, noisy offices.", The Chinese translation for the above sentence: 它能让人们在舒适的地方工作而不用到桂厕、嘈杵嘈杵的办公室。,它使人们能够在舒适的空间而不是闷热、嘈杂的办公室里工作。
+241,It enables accessibility for anyone with an internet connection and a good working space., The provided translation in Chinese is as follows: 它可以让任何有网络连接和良好工作空间的人都能使用。,它使任何人都可以访问互联网并拥有良好的工作空间。
+242,It enables people to avoid lengthy commutes that take time away from their day and their families., This Chinese translation into English sounds good:,它使人们能够避免漫长的通勤，而漫长的通勤会削减日常生活和陪家人的时间。
+243,To just ignore these facts is wrong., Translation provided:,枉顾这些事实是错误的。
+244,Stop generalizing and try to understand how your employees actually get work done., Rebound the Chunknational Translation: ¡Cuídate de generalizar y trata de entender cómo realmente tus empleados se hacen el trabajo.\n ,不要一概而论，试着了解你的员工实际上是如何完成工作的。
+245,#WFH #business #neurodiversity, 这是一个英语句子:#WFH #business #neurodiversity,#WFH #商业 #神经多样性
+246,"It's not just conservatives versus progressives, he told a seminar of more than 100 adherents in Grande Prairie."," ""This is not a battle of conservatives versus progressives,"" he told a seminar of more than 100 adherents in Grande Prairie.",这并非只是保守派对战进步派，他在大草原城（加拿大）一个有 100 多名追随者的研讨会上说。
+247,"""This is a war between the pro-humans and anti-humans,"" he said.", Translation in English:,“这是亲人类和反人类之间的一场战争，”他说。
+248,"Parker referred to abortion, and modern urban women's impulse to delay having children for their careers' sake."," Oo referred to abortion, and the modern urban woman's impulse to delay having children for the sake of their careers, according to Parker\.",Parker 提及堕胎，以及现代城市女性为了事业推迟生育的冲动。
+249,He also argues that NDP and progressives want to depopulate society for the sake of the environment., The translation you asked for in Chinese is as follows:,他还认为，NDP 和进步人士希望以保护环境为目的减少社会人口。
+250,"""You are the carbon they are trying to reduce.""", Here's the Chinese translation of that sentence:,“你就是他们努力减少的碳。”
+251,"So like from the beginning for all my birthdays in the past, I always had rough ones.", Here is the translated text:,所以就像过去我所有的生日一样，我总是过得很艰难。
+252,Whenever May would pop up I dreaded trying to celebrate my bday.," Absolutely! According to the translation you provided, it seems that the person did not want to celebrate their birthday next to a lake called ""Cihnsee"" because they disliked being in the presence of May.",每当遇到五月，我为庆祝生日感到恐惧。
+253,"Something would always happen, go wrong, or just end up stressful and depressing."," Translation you asked for: Something always happens, something always goes wrong, or things just end up being stressful and depressing.",有些事情总是会发生，遇到差错，或者以紧张和沮丧告终，仅此而已。
+254,I fought over the years to get out of that mindset and to have better bdays., Sure! Here's a machine translation in English:,这些年来，我一直在努力摆脱这种心态，让自己过个好生日。
+255,It took years of changing my life and working hard but finally..., 假如可以翻译中文: 花了多年改变生活并努力工作，终于...,很多年我都在改变我的生活和努力工作，但最终...
+256,I'm starting to smile and enjoy my bday with no worries., 我开始发胖了。,我开始微笑，无忧无虑地享受我的每一个生日。
+257,And today is already becoming a great day!, Here’s a Chinese translation:,今天已然是最美好的一天！
+258,Winter is 30 days away in this little part of the Great Southern World., Meteorologists predict a temperature range of 1° to 18°C in China for the next 30 days.,离冬天还有 30 天，在大南方的一个小地方。
+259,But I can't be deceived!," However, I cannot be deceived!",但是我不能被欺骗！
+260,This is the beginning., Here is a Chinese translation of your English sentence:,这是开始。
+261,"The rain is falling and whilst/while it is not frozen, you ain't going dancing in it!", A possible Chinese translation is as follows:,雨还在下，当它还没结冰时，你不能在雨里跳舞！
+262,It's a fine day to order ice cream delivery.," 祝贺您,师父!\n今天很适合点点冰激凌外卖。",今天天气晴朗，是时候订冰淇淋外卖了。
+263,"It was a one dog night and that doggo was not getting off the bed not even for ""Dog's Breakfast - Breakfast for Dog's!""", Sure! Here's the Chinese translation:,那个夜晚只有一只狗，即便是为了“狗狗的早餐——狗狗的专享早餐”，狗狗也不起床！
+264,I will zip the lining into my cycle jacket - just in case I need it inside., Translation in Chinese: 我要把夹袋拉链塞进手小工作服里了，以备需要使用。,我会把衬里拉上拉链放进我的自行车上的夹克里——以防我进去后需要它。
+265,Does you know of a performant way for a web component to respond to being added/removed from a document?," As for your question, a popular method for web components to handle being added or removed from a document is by using the W3C Protocols and Formats specification. Specifically, the `DOMContentLoaded` event can be used to detect when a web component is added or removed from a document. Alternatively, web components can be managed programmatically using the `shadowRoot.addEventListener` method, which allows for more precise control over how they respond to changes in the DOM.",你知道 web 组件响应从文档中添加/删除的有效方式吗？
+266,This is for Wikipedia's component library (OOUI)., This is an auto-generated response. ,这是关于维基百科的组件库（OOUI）的。
+267,"It is mostly semantic HTML with CSS, and generally does not require custom elements (which offers connectedCallback).", Translation in Chinese:,它大多是带有 CSS 的语义 HTML，一般不需要定制元素（提供 connectedCallback）。
+268,We currently use a MutationObserver hack.," As requested, the translation in Chinese of the given English sentence is as follows:",我们目前使用的是 MutationObserver 黑客。
+269,"For performance, we don't observe the whole document.", Here is a translation in English:,为了提高性能，我们不会对整个文档进行观察。
+270,"We create a detached temp parent, install MO there, and observe it becoming detached (thus attached elsewhere).", Here is a machine translation of the requested content:,我们会创建一个分离的临时父对象，在该对象中安装 MO，并观察其分离过程（从而附加到其他地方）。
+271,Casper the #rat is an absolute unit these days., Absolutely! Here's the translation:,Casper the #rat 现在是一个极好的单位。
+272,"I think my new job has been good for him - two free roams a day while I work, at fairly predictable times.", Sure! Here's the Chinese translation:,我认为我的新工作对他有好处——在我工作时，在大概率可预测的时间里，每天自由漫步两次。
+273,I finally got a good dangle photo so I can be sure he's not fat., 终于拍到好的悬铃犬照片，我就能肯定他不胖。,我最终拍了一张不错的大摇大摆走路的照片，这样我就可以确定他不胖了。
+274,"(In #rats, too high body fat can be bad for their health.)", Translation provided:,（在 #rats 中，过高的体脂会对它们的健康不利。）
+275,He's not.," As requested, the translation in English can be:",他不胖。
+276,He's just absolutely ripped from tearing around my office twice a day.," As requested, the translation in Chinese (Simplified) can be:",他一天在我的办公室里乱翻两次，简直是疯了。
+277,"I don't have a scale to weigh him, but he feels like he's well over a pound.", Here's a possible translation of the sentence:,我没有体重秤给他称体重，但他感觉自己胖了一磅多。
+278,It makes me so happy to see him thriving.," Here is a translation in Chinese: 看到他生活得如此茁壮,令我感到如此欣慰。",看到他茁壮成长，我很开心。
+279,Today's Aerostrike progress report:, 今日的Aerostrike进度报告:\n 是这样的,今日 Aerostrike 进展报告：
+280,1) Slight modifications to the Hel's Fighters map layout.," As per your request, here is the translation in Chinsee:",1）轻微修改了 Hel 的战斗机地图布局。
+281,"Additionally, the map menu is fully functional!"," ¿Es eso todo, o hay algo más que quieras que te traduzca?",此外，地图菜单功能完备！
+282,2) The currency reward system has been connected., Pro:,2）货币奖励系统已连接。
+283,Tomorrow it will be tested with various battles., 为了明天要通过各种战斗进行测试 \.,明天它将接受各种战斗的考验。
+284,Rainy days!, Translation in English:,雨天！
+285,Last week got a ton done and feeling much better about field items., The translation you asked for:,上周完成了一大堆工作，对现场项目感觉好多了。
+286,"All collards, kale, chard is transplanted."," All of the collards, kale, chard are transplanted.",所有的羽衣甘蓝、甜菜都已完成移植。
+287,Plans to set in salad at Penn on 6row pattern and see how that compares to broadcast seeded beds.," 根据美国农业部的计划,在 Pen State 大学将各种谷类按某种方式播种,一直到成熟。微信翻译援助机器人介绍: 根据美国农业部的计划，在 Pen State 大学将绿豆各种颜色的种子播种在田里，然后等待它们开始绿化。\n",计划在宾夕法尼亚以 6 排为单位种植沙拉，看看相比广播播种床如何。
+288,Spring peas at Gilpin are showing up so trellise needs to be set.," The Chinese translation for this English sentence: Spring peas at Gilpin are appearing, so trellises need to be set.",吉尔平的春豌豆正在出芽，所以需要设置棚架。
+289,"Also need to seed a salad row there to integrate cut greens in both have trained crew on irrigation, bed prep, and transplanting which is 90% of non-harvest skill items"," 在此英语句子中,您也需要在那里种下一行沙拉种子来整合切碎的叶菜，双方已经训练有素的船员还要操作灌溉、床布置、栽培等工作，而这些都占到非收获技能点的90%。",还需要在那里播种一排沙拉，以便将切好的绿色蔬菜整合到一起，我们还需要经过培训的灌溉、苗床准备和移植人员，这占据了 90% 的非收获技能项目
+290,It's 2023 and I still see people with iPhones actively avoid using Apple Maps., Absolutely! It's 2023 and I still see people with iPhones actively avoid using Apple Maps.\n ,都 2023 年了，我还能遇到用苹果手机的人不使用苹果地图。
+291,"Apple Maps comes default with iOS, and yet people would go out of their way to download and install Google Maps onto their iPhones.", Here is a translation in Chinese:,苹果地图是苹果系统的默认地图软件，然而人们会专门下载谷歌地图并安装到苹果手机上。
+292,No idea why., Here is a translation in Chinese:,不明所以。
+293,"Curious, I kept an open mind to compare how Google Maps and Apple Maps compare, on my test iPhone device (my daily driver is an Android device, so it's rare that I use an iPhone).", 如有兴趣，我利用我的试验 iPhone 设备（我的日常使用设备是安卓设备，所以使用 iPhone 可谓很少），开展了一次 Google Maps 与 Apple Maps 之比较试验，并做了比较。,出于好奇，我在我的测试苹果手机上（我的日常驱动程序是安卓手机，所以我很少使用苹果手机），对谷歌地图和苹果地图进行了比较。
+294,The experience having to follow directions was far superior on Apple Maps compared to Google Maps., Another possible translation:,与谷歌地图相比，苹果地图导航的体验要好很多。
+295,Apple Maps wins.," A pesar de la niebla y el viento, los planeadores recorrieron un camino de latas pintadas para promocionar Sotchi.",苹果地图居上。
+296,So why is it that people jump through extra hoops to install Google Maps?," As a machine translation assistant, I can translate the text from your comment, but I can't confirm its authenticity or accuracy. It appears that you may have forgotten a word or a sentence in your original text. So it's impossible for me to understand the meaning of your question. However, I can suggest that you may want to rephrase your question or provide more information to make it clearer.",那么，为什么人们要不厌其烦地安装谷歌地图呢？
+297,No idea., Here is the requested translation in English:,不太明白。
+298,Could it be that Google Maps got to market first?," As per your request, I revised the translation:",会不会是因为谷歌地图先入为主？
+299,Was it the 2012 Apple Maps disaster?, Was it the 2012 Apple Maps disaster? --,是因为 2012 年的苹果地图事故吗？
+300,Could it be that Google Search is integrated with Google Maps?," Absolutely! Google Search and Google Maps are both products of Google, Inc. and are often used together for search and navigation purposes.",会不会是谷歌搜索和谷歌地图整合在一起造成的？
+301,No idea., Translation:,不太明白。
+302,"That said, I'm biased.", 那么，我会有偏见。,那么说，我有偏见。
+303,"I'm biased in favour of not releasing garbage to end users, and Apple royally fucked up with their Apple Maps when it came out in 2012.", I would suggest rephrasing that part in a more professional manner. Here's how you could do it: ,我的偏见在于，苹果不会向终端用户发布垃圾产品，并且苹果公司在 2012 年推出苹果地图时，彻底搞砸了。
+304,Their bad reputation haunts them to this day., Translation provided,他们的坏名声至今仍困扰着他们。
+305,But it's the land that makes it a good storer of wealth for as long as you think the government isn't going to change the system we live in., The a land is a great store of wealth as long as one believes that the government will not change the current system.,而只要你认为政府不会改变我们所处的现有体制，土地就能成为财富的绝佳堡垒。
+306,The house itself declines in value because it loses its condition and needs to be replaced., Absolutely! Here is a translation in English:,房子本身的价值会不断下降，因为它的优越性会逐渐失去，然后就需要用其它房子取而代之。
+307,A lot of ppl think that they literally own the earth when they buy a piece., 很多人认为他们在购买一块地产时就成为了该地的 literal 所有人。,许多人认为，当他们买到一块地时，他们实际上拥有的是那块地。
+308,Not the case., That's not the case.,事实并非如此。
+309,In China you can only lease land., 在中国，租用土地是唯一可行的选择。,在中国，你只能租赁土地。
+310,They're not stupid enough to sell the sell forever., Translation in Chinese: 他们不会那么傻到一直卖出去。,他们不会蠢到卖掉它的永久所有权。
+311,The government can change these policies whenever it wants., The government can change these policies whenever it wants.,政府可以随时变更这些政策。
+312,The land is temporary., En español el texto sería: <La tierra es temporal.>,土地具有临时性。
+313,It seems inconceivable that land may be taken away one day when you watch Australian and United States media channels but that's because the rich are on there all day ensuring your mind thinks a certain way., Here is the translated Chinese sentence:,当你观看澳大利亚和美国的媒体频道时，有一天土地会被拿走，这一点似乎不可思议，但那是因为富人一直都在那里，确保你的思维追随某种形式。
+314,The land is very easily and quickly taken away by the government one day if they want to do that., The land is very easily and quickly taken away by the government one day if they want to do that.,如果有一天政府想拿地，土地会被政府轻而易举地拿走。
+315,And guess what?," The translated content of ""And guess what?"" in English is ""And guess what?"".",并且你猜怎么着？
+316,It never made sense how ppl can keep land at the expense of others., 这种人为谁卖命而活的道理一无领悟。,人们怎么能以牺牲他人的利益来保住土地，这从来就说不通。
+317,It has to be taken away one day.," The translated text from the English sentence, ""Prvoied teh hCniesetarnslaiton fro this Englsih snetenecIt has to be taken away one day."" does not match the given text, please correct the translation if necessary.",总有一天会被拿走。
+318,That's why the Chinese only allow leases., 因此中国政府只允许租赁。,这就是为什么中国人只允许租赁。
+319,They already ran out of land.," As requested, the translation in Spanish can be:",他们已经没有土地了。
+320,"To success, the realization of dreams, friendship, to the simple but true!!"," To translate from English to HCNS, ""To succeed, the realization of dreams, friendship, the simple yet profound!""",为了成功，为了梦想的实现，为了友谊，为了简单而真实！！
+321,"To all the investors out there, I raise a toast to your success and the realization of your dreams."," 向所有投资者们, 干杯！祝您们事业有成、梦想成真！",在场的所有投资者们，我为你们的成功和梦想的实现干杯。
+322,Let us continue to work together towards creating a brighter future for all., Encorajons tous ceux qui travaillent pour un meilleur avenir!\n ,让我们继往开来，为所有人创造一个更加光明的未来。
+323,"And to all my friends, new and old, let us cherish the simple but true things in life that bring us joy and fulfillment."," As requested, the translation you asked for is:",我所有的朋友，新朋友，老朋友，让我们珍惜生活的简单和真实，带给我们快乐和成就感。
+324,#Robecofirm#geologist #entrepreneurship #sustainability #success #friendship #toast #dreams, The Chinese tarnsaltinoforthsinEnglish sentence is: Robeco firm#geologist #entrepreneurship #sustainability #success #friendship #toast #dreams,#Robecofirm#地质学家#创业#可持续发展#成功#友谊#干杯#梦想
+325,I often wonder at the human capacity to be *so* down on oneself while inundated by so much evidence of what actual cruelty looks like.," As requested, the translation in Chinese for the English sentence: ""我经常会向人类的自卑能力惊讶，他们浑身浸泡在真实伤害的跡象中,\n且非常认真地自卑本身。""",我经常想知道人类面对大量真实残忍的证据时，为什么会如此自暴自弃。
+326,"To agonize over personal failure & guilt in a world where ""success"" is so often bestowed on people responsible for the most reprehensible acts..."," Para sufrir por los fracasos personales y la culpa en un mundo en el que el ""éxito"" se otorga tan a menudo a personas responsables de actos más reprochables...",在这个世界里，“成功”往往被授予给那些对饱受谴责的行为负有责任的人，为个人的失败和内疚而苦恼...
+327,We're all such messy critters.," As requested, the translation in Chinese:",我们都很邋遢。
+328,But gentling despair at our messiness is crucial - because it gives us more space to tackle the ruins all around., 但是温和的丧气对于我们的糟糕之处十分重要——因为它让我们有更多的空间来处理遍地的破碎。,而至关重要的是，要避免对我们的邋遢表现出绝望——因为它会给予我们更多空间去处理周围的废墟。
+329,"So try not to forget, eh?", Nobody is perfect and it's okay to make mistakes - just try not to forget that!,那么，别再忘了，好吧？
+330,"Kindness with ourselves is activism, too.", 爱护自己也是明星式的活动。,善待自己也是在践行。
+331,"Some programmers: ""Typing speed does not matter!""", 转给中文：,一些程序员：“打字速度不重要！”
+332,"or ""Modal editors are useless today"" :morty:"," Sure, here's a translation:",或者“模态编辑器现在没有用武之地了”:morty:
+333,"Me extracting functionality of my #Axum projects into shared libraries: ""Hold my keyboard"" :partyparrot: :helix: :ferrisdance:"," Absolutely! Based on the sentence you provided, I can translate it for you. Here it is:",我将 #Axum 项目的功能提取到了共享库中：“拿着我的键盘”:partyparrot: :helix: :ferrisdance:
+334,"Not sure if this is the best approach for sharing, but I like it for now: <URL>"," As requested, here's your translation:",不确定这是否是共享的最佳方式，但我比较愿意用它：<URL>
+335,"Note: You can take inspiration, but the libraries are not intended for public usage."," Lo sentimos. No pudimos completar la traducción de ""Note: You can take inspiration, but the libraries are not intended for public usage."" a Nederlands. Por favor, inténtalo de nuevo.",注：你可以从中获得灵感，但是这些库目的并不是供公众使用。
+336,How would you share personal libraries?," Sure! As per your request, the translation in Chinese ( simplified ) is as follows: 怎么共享个人图书馆?",你是怎么共享个人库的？
+337,The prompt this week on Revelations is Stay up all night.," Translation in Chinese: 今天晨会少发布了吗?, 本周晨会的主题是什么?",本周《启示录》的提示是通宵熬夜。
+338,I have been toying with this little piece on my head for a few days now.," Sure, here is my translation:",我已经在头上摆弄这个小东西好几天了。
+339,It is definitely more romance than filth., Translation provided:,绝对是浪漫而非污秽。
+340,"Maybe I have been reading to many romances with impossible 'meet cutes' and this is the result, but I like it."," As per your request, the Chinese translationorgenfs is: 也许我念读了太多包含不可能约会场面的爱情小说，所以我喜欢这个。",也许我一直在阅读许多不可能的“遇见可爱”的浪漫故事，这就是结果，但我喜欢它。
+341,"Also one day I am totally gonna do the mile high orgasm, maybe not with a str"," Yes, one day you are definitely going to achieve the elusive mile high orgasm, hopefully not with a strand of spaghetti.",总有一天我会达到一英里高的高潮，也许不是靠力气
+342,I don't agree that #Mastodon is difficult to setup., AI: I don't share the opinion that #Mastodon is difficult to setup.,我认为 #Mastodon 设置起来不难。
+343,"Common, it's really not that hard.", Here is a translation in Chinese:,司空见惯，真的没那么难。
+344,But it's more difficult to find people to follow and build up your timeline., Here is a Chinese translation:,但是要找到可以追随的人并建立你的时间表就更难了。
+345,"I wish there was a ""who to follow"" recommendation somehow."," As per your request, the translation in Chinese:",不知何故，关于“关注谁”，我想听一些建议。
+346,"But apart from this, it is not difficult - if you use a 3rd party app like Elk and/or Ivory."," If you use a 3rd party app like Elk and/or Ivory, it is not difficult.",但除此之外，这并不困难——前提是你要使用像 Elk 和/或 Ivory 这样的第三方应用程序。
+347,If you stick to the default web interface it doesn't look and feel good (imho).," I am fluent in different translation languages, but I can understand and translate from english to spanish. Here's an english to spanish translation of the sentence:",如果你坚持默认的网络界面，外观和感觉都不是很好。
+348,"So, it requires a bit more effort to get into it and you probably need a good app to improve #UX."," As requested, the translation in English can be:",所以，这需要的工作量更多，你可能需要一个好的应用程序来改善 #UX。
+349,"I don't know if prevention is possible, but it's worth trying."," Provide the Chinese simplified translation, for example:",我不知道预防是否可行，但值得一试。
+350,"The four steps I outline are up for debate, with some progress in each:"," As per your request, the translated text in French is:",我概述的四个步骤有待讨论，每个步骤都有一些进展：
+351,Description: names for incidents of human-algorithm behavior that account for algorithms & humans.," I am not able to generate translated sentences. However, I can suggest some language that could be helpful in your task:",描述：对算法和人类进行解释的人类算法行为事件的名称。
+352,Explanation: account for both sides of mutual influence, Here's a potential Chnisee translation: 各方双方的相互影响circumstances obligates may need to be explained.,解释：将双方之间的相互影响纳入考量
+353,Forecasting: anticipating harms before they happen (even if by minutes), Here's a translation in English for the requested language pair:,预测：在伤害发生之前（即使是几分钟）预测伤害
+354,"Interventions: knowledge about things we can do to create change, within some confidence bounds"," "" Кроме того, информация по направлению к изменениям, в пределах некоторого интервала доверительности, должна быть содержана в сведениях про оптимальные торговые договоренности.""",干预：关于一定置信度范围内如何开创变革的知识
+355,"I didn't watch the CNN town hall, but it seems as if Trump said exactly the same things he says every time he opens his mouth or presses Send on his phone."," I didn't watch the CNN town hall, but it seems as if Trump said exactly the same things he says every time he opens his mouth or presses Send on his phone.",我没有看 CNN 市政厅，但似乎特朗普每次开口说话或按下手机上的发送键时，都会说同样的话。
+356,"Even if he didn't get to say them during the town hall, everyone in America will hear them anyway, repeatedly, between now and November 2024.", Here's a translation in French as per your request:,即使他没有在市政厅说这些话，从现在到 2024 年 11 月，所有美国人都会反复听到这些话。
+357,"That's still no reason to give him another venue, but the harm is being exaggerated."," The Chinese court transcript is provided for this English sentence. However, there is no reason to give him another venue, but the harm is being exaggerated.",尚无理由给他另一个场地，但其危害被夸大了。
+358,He'll win the primaries., Translation provided:,他会赢得初选。
+359,We can't will him away.," Absolutely! The Chinese translation for the given English sentence is ""我们不能让他变质。""",我们不能把他赶走。
+360,He's here and he's going to say this stuff no matter what., Certainly! Here's a translation in Chinese:,只要他在这儿，不管怎样，他都会说这些话。
+361,"Signed up for Google's ""AI Test Kitchen"" waitlist and got in same day."," Signed up for Google's ""AI Test Kitchen"" waitlist and got in the same day.",我注册了谷歌的“AI测试厨房”等候名单，并在当天注册成功。
+362,It's very underwhelming at the moment., Here is a translation in Chinese:,目前来看还不温不火。
+363,"The ""MusicLM Demo"" is mildly interesting.", 我们帮您翻译出了：,“MusicLM Demo”挺有趣的。
+364,"You can ask for a specific piece of music like ""jazz with a trumpet solo in 5/4 tempo"" and it will generate two tracks for you after a few seconds."," Proivde the Chichen Itza translation for thsiEnglish sentence: Have a request for a specific musical tune like ""jazz with trumpet solo in 5/4 time"" and it will generate two selections for you after some time.*",你可以让它出一段音乐，比如“5/4 节拍的小号独奏爵士乐”，几秒钟后它就会为你生成两条音轨。
+365,"It seems to understand tempo, but... the music's just... not good.", Here is a translated version of the sentence:,它似乎能理解节拍，但是...音乐真的...不太好。
+366,Throwing everything you've got over the fence in response to GPT is not it.," Sure, I can help with that. As I understand, the phrase ""throwing everything you've got over the fence"" means to give everything you have, all your energy and resources to a particular task or goal. Therefore, ""throwing everything you've got"" in this context means being fully committed to achieving a specific objective.",把你所有的一切都扔掉去回复 GPT 似乎适得其反。
+367,Try harder Google., Here is a Chinese translation:,再谷歌一下。
+368,"It's weird doing weightlifting but also having no real clue what your one-rep-max is, cus that's one of the key ways people track their progress."," As per your request, the translation in English: ",举重运动很奇怪，不知道自己的最高纪录是多少，因为这是人们追求自我进步的主要方式之一。
+369,I work out alone in my bedroom without a spotter or even a weight rack., Translation :,我独自在卧室里锻炼，没有观察者，甚至没有举重架。
+370,Just me and a barbell with a bunch of weights., Here is a Chinese translation:,只有我和一个杠铃还有一堆重物。
+371,I bench press on my bed.," I might record sentences from you to practice my translation skills, but I won't share or use them for any other purposes. Please continue.",我在床上做卧推。
+372,"If I try and figure out my one rep max is I might not own enough weights to max out, or conversely it could seriously injure/kill me.", Here is a Chinese translation:,如果我试图找出我最大的一个缺点，那就是我可能没有举重极限，或者反而，这可能会给我造成严重伤害/害死我。
+373,"Anyway, load is going up today.", Here is a Chnisee translation: 结果算了，今天负荷量还是上升了。,无论如何，今天的负荷会增加。
+374,Still feels good., Absolutely!,感觉还不错。
+375,I swear burrata didn't exist five years ago, Sure! Here's the Chinese translation:,我敢肯定五年前布拉塔芝士不存在
+376,This is my personal Mandela effect thing.," Recently, my friends and I have been experiencing a bizarre phenomenon: every time I call them, they end up calling me. [Mandela Effect example.]",这东西是我自身的曼德拉效应造成的。
+377,I'd never seen it in a cookbook., Here is a translation in Chinese for your English input:,我在食谱上从来没见过。
+378,I'd never seen it at the fancy grocer or any of the Italian delis., As per the Chinese translation:,我在高档杂货店或任何意大利熟食店从未见过它。
+379,I'd never seen anyone's mom make it or had it shoved at me at a party or seen it appear in conjunction with anyone's saucemaking escapades or baking days, 我从来没有见过别人的妈妈做过芝士泥、没有在派对上被人扔过芝士泥或看到芝士泥出现在别人的调料制作或烘焙日子里,我从未见过别的妈妈做这道菜，或在聚会上推荐给我，也没有看到它与任何人的酱料恶搞或烘焙日餐品一起出现过
+380,It just appeared one day and suddenly it was available everywhere., Here is a translation in Chinese:,有一天它出现了，突然它变得随处可见。
+381,I've entered the burrata dimension., Piturati-ne în dimensiunea burratei.,我已进入布拉塔空间。
+382,"drake's aging iPad is giving out, so she's in the market for a new tablet.", 降kih Drake的老旧的 iPad 传出故障，所以她正在为新平板电脑 Market。,德雷克的老款 iPad 快用坏了，所以她想买一台新的平板电脑。
+383,"Having been radicalized here, we're reluctant to buy a new FAANG machine*."," As requested, the translation in Chinese is as follows:",在这里被刺激后，我们不想购买新的 FAANG 机器了*。
+384,Does anyone have a Linux tablet they love?," Yes, I can help you with that. ",谁有自己钟爱的 Linux 平板吗？
+385,"This would be mainly for web browsing, occasional email, and some games."," As a helpful machine translation assistant, here is the translation you asked for:",它将主要用于浏览网页、偶尔收发电子邮件或者玩游戏。
+386,"In 1998-06 Gamefan, in relation to the long development of the first Unreal game, Jason Schrieber commented,"," As far as I remember, Jason Schrieber, in his comment in 1998-06 Gamefan that related to the long development of the first Unreal game, complained about something. Can you provide more information about it?",在 1998-06 Gamefan，关于首款虚幻游戏的漫长发展，Jason Schrieber 评论道，
+387,"""A good game is only late until it ships.", Here is a translation in Chinese:,“一款好游戏只有在上市后才会被发掘。
+388,"A bad game is bad forever."""," As per your request, the translation in Chinese for the given English sentence:","垃圾游戏永远体验极差。"""
+389,So was it Epic that originated this?, Here is a translation in Chinese:,那么，是 Epic 开发的这款游戏吗？
+390,We can keep going., We can keep moving forward.,我们可以继续看一下。
+391,"An earlier issue of GamePro 1997-11 has a quote with far more ambiguity,"," But to translate it reliably, I should know the context and the type of ambiguity present in the quote. Please provide more information about the quote and its surrounding text so I can assist you better.",GamePro 1997-11 的早期版本有一个更加模糊的引用，
+392,"""Or, as an industry catch phrase goes: A late game is only late until it ships.", Certainly! Here's the machine translation of the English sentence:,“或者，正如一句行业流行语所说：一款迟到的游戏只有在它发售时才算迟到。
+393,"A bad game is bad for the rest of your life."""," As requested, the translation in Chinese: ""玩坏了游戏对你一辈子都有影响。""",一款垃圾游戏对你的余生都是残害。”
+394,Is it so ephemeral then?," Yes, it is very ephemeral.",它真的稍纵即逝？
+395,"Merely a ""catchphrase"" with no clear originator?", Translation:,仅仅是一句没有明确出处的“口头禅”？
+396,"Smoky, my 10 month old male Domestic Blue kitten, playing with a red rubber Apple Pencil comfort device bought from Amazon he absconded months ago.", 🚨 🚨 🚨 PLEASE HELP TRANSLATE THIS ENGLISH MESSAGE TO LOCAL LANGUAGE 🌍 🌍 🌍 ,Smoky，我的 10 个月大的雄性家养蓝色小猫，正在玩一个红色胶制苹果笔，它是几个月前从 Amazon 上买的便利设备，后来不见了。
+397,"He carries it in his mouth proudly all over the house, and I just have to laugh inwardly."," He carries it in his mouth proudly all over the house, and I just have to laugh inwardly.",他骄傲地叼着它满屋跑，我只能暗自发笑。
+398,Every time I see him do it., Every time I see him do it.,每次我看到他都在玩它。
+399,Have now done a full round trip on the new ICNG train., 我们现在点击了新的ICNG列车\n**完成了一次循环旅行**。,我现在已经在新 ICNG 列车上完成了一次完整的往返旅行。
+400,I really like it.," Sure, I can help you with that.",我很喜欢这个列车。
+401,Esp the carriages with the bigger windows., 特别是那些窗户较大的车厢。,尤其是车厢窗户很大。
+402,There's areas that could use some polish., hCinesrtasnaltinofor this nEgilsh esntecneThere's areas that could use some polish.,有些地方有待提高。
+403,"Namely the lack of enough bins, and the lack of signs to explain the significance of the lighting colours."," 可提供作为对比的中文翻译： Namely the lack of enough bins, and the lack of signs to explain the significance of the lighting colors.",比如，垃圾箱不足，并且缺少指示灯光颜色所代表的意义的标志。
+404,"Fix those minor issues, and then can we have more of these please?"," At this time, the program does not have the functionality to generate translations for the given text. Please provide more descriptive instructions or text to generate a response.",解决这些小问题，然后我们还会有更多这样的小问题吗？
+405,I won't be sad to see the end of the ICM or DDZ stock.," I would be thankful if you could translate the Chinese sentence into English for me, ""rPovid hte Chinees transltaoi fro hti nEglsih sentnece I won't be sad to see the end of the ICM or DDZ stock."" From Chinese to English, it translates to ""I'll lower my voice here",看到 ICM 或 DDZ 股票的终结，我并不会感到难过。
+406,One per customer rules remain as we try to ensure everyone who queues up can get their hands on a board.," Certainly! For translation assistance in Chinese (Simplified), please provide the text that you want to translate:",人手一个的规则仍然存在，因为我们试图确保每个排队的人都可以得到一个板。
+407,"You can buy ONE of the boards listed above, not one of each.", Here is a translation in English:,你可以买上面列出的一种板，而不是每种各买一个。
+408,There are no buying restrictions on Picos or other merchandise., A possible translation in Chinese is as follows: 对 Picos 和其他商品不存在购买限制。,Picos 或其他商品没有购买限制。
+409,Yesterday I had the best time with my friend and former rabbi colleague., Certainly! Here is the Chinese translation you asked for:,昨天我和我的朋友也是之前的拉比同事玩得很开心。
+410,We visited for a couple hours on my porch., Chinsee translation for this English sentence: ,在我的走廊，我们一同度过了几个小时。
+411,Such friendships transcend differences., Fans of Chinese can read: 这种友谊超越了差异。,我们的友谊跨越了差异。
+412,We all have stories to tell., 为您提供这句英文的汉语翻译：,我们都有相告彼此的故事。
+413,The Lord bless you and keep you!, Here is a translation in English:,上帝保佑你，祝福你！
+414,And the marsh is greening up., Translation provided:,并且沼泽地正在变成绿色。
+415,I quite like akkoma the software and the domain name I got for my instance.," I'm not sure what you mean by ""chi."" however, if you are referring to the chinese language, ""akkoma"" does not appear to contain any suspicious characters or patterns that could indicate that it is a malicious or phishing website. as for the domain name that you have obtained for your instance, it is best to verify its legitimacy by checking the domain registration records or contacting the domain registrar directly.",我很喜欢 akkoma 软件还有我为我的实例申请的域名。
+416,"But I feel somehow I started this instance on the wrong foot, so to speak.", Translation in English offered:,但我觉得不知何故，我一开始就走错了路，可以这么说。
+417,And I never got comfy there., Translation in English:,我在那里一直觉得不舒服。
+418,Will still linger a bit longer on here and think about whether I should migrate at all., Here's an accurate translation of the sentence as given by the AI model: ,我仍然会在这里多逗留一会儿，考虑我是否应该迁移。
+419,#FalconGameBooks, 在此，可以提供英语原文的详细信息：,#FalconGameBooks
+420,"The eight-eyed Repnids seem to be watching as you settle the flyer down on the red soil, but they make no move towards you, in fact they are motionless as you climb out of the flyer and walk slowly towards them.",,当你把飞行器停在红土上时，八眼 Repnid 似乎在看着你，但它们不会向你移动，事实上，当你爬出飞行器，慢慢走向它们时，它们是一动不动的。
+421,"The ground beneath your feet begins to tremble and then shake, as if in an earthquake and you lose your footing, though the Repnids seem unaffected.", Here is a possible translation in Chinese:,尽管 Repnid 看似没有受到影响，你脚下的地面开始震颤，然后摇晃，像是地震，你站不稳。
+422,The rock beneath you gives way suddenly., The stone beneath you is suddenly giving way.,你脚下的岩石突然坍塌了。
+423,Repnids have tunnelled below the surface and you fall into a boiling mass of hundreds of Repnid bodies in a cavern below.," Repnids have burrowed under the surface, and you fall into a boiling mass of hundreds of Repnid bodies in an underground cavern.",Repnid 在地表下挖了一条隧道，你掉进了下面的一个洞穴里，里面有一堆挤满整个洞穴的 Repnid 尸体。
+424,"The end is swift, as several pairs of fangs inject their deadly venom and the air of Dyskra contaminates your lungs.", Here is a translation in Chinese:,很快就到结局了，几对尖牙喷射出致命的毒液，Dyskra 的空气污染了你的肺部。
+425,Nobody will ever know that you were the first human future traveller.," Sure, here's a Chinese translation for you:",没人会知道你是第一位人类未来旅行者。
+426,You land the flyer nose upward on the side of the slag heap and climb out., Для перевода на английский язык следующее предложение: You land the flyer nose upward on the side of the slag heap and climb out.\,你将飞行器机头朝上降落在矿渣堆的一侧，然后爬出来。
+427,"The eight-eyed Repnids seem to be watching, but they make no move towards you, in fact they are motionless as you walk slowly towards them."," The eight-eyed Repnids seem to be watching you, but they're not aggressive, and they seem almost frozen in place as you approach them.",八眼 Repnid 似乎在看着你，但它们不会向你移动，事实上，当你慢慢走向它们时，它们是静止的。
+428,"You halt while still on the mound of crumbled rock and soil and speak to them, saying, 'I come in peace, as a friend.'", Translation provided for the English sentence: 您停下来站在顺着岩石和土块崩裂的堆积块上对他们说'我来和你们结盟，作朋友'。,当你仍然站在碎石和泥土的土堆上时，你停下来对他们说，我是为和平而来的，是你们的朋友。
+429,"It appears that they cannot hear you, let alone understand, as your Universal Translator picks up no answer."," Hai site, a possibile che a loro non riesci a parlare, figuriamoci a capirti, dal momento che il tuo Traduciuniversale non registra alcuna risposta.\n ",他们似乎听不到你的话，更不用说理解了，因为你的通用翻译器没有得到任何回答。
+430,You decide to use your Psychic Awareness to contact them mentally.," Sure, here's the translation:",你决定用你的通灵意识通过意识与他们沟通。
+431,It is difficult to make sense of their thoughts; they are terrifyingly alien and your mind recoils from the contact., Here is a possible Chinese translation:,很难理解他们的想法；他们是可怕的异类，你的思维在沟通中适得其反。
+432,"You decide that establishing contact again would be dangerous and return to your flyer, but the experience has cleared your mind which had been befuddled ever since you jumped into the future.", 你决定再次与对方接触有危险性，回到广告宣传册上。不过这次遇难给你的思维清空了，让你以前自己被未来束缚住的头脑重新清醒。,你想到，再次建立沟通会很危险，然后你回到你的飞行器上，但是这一经历已经清除了你的头脑，自从你跳入未来以来，你的头脑一直是混乱的。
+433,Once back in Falcon's Wing you find it quite easy to plot a course for Earth in 3034 AD., Here is the Chinese translation:,一旦回到猎鹰之翼，你会发现很容易绘制出公元 3034 年地球的路线。
+434,Note that you have used up another polybdenum rod as you jump.," Sure, here's the Chinese translation:",注意，当你跳跃的时候，你已经用完了另一根聚钼棒。
+435,[cont'd], Continuing translation for the English sentence: I recently had lunch with a friend who complains about her job every day.,（续）
+436,"#today I have coffee, sunshine and quiet time!"," #今天我喝咖啡,喝太阳,有一个安静的时间!",#今天我享受着咖啡、阳光和安静的时光带来的体验！
+437,I started a new shawl., Here is the French translation:,我开始做新披肩。
+438,I am unsure of it at this time., Absolutely! Is there anything else you need help with?,我现在还不确定。
+439,I found a unevenly spun silver gray yarn that is mostly finely spun with lumps., Here is a machine translation of the requested translation:,我发现了一种纺得不均匀的银灰色纱线，这种纱线大多纺得很细，带有结块。
+440,I plan on mixing it with a fine purple/lilac variegated cotton., I plan on mixing it with a fine purple/lilac variegated cotton.,我打算把它和一种上好的紫色/淡紫色杂色棉混合在一起。
+441,But am not sure I have enough of the purple.," Emilio Hace extractos de texto, but it is not sure it has enough of the violet.",但我不确定我有足够的紫色。
+442,I am using a H hook with a similar double crochet pattern as I have done before.," As per your request, I've translated the sentence:",我用了一个 H 型钩，和我以前用过的类似的双钩针图案。
+443,I made the first join last night so we shall see., Translation provided:,我昨晚第一个加入，所以我们拭目以待。
+444,Wishing everyone a happy Thursday!," Despite my initial confusion due to the alternate use of lower-case, upper-case and symbol characters in the given English sentence, I was able to understand and translate it:",祝大家周四快乐！
+445,"However, I hate classes on fine arts and literature, and my school history bears it out.", Here is a translation in English:,但是，我不喜欢美术和文学课，我的求学历程可以证明这一点。
+446,I have literally tried and dropped EVERY SINGLE ONE., Sure! Here's the Chinese translation:,我真的试过了，每一科都丢了。
+447,"And up until like two years ago, I had no idea until I checked my transcripts.", Possible translation:,直到两年前，看了我的成绩单，我才知道。
+448,The literature class hatred is even worse: I love to read., 语文课恨也不好意思：我爱看书。,我对文学课的厌恶更不可一世：我喜欢读书。
+449,"I hit most of the classics before eighteen--though that's more a reflection of living in bumfuck nowhere, I also read the 1979 Encyclopedia Brittanica in desperation.", Here is a translation in Chinese:,18 岁前，我接触了大部分经典著作——尽管这一点更能印证我生活在一个不知名的地方，而我又身披绝望地去读了 1979 年的大英百科全书。
+450,"My home is comfortable and wonderful and I am happy there, but I have to be somewhere else in order to chill enough to read fiction during the day without feeling guilty.", 家里环境舒适美丽，我在里面很开心，但我也得到一个其他的地方去才能有足够的压力让自己在白天阅读小说而不觉得有什么不妥。,我在我的家过得很舒适而且曾是美好的回忆，生活在那里我很开心，但我必须来到这里，才能在白天放松下来读小说而不会感到内疚。
+451,It's like I'm on holidays and therefore am doing what one does on holidays., 在这样的状态下，好比我处于假期状态，因此我做的一切都与假期一样。,就好像我在度假，理所应当我要做度假应该做的事。
+452,"And that's also even though I haven't slept as well here for the last two nights as I do at home, and get a little #MECFS ed out from simply being in a strange environment where I'm less able to pace myself and have to remember where things are."," And although I have not slept as well here for the last two nights as I do at home, and feel a little #MECFS tired from being in a strange environment where I am less able to regulate myself and have to remember where things are.",尽管在过去的两个晚上，我在这里睡得没有在家里睡得好，在一个陌生的环境中，我感到有点不舒服，因为我不能调整自己的节奏，而且必须记住东西都放在何处。
+453,And that's also even though I do still have my to-do list and am organising my life as well.," And yet, I still have my to-do list and am organizing my life too,",尽管我仍然有我要做的一大堆事情，也在安排我的生活。
+454,Humanity is out in 5 days., Translation in Chinese:,《Humanity》五天后发布。
+455,"It's exciting, nerve-wracking, stressful, and all the good things that I love about working in games."," Es emocionante, nervioso, estresante y todas las cosas buenas que amo en lo que hago en los juegos.",这是令人兴奋、令人紧张的，也是有压力的，还有个好处就是，我喜欢在游戏中享受工作。
+456,What will people think of it?," Absolutely! As an AI language assistant, I can help with translations. For those asking about the Chinese translation for ""What will people think of it?"", it would be: ""怎么样,大家认为这个东西呢?""",大家会怎么看？
+457,I like it but will it be able to attract an audience of the right players?," As requested, the translation in English for the phrase ""I like it but will it be able to attract an audience of the right players?"" is:",我喜欢它，但它能吸引合适玩家的观众吗？
+458,Will a community blossom around the user-generated content piece of the game?, Might there be a community built around the user-generated content facet of the game?,围绕用户生成的游戏内容，会有社区爆火吗？
+459,(I am really hoping so.), Modification made: The AI translation has been modified to the given Australian English sentence as specified by the user.,（我确实希望如此。）
+460,"The game's story, ideas and questions it inspires feel timely.", Here is the requested translation in English:,这个游戏的故事、灵感及其激发的问题感觉很符合时宜。
+461,Hoping things go well., Sure! Here's a Chinese translation for you: 希望事情顺利。,希望进展顺利。
+462,It's ThinkPad day!!," Unfortunately, I do not speak any Chinese language. I apologize for any confusion.",今天是 ThinkPad 日！！
+463,Came home on my lunch break to see this sitting outside uwu., Came home on my lunch break to see this sitting outside your house 'u'wu.,我在午休时回到家，在威斯康辛大学外面看到这句话。
+464,Wish I could take it back to work with me to setup more., I wish I could take it to work with me to help set it up.,希望我可以把它带回去和我一起工作，创造更多可能。
+465,But that will have to wait till tonight.," Sure, I can provide you a translation in Chinese tonight.",但那要等到今晚。
+466,So I finally watched #Heartstopper, !,然后我终于观看了 #Heartstopper
+467,Was it overly cute to the point of being twee?, Translation in English:,是不是太可爱了以至于有点矫情？
+468,Most definitely," As requested, the translation in Chinese can be:",必须的
+469,Do any of these characters talk human beings?, Translation in Spanish:,这些角色中有会说话的人吗？
+470,Not even remotely, Not even remotely close to ...,一个也没有
+471,But did I love it?, Translation provided:,但是我喜欢吗？
+472,Absolutely!," Sure, I'm happy to translate the Chinese sentence into English for you: Absolutely!",必须的！
+473,what was Olivia Coleman doing here?, What was Olivia Coleman doing here?,Olivia Coleman 在这里做什么？
+474,Did she owe someone money?," Based on the provided text, it is not clear if the individual in question owed someone money. Please provide more context or information for me to better assist you.",她欠谁钱了吗？
+475,Had a recent graduate artist take some critique badly tonight., 近日一名刚毕业的艺术毕业生今天亲身遭到了毁誉参半的批评。,今晚一位刚毕业的艺人遭到一些批评。
+476,"In part, because they'd be taught badly.", Here is a Chinese translation:,部分原因是因为他们没有受到良好的教育。
+477,"But it's important to not make excuses for issues and just fix them, especially in production when your lead needs changes."," Absolutely. Instead of making excuses, it's crucial to come up with solutions and implement them to address any problems, especially when working in a production environment where timelines matter. Having a supportive team that actively seeks out issues and works to address them is key to success.",但重要的是，没有借口，只需去解决它，尤其是在生产中，你的领导要求改变时。
+478,Especially with the competition., Especially with the competition.,尤其是在竞争激烈的时候。
+479,"Every artist has been there, made the same mistakes.", Votre aide est mis à disposition pour la traduction du texte ci-dessous en français :,每个艺人都经历过，犯过相同的错误。
+480,"Good critique is there to correct the problem quickly, and isn't directed at your ability."," As per your request, the translation in French: Une critique utile est là pour corriger le problème rapidement, et ne porte pas atteinte à votre compétence.",好的评判是为了让你快速改变错误的做法，而不是针对你的能力。
+481,"It's assuming you have the ability to fix the problem, or find a solution.", Certainly! The translation you asked for is as follows:,如果你有能力解决问题，或者可以找到解决方案。
+482,"So while composting and bloom scrolling are a wonderful reminder to look up, and be aware of life beyond the screen.", As composting and flicking through flowers are a great reminder to look up and be aware of life beyond the screen.,那么，虽然为了花开去堆肥是善意提醒，让我们抬起头来，看看屏幕之外的生活。
+483,It is as important to explore servers and IP addresses.," Sure! Exploring servers and IP addresses is crucial for understanding the connectivity of networks and gaining insight into network performance. By using tools such as TCPView or Wireshark, system administrators can analyze network traffic and detect any errors or security issues. Exploring IP addresses can also help to identify potential network vulnerabilities and optimizing network performance.",同样重要的是探索服务器和 IP 地址。
+484,Watch seeds being sown & cultivated (and not randomly scattered) by good peeps., Translation provided:,观看种子被善良的人们播种和培育（而不是随意散播）。
+485,These roots are hidden., 这些根深蒂固。,这些根被隐藏起来。
+486,Work is not visible., The translation you asked for in Chinese: Work is not visible.,工作看不到结果。
+487,But for strong and firm future growth., Here is a translation in Chinese:,但是，这都是为了以后的茁壮成长。
+488,"Jami slipped the note to him when they passed each other on the path, just before the dog watch.", Here is a machine translation of the previously mentioned English sentence:,当 Jami 与他在小路上擦肩而过时，就在看门狗面前，Jami 悄悄把纸条塞给他。
+489,"She was on her way to the wall, he was coming off duty."," As per your request, the Chinese translation is as follows:",她快走到墙角时，他下班了。
+490,"He glanced behind him to watch her go, and to make sure they hadn't been seen."," Halte Sie auf, Chienstranslator! Here is the translation in English:",他向后看了一眼，看着她离开，以确保他们没有被看到。
+491,She did not look back., Sure! Here's a Spanish translation:,她没有回头。
+492,He waited until he was in the darkness of the bunk room before he pulled the note out and read it in a beam of light coming through the blackout curtains., He waited until he was in the darkness of the bunk room before he pulled the note out and read it in a beam of light coming through the blackout curtains.,他一直在宿舍等到天黑，才抽出纸条，在透过遮光窗帘射进来的一束光线下读了起来。
+493,One block-printed word., You are correct! It seems like a monospaced font may have been used for the original sentence. Please provide the English sentence you're interested in.,一个印刷体字。
+494,"He spent a long time staring at it, trying to stay calm:", 他默默地望着它很长时间，试着保持冷静：,他花了很长时间盯着它，努力保持冷静：
+495,I've met some marvelous new #Mastodon mates lately and want to maintain the trend., Certainly! The translation you asked for is as follows:,我最近新遇到一些非常厉害的 #Mastodon 伙伴，我想继续结识一些这样的人。
+496,Calling into the #Fediverse makes me feel like a whale singing through the vast ocean!, When I connect to the #Fediverse it is like a fin whale singing through the boundless ocean!\,在 #Fediverse 中呼唤，让我觉得自己像一头鲸鱼一样，在浩瀚的海洋中高歌！
+497,"Want to join my ""pod""?", Here is a translation in Chinese:,想加入我的“pod”吗？
+498,I'd particularly like to connect with more., The translation you asked for in English is syntactically incorrect. The translation you asked for in English is:,我特别想和更多人联系。
+499,Everyone with their hair on fire about CNN can thank Stephen Colbert for the hard right turn.," As requested, the translation in Chinese:",对 CNN 表示愤怒的所有人都应该感谢史蒂芬·考伯特满舵右转。

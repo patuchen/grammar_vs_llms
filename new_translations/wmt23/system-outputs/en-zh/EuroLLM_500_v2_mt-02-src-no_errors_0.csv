@@ -1,0 +1,501 @@
+,source,translation,reference
+0,The hacked up version of Jedi Knight was crashing because it was calling a function off the end of a vtable.,受恶意程序破坏的杰斯丁之徒（Jedi Knight II）版程序因为该程序调用了一个VTA末端函数而崩溃。,绝地武士的破解版崩溃了，因为它调用了 vtable 结尾的一个函数。
+1,"Turns out is was presuming that calling IDirect3D::CreateViewport() would return an IDirect3DViewport3, which has additional methods tacked onto the end compared to an IDirect3DViewport, which is what I've implemented.",出事了，它认为调用 IDirect3D::CreateViewport()会返回一个 IDirect3DViewport3，而并没有了解到 IDirect3DViewport超过端末方法的收割者，我自己实现了这项功能。,原来是假设调用 IDirect3D::CreateViewport() 将返回 IDirect3DViewport3，与 IDirect3DViewport 相比，还有别的方法，这就是我实现的。
+2,"To me, this is a pretty big assumption because it is only creating the viewport using a Direct3D object, not a Direct3D3 object.",这个假设对于我来说确实有点夸大其词，因为它只创建了renderbuffer使用Direct3D，而不使用Direct3D3。,于我而言，这是一个非常大胆的假设，因为它仅使用 Direct3D 对象创建视口，而非使用 Direct3D3 对象。
+3,"Now, I get that in practice, IDirectXObject2 is typically a proper superset of IDirectXObject, with no changed function signatures, and new methods only added to the end.",现在，我明白的是，IDirectXObject2在实践中通常是IDirectXObject的合适超集，函数名没有改变，新增的方法只有添加到最后。,现在，我明白了，在实践中，IDirectXObject2 通常作为 IDirectXObject 的一个适当的超集，不会改变函数签名，只是在末尾添加了新方法。
+4,But this is not universally true; for those cases it matters what interface you are using to create the object in question.,但是，这并不是遍及所有领域的真相。对于这些案例，你是从哪种用户界面创建这个对象的作用才重要。,但这种方法并不是万能的；在这些情况下，使用什么接口来创建有问题的对象很重要。
+5,"So anyway, since it does hold true here, to fix it I had to extend my viewport implementation to contain the IDirect3DViewport3 methods so that the call to the new one was valid.","所以,就算这是真的，为了改进它，我不得不推广我的视图范围以包含 IDirect3DViewport3 方法，这样新方法的调用才能是有效的引用了。",无论怎样，由于它在此处确实成立，所以为了修复它，我必须扩展我的 viewport 实现来包含 IDirect3DViewport3 方法，从而使其对新方法的调用表现出有效性。
+6,"Suppose for the sake of argument that science at least in part consists of lists of objectively factual statements about the world, true apart from any theory they might support.",设一说科学至少部分是由关于世界的有史以来事实陈述的列表而组成的，但这些陈述并不依赖任何它们可能支撑的理论。,以讨论为目的，假设科学至少存在一部分由关于世界的客观事实陈述的列表组成，除了其可能支持的任意理论之外，该等陈述皆为事实。
+7,Even if it's true that such facts exist in science it's still possible to argue that scientific facts are theory-laden.,即便这种事实在科学中确是存在，（他）也能够坚信此说始终是理论。,即使这些事实确实存在于科学之中，仍然有可能认为科学事实是纯理论的。
+8,Scientific facts result from experiments.,科学事实源于实验。,科学事实源于实验。
+9,"The experiments don't create the facts on this reading, but the choice of which experiments to conduct controls which facts are discovered.",实验并未创造阅读中的事实，但选择哪些实验将得到失败，就能控制哪些事实被发现。,实验并不创造以上所述事实，但选择进行哪些实验控制了哪些事实会被发现。
+10,"Some facts, e.g. about subatomic particles, can only result from experiments that are themselves only possible in capitalism because they require too much resources, too much organization, too much coercion, to pull off otherwise.",例如某些子原子粒子的一些事实，只能源自资本主义的一些试验，因为它们需要太多的资源、太多组织、太多强制性的因素才能实现。,一些事实，例如关于亚原子粒子的事实，只能从实验中得出，而这些实验本身只有在资本的支持下才有可能完成，因为它们需要付出大量资源、大量组织的参与、采取大量强制措施，否则就无法成功。
+11,This is a very brief sketch of a plausible argument that theories of capitalism influencing the actual content of science are consistent with theories asserting the existence of objective scientific facts.,这是一个颇具说服力的观点范例，用于概述资本主义对科学内容的影响理论与内含客观科学事实的说法实际上是一致的，这是一个非常简要的分析。,以下是对一个似是而非的论点的简述，即资本主义影响科学实际内容的理论与断言客观科学事实存在的理论具有一致性。
+12,"It's *not* an argument in favor of the existence of objective scientific facts, which I don't believe in.",它（不是）对存在客观科学事实的论点的争论，我不相信！,这 *并非* 一个支持客观科学事实存在的论点，我不相信这一论点。
+13,Going to be my first project car.,我的第一个工程车将成为我的第一个项目车。,它将是我第一辆项目车。
+14,Picking this up this weekend.,在这个周末，请自行参阅：\n请自行执行，请自行阅读：,我这个周末来取它。
+15,I was looking for a good first car guy car; and I really love the 80s aesthetic.,我正在寻找一辆好第一代马自达轿车；并且我真的很喜欢80s美学。,我正在寻找将与我朝夕相处的第一辆车；我确实非常喜欢 80 年代的审美观。
+16,Already on coil overs and lowered ride height.,在轮转保持正确和车轮高度降低 后果已然显现了。,已经在盘旋并降低了行驶高度。
+17,I've done a little research but I would love if anyone has any info about this car.,我进行了一些研究，但是如果有人能提供关于这个车子的信息，我就很高兴。,我做过研究的，不过，如果谁能提供任何关于这辆车的信息，我会非常感激。
+18,Personal experiences?,随机给出中文翻译：个人经验不同的粒子？,个人体验？
+19,I know they're not fast compared,我知道，对比之下，他们并不算快。,我知道相比之下它们的速度并不是很快
+20,#Venting into the Fediverse time.,#参与封闭世界 (Fediverse) 的时间。,#在 Fediverse 中发泄。
+21,The Domestic Partner and I went to the liquor store tonight for some beers and a bottle of bub.,今天晚上，我和我的家庭伴侣去了酒馆，那里有一些啤酒和一瓶气泡酒。,我和我的同居伙伴今晚去酒类专卖店买了些啤酒和一瓶起泡酒。
+22,"When we went to check out, the cashier is a fairly obvious #trans woman.",当我们出发的时候，收银员明显是女人的。,我们去结账的时候，发现收银员明显是一位#跨性别女性。
+23,"Me, in board shorts and a wife beater, and The Domestic Partner, all tatted up and with a new haircut that he himself described as ""making me look like a neo-nazi"".","我穿着短裤戴着娃娃脸的妻子,整个都染了上三维刺绣和新发型，自称让我“化身纳粹”。",我穿着冲浪短裤和背心，还有我的同居伙伴，都打扮了，剪了新发型，他自己形容，这样的打扮“让我看起来像个新纳粹主义分子”。
+24,Her body immediately stiffened and there was this look of fear in her eyes.,她的身体立马僵硬了起来，眼中都闪现着慌乱的神色。,她的身体立即僵硬，她的眼睛里有这种恐惧的表情。
+25,And then we just... paid for our stuff.,然后，我们只是...支付了我们所需物品 。,然后我们就...为我们买的商品结了账。
+26,And said thank you.,并说谢谢。,还说了谢谢。
+27,And I said her nails looked cool.,我说她的指甲看起来很酷。,并且我还夸她的指甲很靓丽。
+28,The smile of relief on her face was a great feeling but the fact that she was scared first FUCKING SUCKS AND I HATE IT.,她的脸上带着满满的感激之情，非常开心，但她日前害怕的第一件事确实OUT OF CONTENT，我觉得这个感想可绝对不好。。,她脸上出现了如释重负的笑容，感觉很好，但她第一次遇到的恐惧真他妈的糟糕，我再也不想遇到那样的事。
+29,This is the stupidest timeline and I hate it dot com.,这是愚蠢的时间点，我讨厌点公司名字对应相关的活动。,这次经历真蠢，我再也不想遇到它。
+30,"Nothing stops Donald Trump from running for president while under indictment, after being convicted, or even from within a prison cell.",毫无疑问，任何条款都不能阻止美国总统唐纳德·特朗普自动成为总统，即使他在犯罪的情况下也仍然可以当选，尽管是被定罪或在监禁中的情况下。。,谁都阻止不了唐纳德·特朗普在被起诉时、被定罪后，甚至是在监狱里竞选总统。
+31,"If elected, he would undoubtedly pardon himself to get out of prison.",如果他当选， 无疑他的自己会烏然大赦，如此便已经平安地步出监狱了。,如果成功当选，毫无疑问，他会大赦自己离开监狱。
+32,But he can't pardon himself out of state prison.,但他不能够因为在州监狱（prison=监狱）服刑而无条件地饶恕自己。,而他无法大赦自己离开州立监狱。
+33,It takes the state's governor.,州长作出了决定。,因为这一点需要州长同意。
+34,The two states involved are New York and Georgia.,这两国有对毒品贩运最为敏感的人权问题，危害到人类健康和安全。,可以做到这一点的两个州就是纽约州和乔治亚州。
+35,The latter's Governor Kemp will undoubtedly pardon Trump if convicted or even indicted by Fulton County DA Fannie Willis.,最后的州长勘普松（Kemp）毫不 suspeously 将会赦免徒 刑之罪，或者未会被 Fulton 县检察官范尼·维利斯 (Fannie Willis) 起诉。,如果被富尔顿县地方检察官法尼·威利斯定罪或甚至起诉，乔治亚州州长肯普无疑会赦免特朗普。
+36,NY is the best hope for accountability,纽约成为追责的最佳希望，,纽约州肩负着问责的最大希望
+37,There is significant evidence that real-world communication cannot be reduced to sending signals with context-independent meaning.,显著证据表明，现实世界通信不能被简化为发送具有参照独立含义的信号。,大量证据表明，现实世界的通信不能简单认定为发送与背景毫无关联的信号。
+38,"In this work, based on a variant of the classical Lewis (1969) signaling model, we explore the conditions for the emergence of context-dependent communication in a situated scenario.",在本文中，根据Laws-1969的经典信号模型的一种变种加以考究，我们探讨了局部性情景下多因素互动现象的出现条件。,在本研究中，我们以一个经典的刘易斯（1969）信号模型的变体为基础，对在一个情境场景中出现依赖背景的通信的条件进行了探索。
+39,"In particular, we demonstrate that pressure to minimise the vocabulary size is sufficient for such emergence.",特别是，我们表明了压迫词汇量规模最小的需求是为了发生这些现象所必需的。,特别地，我们通过证据证实，对于此现象的出现，最小化词汇量的压力就已足够。
+40,"At the same time, we study the environmental conditions and cognitive capabilities that enable contextual disambiguation of symbol meanings.",同时，我们研究构建机制和针对符号含义的上下文明示有助于我们的环境条件。。,与此同时，环境条件和认知能力在符号意义方面使语境出现歧义，我们对此进行了研究。
+41,"We show that environmental constraints on the receiver's referent choice can be unilaterally exploited by the sender, without disambiguation capabilities on the receiver's end.",我们展示了从接收方选择受迎对象的环境限制可以通过发送方不影响接收方端不可辨别的能力来一边一边地被利用。,我们发现，接收者选择所指对象的环境限制可以被发送者单方面利用，而接收者没有消除歧义的能力。
+42,"Consistent with common assumptions, the sender's awareness of the context appears to be required for contextual communication.",为了符合常规假设，发送方关于上下文的认知似乎是相关通话的基础。,与通常假设一致，发送者对语境的意识似乎是语境通信的必需条件。
+43,"We suggest that context-dependent communication is a situated multilayered phenomenon, crucially influenced by environment properties such as distribution of contexts.",我们建议，在局部环境属性如：上下文分布的情况下，情况下的交流是有机而多层次的，这种情况的环境属性特征极大地影响了它。,我们认为，依赖语境的通信是一种情景化的多层次现象，受到环境属性如语境分布的重要影响。
+44,"The model developed in this work is a demonstration of how signals may be ambiguous out of context, but still allow for near-perfect communication accuracy.",在本作品中，开发的模型便是一种在不完全情况下信令可能带有歧义，且仍然能够提供接近完美的通信准确性的实例，。,此研究中开发的模型表明，信号在脱离语境的情况下可能是模糊的，但仍然为几近完美的通信精度提供了条件。
+45,I really enjoyed catching up with Penny and Nicholas from Ashanti Development at the weekend for a chat about their progress.,在周末，我真是喜欢和阿萨金开发公司中Penny和尼古拉斯聊天 有关他们刚刚取得的进展。,周末真的很开心，与来自 Ashanti Development 的 Penny 和 Nicholas 讨论了一下他们的进展。
+46,"Ashanti Development has been working with an ever-expanding number of communities in the Ashanti region of Ghana for approaching 20 years, engaging with communities and providing support with water and sanitation, education, healthcare, tree planting and farming.","阿散蒂发展公司已与不断增长的阿散蒂地区的社区合作了20多年的时间,与社区接触以提供水和卫生设施、教育、医疗保健、植树造林与农业支援。。",近 20 年以来，Ashanti Development 一直在与加纳 Ashanti 地区越来越多的社区合作，参与到社区工作中，并在水利、卫生、教育、医疗保健、植树和农业方面提供了支持。
+47,Communities gain the knowledge to embed and support their own development.,社区获得将自己发展集成的知识和支持，在这个过程由wemakeit完成。,社区人员学习了知识，并将这些知识用于支持自身的发展。
+48,I was fortunate enough to spend a memorable six months alongside Nicholas in 2011 supporting a range of projects.,我幸运地度过了一段令人难忘的六个月，在2011年与尼古拉一起合作，参与了一系列项目。,2011 年，我有幸与 Nicholas 共同经历了难忘的六个月，为一系列项目提供了支持。
+49,"When we caught up at the weekend I was chuffed to hear about progress, particularly with tree planting and farm support.",遇上周末，我们办完了各项事项，尤其是在林木种植和农场支持方面，听到了客户的喜悦之情。,周末见面时，得知工作的进展，我很开心，特别是植树和农场获得的支持。
+50,Thousands of trees have been established and farmers have seen increased crop yields through a range of interventions from support with equipment purchases to training.,成百上千根树木已经种植植入、农民从购买设备和培训等多方面利益得到了增强的作物产量。,种植了成千上万棵树，通过从购买设备到培训的一系列干预措施，农户见证了作物增产。
+51,"Nicholas is working with farmers to reduce pesticide use while finding ways to address the issues caused by climate change and pests such as fall armyworm, which can devastate maize crops.","尼古拉斯正与农民合作,减少使用农药,同时寻求解决气候变化和害虫如马铃薯蚜造成的问题。马铃薯蚜会致使马铃薯作物有毁灭性的打击。",Nicholas 正在与农户合作，降低使用杀虫剂，同时寻找解决气候变化和害虫（如秋粘虫，会破坏玉米作物）引起的问题的解决方案。
+52,Photos from my visit to Ghana in 2011.,从我于2011年访问加纳的照片。,本人 2011 年到访加纳的照片。
+53,The UPS store near me won't allow me to write a label or write on the box.,附近的UPS 仓库没人允许我在快递盒上写贴或贴标签。,我附近的 UPS 商店不允许我手写标签或写产品盒上。
+54,The must print the label.,请打印标签。,他们要求必须打印标签。
+55,They won't allow me to tell them the address it's going to and who is shipping it.,他们帮我拦住不让我告诉他们邮寄行程的地址和邮寄人。,他们不允许我告诉他们商品的收货地址和承运人。
+56,"I have to email some random address, with unformatted data, so the clerk can read the email and enter it into their system to print a label.",我需要将一些随机地址（含无格式化的数据）发送电子邮件给空降人员，这样服务员可以在电子邮件中阅读到信息并将信息输入电子邮件系统以后即可打印标签。,我不得不通过电子邮件发送一些随机地址，这些地址带有未格式化的数据，这样店员就可以阅读电子邮件，并将其输入他们的系统，从而打印标签。
+57,"And they always to charge me $2.25 for that ""convenience"".",他们总是要 2.25 加成这件'方便'事 。,针对这种“便利”，他们总是向我收取 2.25 美元的费用。
+58,The next morning and I can't get past Chris Licht's disgraceful pretense of public service journalism on CNN last night.,早上，我不能不觉得Chris Licht的肮脏的公共服务新闻记者昨晚的借口在 CNN 太过可耻了。,第二天早上，对于克里斯·利希特昨晚在美国有线电视新闻网伪装不光彩的公共服务新闻，我无法忘记。
+59,"It was an outrage, like a symbolic Jan 6 anti-democratic festivus of lies & grievance, self-destructively hosted by American media.",这是一件非常令人恼火的事情，就像一个类似于1月6日反民主传颂谎言和抱怨的节日；这个节日是由美国媒体自导自演的，导致自我崩溃了。,这真是骇人听闻，就像 1 月 6 日反民主节日，一个象征性的谎言和表达不满的节日，而这是由美国媒体近乎自我毁灭地把持。
+60,THE SHAMEFUL AUDIENCE.,该卑鄙的听众。,“可耻的观众”。
+61,Licht AGREED to an all Republican audience!,莱希同意所有共和党人！,利希特“赞同”所有共和党观众的观点！
+62,Who vetted & chose the individuals?,誰全程審核了方針內容，並准予選定該人物嗎？,谁审查和选择这些个体？
+63,There's a story to be reported there.,现场有报道有待报道。,这件事有个事实要报道。
+64,The ratings--seeking delusional irresponsibility of it all.,它意味着在所有内容中，引发疯狂不负责任的评级。。,为追求收视率而进行的不负责任的妄想。
+65,It can't be repeated.,这句话不能重复，经过查证，确实如此。,不能重蹈覆辙。
+66,"I have a very drafty basement, which essentially means I can get a lot of rodents taking refuge.",我有一个很潮湿的地下室，这基本上就是说我可以让很多臆想的动物栖身于这些地方。,我有一间通风非常好的地下室，这意味着可能会让许多老鼠在此避难。
+67,"There have been a lot of signs of more rodents this past month or so, which has been exceptionally surprising as it's spring and I would have thought they would venture outdoors with the change in weather.",这么一说的话已经发现了很多来自鼠类动物的迹象，我觉得这让人吃惊，因为春天到了，我原本以为它们会随着新气候开始出门散步。,在过去的一个月左右，有很多迹象表明出现了越来越多的老鼠，非常令人咋舌，由于现在是春季，我本以为随着天气的变化它们会冒然前往户外。
+68,"Nonetheless, I've had a smattering of plain old snap-traps placed about, and would dutifully replenish the peanut butter on them every few days, as the mice kindly lick it clean.",尽管如此，我还是为数不多的通平涂陷阱放置了，并在每隔几天便替换为新的，肌肉小白鼠很清楚地项饲料递送它清洁。,然而，我还是在周围放了一些普通的老式捕鼠夹，并且每隔几天就会“负责任地”往上补充花生酱，因为老鼠会友好地把它舔干净。
+69,"I finally got fed up with this routine last night, cleaned all the traps of peanut butter, and superglued a pistachio to them.","昨晚我终于受够了这种节拍式,清洗那些含有花生酱的陷阱,粘上了一颗核桃。",昨晚我终于放弃了这种套路，把所有花生酱都清理了，还用强力胶粘了一颗开心果在上面。
+70,It worked.,这东西确實工作了，！,奏效了。
+71,"(fwiw, I've tried nearly every ""humane"" trap on the market with very little success.",(被告知，如无错误，我试过了几乎所有的‘无罪的’陷阱，但结果都很不理想。),（顺便说一句，我几乎试过了市场上所有的“人道”陷阱，但收效甚微。
+72,"I'm not especially happy with killing them, but I won't be taking comments on the ethics of killing mice.)",我很少感到高兴是杀了它们，但是我不会评论杀鼠行为的道德。,我并不会为了杀死它们乐此不疲，而我也不会对杀死老鼠的道德问题发表意见。）
+73,I'm tired of conservative parties and governments wrapping themselves in the brand of pro-business.,我厌倦了保守党和政府用经济自由主义幌子行事了， （特别是联邦选举选区）。,我厌倦了保守派政党和政府打着亲商的旗号包装自己。
+74,"They aren't, at least not in Alberta.",这类用品确实不存在，至少在阿尔伯塔还不存在。,他们不是亲商派，至少在阿尔伯塔省不是。
+75,Sure they cut business taxes.,当然，削减了企业税收。,对，他们削减了营业税。
+76,But they also cut grants and tax credits that encourage more business activity.,但他们也截断了更多商业活动所鼓舞的补贴和税项，，也就是说，伸张正义还是需要多一份耐心，尽量避免剥夺他人的权利和利益。,但是他们也削减了鼓励更多商业活动的拨款和税收抵免。
+77,"I own a business. It's successful in spite of the provincial government, not because of it.",我拥有一家企业。这家企业尽管在省政府支持下成功经营，却并非省政府导致它的。,我拥有一家企业。我这家企业是不依靠州政府而获得成功的，不是因为他们削减营业税。
+78,"Discovered the hard way that in 2023, local TV station web sites are the absolute worst experience on the internet.",發現了難以否認的真理，2023 年，當地的電視站網站成為網際網路上最糟糕的體驗。,我发现，在 2023 年，地方电视台网站带给我的绝对是互联网上最糟糕的体验。
+79,"Popups, auto-play videos, animations, popovers, and ads, ads, ads.",弹出式弹出式广告，自动播放视频，动画，滚动广告和广告，广告，广告，广告.,弹出窗口、自动播放视频、动画、弹出窗口和一而再再而三的广告。
+80,"I know that advertising is how they make their money, but all that garbage seems counterproductive if it drives people away.",我知道，广告是他们如何赚钱的，但这种垃圾显得反效果，如果会让人们远离他们。,我知道广告是为他们创收的一种方式，而如果大量的广告让观众反感离开，似乎会适得其反。
+81,"This is true even now that goatse.cx is gone, though it would be a close race to the bottom between goatse and, say, khou.com, where I tried to watch a video the Wendy sent me.",尽管囧碼港客戶端已经停运，但这个情况仍然成立。两台服务器之间的比赛相当激烈，就像是囧碼（Goatse或GoatSe.Com）和Khou.Com的比赛。我曾经是Wendy发给我的视频的收视人。,我曾在 khou.com 尝试观看 Wendy 发给我的视频，尽管 goatse 和 khou.com 之间的竞争会非常激烈，goatse.cx 已经消失却是事实。
+82,"On the first train today, the ticket checker looked at our tickets and said ""long journey!""",今天的第一趟火车，车票检查员经过了我们在车上的车票，并说了“得瑟一趟！”,在今天的第一列火车上，检票员看了看我们的票，说“长途旅行！”
+83,"""Yeah and I'm coming back today,"" I said.",「那麼，我今天回來了所說：」。,“是的，我今天就回来，”我说。
+84,"""I'm just dropping him off in Glasgow,"" I attempted to explain, gesturing at my traveling companion.","我只是想在格拉斯哥把他带走"",我试图解释,并向我的同伴示意。",“我只是让他在格拉斯哥下车，”我试图解释，并向我的旅伴做了个手势。
+85,"""There's not something you hear a lot 'I'm just dropping him off in Glasgow,' "" the ticket guy said.",这句话的意思是：“在哪里，有人说话了很久，‘我只是把他送到格拉斯哥的人’。” \n 售票工人说，,“您不会经常听说‘我只是让他在格拉斯哥下车’，”售票员说。
+86,It's a thing I've never said before either.,这是我从未说过的先例。。,我也从来没这样说过。
+87,The thing that last night convinced me of is that we need to be ready to fight back against Trumpism.,即日深夜，让我予以印证的就是我们需要做好准备反抗特朗普主义。,昨晚，我确信，我们有必要准备好反击特朗普主义。
+88,Trumpism is a cult.,特朗普主义是一种邪教。,特朗普主义是邪教。
+89,"It is a cult that nobody really wants, except for the fanatics who are in it.","这个教派真是上天不沾地的,除了上天注定的虔诚信徒们之外,其它人根本不追随。",这种邪教，除了其中的狂热分子，没有人真正想要参与。
+90,And they are truly nuts.,他们真的疯了。,他们是真的疯了。
+91,We can not allow them to hijack our country.,我们不能让他们接管我们的国家。,我们绝不允许他们劫持我们的国家。
+92,It is time to fight back.,有必要反击。,是时候进行反击了。
+93,Go out and protest now.,请你出门现在进行绝食抗议。。,现在就出去抗议。
+94,Get some bumper stickers that are anti-Trump and plaster them all over.,请下载一些美联储马太效应吉祥物，贴在车身各处。,找一些反特朗普的车尾贴，贴满。
+95,Yell back at those who would try to talk over us.,向那些试图在我们面前滔滔不绝的人说话的人说出你的威胁话语。,对那些试图凌驾于我们之上的人大声呼喊。
+96,This is not normal.,这是不正常的，（我）不能为他们执行任务了。,这很反常。
+97,This is not OK...,这不是正确的...\n ,这是错的...
+98,My neighbor & I arrived home at the same time and I could hear him coughing up a covid mucus storm from across the street.,我的邻居来了，我们一起回家，我能从我对面的楼道里听到他咳嗽，咳出了口罩。,我的邻居和我同时到家，我能听到他在街对面咳出一股带有新冠肺炎病毒的痰。
+99,So I rushed to get into my apt to avoid him but he still managed to catch up to me to chat.,因此我飞快地捎带进来预定好房间好躲避攻中，但他仍和我对口猜。,所以我跑进我的公寓来避开他，但他仍然试图赶上我，与我聊天。
+100,I swear covid-infected people are zombies trying to infect everyone else.,我发誓，感染了covid的人是穿着僵尸的外衣试图感染别人。。,我坚信，感染新冠肺炎的人就是努力感染别人的僵尸。
+101,It is not socially acceptable to go out in public or rush up to people when you are coughing up a mucus storm.,否则，在公众人物身边咳嗽、用手驱散痰气时频繁出入公共场所，这种动作不符合社会公正标准。,社会无法接受的是，你咳出大量痰，前往公共场合或冲向人群。
+102,I repeat. It is not socially acceptable to spread your covid mucus storm everywhere!!!,我重复一下，传播网络上的疫情不安是非理性的。,我重复一遍。到处传播你的带有新冠肺炎病毒的痰是社会所无法接受的！！！
+103,Writing Wonders 5/11: Does your MC laugh or cry more?,中文: 写得神奇的是第 5/11:你是否更喜欢笑也不是更喜欢哭？,书写奇迹 5/11：你的 MC 笑的时候多还是流泪的时候多？
+104,Abe keeps his sorrows hidden and laughs easily while Tom is not afraid to cry but is less amused by rude humor.,阿部 彬因為不怕流淚，但不排除感冒過敏，當不著地笑着也無所謂，而 Tom 則不太反對哭泣，但不喜歡粗暴的幽默。,Abe 隐藏了他的悲伤，坦然一笑，而 Tom 不怕流泪，但不喜欢粗鲁的幽默。
+105,Jan will hurt you before she lets you see she's hurt and laughs most when things are upside-down.,张江会伤害你之前，她也不会为了害你而笑。直到事情出了幺翻脸，她的笑声就总是这样。,Jan 会在你伤到她之前伤害你，如果事实相反，她大多情况下会笑。
+106,Mio knows that sorrow is life's constant companion.,"Mio知道,伤痛永远都是生活伴侣。(Mio knows that grief is the constant companion of life).",Mio 知道悲伤伴随着一个人的一生。
+107,"After 4,000 of distress Yl finds herself in a place of love and is having huge feels she doesn't know what to do with so there's a lot of both.",经过4000次哀伤，Yl发现自己融入了一个充满爱情的地方，这种情况让她无法自己做出决定，她觉得自己有些麻木了，更加难过。,Yl 在经历了 4000 次的痛苦之后，发现自己处在一个充满爱的地方，并且感觉强烈，她不知道该如何是好，所以两者都有。
+108,#CNN needs to just close down.,#CNN需要关闭，）,#CNN 需要做的就是关门大吉。
+109,Yesterday's fiasco with #MangoMoron was an outrageous fiasco.,昨天的 #迷果文朗盛场 (Mango Moron) 的惨事是一场莫名其妙的惨事。。,昨天 #MangoMoron 的惨败真的令人愤慨。
+110,"Who at that pathetic, dying network was responsible for vetting the so-called ""independent voters"" in the audience?","然而., 这个令人遗憾的死亡网络, 它负责审核观众所谓的 ""独立选民""?\n",在那个可悲且正在死去的网络中，谁来负责审查观众中所谓的“独立选民”？
+111,"Which cable news ""executive"" made the call to give the fat, lying criminal this much air-time?","哪家 ""顶头上司""做出了邀请 ""卡壳者""拥有多成百万被告被审议的呼吁？",哪个有线新闻“高管”打的电话，给这个肥胖且信口雌黄的罪犯这么多的播出时间？
+112,High pressure will prevail through early next week.,在下个周早些时候，高压将持续存在。,下周早些时候高压将会持续多发。
+113,A cold front should arrive by the middle of next week.,一周的下一个星期中冷锋应该到来。,下周周中将迎来一股冷锋。
+114,"Early this morning, IR satellite and surface based observations indicated an expanding area of low stratus and patchy <URL>",早晨，ＩＲ卫星和表面观测显示低层云区的扩张区域正在扩张，<URL>（访问此链接）。,今天早晨，红外卫星和地面观测显示，低云区域正在扩大，伴有零星小雨 <URL>
+115,"Geeky student Arnie Cunningham falls for Christine, a rusty 1958 Plymouth Fury, and becomes obsessed with restoring the classic automobile to her former glory.","科幻学生阿尼.康宁汉对锈的 1958 Plymouth Fury 产生了爱,并激发了对这辆经典汽车重返昔日繁华的痴迷，。",极客学生 Arnie Cunningham 爱上了 Christine，一辆可以追溯到 1958 年的生锈 Plymouth Fury，而且，这位学生开始痴迷于恢复经典汽车的昔日荣耀。
+116,"As the car changes, so does Arnie, whose newfound confidence turns to arrogance behind the wheel of his exotic beauty.","随着车子换档,Arnie也发生了变化,他的 新的 自信不拘泥于他的外貌的车子在驾驶 之后也 变成了自大小。",随着汽车的变化，Arnie 也在变化，在他异域佳人的车轮下，他新获得的自信转变成了傲慢。
+117,Salesforce Partner,销售处合作伙伴,Salesforce 合作伙伴
+118,Codleo is one of the best Salesforce Partner offering best Salesforce services tailored to your company needs.,科德利埃(Codleo)是一家提供优质 Salesforce 服务的合作伙伴，为您的公司提供专门的 Salesforce 服务。,Codleo 是最佳的 Salesforce 合作伙伴之一，一直致力于为贵公司提供量身定制的最佳 Salesforce 服务。
+119,Need help?,需要帮助吗？,需要帮助？
+120,Contact our Salesforce Consultants today!,请在今天与 Salesforce 咨询人员联系！,请随时联系我们的 Salesforce 顾问！
+121,Find a reliable Salesforce partner to leverage their expertise and maximize the value of your CRM investment.,找到一个可靠的 Salesforce合作伙伴，可利用顾问的专业经验，最大化您的CRM投资。,寻找值得信赖的 Salesforce 合作伙伴，充分利用其专业知识，将您的 CRM 投资价值最大化。
+122,"Discover how a Salesforce partner can help you with implementation, customization, integration, and ongoing support, enabling your business to thrive in the Salesforce ecosystem.",您能否提供中文翻译，表达如下：销售相关方可以帮助您实现，实现、整合和持续支持。（使您的企业在 Salesforce 生态系统中蓬勃发展。）,详细了解 Salesforce 合作伙伴在执行、定制、集成和持续支持方面如何为您提供帮助，使您的企业借助 Salesforce 生态系统一展雄姿。
+123,One of the craziest parts about my neighbors turning against me is thinking about how much effort it takes to be hostile.,我的邻居转向我之前的一个最荒唐的部分，就是他们想知道如何付出这么多努力来表现敌对。,我的邻居与我针锋相对，最不可理喻的是，惦记着要花多大力气对付我。
+124,"Forget me, fine.",忘了我，行了，。,忘掉我，好。
+125,"Ignore me, fine.",不要關注我，都還好。,无视我，好。
+126,It hurts but you gotta do you.,"这个对你来说很痛,但还是要做zk를",会很痛苦，但必须这样做。
+127,But at this point the open hostility and violence is getting worse.,不过，此时已经比较恶劣的敌对情绪和暴力行为正在加剧。,而此时公开的敌意和暴力正在加速恶化。
+128,That takes effort.,这需要付出努力。,那样做需要花力气。
+129,Slamming a door in my face takes effort.,打开门时撞上我，这样的事情需要费力有劲。,当着我的面摔门需要花力气。
+130,Our dogs used to be BEST FRIENDS.,我们老狗狗以前是极其亲密的朋友；,我们的宠物狗曾是我们最好的朋友。
+131,And I still have NO IDEA what I could have possibly done to deserve this.,这个版本的中文翻译是：我仍然不知道我有什么可能作为个体会得到如此待遇。,我还是不知道我到底做了什么该受到这样的惩罚。
+132,They had keys to my apartment for 6+ years.,他们拥有我的公寓的钥匙，这些钥匙已经是我公寓钥匙的第6年了，一共有6年多。,他们 6 年多之前就有我公寓的钥匙了。
+133,That vessel is off-limits.,那艘船在禁用的範圍内，是這麼說的。,那艘船禁止入内。
+134,I am aware of your hatred of Organa.,我清楚你的憎恨 Organa。,我了解你对 Organa 的仇恨。
+135,She is irrelevant to me.,她对我而言无关紧要。。。,她与我而言是无关紧要的人。
+136,You may kill her if you can.,你可能会杀了她，只要你能，.\n ,如果可以，你可以杀了她。
+137,But another individual often flies aboard that ship.,但是，常常在该船上搭乘的还有另外一名乘客，,但另一个人经常乘坐那艘船。
+138,If he were to die... the consequences would be... significant.,如果他死亡，... 其后果将是... 严重的。。。,如果他死了...后果将会...非常严重。
+139,I gripe about dad-ification a lot.,我对父亲化的话儿一说不停。,我多父亲化这种行为非常抵制。
+140,Here is a (slightly longer than) toot-length crash course in what I mean by dad-ification:,以下为父式定义（略长一些）：这里是一个关于我父母亲式定义的“致死性简介”：,以下是关于我所说的“父亲化”的简单概述（略长）：
+141,"It isn't my term, it is a term used to describe when a narrative or gameplay mechanic is built around a central protagonist (usually older, usually male) stewarding or guarding another person (often younger).",我的说法不是我自己的说法，它被用来描述一个中心的男主角通常“大一岁，多数是男性的人物”在旁边护卫／守护着还有一个还有其他人——通常比父亲稍大一点——人物。,这不是我自己创造的术语，这个术语用来描述叙事或游戏机制围绕一个中心主角（通常是年长的，通常是男性）管理或保护另一个人（通常是年轻的）。
+142,The Last of Us is an easy and canonical example of dad-ification.,《最后一个人／最后一个家伙》是父亲式教育的一个实例，简单易行且有规律。,《最后生还者》是一个关于父亲化的经典示例。
+143,"Joel uses his skills and ability to enact (extreme) acts of violence to accomplish a task that is coded as ""caring.""",乔尔的技能和能力能实施极端暴力的行为来完成以“关爱”为标识的任务。,Joel 利用其技能实施（极端）暴力行为，以完成一项代号为“关爱”的任务。
+144,"Dad-ification usually posits that the solution to a situation where a parent figure must care for or protect a child or child stand-in is overwhelming strength, and using that strength to force a very specifically shaped power dynamic.",通常来说，父权化(dad-ification)认为，在当一名长辈必须照顾或保护一个或多个孩子的状况时，解决方法是过于强大的力量，例如强制实施特定的权力关系结构。,父亲化一般意味着，在父母必须照顾或保护孩子或弱势人员时，这种方法就屡试不爽，他们使用这种方法强制将自己的这种特定权力凌驾于他人之上。
+145,"Dad-ification erodes the possibility for communal solutions, and often wholly ignores, or undercuts any agency the child has.","父权主义削弱了社区解决问题的可能,同时往往完全忽视，或压制任何孩子拥有的意见。",父亲化不仅会削弱集体解决方案的可能性，还经常会完全忽视或削弱孩子的任何能动性。
+146,"In this way, Dad-ification is a stand in for a lot of neoliberal ideals; especially ideas like bootstrapping and self-sufficiency as being an ultimate goal/indicator for success.","这种方式就是日党的功能,挺过很多的自由主义意识形态;尤其像作为最终目标或成功标尺的自营助长的观念。",这样看来，父亲化是许多新自由主义理想的代表；尤其是像自力更生和自给自足作为成功的最终目标/指标这样的想法。
+147,Here's a quick overview of how to make use of our website.,给大家介绍一下在我们的网站上使用方式，简要说明一下我们网站的用途。。,以下是关于我们网站的使用方法的概述。
+148,- We send out notifications when airfare goes on sale.,- 我们会在票价开始询价（sale）时向您发出通知。。,- 机票打折时，我们会进行通知。
+149,- We provide links to where you can book the fare.,我们为您提供乘车票价预订参考链接，请点击后预订。,- 我们会给您提供预订机票的链接。
+150,"- We don't sell tickets, or charge a subscription.",我们不销售门票，或收取订阅手续费。,- 我们不销售机票，也不收取订阅费用。
+151,- More details are in the full blog post.,-更多详情都在完整文章中，请访问它^-^,- 请查看完整的博客帖子了解更多细节。
+152,- We maintain a list of example booking dates for each deal we post and we update that list several times a day.,我们维护每次发布的交易的预订时间作为示例的清单，而且我们会将清单更新到每天的几次。,- 对于我们发布的每笔交易，我们会持续更新一个示例预订日期列表，每天更新数次。
+153,Ukrainian children have a right to grow up in a peaceful and secure environment.,乌克兰儿女有权在和平、安心的条件中成长；,乌克兰儿童享有在一个和平且安全的环境中成长的权利。
+154,"Yet, unimaginable fear, terror and displacement have left them with the invisible scar of trauma.",但是，无法想象的恐惧、恐怖和流离失所带给他们的这个看不见的创伤印记，我们不能回避这个问题。,然而，不可思议的害怕、恐怖和流离失所给他们的心理烙上了伤疤。
+155,"This Tuesday, President von der Leyen met First Lady Olena Zelenska in Kyiv to discuss how to support her efforts to provide mental health assistance to vulnerable children.","根据周二在基辅与第一夫人奥列娜·泽连斯克(Oleana Zelenska,女总统夫人的女儿)会谈，总统冯德莱恩讨论了一系列的支持她在为弱势儿童提供心理卫生援助的努力。",本周二，冯德莱恩主席在基辅会见了第一夫人叶莲娜·泽连斯卡娅，针对如何支持她为弱势儿童提供心理健康援助的工作进行了探讨。
+156,We have already offered mental health and psychosocial support.,我们已经为心理健康和心理社会支持的提供费用（MSP）付款。,我们已经在精神卫生和心理健康方面提供了支持。
+157,All our efforts will help them make it through this journey.,我们的一切努力将有助于他们度过这个旅程，，,我们将尽一切努力帮助他们度过这段艰难的时光。
+158,A bunch of shiny new goodness in #dart,一个光鲜亮丽的新健康果腹美味，在#dart中出现了,#dart 里展现的是新时代的美德
+159,Over time dart became my go-to for quick UI.,随着时间的推移，多普尔变得是我对交互式图标提供的最可靠选择。,dart 逐渐成为我快速与用户对接的首选。
+160,"#flutter is a pleasure to work with, and they have #mobx for easy store management.",由于弗劳跃的交互设计十分有趣，因此非常喜欢使用其来管理仓库。,#flutter 是一个绝佳合作伙伴，他们拥有可以简化商店管理的 #mobx。
+161,"The dependency story is less insane than nodejs, too.",基于依赖关系的故事，没有比nodejs还更离谱的。,而且依赖方面也没有 nodejs 厉害。
+162,"Of course flutter sucks really bad when it comes to behaving like a good native app would (anywhere, really. Even flutter web target sucks).",当然，在行为上与原生应用相匹配时做的滑动操控处理会相当糟糕（在任何地方，真的。即使是 Flutter Web 目标都糟糕。）,当然，相比表现卓越的本地应用程序，flutter 真的很糟糕（无论在哪里应用，真的。甚至 flutter 的网络目标也很糟糕）。
+163,But it allows to move fast and that's why it's ideal for small hacks.,这使得移动变得快，因此它非常适合小程序。,但它允许快速移动，这就是它成为小型黑客理想选择的缘由。
+164,Echidna with amethyst and magenta spikes.,柚子果虫身身上像石榴一樣美麗，帶著紫色尖刺。,长有紫水晶色和洋红色尖刺的针鼹。
+165,"They are average height, has an average build and muscular.",平均身高、平均體型和肌肉發達。,它们身高和身材皆为中等，拥有发达的肌肉。
+166,Their tail is extremely thick.,他们的尾巴极其粗。,它们的尾巴非常粗。
+167,"Their hair is raspberry, short and curly.",他们的发型是紫色的。它们很短而且卷卷的。,它们的毛发是红莓色的，短小而卷曲。
+168,Their eyes are pear and they wear scarlet cateye glasses.,他们的眼睛乌大，戴着红色弛耶隐形镜片。,它们的眼睛呈梨状，仿佛戴着猩红色的猫眼眼镜。
+169,Their most interesting feature is their good deeds.,他們最令人感興趣的特點是他們的良好行為。,它们最吸引人的是它们友好的行为。
+170,Looking for a list of the best vampire games on PC?,寻找最受欢迎的电脑游戏角色扮演 (Vampire) seznam？,在 PC 上寻找最佳吸血鬼游戏列表？
+171,"Being able to jump really high, tear regular humans to shreds, use creepy magic powers, and replenish health by feasting on your enemies - this should be a staple of all PC games, to be honest.",对于 PC 游戏来说，有可能跳得非常高、撕碎普通的人类、利用令人毛骨悚然的魔术力量、并且通过用敌人排成队来补充健康 — 这应该是所有 PC 游戏中的基本要素，坦白说了。,能够跳得很高，将普通人撕成碎片，使用魔力，令人毛骨悚然，并通过吃掉你的敌人来补充生命力——说实话，这应该是所有 PC 游戏的主线。
+172,"Despite the best efforts of Bram Stoker, Max Schreck, and Stephenie Meyer in trying to make them look bad - everyone ...",尽管布拉姆·斯托克、马克·谢尔克和斯蒂芬妮·梅尔 (Stephenie Meyer)对他们试图让他们看起来不好 - 每个人努力追求力求改善：,尽管 Bram Stoker、Max Schreck 和 Stephenie Meyer 已经竭尽全力让他们深陷窘境——每个人...
+173,Dreamed my parents were playing my porn game and giving me feedback.,打算梦见我的父母正在玩我的Porn遊戲，并会给我反馈。。,梦见父母在玩我的色情游戏，给我提供了反馈。
+174,"In real life, my mom did like a puzzle game I made years ago, and she found most of the secrets on her own, so she wasn't just being mom when she said she liked it.",在现实中，我妈妈喜欢上我制作的益智游戏一段时间了，而且大部分的秘密都在于她自己找到了，她才是妈妈而不是说出的那个人。,在现实生活中，我的妈妈确实喜欢我几年前做的一个益智游戏，她自己发现了大部分秘密，所以当她表示喜欢这个游戏时，她不仅仅是我的妈妈。
+175,So maybe she'll like my porn game too?,那么可能她可能也会喜欢我的玩具游戏？,那么，她也许也喜欢我的色情游戏？
+176,It maybe has too many language subtleties.,这句话可能涉及过多语言上的细节。,它可能在语言方面有非常多的微妙之处。
+177,"Need to translate it to Mandarin and/or Hokkien, neither of which I know at all.","请将该英文句子翻译成中文(我都不太清楚),或者说这句话用汉语和闽南话（也没有听说过）。",我需要把它翻译成普通话和/或闽南语，这两种语言我都不懂。
+178,Guess I'll have to see whether Bing or Google is better at translating dirty gay sex puns.,猜测，我是否得去看看哪一种网站更好地能翻译要求比较脏的，跟随色的同性恋性虐的俏皮话。,我想我得看看必应和谷歌谁更擅长翻译下流的同性恋性爱双关语。
+179,Been toying with this thought for a little while:,這念頭一直在玩弄我，一陣子了:\n ,考虑这个想法已经有一段时间了：
+180,"Mental health is often seen as something separate from ""regular"" health.","中国语义:心理健康常常被视为与""常规""健康的不同状态。",与“普通”健康相比，心理健康通常被视为异类。
+181,Why?,为何？,为什么？
+182,Because it happens in the mind and seems less tangible than physical health.,（因为它发生在心灵里，看上去不那么有形，就像身体的健康一样）。,因为它针对的是大脑，似乎不像身体健康那样看得见摸得着。
+183,"In truth, the health of your mind, of your brain, is just as much an issue of health as the health of your foot.",确实，你脑子、脑神经的健康，与你的脚的健康一样重要。,事实上，你的精神健康，你的大脑健康，就像你的腿脚健康一样，同样是健康问题。
+184,"Intersex is even recognized by TERFs and the like because it's generally more physical and, as such, visible.",TERFs 和类似的人士甚至认同异（）性，因为异体通常更具体、很明显。,双性人竟然被 TERF 之类的机构所认可，因为它通常更具物理性，因此也更明显。
+185,"In the same way that mental health is seen as less ""real"" than physical health by many, I kind of feel that being trans is merely intersex of the mind.",正如很多人认为心身健康与身心健康有点划不来似的，我自己觉得跨性别与灵魂有淡淡和谐才是最重要的。,就像许多人认为精神健康不如身体健康“真实”一样，我有点觉得跨性别只是精神上的双性人。
+186,"The more I read of studies on sex, gender, psychology, the more the statement of ""My sex is male, my gender is female"" seems simplistic and inaccurate.",越是研究性别、性别本质、心理学等问题，这种“我是男性，我的性别是女性”的言论就越感觉简易，因此不正确。,我读的关于性、性别、心理学的研究越多，“我的性是男，我的性别是女”的说法就越显得简单化和不准确。
+187,It almost seems like ceding part of an argument to TERFs.,这几乎像是把特定论点的一部分让给 TERFs（性倾向不变异者）。,这大概就像把论点的一部分让给了 TERF。
+188,"I feel that to be trans is to be ""biologically non-binary"".",我觉得跨性别者主要是“生物学上不是双性人（bisexuality）的）。,我觉得跨性别就是“生物非二元”。
+189,"My sex is non-binary, my gender is female.",我的人生 sexo 複合並非二元化，而是我背後的性别是女性。,我的性是非二元的，我的性别是女。
+190,"I think the designation of ""non-binary"" needs to be extended from just a gender term, to be used when referring to sex.",我认为，终止用“两性”这个词系指代性别的一个提名需要从“性别”用到一般性，例如在提及性别方面获取更加准确的词语。,我认为“非二元”的定义需要从仅仅是一个性别术语扩展到对性的指代。
+191,"I've been, on and off, listening to the works of @iotar",我一直都在不時地聽 @iotar 的作品。,我一直在断断续续地听 @iotar 的作品
+192,There's a lot of well good stuff in this mysterious collective's backlog.,"这里有许多与秘密的集体档案密切相关的好处。""",在这个充满神秘的收藏集中有很多好作品。
+193,Like krauty moods and other worldly pop music and radiophonic workshop and all sorts.,类似的氛围，像是摇滚乐和世界歌以及由电波产生的新兴音乐，以及各类乐室。,比如 krauty moods、其他通俗流行音乐、广播电台直播间等各种形式。
+194,Very much worth having a go at.,尝试一下非常有意义。,非常值得试听。
+195,Also FWIW I like the archive.org interface a lot more than the desktop #bandcamp \- I've no idea how people use bc as their primary music platform (besides the political reasons).,Additionally FWIW I really like the interface on archive.org better than the desktop #bandcamp - I have no idea how people use it as their primary music platform (other than political reasons).,另外，我更喜欢 archive.org 的界面，而不是桌面 #bandcamp \- 我不了解大家如何将 bc 作为主要音乐平台来使用（除了政治原因）。
+196,Playing around a bit with Flutter.,通过Flutter玩弄一点，）,试玩了下 Flutter。
+197,"I'd hate to base my business on tech from Google, to be honest, on the other hand Google is one of the few big players with real incentives to create a compelling cross platform experience and it shows.",诚实地说，我不愿意把我的生意赖以成名的技术发展源自于Google，另一方面，Google是真正有动力打造跨平台产品的少数几个技术巨头之一，而这在很大程度上也是有道理的。 ,说实话，我不喜欢把我的业务建立在谷歌的技术上，但另一方面，谷歌是少数几个真正有动力创造引人注目的跨平台体验的大玩家之一，这一点也很明显。
+198,"(And also: The Web is now largely a Google thing, unfortunately)",中文翻译：(另外，网络现在已基本体现为谷歌)，遗憾的是。,（另外：遗憾的是，网络现在很大程度上都是谷歌的产品）
+199,Also please refrain from telling me that google/flutter apps suck on iOS and macOS.,另外，请你尽量不要告诉我关于谷歌和Flutter那个对于ios和macOS适用的应用软件的吐槽。。,也请不要告诉我谷歌/flutter 应用程序在 iOS 和 macOS 上引流。
+200,Cross platform is hard if you want to do it well.,跨平台开发，如果你想做到很好，那真的很难。,跨平台要想做好很难。
+201,I know that.,我知道，（我）知道자。,我知道。
+202,Thank you to those people who have downloaded the latest update to Leasey.,感谢那些下载了勒采伊最新更新文件的人，！,感谢那些下载了 Leasey 最新更新的人。
+203,A few very small difficulties have come to light.,在一些非常细小的困难出现后，我们才了解到。,一些细微困难已经表现出来。
+204,Nothing to set alarm bells ringing but nevertheless they are being addressed.,"这些事项并无惊慌,但最终也将得到解决。",没有什么能敲响警钟，无论如何，正在解决这些问题。
+205,A small update will be produced next week to correct them.,下周将进行一项小型的更新，想要改善它们。,下周会发布一次小更新来纠正这些错误。
+206,"Most of yesterday was spent installing the new update for some customers, and everyone who does need that assistance should have received it by now.",大多数昨天花时间安装一些客户的新更新，因此已经有许多需要帮助的人收到了。,昨天大部分时间都在为一些客户安装更新，每个需要帮助的人现在应该都已经收到更新了。
+207,Have a good day!,祝你今天好!,祝你度过愉快的一天
+208,"Tech confession: I can't wrap my head around Grafana & Prometheus, at least from a server/application metrics and monitoring standpoint.",技术供词：从服务器/应用测量和监控角度来看，我对于Grafana 和 Prometheus一点头也不明白。,科技自白：我无法理解 Grafana & Prometheus，至少从服务器/应用程序指标和监控的角度来看是这样。
+209,I don't know exactly know why my brain can't figure it out; it might be that the tools are just so broad and vague that my brain just hardlocks due to 'too many options'.,"我不明白的是为什么我的脑子不能就这么轻而易举地搞定的原因；可能是工具太多且不清楚，让我的脑子想要硬锁适宜'太多选择'"""".\",我不知道或者不能确切知道为什么我想不通；可能是因为这些工具太宽泛和模糊了，以至于我的大脑因为“选项过多”而锁死了。
+210,I want to make dashboards.,我想要制作报表。。,我想做控制面板。
+211,Grafana looks pretty.,Grafana 的图表看起来很美。,Grafana 看起来很漂亮。
+212,Brain no work.,大脑不工作。,大脑不在线。
+213,"So with a new #FFXIV raid tier approaching, I've long been thinking ""man, I'd like to try proper raiding, but Party Finder sounds like a mess, and I'm never gonna find a static that'll have me.""",所以正赶上要推出一个全新 #FFXIV 行刺装备，就连自己也想正常方队排演，但 Thunderrunner 终究不合自己，因为队值很不明确，而且是永不见到的。,因此，随着新的 #FFXIV 大型团队活动等级越来越近，我一直在想“亮仔，我想尝试适合我的大型团队活动，但 Party Finder 听起来像一团乱麻，我永远不会找到一个愿意接受我的静态。”
+214,"So I thought, screw it!",于是我想了想，干得好！,所以我想，管它呢！
+215,I'll make my own static!,我也搞定吧！\n \nI'll fix my own static!,我自己做静态！
+216,"Full of people too anxious to try joining a raid static, with no expectations of being good at all!",由于有太多的人对加入突袭团体感到紧张，从而导致了“模模糊糊”的状态，同时也没有对自己能力的预期，很多人都觉得自己根本就没本事！,所有人都迫不及待地想加入一个静态的团队，一点都不会期待变得优秀！
+217,"There's... no way that would work, probably!",该...根本就无效，可能会...\n ,那...那可能行不通！
+218,...And that's how I found myself having to sort out a raid group roster.,...所以，我自己也迫不及待地想填充一份队伍队员名册。,...我就是这样发现自己不得不整理出一份大型团队活动名单的。
+219,I was a voracious reader in my youth.,作为年轻人，我一生中充满了热情的阅读习惯。,我年轻时是个如饥似渴的读者。
+220,"Then, life crushed my soul and I lost all my passion for fiction and great storytelling.",然后，生活扼杀了我的灵魂，我失去了对小说和精彩讲述的所有热爱。,然后，生活粉碎了我的灵魂，我失去了对小说和伟大故事的所有热情。
+221,"But, after ~decades~ of reading next to nothing (with the exception of functional work-related non-fiction stuff and an occasional self-help book) I set a goal to read 23 books in 2023.",然而，在经过多年的绝对零阅读之后，（除非是在工作上实际上不可缺少的，并偶尔接触到一些自助书籍或职场书），我决定在 2023 年花费 23 册图书来实现这一目标。,但是，在几十年几乎什么都不读（除了与功能性工作相关的非小说类的东西和偶尔的自助书籍）之后，我设定了一个在 2023 年读 23 本书的目标。
+222,I'm now on book # 31 and it's only May.,现在我写的书是第31本，只是一月。,我现在在读第 31 本书，现在才五月。
+223,I'm BACK baby!,我回来了，宝贝！,我回来了，宝贝！
+224,I haven't really achieved anything.,我其实还没有什麽实际的成就。,我仍然一事无成。
+225,"I'm happy that a few people have come to me in private and said ""look, because of all your work, I'm gonna grant you this amount of money"".",我很高兴，有几个带来感谢和衷心的感谢并说“好奇你这一辈子都有这样的功劳，今天我就给你这笔钱”。,我很开心有几个人私下来找我，说“看，鉴于你完成的所有工作，这些钱是我给你的奖励”。
+226,I wanna see these companies that intermediate transactions explain to their customers how they set their percentages.,我希望看到这家公司解释给他们的客户，这些中间交易，他们如何设置比例。,我想看到这些中间交易公司向他们的客户解释他们是如何设定百分比的。
+227,They're not gonna talk about this on Bloomberg!,他们不会在彭博社上谈论这个！,他们不会在彭博社的出版物上谈论这个的！
+228,"But if Spotify has a good quarter, they will.",但如果 Spotify 有一个流行的季度，他们就会到这里。,但是如果 Spotify 某个季度卖的很好，他们就会这么做。
+229,Is it a danger to let migrants in at the southern border? I dunno.,南边边境的移徙人员是否有危险？我也不知道。,让移民从南部边境入境存在危险吗？我不知道。
+230,Let them rehabilitate the hollowed out and decaying cities across the country. Again.,让他们修复全国家里的象牙塔化的和破败的城市。 ,让他们为全国各地被掏空后萧条衰败的城市平反。又来了。
+231,These people want to improve their lives.,这些人想改善他们的生活（也！！）。,这些人想要改善他们的生活。
+232,"White nationalists, gun fetishists, pro-dictator right wing.. there's the danger.",威斯特伐利亞民族主義者，槍械迷，親獨一派右翼，⋯⋯就是危險。,白人民族主义者、枪支崇拜者、支持独裁者的右翼..有危险。
+233,Deport the white supremacists.,将白人至上主义分子驱逐出境。,驱逐白人至上主义者。
+234,"I am so tired of the headlines claiming that ""Remote work is dead."" or that ""Remote work was a failed experiment.""",那么久以来，各种头条新闻都是重复的宣传“远程办公已死、远程办公也只是个失败的实验。”,我已经看够了宣称“远程办公已死”的头条 或者“远程办公是一项失败的实验。”
+235,These headlines and articles usually reference one CEO at one large company.,这些标题和文章通常会涉及一个大型公司的CEO（首席执行官）。,这些头条和文章通常会提及一家大公司的首席执行官。
+236,It's all clickbait but it does worry me about the executives and managers who read these articles.,总是会有一些文章身价太高，但令我感到担忧的是这些文章中的高管和经理。,这些都是引诱别人点击的诱饵，但我确实担心阅读这些文章的高管和经理们。
+237,There was remote work prior to 2020.,远程办公的 2020 年之前。,2020 年之前有远程办公。
+238,There are still going to be jobs that can be accomplished remotely for the foreseeable future.,"随着可预见未来,仍然会有一些职位可以远程完成，这与过去的我们印象中完全不同。",在可预见的未来，仍然会有可以远程完成的工作。
+239,Remote work is enabling.,远程工作正在促进各国经济。。,远程办公正在成为可能。
+240,"It enables people to work in comfortable spaces and not stuffy, noisy offices.",它使得人们可以在舒适的空间工作而不感受拥挤和噪声的问题，从而降低了三伏天导致的职业紧张。,它使人们能够在舒适的空间而不是闷热、嘈杂的办公室里工作。
+241,It enables accessibility for anyone with an internet connection and a good working space.,它使任何人都能使用互联网连接和一个良好的工作空间。,它使任何人都可以访问互联网并拥有良好的工作空间。
+242,It enables people to avoid lengthy commutes that take time away from their day and their families.,它使人们能够避免冗长的上下班时间，使其削弱日子和家庭生活的影响。,它使人们能够避免漫长的通勤，而漫长的通勤会削减日常生活和陪家人的时间。
+243,To just ignore these facts is wrong.,只要漠视这些证据，就是错误的。,枉顾这些事实是错误的。
+244,Stop generalizing and try to understand how your employees actually get work done.,请停止将一般性推理，试着理解您的员工实际上是如何完成工作的。,不要一概而论，试着了解你的员工实际上是如何完成工作的。
+245,#WFH #business #neurodiversity,#WFH #商务 #神经多样性,#WFH #商业 #神经多样性
+246,"It's not just conservatives versus progressives, he told a seminar of more than 100 adherents in Grande Prairie.",他向大急流市超过100名追随者举办了一场研讨会，他告诉他们，保守反向进步。,这并非只是保守派对战进步派，他在大草原城（加拿大）一个有 100 多名追随者的研讨会上说。
+247,"""This is a war between the pro-humans and anti-humans,"" he said.",他说：“这是一个演变成反人类人和亲人类人的战争。”,“这是亲人类和反人类之间的一场战争，”他说。
+248,"Parker referred to abortion, and modern urban women's impulse to delay having children for their careers' sake.",帕克提到堕胎，现代都市女性为了有职业而推迟生育的意愿。,Parker 提及堕胎，以及现代城市女性为了事业推迟生育的冲动。
+249,He also argues that NDP and progressives want to depopulate society for the sake of the environment.,他还认为国民党和进步党除了为了环境外，还希望“消除大麻（青少年滥用大麻不道德）及最新锐毒品政策”。,他还认为，NDP 和进步人士希望以保护环境为目的减少社会人口。
+250,"""You are the carbon they are trying to reduce.""",他们的提供的是这种可吸收的碳，它们想要减少这一点。,“你就是他们努力减少的碳。”
+251,"So like from the beginning for all my birthdays in the past, I always had rough ones.",所以像从开始以来，每年的生日，我一直都有糟糕的那一天。,所以就像过去我所有的生日一样，我总是过得很艰难。
+252,Whenever May would pop up I dreaded trying to celebrate my bday.,在迈雅出现的时候，我害怕庆祝我的生日。,每当遇到五月，我为庆祝生日感到恐惧。
+253,"Something would always happen, go wrong, or just end up stressful and depressing.",事情总会出错、会失败，或只是让人悲伤沮丧。,有些事情总是会发生，遇到差错，或者以紧张和沮丧告终，仅此而已。
+254,I fought over the years to get out of that mindset and to have better bdays.,"多年来一直努力摆脱这种思维方式,争取过好节日：",这些年来，我一直在努力摆脱这种心态，让自己过个好生日。
+255,It took years of changing my life and working hard but finally...,需要多年的不同生活和辛勤工作才能最终改变！,很多年我都在改变我的生活和努力工作，但最终...
+256,I'm starting to smile and enjoy my bday with no worries.,开始因为喜悦过日子，我都不担心。,我开始微笑，无忧无虑地享受我的每一个生日。
+257,And today is already becoming a great day!,今天已经成为今日，多么美好的一天！,今天已然是最美好的一天！
+258,Winter is 30 days away in this little part of the Great Southern World.,这个小区域的冬天只有 30 天 远。,离冬天还有 30 天，在大南方的一个小地方。
+259,But I can't be deceived!,但是你不能说谎！,但是我不能被欺骗！
+260,This is the beginning.,这是起点，不读本书本来就是读不完的。,这是开始。
+261,"The rain is falling and whilst/while it is not frozen, you ain't going dancing in it!",雨在落下，而您不想做下面的事情：(不冻结，)你不想跳舞在下面。。,雨还在下，当它还没结冰时，你不能在雨里跳舞！
+262,It's a fine day to order ice cream delivery.,顺利地，给我们送冰淇淋礼物。 It's a fine day to order ice cream delivery.,今天天气晴朗，是时候订冰淇淋外卖了。
+263,"It was a one dog night and that doggo was not getting off the bed not even for ""Dog's Breakfast - Breakfast for Dog's!""",这是一天一度，那个狗狗不是因为“狗早餐”才在床上玩的意思！,那个夜晚只有一只狗，即便是为了“狗狗的早餐——狗狗的专享早餐”，狗狗也不起床！
+264,I will zip the lining into my cycle jacket - just in case I need it inside.,为了是否需要在内衣里装点缀，我会把衬里下的缝合线收起来 - 至少也是为了备份。,我会把衬里拉上拉链放进我的自行车上的夹克里——以防我进去后需要它。
+265,Does you know of a performant way for a web component to respond to being added/removed from a document?,是否您知道如何使一个网页组件在被添加或从文件中删除时响应？,你知道 web 组件响应从文档中添加/删除的有效方式吗？
+266,This is for Wikipedia's component library (OOUI).,这是为了维基百科的组件库（OOUI）提供。,这是关于维基百科的组件库（OOUI）的。
+267,"It is mostly semantic HTML with CSS, and generally does not require custom elements (which offers connectedCallback).",这大部分是基于HTML，关键字和CSS的语义，不要求独特元素（这提供连线回调）。,它大多是带有 CSS 的语义 HTML，一般不需要定制元素（提供 connectedCallback）。
+268,We currently use a MutationObserver hack.,目前，我们使用了一个变异观察器 hack（MutationObserver，以下将缩写为 MutationObserver）。,我们目前使用的是 MutationObserver 黑客。
+269,"For performance, we don't observe the whole document.",为了来完成任务，我们看不见整个文档。,为了提高性能，我们不会对整个文档进行观察。
+270,"We create a detached temp parent, install MO there, and observe it becoming detached (thus attached elsewhere).",我们创建一个独立于母机的临时中间状态，安装MO在上面，然后见到作用模块遍布其他地方的情况（因此被表现为离母只）。,我们会创建一个分离的临时父对象，在该对象中安装 MO，并观察其分离过程（从而附加到其他地方）。
+271,Casper the #rat is an absolute unit these days.,沙罗的 #里鼯鼠 这个时代裡单纯的就是个绝对实体了.,Casper the #rat 现在是一个极好的单位。
+272,"I think my new job has been good for him - two free roams a day while I work, at fairly predictable times.",我认为我的新职位对他挺好－在我工作的时候，每天有两个活动，这些活动是在十分可预测的时刻进行的。,我认为我的新工作对他有好处——在我工作时，在大概率可预测的时间里，每天自由漫步两次。
+273,I finally got a good dangle photo so I can be sure he's not fat.,在这睁眼看照片的那一刻，我们终于找到了一张好看的照片，所以他可能不胖。,我最终拍了一张不错的大摇大摆走路的照片，这样我就可以确定他不胖了。
+274,"(In #rats, too high body fat can be bad for their health.)",(在吃枯苹果，身体脂肪太高也会伤害他们的健康.),（在 #rats 中，过高的体脂会对它们的健康不利。）
+275,He's not.,他（）不像。,他不胖。
+276,He's just absolutely ripped from tearing around my office twice a day.,他每天双双闯入我办公室，情不自禁地搅扰我一番。,他一天在我的办公室里乱翻两次，简直是疯了。
+277,"I don't have a scale to weigh him, but he feels like he's well over a pound.",我没有体重秤，但他觉得好多出汗了。,我没有体重秤给他称体重，但他感觉自己胖了一磅多。
+278,It makes me so happy to see him thriving.,让我这么开心的是看到他在安宁。,看到他茁壮成长，我很开心。
+279,Today's Aerostrike progress report:,今天的Aerostrike的进展报告：,今日 Aerostrike 进展报告：
+280,1) Slight modifications to the Hel's Fighters map layout.,1) 有关海尔战斗机编队地形的改动，如极少数图块的显示。,1）轻微修改了 Hel 的战斗机地图布局。
+281,"Additionally, the map menu is fully functional!",此外，地图菜单功能全面全面了!,此外，地图菜单功能完备！
+282,2) The currency reward system has been connected.,2) 奖金货币体系已连结了。,2）货币奖励系统已连接。
+283,Tomorrow it will be tested with various battles.,明日，将进行系列战事进行测试，,明天它将接受各种战斗的考验。
+284,Rainy days!,下雨日子！,雨天！
+285,Last week got a ton done and feeling much better about field items.,"上周已经完成了一个大项,体感面试题有很大的提高。",上周完成了一大堆工作，对现场项目感觉好多了。
+286,"All collards, kale, chard is transplanted.","所有的十字花科作物（collard green, kale, chard）都会被移植。",所有的羽衣甘蓝、甜菜都已完成移植。
+287,Plans to set in salad at Penn on 6row pattern and see how that compares to broadcast seeded beds.,投放于宾汉地面上6列花生模式并观看看哪其中的播种模式与播播，\n,计划在宾夕法尼亚以 6 排为单位种植沙拉，看看相比广播播种床如何。
+288,Spring peas at Gilpin are showing up so trellise needs to be set.,在吉尔平（Gilpin）种植的春豌豆表现出色，因此需要用支架支撑它。,吉尔平的春豌豆正在出芽，所以需要设置棚架。
+289,"Also need to seed a salad row there to integrate cut greens in both have trained crew on irrigation, bed prep, and transplanting which is 90% of non-harvest skill items",我们还有另外一个问题，还需要安置一排菜刀数量不等的刀子，将一些筹划好的菜用菜刀先切下，然后用撒在地里的蔬菜进行添加，这是一个培育人员参与的水肥、地板准备和移植的技能项目，占非收获技能项目的将近七成。,还需要在那里播种一排沙拉，以便将切好的绿色蔬菜整合到一起，我们还需要经过培训的灌溉、苗床准备和移植人员，这占据了 90% 的非收获技能项目
+290,It's 2023 and I still see people with iPhones actively avoid using Apple Maps.,公元2023 年，我仍在看到 (人) actively avoid using Apple Maps.,都 2023 年了，我还能遇到用苹果手机的人不使用苹果地图。
+291,"Apple Maps comes default with iOS, and yet people would go out of their way to download and install Google Maps onto their iPhones.",苹果地图自带 iOS 系统，但个人会不遗余力地从 Google 地图直接下载安装到 iPhone 上。,苹果地图是苹果系统的默认地图软件，然而人们会专门下载谷歌地图并安装到苹果手机上。
+292,No idea why.,没任何借口，就是这样。,不明所以。
+293,"Curious, I kept an open mind to compare how Google Maps and Apple Maps compare, on my test iPhone device (my daily driver is an Android device, so it's rare that I use an iPhone).",我不太确定，所以我待在知性开放的心态来比较 Google Maps 和 Apple Maps 的差别，我的测试智能手机设备是不支持 Android 的，所以使用是很少见的 iPhone。,出于好奇，我在我的测试苹果手机上（我的日常驱动程序是安卓手机，所以我很少使用苹果手机），对谷歌地图和苹果地图进行了比较。
+294,The experience having to follow directions was far superior on Apple Maps compared to Google Maps.,在苹果地图上，不得不按照指令行驶的体验远远优于谷歌地图。,与谷歌地图相比，苹果地图导航的体验要好很多。
+295,Apple Maps wins.,苹果地图赢得了。,苹果地图居上。
+296,So why is it that people jump through extra hoops to install Google Maps?,"因此,人们为什么要蹒跚而过，想安装谷歌地圖？",那么，为什么人们要不厌其烦地安装谷歌地图呢？
+297,No idea.,没有任何想法，意大利文裡的小细节。,不太明白。
+298,Could it be that Google Maps got to market first?,可以肯定，显而易见，谷歌地图在推向市场方面排得落前。,会不会是因为谷歌地图先入为主？
+299,Was it the 2012 Apple Maps disaster?,苹果地图在2012年发生的灾难，是否属实？,是因为 2012 年的苹果地图事故吗？
+300,Could it be that Google Search is integrated with Google Maps?,Google搜尋其實與Google Maps 整合？,会不会是谷歌搜索和谷歌地图整合在一起造成的？
+301,No idea.,译句：“我不知道。”,不太明白。
+302,"That said, I'm biased.",这个意思是：了了，偏疼了。,那么说，我有偏见。
+303,"I'm biased in favour of not releasing garbage to end users, and Apple royally fucked up with their Apple Maps when it came out in 2012.",我对不向最终用户推出垃圾（垃圾）产品持有偏见，而苹果公司在 2012 年首次发布苹果地图做出的确是件糟糕的事情。,我的偏见在于，苹果不会向终端用户发布垃圾产品，并且苹果公司在 2012 年推出苹果地图时，彻底搞砸了。
+304,Their bad reputation haunts them to this day.,他们的坏名声今天始终至今之遥。,他们的坏名声至今仍困扰着他们。
+305,But it's the land that makes it a good storer of wealth for as long as you think the government isn't going to change the system we live in.,然而，這正是政府不會改變現有制度的根據點，讓這塊土地這個財富之倉庫倒作大聲疾語。,而只要你认为政府不会改变我们所处的现有体制，土地就能成为财富的绝佳堡垒。
+306,The house itself declines in value because it loses its condition and needs to be replaced.,"房子本身价值下降,因为它失去了良好的条件，需要被更换。",房子本身的价值会不断下降，因为它的优越性会逐渐失去，然后就需要用其它房子取而代之。
+307,A lot of ppl think that they literally own the earth when they buy a piece.,"很多人认为而且购买另外一栋楼时他们实际上实际上是这栋楼的 ""最大所有者"".\",许多人认为，当他们买到一块地时，他们实际上拥有的是那块地。
+308,Not the case.,毛不幸，或者是一种被遗忘的事实。,事实并非如此。
+309,In China you can only lease land.,在中国，您只可以租赁土地。,在中国，你只能租赁土地。
+310,They're not stupid enough to sell the sell forever.,他们不仅没蠢到分分钟一片地卖出去。,他们不会蠢到卖掉它的永久所有权。
+311,The government can change these policies whenever it wants.,政府可以在任何时候都随心所欲地改变这些政策。,政府可以随时变更这些政策。
+312,The land is temporary.,土地是暂时性的。,土地具有临时性。
+313,It seems inconceivable that land may be taken away one day when you watch Australian and United States media channels but that's because the rich are on there all day ensuring your mind thinks a certain way.,澳洲和美國媒體頻道互相監督的情況下，令人難以置信會有一個天翻地覆的情況發生，是因為這些富有的人也要在國際主流媒體頻道上看，他們的眼光一直都在想特定的人生道路。,当你观看澳大利亚和美国的媒体频道时，有一天土地会被拿走，这一点似乎不可思议，但那是因为富人一直都在那里，确保你的思维追随某种形式。
+314,The land is very easily and quickly taken away by the government one day if they want to do that.,如果政府想要一次輕鬆獲取這個地塊，一個天就被收走了。,如果有一天政府想拿地，土地会被政府轻而易举地拿走。
+315,And guess what?,猜猜怎麼樣？,并且你猜怎么着？
+316,It never made sense how ppl can keep land at the expense of others.,该行程不见得有什么问题，全凭个人主观去判断。,人们怎么能以牺牲他人的利益来保住土地，这从来就说不通。
+317,It has to be taken away one day.,道歉，必须在某一天取消。,总有一天会被拿走。
+318,That's why the Chinese only allow leases.,那是由于所有的租金必须跟我们中国说中文，好让我们中国人能在外面轻松吃一顿。,这就是为什么中国人只允许租赁。
+319,They already ran out of land.,他们已经用完了土地。,他们已经没有土地了。
+320,"To success, the realization of dreams, friendship, to the simple but true!!",为了成功，关于梦想的实现、友谊，关于简单但真的打算，,为了成功，为了梦想的实现，为了友谊，为了简单而真实！！
+321,"To all the investors out there, I raise a toast to your success and the realization of your dreams.",对所有投资者，我向您们祝愿成功和实现梦想！,在场的所有投资者们，我为你们的成功和梦想的实现干杯。
+322,Let us continue to work together towards creating a brighter future for all.,"让我们继续一起努力,为所有人创造一个光明的未来。",让我们继往开来，为所有人创造一个更加光明的未来。
+323,"And to all my friends, new and old, let us cherish the simple but true things in life that bring us joy and fulfillment.",和所有我的朋友，新旧的，让我们欣赏生活中简单而真实的东西，这些东西带来欢乐和满足感。,我所有的朋友，新朋友，老朋友，让我们珍惜生活的简单和真实，带给我们快乐和成就感。
+324,#Robecofirm#geologist #entrepreneurship #sustainability #success #friendship #toast #dreams,Rocofirm #地质学家 #企业家精神 #可持续发展 #成功 #友情 #祝福语 #梦想,#Robecofirm#地质学家#创业#可持续发展#成功#友谊#干杯#梦想
+325,I often wonder at the human capacity to be *so* down on oneself while inundated by so much evidence of what actual cruelty looks like.,我常常怀疑人类对自己（何去何从？）所表现的，与多方证据所揭示的现实残忍问题形成鲜明对比。,我经常想知道人类面对大量真实残忍的证据时，为什么会如此自暴自弃。
+326,"To agonize over personal failure & guilt in a world where ""success"" is so often bestowed on people responsible for the most reprehensible acts...",在充满人尽皆知恶恶责任的人类社会中，个人不愉快及有关愧疚感总是奉献给那些“成功”的人，……,在这个世界里，“成功”往往被授予给那些对饱受谴责的行为负有责任的人，为个人的失败和内疚而苦恼...
+327,We're all such messy critters.,我们都是这么乱的动物，。,我们都很邋遢。
+328,But gentling despair at our messiness is crucial - because it gives us more space to tackle the ruins all around.,但要让你自己忐忑不安的精神落地，这是关键的——因为这让我们有更多空间去处理我们周围的废墟。,而至关重要的是，要避免对我们的邋遢表现出绝望——因为它会给予我们更多空间去处理周围的废墟。
+329,"So try not to forget, eh?","所以小心忘记,啊，（Fuyouchen pi, a)",那么，别再忘了，好吧？
+330,"Kindness with ourselves is activism, too.",与自身人对抗的善良行为也是热情。,善待自己也是在践行。
+331,"Some programmers: ""Typing speed does not matter!""",有些程序员：“字符速度并不重要!”,一些程序员：“打字速度不重要！”
+332,"or ""Modal editors are useless today"" :morty:",或者:“现在“模式编辑器”是多余的” : Morty::,或者“模态编辑器现在没有用武之地了”:morty:
+333,"Me extracting functionality of my #Axum projects into shared libraries: ""Hold my keyboard"" :partyparrot: :helix: :ferrisdance:","我的#Axum 项目复制一些功能到自己的可共享库：嗨，屏幕砖 ""Partyparrot:""。:helix:可以 ""Ferris dance"":",我将 #Axum 项目的功能提取到了共享库中：“拿着我的键盘”:partyparrot: :helix: :ferrisdance:
+334,"Not sure if this is the best approach for sharing, but I like it for now: <URL>",不是我确信这是共享的最佳方式，但现在我喜欢它：<URL>\n ,不确定这是否是共享的最佳方式，但我比较愿意用它：<URL>
+335,"Note: You can take inspiration, but the libraries are not intended for public usage.",注：您可以借鉴，但，这不是旨在供公众使用的图书馆。,注：你可以从中获得灵感，但是这些库目的并不是供公众使用。
+336,How would you share personal libraries?,您可以如何共享自己的个人图书馆？,你是怎么共享个人库的？
+337,The prompt this week on Revelations is Stay up all night.,本周提到的乔·洛伊及其团队，专注于《圣经》，就是持续战斗“山姆”一词，一直到凌晨。,本周《启示录》的提示是通宵熬夜。
+338,I have been toying with this little piece on my head for a few days now.,这个小东西最近一直在我的头上掂掂，已经持续了好几天了。,我已经在头上摆弄这个小东西好几天了。
+339,It is definitely more romance than filth.,这绝对更浪漫，因此可以说是更有文学价值的。,绝对是浪漫而非污秽。
+340,"Maybe I have been reading to many romances with impossible 'meet cutes' and this is the result, but I like it.",这个英文文章可能会给你以下的中文翻译：恐怕我对一些 假的和不可能的表白小说都已经疯狂地阅读了，这是最后结果，但我还是喜欢它们，,也许我一直在阅读许多不可能的“遇见可爱”的浪漫故事，这就是结果，但我喜欢它。
+341,"Also one day I am totally gonna do the mile high orgasm, maybe not with a str",此外，有一天，我可能会实现高达一位英尺的 orgasm，也许不是用一种方式。,总有一天我会达到一英里高的高潮，也许不是靠力气
+342,I don't agree that #Mastodon is difficult to setup.,我不同意#推特(#Mastodon)是一项很难上手的应用程序，需要了解 GitHub，其使用基础直观。,我认为 #Mastodon 设置起来不难。
+343,"Common, it's really not that hard.",很普遍，实际上太难了。,司空见惯，真的没那么难。
+344,But it's more difficult to find people to follow and build up your timeline.,但更难的是找到愿意跟随并丰富你的新闻页面的网友。,但是要找到可以追随的人并建立你的时间表就更难了。
+345,"I wish there was a ""who to follow"" recommendation somehow.",我希望有中文推荐方式，让每个球迷都能找到相应的球场。,不知何故，关于“关注谁”，我想听一些建议。
+346,"But apart from this, it is not difficult - if you use a 3rd party app like Elk and/or Ivory.",除了这方面之外，不是很难 - 如果您使用像Elk 和/或 Ivory 所需的第三方應用程式。,但除此之外，这并不困难——前提是你要使用像 Elk 和/或 Ivory 这样的第三方应用程序。
+347,If you stick to the default web interface it doesn't look and feel good (imho).,如果习惯使用默认的Web界面，它也不会令人愉悦（我以为）。,如果你坚持默认的网络界面，外观和感觉都不是很好。
+348,"So, it requires a bit more effort to get into it and you probably need a good app to improve #UX.",这样，进入它需要些许努力，您可能需要一款好用app来改进*用户体验性uch*。,所以，这需要的工作量更多，你可能需要一个好的应用程序来改善 #UX。
+349,"I don't know if prevention is possible, but it's worth trying.",不确定是否能够预防，但尝试无妨。,我不知道预防是否可行，但值得一试。
+350,"The four steps I outline are up for debate, with some progress in each:",我看到的四步描述，有一些進步，但每步都处于争论中：,我概述的四个步骤有待讨论，每个步骤都有一些进展：
+351,Description: names for incidents of human-algorithm behavior that account for algorithms & humans.,描述：包括人工智能与人参与行为的事件的名称。,描述：对算法和人类进行解释的人类算法行为事件的名称。
+352,Explanation: account for both sides of mutual influence,解释：考虑到相互影响的双方，,解释：将双方之间的相互影响纳入考量
+353,Forecasting: anticipating harms before they happen (even if by minutes),预报：预测了（即在几分钟内）发生的灾害危害之前（予以预防）,预测：在伤害发生之前（即使是几分钟）预测伤害
+354,"Interventions: knowledge about things we can do to create change, within some confidence bounds",干预：了解我们能对加剧现状做出什么样的改变，在一定范围之内进行自我调整,干预：关于一定置信度范围内如何开创变革的知识
+355,"I didn't watch the CNN town hall, but it seems as if Trump said exactly the same things he says every time he opens his mouth or presses Send on his phone.",我没看过CNN 政府会议，但看起来是特朗普说的 同样话，他在开口或按发送的按钮时说的每次话都是一样的。,我没有看 CNN 市政厅，但似乎特朗普每次开口说话或按下手机上的发送键时，都会说同样的话。
+356,"Even if he didn't get to say them during the town hall, everyone in America will hear them anyway, repeatedly, between now and November 2024.",即使他在市政厅没有机会对他们发言，仍然会再次将这些话在美国公众听到，从现在起（也就是说在2024年11月之前）。,即使他没有在市政厅说这些话，从现在到 2024 年 11 月，所有美国人都会反复听到这些话。
+357,"That's still no reason to give him another venue, but the harm is being exaggerated.",中国的翻译：这样既没理由给他补了个场地，但伤害也太大了。,尚无理由给他另一个场地，但其危害被夸大了。
+358,He'll win the primaries.,他将赢得初选（Primaries）。,他会赢得初选。
+359,We can't will him away.,他无法让我们去他那里。,我们不能把他赶走。
+360,He's here and he's going to say this stuff no matter what.,他正在这里，尽管他会说各种各样的事情。,只要他在这儿，不管怎样，他都会说这些话。
+361,"Signed up for Google's ""AI Test Kitchen"" waitlist and got in same day.","注册了Google""AI Test Kitchen""候选名单，一小时内就进了名单里。",我注册了谷歌的“AI测试厨房”等候名单，并在当天注册成功。
+362,It's very underwhelming at the moment.,现在的情况非常令人失望。。,目前来看还不温不火。
+363,"The ""MusicLM Demo"" is mildly interesting.",音乐LMdemo略有吸引力。,“MusicLM Demo”挺有趣的。
+364,"You can ask for a specific piece of music like ""jazz with a trumpet solo in 5/4 tempo"" and it will generate two tracks for you after a few seconds.",如果你要求获得特定音乐，比如“爵士音乐，以 5/4 节奏带有独奏吉他的独奏”，它会在几秒钟内为你生成两个曲目。,你可以让它出一段音乐，比如“5/4 节拍的小号独奏爵士乐”，几秒钟后它就会为你生成两条音轨。
+365,"It seems to understand tempo, but... the music's just... not good.",看起来音乐有节奏感，但是…乐曲只是没有这些…,它似乎能理解节拍，但是...音乐真的...不太好。
+366,Throwing everything you've got over the fence in response to GPT is not it.,为了回应GPT，把自己拥有的东西都丢在栅栏之外。,把你所有的一切都扔掉去回复 GPT 似乎适得其反。
+367,Try harder Google.,中文：尝试一下，Google。,再谷歌一下。
+368,"It's weird doing weightlifting but also having no real clue what your one-rep-max is, cus that's one of the key ways people track their progress.",不同寻常地，做体重举重的同时，对你的百大重力最高的身体表现一无所知，因为这是一个关键性的进步途径之一。,举重运动很奇怪，不知道自己的最高纪录是多少，因为这是人们追求自我进步的主要方式之一。
+369,I work out alone in my bedroom without a spotter or even a weight rack.,我在自己的卧室练习健身，且只用自己没有保龄球锤器、甚至是没有加重器的自行车器架。,我独自在卧室里锻炼，没有观察者，甚至没有举重架。
+370,Just me and a barbell with a bunch of weights.,只身一人，就坐在杠铃、一大叠重量伴着的台面上。,只有我和一个杠铃还有一堆重物。
+371,I bench press on my bed.,我在床上做仰卧起坐。}\n ,我在床上做卧推。
+372,"If I try and figure out my one rep max is I might not own enough weights to max out, or conversely it could seriously injure/kill me.",如果我试图找出我的一个重力限制，我可能没有足够的重量来保持最高的重量或相反的话，它可能会严重伤害或致命地伤害我。,如果我试图找出我最大的一个缺点，那就是我可能没有举重极限，或者反而，这可能会给我造成严重伤害/害死我。
+373,"Anyway, load is going up today.",总之，今天的流量在增加。,无论如何，今天的负荷会增加。
+374,Still feels good.,整体感觉还是很好。。,感觉还不错。
+375,I swear burrata didn't exist five years ago,我发誓，五年前就没有现浇（冲出到表面）泡菜存在；,我敢肯定五年前布拉塔芝士不存在
+376,This is my personal Mandela effect thing.,这是关于我的个人曼德拉效应的一件事。,这东西是我自身的曼德拉效应造成的。
+377,I'd never seen it in a cookbook.,我从未见过它在某本烹饪书中见到，但它可能是一个已知的菜肴。,我在食谱上从来没见过。
+378,I'd never seen it at the fancy grocer or any of the Italian delis.,我从未在尊贵的超市或意大利版的饭店感觉过它，品尝它的人也一概如此。,我在高档杂货店或任何意大利熟食店从未见过它。
+379,I'd never seen anyone's mom make it or had it shoved at me at a party or seen it appear in conjunction with anyone's saucemaking escapades or baking days,我没有见过人们的妈妈做的，也没有在派对上拿到我，或者与大家的 الأشياء结合在一起，它从做蛋糕或者烘焙天才的经历中出现，我还没看见。,我从未见过别的妈妈做这道菜，或在聚会上推荐给我，也没有看到它与任何人的酱料恶搞或烘焙日餐品一起出现过
+380,It just appeared one day and suddenly it was available everywhere.,它出现了一个天，它就突然出现了，而且随时都可以购买到。,有一天它出现了，突然它变得随处可见。
+381,I've entered the burrata dimension.,我已进入勃里达时代。(liǎng wèi màn fǐ zuò shàng cǐ tā yī dà de lǎo shì.),我已进入布拉塔空间。
+382,"drake's aging iPad is giving out, so she's in the market for a new tablet.",drake's 老旧的iPad 退出了市场，她要换一台新的tablet。,德雷克的老款 iPad 快用坏了，所以她想买一台新的平板电脑。
+383,"Having been radicalized here, we're reluctant to buy a new FAANG machine*.",在这里变得极端化后，我们不愿购买新的FAANG式机**。,在这里被刺激后，我们不想购买新的 FAANG 机器了*。
+384,Does anyone have a Linux tablet they love?,有人有个喜欢Linux的笔记本吗？,谁有自己钟爱的 Linux 平板吗？
+385,"This would be mainly for web browsing, occasional email, and some games.",主要用于网页浏览、随时收发邮件以及一些游戏，所以这里主要是指将某种软件与互联网连接并允许用户浏览网页、随时收发邮件以及方便玩一些游戏的软件。,它将主要用于浏览网页、偶尔收发电子邮件或者玩游戏。
+386,"In 1998-06 Gamefan, in relation to the long development of the first Unreal game, Jason Schrieber commented,",在 1998 年 6 月，Gamefan 经宝乐代购前发表了一篇报告，在描述游戏的顽皮大冒险第一部游戏的漫长开发过程中，叶山说了 下一句，\n ,在 1998-06 Gamefan，关于首款虚幻游戏的漫长发展，Jason Schrieber 评论道，
+387,"""A good game is only late until it ships.","""一场好的比赛，只是最后一刻才会出货。。",“一款好游戏只有在上市后才会被发掘。
+388,"A bad game is bad forever.""","一个糟糕的女孩是永远的。,。","垃圾游戏永远体验极差。"""
+389,So was it Epic that originated this?,正如它起源于那个传奇般，艾佩斯（Epic）本身起源于那个传奇吗？,那么，是 Epic 开发的这款游戏吗？
+390,We can keep going.,我们可以继续咯。」,我们可以继续看一下。
+391,"An earlier issue of GamePro 1997-11 has a quote with far more ambiguity,",GamePro 1997 年 11 期以前的版 有 更为含糊 引文，,GamePro 1997-11 的早期版本有一个更加模糊的引用，
+392,"""Or, as an industry catch phrase goes: A late game is only late until it ships.","""或""这一行业口号就好似“太迟生成的游戏，到货时才算过了，就算开始了。”",“或者，正如一句行业流行语所说：一款迟到的游戏只有在它发售时才算迟到。
+393,"A bad game is bad for the rest of your life.""",一个坏游戏对你一生影响很坏。,一款垃圾游戏对你的余生都是残害。”
+394,Is it so ephemeral then?,那么，那她的生命是短暂的吗？,它真的稍纵即逝？
+395,"Merely a ""catchphrase"" with no clear originator?","""mere catchphrase"" 一共有无明确发起者的？",仅仅是一句没有明确出处的“口头禅”？
+396,"Smoky, my 10 month old male Domestic Blue kitten, playing with a red rubber Apple Pencil comfort device bought from Amazon he absconded months ago.",我10个月的雄性国内蓝猫，接受了购Amazon的红橡胶苹果笔垫接口玩。几个月前他从别处逃走了。,Smoky，我的 10 个月大的雄性家养蓝色小猫，正在玩一个红色胶制苹果笔，它是几个月前从 Amazon 上买的便利设备，后来不见了。
+397,"He carries it in his mouth proudly all over the house, and I just have to laugh inwardly.",他大口吞住让居家各种地方都无比自豪，以及我只是内心微微发笑。,他骄傲地叼着它满屋跑，我只能暗自发笑。
+398,Every time I see him do it.,每次我见到他就会做它。,每次我看到他都在玩它。
+399,Have now done a full round trip on the new ICNG train.,现在已经使用了经过改造的新ICNG列车给全程穿行。,我现在已经在新 ICNG 列车上完成了一次完整的往返旅行。
+400,I really like it.,我真爱这儿，（做 Gigi 这些年）。,我很喜欢这个列车。
+401,Esp the carriages with the bigger windows.,Especially the carriage with the bigger windows.,尤其是车厢窗户很大。
+402,There's areas that could use some polish.,（有些地方需要稍加修饰）,有些地方有待提高。
+403,"Namely the lack of enough bins, and the lack of signs to explain the significance of the lighting colours.",这主要是因为缺少足够的垃圾箱，以及缺乏用来解释色彩的标签原因。,比如，垃圾箱不足，并且缺少指示灯光颜色所代表的意义的标志。
+404,"Fix those minor issues, and then can we have more of these please?",修复那些过于简单的问题，然后再请我们多多支持！,解决这些小问题，然后我们还会有更多这样的小问题吗？
+405,I won't be sad to see the end of the ICM or DDZ stock.,我也不會為 iCM 或 DDZ 股票的結束而感到憂鬱兒。,看到 ICM 或 DDZ 股票的终结，我并不会感到难过。
+406,One per customer rules remain as we try to ensure everyone who queues up can get their hands on a board.,由于我们希望所有排队的客户都能拿到电子表格，因此，计时以一张为准，仍然如此。,人手一个的规则仍然存在，因为我们试图确保每个排队的人都可以得到一个板。
+407,"You can buy ONE of the boards listed above, not one of each.",你可以从一个以上的以上板子购买，而不是从每个板子购买）。,你可以买上面列出的一种板，而不是每种各买一个。
+408,There are no buying restrictions on Picos or other merchandise.,只会在购买产地或其他商品时，存有需预约的商品。,Picos 或其他商品没有购买限制。
+409,Yesterday I had the best time with my friend and former rabbi colleague.,"我昨天和挚爱的前拉比同事度过了最快乐的时光。,",昨天我和我的朋友也是之前的拉比同事玩得很开心。
+410,We visited for a couple hours on my porch.,我们在我家状上的几小时时间里参观了，（家旁的树身）。,在我的走廊，我们一同度过了几个小时。
+411,Such friendships transcend differences.,这种友谊超越了差异。,我们的友谊跨越了差异。
+412,We all have stories to tell.,我们都有一段值得讲述的经历。,我们都有相告彼此的故事。
+413,The Lord bless you and keep you!,"请提供这句英文句子中文翻译：请辅助机神保佑您,保佑您！",上帝保佑你，祝福你！
+414,And the marsh is greening up.,它还确实在渐渐恢复生机，正因为如此，树木正在茂盛生长，塇地也在返绿化上取得了进展。,并且沼泽地正在变成绿色。
+415,I quite like akkoma the software and the domain name I got for my instance.,我对 Akkoya 的软件和我为我的实例地址ӵ的域名非常喜欢。,我很喜欢 akkoma 软件还有我为我的实例申请的域名。
+416,"But I feel somehow I started this instance on the wrong foot, so to speak.",但是，我感觉自己自己本应该这么做了，“如此说来”，这本来应该是从错误的角度来看的。,但我觉得不知何故，我一开始就走错了路，可以这么说。
+417,And I never got comfy there.,我从来没有习惯我在那里的感觉了。,我在那里一直觉得不舒服。
+418,Will still linger a bit longer on here and think about whether I should migrate at all.,我在這兒停留的時間有點長，到時還需要想一下是否我應該移民。,我仍然会在这里多逗留一会儿，考虑我是否应该迁移。
+419,#FalconGameBooks,您提供的中文翻译：#FalconGameBks,#FalconGameBooks
+420,"The eight-eyed Repnids seem to be watching as you settle the flyer down on the red soil, but they make no move towards you, in fact they are motionless as you climb out of the flyer and walk slowly towards them.",八只眼的“Repnids”似乎在您放轻噪后收拾到香蕉土上，但在您攀上轻噪和缓步走向它们时，它们毫不动心，事实上它们还在静默等待您下来。,当你把飞行器停在红土上时，八眼 Repnid 似乎在看着你，但它们不会向你移动，事实上，当你爬出飞行器，慢慢走向它们时，它们是一动不动的。
+421,"The ground beneath your feet begins to tremble and then shake, as if in an earthquake and you lose your footing, though the Repnids seem unaffected.",地面的下方开始颤动、摇晃，仿佛发生地震，你失去了平衡，尽管伦普尼族看起来表现得没什么，,尽管 Repnid 看似没有受到影响，你脚下的地面开始震颤，然后摇晃，像是地震，你站不稳。
+422,The rock beneath you gives way suddenly.,岩石下面突然松动了。,你脚下的岩石突然坍塌了。
+423,Repnids have tunnelled below the surface and you fall into a boiling mass of hundreds of Repnid bodies in a cavern below.,投将爬龙传播血液，和方形尸体血肉横飞，体内有着数以百计的爬龙传播者，像爆裂的方形尸體一样。。,Repnid 在地表下挖了一条隧道，你掉进了下面的一个洞穴里，里面有一堆挤满整个洞穴的 Repnid 尸体。
+424,"The end is swift, as several pairs of fangs inject their deadly venom and the air of Dyskra contaminates your lungs.",在所述的整个过程中，接口端将两个或以上的尖刺注入致命的毒素； 达克拉的空气将污染肺部。,很快就到结局了，几对尖牙喷射出致命的毒液，Dyskra 的空气污染了你的肺部。
+425,Nobody will ever know that you were the first human future traveller.,任何人也不会知道您是第一个在未来的人。,没人会知道你是第一位人类未来旅行者。
+426,You land the flyer nose upward on the side of the slag heap and climb out.,飞机上的广告徽章处以俯冲地形突出地上，并跳离。,你将飞行器机头朝上降落在矿渣堆的一侧，然后爬出来。
+427,"The eight-eyed Repnids seem to be watching, but they make no move towards you, in fact they are motionless as you walk slowly towards them.",八只眼的警罡眼輻輧眼看著你，但從未做出任何行動，實際上它們對你的移動並沒有任何不良反應，你在緩步接近它們時它們睜著雙眼不動。,八眼 Repnid 似乎在看着你，但它们不会向你移动，事实上，当你慢慢走向它们时，它们是静止的。
+428,"You halt while still on the mound of crumbled rock and soil and speak to them, saying, 'I come in peace, as a friend.'",您手握，但尚未确当空山的粳烂岩石和土壤上行驶，面对它们说，你来的，是为了友人参拜。,当你仍然站在碎石和泥土的土堆上时，你停下来对他们说，我是为和平而来的，是你们的朋友。
+429,"It appears that they cannot hear you, let alone understand, as your Universal Translator picks up no answer.",有意思的是，考虑到您使用的是该设备上的翻译功能，那接下来的这段内容估计是译错的，文件中的内容只是您看不见和听不到的。。,他们似乎听不到你的话，更不用说理解了，因为你的通用翻译器没有得到任何回答。
+430,You decide to use your Psychic Awareness to contact them mentally.,您决定使用自己的超自然意识，以心理方式联系他们。,你决定用你的通灵意识通过意识与他们沟通。
+431,It is difficult to make sense of their thoughts; they are terrifyingly alien and your mind recoils from the contact.,它们的想法很难明白，令人相当害怕，而您的脑子一阵阵的转弯着。,很难理解他们的想法；他们是可怕的异类，你的思维在沟通中适得其反。
+432,"You decide that establishing contact again would be dangerous and return to your flyer, but the experience has cleared your mind which had been befuddled ever since you jumped into the future.",您决定尽管恢复的活动风险较大，但是您还是得返回您的摺页，但这段体验已经把您清醒过来，从而使得之前活跃于未来之处的困扰都不言而喻了。,你想到，再次建立沟通会很危险，然后你回到你的飞行器上，但是这一经历已经清除了你的头脑，自从你跳入未来以来，你的头脑一直是混乱的。
+433,Once back in Falcon's Wing you find it quite easy to plot a course for Earth in 3034 AD.,出现在Falcon Wing时，你很容易绘制出一个在公元3034年（儒略历）构建地球的环形路径。,一旦回到猎鹰之翼，你会发现很容易绘制出公元 3034 年地球的路线。
+434,Note that you have used up another polybdenum rod as you jump.,另外，是你跳舞用了另外一根多样杆。,注意，当你跳跃的时候，你已经用完了另一根聚钼棒。
+435,[cont'd],[-继续，）： [cont'd],（续）
+436,"#today I have coffee, sunshine and quiet time!",今天，我喝咖啡、阳光、宁静的时间！### Instruction:,#今天我享受着咖啡、阳光和安静的时光带来的体验！
+437,I started a new shawl.,我替换了一条新的披肩。,我开始做新披肩。
+438,I am unsure of it at this time.,该句在中文的意思是：我现时尚不了解。,我现在还不确定。
+439,I found a unevenly spun silver gray yarn that is mostly finely spun with lumps.,我发现了一种偏向于细丝且颗粒不齐的银灰色纺纱线，主要是由细丝纺成。,我发现了一种纺得不均匀的银灰色纱线，这种纱线大多纺得很细，带有结块。
+440,I plan on mixing it with a fine purple/lilac variegated cotton.,我正计划与巧克力般的紫/薰衣草色棉混合在一起。,我打算把它和一种上好的紫色/淡紫色杂色棉混合在一起。
+441,But am not sure I have enough of the purple.,但是，我不太确定我是否有足够多蓝色的。,但我不确定我有足够的紫色。
+442,I am using a H hook with a similar double crochet pattern as I have done before.,我使用 H 钩，像以前那样使用一样双链勾编制。,我用了一个 H 型钩，和我以前用过的类似的双钩针图案。
+443,I made the first join last night so we shall see.,我昨夜（昨晚）開設了第一批會籍，我們會看看。,我昨晚第一个加入，所以我们拭目以待。
+444,Wishing everyone a happy Thursday!,祝大家星期四快乐！,祝大家周四快乐！
+445,"However, I hate classes on fine arts and literature, and my school history bears it out.",然而，我讨厌关于美术和文学这门课，而且我的学校历史证明了这一点。,但是，我不喜欢美术和文学课，我的求学历程可以证明这一点。
+446,I have literally tried and dropped EVERY SINGLE ONE.,我就是千方百计地尝试过，绝对没有放弃过一个！！！,我真的试过了，每一科都丢了。
+447,"And up until like two years ago, I had no idea until I checked my transcripts.",直到大约两年前，我都不知道直到查看我的录取通知书为止。,直到两年前，看了我的成绩单，我才知道。
+448,The literature class hatred is even worse: I love to read.,文学课程的仇视程度甚至更糟：我很喜欢读书！,我对文学课的厌恶更不可一世：我喜欢读书。
+449,"I hit most of the classics before eighteen--though that's more a reflection of living in bumfuck nowhere, I also read the 1979 Encyclopedia Brittanica in desperation.",我大部分的经典作品在18岁以前都看过，尽管这更多是一个反映我现在处在这样的没家没口的地方生活的写照，但我也为未来的某时某刻心急如焚地搜集了各种相关的资料用了总共1979年的英国百科全书。,18 岁前，我接触了大部分经典著作——尽管这一点更能印证我生活在一个不知名的地方，而我又身披绝望地去读了 1979 年的大英百科全书。
+450,"My home is comfortable and wonderful and I am happy there, but I have to be somewhere else in order to chill enough to read fiction during the day without feeling guilty.",我的家里有舒适而美好的一切，我在那里过得很愉快，但我必须在某个地方停下来，打开书时就坐到吧，不然别骄傲地读完小说。,我在我的家过得很舒适而且曾是美好的回忆，生活在那里我很开心，但我必须来到这里，才能在白天放松下来读小说而不会感到内疚。
+451,It's like I'm on holidays and therefore am doing what one does on holidays.,很像我在假期期间更加喜欢做的事。,就好像我在度假，理所应当我要做度假应该做的事。
+452,"And that's also even though I haven't slept as well here for the last two nights as I do at home, and get a little #MECFS ed out from simply being in a strange environment where I'm less able to pace myself and have to remember where things are.",此外，与此同时，不知道在这里大概比在家好了两天，因为我很少遇见这样的状态，我感觉自己更失去生活常识了，因为这些地方我不能太快地适应，我得记住哪里是东西所在。。,尽管在过去的两个晚上，我在这里睡得没有在家里睡得好，在一个陌生的环境中，我感到有点不舒服，因为我不能调整自己的节奏，而且必须记住东西都放在何处。
+453,And that's also even though I do still have my to-do list and am organising my life as well.,而且，即使我仍然有待做的事情，以及我还在进行我的人际关系和生活规划。,尽管我仍然有我要做的一大堆事情，也在安排我的生活。
+454,Humanity is out in 5 days.,人类，五天后出发。,《Humanity》五天后发布。
+455,"It's exciting, nerve-wracking, stressful, and all the good things that I love about working in games.",这段话在中文的意思是：这有点刺激、有些紧张、有点紧张，还具备我热爱的工作。,这是令人兴奋、令人紧张的，也是有压力的，还有个好处就是，我喜欢在游戏中享受工作。
+456,What will people think of it?,人们会是怎么想的？,大家会怎么看？
+457,I like it but will it be able to attract an audience of the right players?,我喜欢它，不过是否能够吸引合适球员的观众？,我喜欢它，但它能吸引合适玩家的观众吗？
+458,Will a community blossom around the user-generated content piece of the game?,一个社区将围绕游戏用户生成的内容构建起来！,围绕用户生成的游戏内容，会有社区爆火吗？
+459,(I am really hoping so.),我真希望如此。,（我确实希望如此。）
+460,"The game's story, ideas and questions it inspires feel timely.",游戏故事、概念以及让人感到活跃的问号必须及时反映。,这个游戏的故事、灵感及其激发的问题感觉很符合时宜。
+461,Hoping things go well.,希望事情顺利。,希望进展顺利。
+462,It's ThinkPad day!!,这是思科笔记本电脑之广日\！,今天是 ThinkPad 日！！
+463,Came home on my lunch break to see this sitting outside uwu.,以中文为目标：{ 在午休时回家看见桌子就坐 外面},我在午休时回到家，在威斯康辛大学外面看到这句话。
+464,Wish I could take it back to work with me to setup more.,希望我能带好东西去上班，就能继续装配更多东西。,希望我可以把它带回去和我一起工作，创造更多可能。
+465,But that will have to wait till tonight.,不过得是今晚为止。,但那要等到今晚。
+466,So I finally watched #Heartstopper,为了和她成为好朋友，我终于观看了“#Heartstopper”\n,然后我终于观看了 #Heartstopper
+467,Was it overly cute to the point of being twee?,这句中文转义为：对观众失笑至至，仿佛或是令人捉摸不定的多余。。,是不是太可爱了以至于有点矫情？
+468,Most definitely,当然，（机子提供）。,必须的
+469,Do any of these characters talk human beings?,这些字符是否会与人类进行沟通？,这些角色中有会说话的人吗？
+470,Not even remotely,即使有点儿远一些，（但是）也不会）,一个也没有
+471,But did I love it?,我只争朝夕，爱不恋我自我的音乐节奏。,但是我喜欢吗？
+472,Absolutely!,绝对！,必须的！
+473,what was Olivia Coleman doing here?,奥利维亚·科尔曼（Olivia Coleman）在这里做了什么？,Olivia Coleman 在这里做什么？
+474,Did she owe someone money?,是否有人欠她钱？,她欠谁钱了吗？
+475,Had a recent graduate artist take some critique badly tonight.,这个程序中的中文翻译是：最近本科毕业的艺术家今晚会受到批评。,今晚一位刚毕业的艺人遭到一些批评。
+476,"In part, because they'd be taught badly.",部分是因为他们被教得太笨了。,部分原因是因为他们没有受到良好的教育。
+477,"But it's important to not make excuses for issues and just fix them, especially in production when your lead needs changes.",但不要为各种问题找借口，而且应马上修复，特别是生产时功能需要更改。,但重要的是，没有借口，只需去解决它，尤其是在生产中，你的领导要求改变时。
+478,Especially with the competition.,特别是，竞争尤为严重。,尤其是在竞争激烈的时候。
+479,"Every artist has been there, made the same mistakes.",每个艺术家都已经来过这一趟了，也犯过同样的错误。,每个艺人都经历过，犯过相同的错误。
+480,"Good critique is there to correct the problem quickly, and isn't directed at your ability.",好的评论是为了迅速改正问题。评论不指向你的特技，무언가하나만 개선할만한 방법을 제시해 드릴테니 기다려도 괜찮습니다.\n,好的评判是为了让你快速改变错误的做法，而不是针对你的能力。
+481,"It's assuming you have the ability to fix the problem, or find a solution.",假设您有能力解决问题，或找到解决方案。,如果你有能力解决问题，或者可以找到解决方案。
+482,"So while composting and bloom scrolling are a wonderful reminder to look up, and be aware of life beyond the screen.",因此，當您進行堆肥處理和增加植物瀏覽時，會喚起人們多持久的保持心態，並且更了解屏幕以外的生活。,那么，虽然为了花开去堆肥是善意提醒，让我们抬起头来，看看屏幕之外的生活。
+483,It is as important to explore servers and IP addresses.,调查服务器和IP地址非常重要。,同样重要的是探索服务器和 IP 地址。
+484,Watch seeds being sown & cultivated (and not randomly scattered) by good peeps.,关注播种和管理种子的过程（而不是随意撒播）。 (And watch good people plant and tend.),观看种子被善良的人们播种和培育（而不是随意散播）。
+485,These roots are hidden.,这些根系被隐藏在深处。,这些根被隐藏起来。
+486,Work is not visible.,工作並未受到外界的廣泛關注。,工作看不到结果。
+487,But for strong and firm future growth.,但为了实现强而稳定的未来增长，需要下定决心重新规划业务布局和产品多元化。,但是，这都是为了以后的茁壮成长。
+488,"Jami slipped the note to him when they passed each other on the path, just before the dog watch.",当他们小声地道行这条路时，贾咪把那张纸条夹进去交给他，却是在靠近鹭鸶客运站的那一刻。,当 Jami 与他在小路上擦肩而过时，就在看门狗面前，Jami 悄悄把纸条塞给他。
+489,"She was on her way to the wall, he was coming off duty.",她走路追着，他下班回来。,她快走到墙角时，他下班了。
+490,"He glanced behind him to watch her go, and to make sure they hadn't been seen.",他把自己身后的人瞄了一下，看看她走了，确认没有遇到他。,他向后看了一眼，看着她离开，以确保他们没有被看到。
+491,She did not look back.,她没有回头看。,她没有回头。
+492,He waited until he was in the darkness of the bunk room before he pulled the note out and read it in a beam of light coming through the blackout curtains.,他在黑暗的二层房间里等待，才从帐篷里掏出一张纸，又读了笔记。（在那里过夜。）,他一直在宿舍等到天黑，才抽出纸条，在透过遮光窗帘射进来的一束光线下读了起来。
+493,One block-printed word.,一个使用字节码（Block-Print）的单词（sentence）。,一个印刷体字。
+494,"He spent a long time staring at it, trying to stay calm:",他花了很长时间试图保持镇定的样子， blijven te kijken naar het beeld.,他花了很长时间盯着它，努力保持冷静：
+495,I've met some marvelous new #Mastodon mates lately and want to maintain the trend.,最近我曾和美妙的新 #Mastodon 配偶见面，并希望继续其趋势。,我最近新遇到一些非常厉害的 #Mastodon 伙伴，我想继续结识一些这样的人。
+496,Calling into the #Fediverse makes me feel like a whale singing through the vast ocean!,加入Fediversum之后，我感到像是在海洋的范围里嘰嘰作响！,在 #Fediverse 中呼唤，让我觉得自己像一头鲸鱼一样，在浩瀚的海洋中高歌！
+497,"Want to join my ""pod""?","希望加入我的""Pod""？",想加入我的“pod”吗？
+498,I'd particularly like to connect with more.,我尤其希望与其他用户建立联系。,我特别想和更多人联系。
+499,Everyone with their hair on fire about CNN can thank Stephen Colbert for the hard right turn.,所有人对于CNN的发烫染发时都可以感谢 史帝夫·柯贝尔，而他为保守人士树立了正确的方向。,对 CNN 表示愤怒的所有人都应该感谢史蒂芬·考伯特满舵右转。
