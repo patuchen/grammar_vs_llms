@@ -1,9 +1,11 @@
+import json
 import sacrebleu
 import argparse
 import csv
 import glob
 import numpy as np
 import scipy.stats
+import os
 
 metric = sacrebleu.CHRF()
 
@@ -11,7 +13,12 @@ args = argparse.ArgumentParser()
 args.add_argument("--data", "-d", default="data/gpt-4o-mini_de-en_cs-uk_500/")
 args = args.parse_args()
 
+
 for langs in glob.glob(args.data + "/*"):
+    fout = open(
+        args.data.replace("data/", "computed/evals/").removesuffix("/")+f"---{langs.removeprefix(args.data)}.jsonl",
+        "w"
+    )
     print(langs.removeprefix(args.data)+"\n")
     scores_all = {}
     for fname in glob.glob(f"{langs}/*.csv"):
@@ -19,13 +26,19 @@ for langs in glob.glob(args.data + "/*"):
             data = list(csv.DictReader(f))
         fname = fname.removeprefix(f"{langs}/")
 
-        scores = [
-            metric.sentence_score(x["translation"], [x["reference"]]).score
-            for x in data
-        ]
-        scores_all[fname] = scores
+        try:
+            scores = [
+                metric.sentence_score(x["translation"], [x["reference"]]).score
+                for x in data
+            ]
+            scores_all[fname] = scores
+        except:
+            print("ERROR in", fname)
 
-    fname_special = [x for x in scores_all.keys() if "polite-no_errors" in x][0]
+    fname_special = [
+        x for x in scores_all.keys()
+        if "no_errors" in x
+    ][0]
     scores_special = scores_all[fname_special]
     for fname, scores in scores_all.items():
         print(
@@ -34,3 +47,8 @@ for langs in glob.glob(args.data + "/*"):
             f"p={scipy.stats.ttest_ind(scores, scores_special).pvalue:.5f}",
             sep=" | ",
         )
+        fout.write(json.dumps({
+            "fname": fname,
+            "score": np.average(scores)
+        })+"\n")
+    fout.close()
