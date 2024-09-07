@@ -44,10 +44,10 @@ class EvaluateTranslation:
 
     def save_results(self, result_dir):
         test_name = os.path.basename(self.test_file).split(".")[0]
-        with open(os.path.join(result_dir, f"res_{self.task}_{test_name}.json"), 'w') as f:
+        with open(os.path.join(result_dir, f"res_translation_{test_name}.json"), 'w') as f:
             json.dump(self.results, f, indent=4)
 
-        with open(os.path.join(result_dir, f"partial_res_{self.task}_{test_name}.json"), 'w') as f:
+        with open(os.path.join(result_dir, f"partial_res_translation_{test_name}.json"), 'w') as f:
             json.dump(self.partial_results, f, indent=4)
 
     def load_data(self):
