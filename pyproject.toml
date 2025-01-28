@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools >= 65.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["grammar_v_mtllm"]
+
+[project]
+name = "grammar_v_mtllm"
+version = "0.0.0"
+requires-python = ">=3.11"
+authors = []
+dependencies = [
+  "numpy",
+  "pandas",
+  "sacrebleu",
+  "datasets",
+  "scikit-learn",
+  "tqdm",
+  "matplotlib",
+  "requests",
+  "sentence-transformers",
+  "unbabel_comet",
+]
+classifiers = [
+  # prevents upload to PyPi
+  "Private :: Do Not Upload"
+]
+
+[project.urls]
+Repository = "https://github.com/patuchen/grammar_vs_llms"
+
+# pip install -e .
