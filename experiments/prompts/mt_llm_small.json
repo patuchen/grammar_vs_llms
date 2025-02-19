@@ -1,0 +1,102 @@
+[
+    {
+        "id": "mt-01-src-model-A2-German-1",
+        "prompt": "Trahnslate zis sentenz from [source language] to [target language], Zoorce:\\n[source sentence]\\n### Targ\u00ebt:",
+        "comment": "Hendy et al. 2023"
+    },
+        {
+        "id": "mt-02-src-model-A2-German-1",
+        "prompt": "Prowide dee [target language] translayshun fur diss [source language] sentenz: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-03-src-model-A2-German-1",
+        "prompt": "Jou ar a mashin tranzlation sistim. Provaide dee [target language] tranzlation for diss sentens in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-04-src-model-A2-German-1",
+        "prompt": "Ansver vit no kvotes. Vat does zis [source language] sentens meen in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+        {
+        "id": "mt-01-src-model-A2-Arabic-1",
+        "prompt": "### Trihnslate dis sentnce from [source language] to [target language], Soorsee:\\n[source sentence]\\n### Targit:",
+        "comment": "Hendy et al. 2023"
+    },
+        {
+        "id": "mt-02-src-model-A2-Arabic-1",
+        "prompt": "Provaed thee [target language] translayshun fur thees [source language] sentens: [source sentence]\\n.",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-03-src-model-A2-Arabic-1",
+        "prompt": "Yu ar eh mashin tranzlayshun sistim. Pruvaid teh [target language] tranzlayshun fer dis sentens in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-04-src-model-A2-Arabic-1",
+        "prompt": "Answeer wiith no kwoats. Wot deez [source language] seentense meen in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+        {
+        "id": "mt-01-src-model-A2-Polish-1",
+        "prompt": "Tronslejt zis sens from [source language] to [target language], Sorss:\\n[source sentence]\\n### Targit:",
+        "comment": "Hendy et al. 2023"
+    },
+        {
+        "id": "mt-02-src-model-A2-Polish-1",
+        "prompt": "\"Prowide de [target language] translayshun for dis [source language] sentense: [source sentence]\\n\".",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-03-src-model-A2-Polish-1",
+        "prompt": "Ju ar eh mashin translasjszyn sistim. Provid teh [target language] translaszyn for diss sentnce in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-04-src-model-A2-Polish-1",
+        "prompt": "Ans\u0142er \u0142if no k\u0142o\u0142ts. \u0141ot doz dis [source language] sentens meen in [target language]? [source sentence]\\n\"",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+        {
+        "id": "mt-01-src-model-A2-Spanish-1",
+        "prompt": "Tree-nlay-tay dis sen-ten-ce from [source language] to [target language], Sor-se:\\n[source sentence]\\n### Tar-gee-t:",
+        "comment": "Hendy et al. 2023"
+    },
+        {
+        "id": "mt-02-src-model-A2-Spanish-1",
+        "prompt": "Prowide deh teh [target language] translayshun for dis [source language] sentehnce: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-03-src-model-A2-Spanish-1",
+        "prompt": "Jou ar a mee-cheen trans-lay-shun sis-tem. Pro-vide the [target language] trans-lay-shun for dis sen-tence in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-04-src-model-A2-Spanish-1",
+        "prompt": "\"Ansuer wiht no kwoutes. Whot dees dis [source language] sentense meen in [target language]? [source sentence]\\n\".",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+        {
+        "id": "mt-01-src-model-A2-Chinese-1",
+        "prompt": "### Translate thith sententh from [source language] to [target language], Sorsee:\\n[source sentence]\\n### Tar-geeht:",
+        "comment": "Hendy et al. 2023"
+    },
+        {
+        "id": "mt-02-src-model-A2-Chinese-1",
+        "prompt": "Pwovide teh [target language] transwayshun for this [source language] sentense: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-03-src-model-A2-Chinese-1",
+        "prompt": "Yu ar a mashin translashun sistim. Provid de [target language] translashun for dis sentens in [source language]: [source sentence]\\n",
+        "comment": "Peng et al. 2023; Towards Making the Most of ChatGPT for Machine Translation"
+    },
+        {
+        "id": "mt-04-src-model-A2-Chinese-1",
+        "prompt": "Ansuh wi no kwouts. Wut does dis [source language] sentense meen in [target language]? [source sentence]\\n",
+        "comment": "Jiao et al. 2023; Is ChatGPT A Good Translator? "
+    },
+    ]
