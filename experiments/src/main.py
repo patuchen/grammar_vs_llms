@@ -3,72 +3,112 @@ import os
 import json
 import pandas as pd
 
-from models import sampling_params, load_model
+from models import Model, sampling_params
 from utils import *
 
-data_folder = "../mt-metrics-eval-v2/wmt23/sources"
-out_folder = "../new_translations/wmt23/system-outputs"
-ref_suffix = ".refA.txt"
-ref_folder = "../mt-metrics-eval-v2/wmt23/references"
-
-with open('../mt_base.json', 'r') as file:
-    prompts = json.load(file)
-
-languages = ["de-en", "cs-uk"] #,"en-zh"
-sample = 500
+import grammar_v_mtllm
+from argparse import Namespace
 
 
 #%%
-def main():
-    args = parse_arguments()
+def main(args=None):
+    if args is None:
+        args = parse_arguments()
 
-    llm, model_short = load_model(args.model, args.gpus)
+    # load model
+    model = Model(args.model, args.gpus)
 
-    testset = load_sample(f'{data_folder}/{args.lp}.txt', sample)
-    references = load_sample(f'{ref_folder}/{args.lp}{ref_suffix}', sample)
+    # load data
+    data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
 
+    # load prompts
+    with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
+        prompts = json.load(file)
+
+    # set noising function
+    noising_functions = {
+        "character_noise": make_typos,
+    }
+    noising_function = noising_functions[args.perturbation]
+
+    # set languages
+    source_language = args.lp.split("-")[0]
+    target_language = args.lp.split("-")[1]
+
+    # run experiments
     for prompt in prompts:
-        for i in range(0, 110, 10):
+
+        # for synthetic noise, repeat at increasing noise levels
+        if args.perturbation == "character_noise":
+            for i in range(0, 110, 10):
+                model_inputs = []
+
+                template = prompt['prompt'].replace("[target language]", CODE_MAP[target_language]).replace("[source language]", CODE_MAP[source_language])
+                experiment_name = f"{model.short}_{args.split}_v2_" + prompt['id'] + f"_{i}"
+
+                # build model inputs
+                for item in data:
+                    # use the source sentence as seed
+                    noised_template = noising_function(template, i/float(100), item["src"])
+
+                    # add system prompt
+                    noised_template = CHAT_INTRO[model.short] + noised_template.replace('[source sentence]', item["src"]) + CHAT_OUTRO[model.short]
+
+                    model_inputs.extend([noised_template])
+
+                print("Model inputs are built. Starting generation")
+
+                # generate translations
+                translations = model.generate(model_inputs)
+
+                # save translations
+                for idx, translation in enumerate(translations):
+                    data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": f"{i/float(100)},character_noise", "lp": args.lp})
+                break
+
+        # for non-synthetic noise, generate translations for different prompts
+        else:
             model_inputs = []
-            translations = []
-            source_language = args.lp.split("-")[0]
-            target_language = args.lp.split("-")[1]
-
-            # Try the rest of the prompt variants
-            #if "01-src" not in prompt['id']:
-            #    continue
-
-            template = prompt['prompt'].replace("[target language]", CODE_MAP[target_language]).replace("[source language]", CODE_MAP[source_language])
-            experiment_name = f"{model_short}_{sample}_v2_" + prompt['id'] + f"_{i}"
-
-            for item in testset:
-
-                noised_template = make_typos(template, i/float(100), item)
-                noised_template = CHAT_INTRO[model_short] + noised_template.replace('[source sentence]', item) + CHAT_OUTRO[model_short]
-
-                model_inputs.extend([noised_template])
-
-
+            for item in data:
+                model_inputs.extend([prompt['prompt'].replace("[target language]", CODE_MAP[target_language]).replace("[source language]", CODE_MAP[source_language])])
             print("Model inputs are built. Starting generation")
-            # Generate translations
-            outputs = llm.generate(model_inputs, sampling_params)
-            translations = [o.outputs[0].text for o in outputs]
 
-            # create folder translations/wmt23/system-outputs
-            if not os.path.exists(f'../new_translations/wmt23/system-outputs/{args.lp}'):
-                os.makedirs(f'../new_translations/wmt23/system-outputs/{args.lp}')
-            dict = {'source': testset, 'translation': translations, 'reference': references}
-            df = pd.DataFrame(dict)
-            with open(f'../new_translations/wmt23/system-outputs/{args.lp}/{experiment_name}.csv', 'w') as f:
-                df.to_csv(f)
+            # generate translations
+            translations = model.generate(model_inputs)
+
+            # save translations
+            for idx, translation in enumerate(translations):
+                data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": "NA", "lp": args.lp})
+
+        break
+
+    if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
+        os.makedirs(f'../output_translations/wmt24/system-outputs/{args.lp}')
+
+    # save data as jsonl
+    with open(f'../output_translations/wmt24/system-outputs/{args.lp}/{args.prompt}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
+        for item in data:
+            f.write(json.dumps(item) + "\n")
             
 # %%
 
 if __name__ == "__main__":
-    main()
+
+    # either define args here or pass them as arguments on command line
+    args = Namespace(
+        lp='cs-uk',
+        model='Unbabel/TowerInstruct-7B-v0.2',
+        prompt='base',
+        split='micro_test',
+        gpus=1,
+        perturbation="character_noise"
+    )
+
+    main(args)
+
 
 # usage:
-# python -m main --lp cs-uk --model Unbabel/TowerInstruct-7B-v0.2
+# python -m main --lp cs-uk --model Unbabel/TowerInstruct-7B-v0.2 --prompt base --split micro_test
 
 ### working models:
 # Unbabel/TowerInstruct-7B-v0.2

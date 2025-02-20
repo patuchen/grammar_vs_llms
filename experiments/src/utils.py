@@ -13,25 +13,6 @@ CODE_MAP = {
     "zh": "Chinese",
 }
 
-# LLAMA3_TEMPLATE = "<|begin_of_text|><|start_header_id|>system<|end_header_id|>" + \
-# "{{ system_prompt }}<|eot_id|><|start_header_id|>user<|end_header_id|>" + \
-# "{{ user_msg_1 }}"
-
-# CHAT_INTRO = {"Meta":dedent("""<|begin_of_text|><|start_header_id|>system<|end_header_id|>
-#             You are a helpful machine translation assistant.
-#             <|eot_id|><|start_header_id|>user<|end_header_id|>"""),
-#             "EuroLLM": dedent("""<|im_start|>system
-#             You are a helpful machine translation assistant.
-#             <|im_end|>
-#             <|im_start|>user
-#             """),
-#             "TowerInstruct": dedent("""<|im_start|>system
-#             You are a helpful machine translation assistant.
-#             <|im_end|>
-#             <|im_start|>user
-#             """)
-#             }
-
 CHAT_INTRO = {
     "Meta": dedent("""<|begin_of_text|><|start_header_id|>system<|end_header_id|>
             You are a helpful machine translation assistant.
@@ -45,7 +26,8 @@ CHAT_INTRO = {
             You are a helpful machine translation assistant.
             <|im_end|>
             <|im_start|>user
-            """)
+            """),
+    "gpt": "",
 }
 
 
@@ -56,31 +38,9 @@ CHAT_OUTRO = {
         """),
     "TowerInstruct": dedent("""<|im_end|>
         <|im_start|>assistant
-        """)
+        """),
+    "gpt": "",
     }
-
-                
-
-    
-# CHAT_INTRO = """<|im_start|>system
-# You are a helpful machine translation assistant.
-# <|im_end|>
-# <|im_start|>user
-# """
-
-# CHAT_OUTRO = {"Meta":dedent("""<|eot_id|><|start_header_id|>assistant<|end_header_id|>"""),
-# "EuroLLM": dedent(""" <|im_end|>
-# <|im_start|>assistant
-# """),
-# "TowerInstruct": dedent(""" <|im_end|>
-# <|im_start|>assistant
-# """)
-# }
-
-#              """ <|im_end|>
-# <|im_start|>assistant
-# """
-        
 
 def load_sample(path, sample):
     loaded = []
@@ -93,6 +53,7 @@ def load_sample(path, sample):
             i += 1
     return loaded
 
+# TODO: add other noising functions
 def make_typos(sentence, prob_threshold=0.1, seed=42):
     new_sentence = ""
     i = 0
@@ -104,6 +65,7 @@ def make_typos(sentence, prob_threshold=0.1, seed=42):
             new_sentence += sentence[i:close_i+1]
             i = close_i + 1
             continue
+
         # With a random probability of prob_threshold, introduce a typo
         if random.Random().random() < prob_threshold:
             # Only swap if not approaching the end of the sentence and if the characters are not special
@@ -117,8 +79,12 @@ def make_typos(sentence, prob_threshold=0.1, seed=42):
         i += 1
     return new_sentence
 
+def extract_translation(text):
+    translation = text.strip()
+    return translation
+
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="Generates samples for MBR decoding using EuroLLM.")
+    parser = argparse.ArgumentParser(description=".")
     parser.add_argument(
         "--lp",
         type=str,
@@ -133,12 +99,6 @@ def parse_arguments():
         help="Model for generation.",
     )
     parser.add_argument(
-        "--num_candidates",
-        type=int,
-        default=1,
-        help="Number of samples to generate for each source sentence.",
-    )
-    parser.add_argument(
         "--gpus",
         type=int,
         default=1,
@@ -146,5 +106,23 @@ def parse_arguments():
     )
     parser.add_argument(
         "--output_file", type=str, help="Output file with translation candidates."
+    )
+    parser.add_argument(
+        "--prompt",
+        type=str,
+        default="base",
+        help="Prompt to use for generation.",
+    )
+    parser.add_argument(
+        "--split",
+        type=str,
+        default="micro_test",
+        help="Split to use for generation.",
+    )
+    parser.add_argument(
+        "--perturbation",
+        type=str,
+        default="character_noise",
+        help="Perturbation to use for generation.",
     )
     return parser.parse_args()

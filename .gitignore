@@ -4,6 +4,7 @@ json_convert.py
 augmenter.py
 mt-metrics-eval-v2
 new_translations/
+output_translations/
 .venv
 
 
