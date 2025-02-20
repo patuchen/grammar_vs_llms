@@ -21,6 +21,10 @@ dependencies = [
   "requests",
   "sentence-transformers",
   "unbabel_comet",
+  "vllm",
+  "openai",
+  "anthropic",
+  "dotenv"
 ]
 classifiers = [
   # prevents upload to PyPi
