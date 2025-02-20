@@ -1,55 +1,141 @@
-from vllm import LLM, SamplingParams
-from openai import OpenAI
-from tqdm import tqdm
-from typing import List, Dict, Any
 import os
+from typing import List, Dict, Any
+from openai import OpenAI
+from anthropic import Anthropic
+from dotenv import load_dotenv
+from vllm import LLM, SamplingParams
+from tqdm import tqdm
 
 class Model:
-
-    def __init__(self, model, gpus):
+    def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str):
         self.model = model
-        self.short = model.split("/")[1].split("-")[0] if "/" in model else model.split("-")[0]
         self.gpus = gpus
+        self.sampling_params = sampling_params
+        self.system_prompt = system_prompt
+
+        self.short = model.split("/")[1].split("-")[0] if "/" in model else model.split("-")[0]
         self.type = "vllm" if "/" in model else "openai"
-        # Initialize the model
+
+        self.llm: LLM | Anthropic | OpenAI = None
         if self.type == "vllm":
-            self.llm = LLM(model=self.model, tensor_parallel_size=self.gpus)
-        elif self.type == "openai":
-            self.llm = OpenAI(
-                api_key=os.environ["OPENAI_API_KEY"]
-            )
+            self.llm = LLM(model=model, tensor_parallel_size=gpus)
 
-    def generate(self, model_inputs):
-        if self.type == "openai":
-            # TODO: define system prompt
-            messages = [
-                [{"role": "system", "content": "You are a helpful machine translation assistant."},
-                 {"role": "user", "content": prompt}]
-                for prompt in model_inputs
-            ]
-            translations = []
-            for msg in tqdm(messages):
-                response = self.llm.chat.completions.create(
-                    model=self.model,
-                    messages=msg,
-                    temperature=0.05,
-                    max_tokens=512)
+    def __call__(self, prompts: List[str]) -> List[str]:
+        return self.generate(prompts)
 
-                translation = response.choices[0].message.content.strip()
-                translations.append(translation.replace('\n', ' ').replace('\t', ' '))
+    def generate(self, model_inputs: list[str], *, quiet: bool = False) -> list[str]:
+        raise NotImplementedError()
 
-            return translations
+class EuroLLMModel(Model):
+    def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
+        system = {
+            "role": "system",
+            "prompt": self.system_prompt
+        }
+        conversations = [
+            [system, {"role": "user", "prompt": prompt}]
+            for prompt in prompts
+        ]
+        responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
+        return [response.outputs[0].text.strip().replace('\n', ' ').replace('\t', ' ') for response in responses]
 
-        # vllm
-        elif self.type == "vllm":
-            outputs = self.llm.generate(model_inputs, sampling_params)
-            translations = [o.outputs[0].text.strip().replace('\n', ' ').replace('\t', ' ') for o in outputs]
-            return translations
+class TowerModel(Model):
+    def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:        
+        # In the documentation from HF they don't use the system prompt
+        conversations = [
+            [{"role": "user", "prompt": prompt}]
+            for prompt in prompts
+        ]
+        responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
+        return [response.outputs[0].text.strip().replace('\n', ' ').replace('\t', ' ') for response in responses]
 
+class AnthropicModel(Model):
+    def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
+        super().__init__(model, gpus, sampling_params, system_prompt)
+        load_dotenv()
+        # self._api_key = os.getenv("ANTHROPIC_API_KEY")
+        self.llm = Anthropic() # TODO check if the api key is loaded
 
-sampling_params = SamplingParams(
-    # stop at end of text (can trim after newlines later?)
-    stop=["<|im_end|>", "<|eot_id|>"],
-    temperature=0.05,
-    max_tokens=512,
-)
+    def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
+        # The system prompt is added by .messages.create
+        conversations = [
+            {"role": "user", "content": [{"type": "text", "text": prompt}]}
+            for prompt in prompts
+        ]
+        # TODO add top_p and top_k if used
+        responses = [
+            self.llm.messages.create(
+                model=self.model,
+                max_tokens=self.sampling_params.max_tokens,
+                temperature=self.sampling_params.temperature,
+                system=self.system_prompt,
+                messages=conversation,
+                stop_sequences=self.sampling_params.stop
+            ) 
+            for conversation in tqdm(conversations, disable=quiet)
+        ]
+        # TODO check if this is correct
+        responses = [response.content[0]["text"].replace('\n', ' ').replace('\t', ' ') for response in responses]
+        return responses
+    
+
+class OpenAIModel(Model):
+    def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
+        super().__init__(model, gpus, sampling_params, system_prompt)
+        load_dotenv()
+        # self._api_key = os.getenv("OPENAI_API_KEY")
+        self.llm = OpenAI() # TODO check if the api key is loaded
+
+    def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
+        # TODO is it system or developer? Doc ambiguous
+        system = {"role": "system", "content": self.system_prompt}
+        # system = {"role": "developer", "content": self._system_prompt}
+        
+        conversations = [
+           [system, {"role": "user", "content": prompt}]
+            for prompt in prompts
+        ]
+        # TODO add top_p if used, top_k not supported
+        responses = [
+            self.llm.chat.completions.create(
+                model=self.model,
+                messages=conversation,      
+                n=self.sampling_params.n,
+                max_tokens=self.sampling_params.max_tokens,
+                temperature=self.sampling_params.temperature,
+                seed=self.sampling_params.seed,
+                stop=self.sampling_params.stop
+            ) 
+            for conversation in tqdm(conversations, disable=quiet)
+        ]
+
+        responses = [response.choices[0].message.replace('\n', ' ').replace('\t', ' ') for response in responses]
+        return responses
+
+def load_model(model: str, gpus: int, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
+    if params is None:
+        params = default_sampling_params()
+
+    if "gpt" in model.lower():
+        return OpenAIModel(model, gpus, sampling_params, system_prompt)
+    elif "tower" in model.lower():
+        return TowerModel(model, gpus, sampling_params, system_prompt)
+    elif "euro" in model.lower():
+        return EuroLLMModel(model, gpus, sampling_params, system_prompt)
+    elif "claude" in model.lower():
+        return AnthropicModel(model, gpus, sampling_params, system_prompt)
+    else:
+        raise ValueError(f"Model {model} not supported")
+    
+def default_sampling_params() -> SamplingParams:
+    # TODO define reasonable values
+    return SamplingParams(
+        n=1,
+        max_tokens=512,
+        temperature=0.05,
+        # stop at end of text (can trim after newlines later?)
+        stop=["<|im_end|>", "<|eot_id|>"], # TODO make sure this works for all the models
+        # top_p=0.9,
+        # top_k=0,
+        seed=0
+    )

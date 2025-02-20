@@ -16,3 +16,7 @@ Outputs translations to `../output_translations/wmt24/system-outputs/{args.lp}/{
 - add other noising functions
 - add other prompts
 - define system prompt for gpt
+    - is "You are a helpful machine translation assistant." enough?
+- Do we use our chat templates or thoses defined by openai/anthropic/vllm?
+- vllm: chat vs generate
+- openai/anthropic: batch mode to reduce the cost?

@@ -3,7 +3,7 @@ import os
 import json
 import pandas as pd
 
-from models import Model, sampling_params
+from models import Model, default_sampling_params, load_model
 from utils import *
 
 import grammar_v_mtllm
@@ -16,7 +16,7 @@ def main(args=None):
         args = parse_arguments()
 
     # load model
-    model = Model(args.model, args.gpus)
+    model = load_model(args.model, args.gpus)
 
     # load data
     data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
@@ -52,7 +52,7 @@ def main(args=None):
                     noised_template = noising_function(template, i/float(100), item["src"])
 
                     # add system prompt
-                    noised_template = CHAT_INTRO[model.short] + noised_template.replace('[source sentence]', item["src"]) + CHAT_OUTRO[model.short]
+                    # noised_template = CHAT_INTRO[model.short] + noised_template.replace('[source sentence]', item["src"]) + CHAT_OUTRO[model.short]
 
                     model_inputs.extend([noised_template])
 
