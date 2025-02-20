@@ -75,7 +75,7 @@ class AnthropicModel(Model):
             for conversation in tqdm(conversations, disable=quiet)
         ]
         # TODO check if this is correct
-        responses = [response.content[0]["text"].replace('\n', ' ').replace('\t', ' ') for response in responses]
+        responses = [response.content[0].text.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
     
 
@@ -109,7 +109,7 @@ class OpenAIModel(Model):
             for conversation in tqdm(conversations, disable=quiet)
         ]
 
-        responses = [response.choices[0].message.replace('\n', ' ').replace('\t', ' ') for response in responses]
+        responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
 
 def load_model(model: str, gpus: int, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
