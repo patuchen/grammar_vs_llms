@@ -113,8 +113,8 @@ class OpenAIModel(Model):
         return responses
 
 def load_model(model: str, gpus: int, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
-    if params is None:
-        params = default_sampling_params()
+    if sampling_params is None:
+        sampling_params = default_sampling_params()
 
     if "gpt" in model.lower():
         return OpenAIModel(model, gpus, sampling_params, system_prompt)

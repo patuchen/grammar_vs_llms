@@ -6,6 +6,7 @@ mt-metrics-eval-v2
 new_translations/
 output_translations/
 .venv
+.set_env.sh
 
 
 # Byte-compiled / optimized / DLL files

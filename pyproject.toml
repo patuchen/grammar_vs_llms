@@ -22,6 +22,8 @@ dependencies = [
   "sentence-transformers",
   "unbabel_comet",
   "vllm",
+  "openai",
+  "anthropic",
 ]
 classifiers = [
   # prevents upload to PyPi

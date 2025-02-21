@@ -2,6 +2,7 @@
 import os
 import json
 import pandas as pd
+import sys
 
 from models import Model, default_sampling_params, load_model
 from utils import *
@@ -64,7 +65,6 @@ def main(args=None):
                 # save translations
                 for idx, translation in enumerate(translations):
                     data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": f"{i/float(100)},character_noise", "lp": args.lp})
-                break
 
         # for non-synthetic noise, generate translations for different prompts
         else:
@@ -80,8 +80,6 @@ def main(args=None):
             for idx, translation in enumerate(translations):
                 data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": "NA", "lp": args.lp})
 
-        break
-
     if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
         os.makedirs(f'../output_translations/wmt24/system-outputs/{args.lp}')
 
@@ -94,15 +92,21 @@ def main(args=None):
 
 if __name__ == "__main__":
 
-    # either define args here or pass them as arguments on command line
-    args = Namespace(
-        lp='cs-uk',
-        model='Unbabel/TowerInstruct-7B-v0.2',
-        prompt='base',
-        split='micro_test',
-        gpus=1,
-        perturbation="character_noise"
-    )
+    
+    # if command line arguments are provided, use those
+    if len(sys.argv) > 1:
+        args = parse_arguments()
+
+    else:
+        # Otherwise, use these hard-coded values (or modify as needed)
+        args = Namespace(
+            lp='cs-uk',
+            model='Unbabel/TowerInstruct-7B-v0.2',
+            prompt='base',
+            split='micro_test',
+            gpus=1,
+            perturbation="character_noise"
+        )
 
     main(args)
 
@@ -114,3 +118,5 @@ if __name__ == "__main__":
 # Unbabel/TowerInstruct-7B-v0.2
 # Unbabel/EuroLLM-1.7B-Instruct
 # meta-llama/Meta-Llama-3.1-8B-Instruct
+# gpt-4o-mini
+# claude-3-5-haiku-latest
