@@ -9,7 +9,7 @@ Each noiser class has a method `noise`: str --> str.
 
 A *scenario* defines a noise profile, which is a collection of noiser class objects. 
 See examples in `utils.define_noise_profiles`. 
-This allows us to model compositions of noisers.
+This allows us to model compositions of noisers for different scenarios, like L2 users (high spelling errors, awkward phrasing), or GenZ typers (low spelling errors, informal register).
 
 We apply this compositions using the class `ComposeNoise` (see `noising_functions.py`). 
 This is instantiated using a noise profile, and has a method `noise`: str --> str.
