@@ -60,4 +60,4 @@ For this, we need to do the following:
 3) Sanity check: The perplexity should looks somewhat smoothly increasing with `p` i.e. it should not look like an elbow. The best case scenario is something linear.
 4) Now, we treat I like a percentile. So if `I=0.5`, we return our 50th percentile prompt. 
 
-TODO: Implement this.
+This needs to be implemented.
