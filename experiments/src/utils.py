@@ -79,6 +79,34 @@ def make_typos(sentence, prob_threshold=0.1, seed=42):
         i += 1
     return new_sentence
 
+def make_natural_typo(sentence, probs, seed=42):
+    new_sentence = ""
+    i = 0
+    random.seed(seed)
+    capital_letters = [ord('A') - ord('a') 
+        if ord('A') <= ord(l) <= ord('Z') else 0 for l in sentence]
+    sentence = sentence.lower()
+
+    while i < len(sentence):
+        # Do not replace anything in placeholders - there is still the source sentence placeholder
+        if sentence[i] == '[':
+            close_i = sentence.find(']', i)
+            new_sentence += sentence[i:close_i+1]
+            i = close_i + 1
+            continue
+
+        if random.Random().random() < probs.get(sentence[i], 0):
+            # Replace with a random nearby character
+            # Neighbours dict is defined at the bottom
+            new_sentence += chr(ord(random.choice(neighbours[sentence[i]])) + capital_letters[i])
+        else:
+            new_sentence += sentence[i]
+        i += 1
+
+
+    return new_sentence
+
+
 def extract_translation(text):
     translation = text.strip()
     return translation
@@ -126,3 +154,34 @@ def parse_arguments():
         help="Perturbation to use for generation.",
     )
     return parser.parse_args()
+
+
+neighbours = {
+    'a': ['q', 'w', 's','z'], 
+    'b': ['v',' ','g','h','n'],
+    'c': ['x','d','f','v', ' '],
+    'd': ['e', 'r', 'f','c','x','s'],
+    'e': ['w','r','d','s'],
+    'f': ['d','r','t','g','v','c'],
+    'g': ['f','t','y','h','b','v'],
+    'h': ['g','y','u','j','n','b'],
+    'i': ['u','8','9','o','k','j'],
+    'j': ['h','u','i','k','m','n'],
+    'k': ['j','i','o','l',',','m'],
+    'l': ['k','o','p'],
+    'm': ['n','j','k',',',' '],
+    'n': ['b','h','j','m',' '],
+    'o': ['i','p','l','k'],
+    'p': ['o','l'],
+    'q': ['w','a'],
+    'r': ['e','t','f','d'],
+    's': ['a','w','e','d','x','z'],
+    't': ['r','y','g','f'],
+    'u': ['y','i','j','h'],
+    'v': ['c','f','g','b',' '],
+    'w': ['q','e','s','a'],
+    'x': ['z','s','d','c',' '],
+    'y': ['t', 'u','h','g'],
+    'z': ['a','s','x'],
+}
+
