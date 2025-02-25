@@ -61,3 +61,10 @@ For this, we need to do the following:
 4) Now, we treat I like a percentile. So if `I=0.5`, we return our 50th percentile prompt. 
 
 This needs to be implemented.
+
+## Using LLMs to generate noised versions
+This needs to be explored. Note that ideally, we do this in a controlled way, i.e. we tell the LLM what kind of noise we need it to produce. 
+Ideally, we are also able to control the "intensity" of the noise, and generate noised prompts over a range of intensities. 
+
+
+
