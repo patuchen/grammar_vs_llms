@@ -45,9 +45,13 @@ Currently, this has 2 noised prompts per prompt and `p` (but we can generate mor
 ## Next steps / TODOs
 
 * Refine current noisers in `Orthographic`. I've written these up roughly motivated by [this paper](https://www.tandfonline.com/doi/epdf/10.1080/01434639708666335?needAccess=true), but I definitely need to go through them again. We should also eyeball the noised outputs and refine them based on that. 
-* Implement noise class `Lexical/Phrasal`. This includes lexical/phrasal simplification (e.g. "provide" --> "give"), and lexical dropping ("Please translate from en to fr:" --> "translate en to fr"). The latter is motivated by search-engine like usage of LLMs by potentially lazy users (guilty). We can investigate using LLMs to help us to do these simplifications. 
+* Implement noise class `Lexical/Phrasal`. This includes lexical/phrasal simplification (e.g. "provide" --> "give"), and lexical dropping ("Please translate from en to fr:" --> "translate en to fr"). The latter is motivated by search-engine like usage of LLMs by potentially lazy users (guilty). We can investigate using LLMs to help us to do these simplifications (see below).
 * Implement noise class `WordOrder`. This reorders things in a plausible way, such as an L2 user might do. For example, "Please translate" --> "Translate please"
 * Implement prompt sampling using perplexity (see below).
+
+## Using LLMs to generate noised versions
+This needs to be explored. Note that ideally, we do this in a controlled way, i.e. we tell the LLM what kind of noise we need it to produce. 
+Ideally, we are also able to control the "intensity" of the noise, and generate noised prompts over a range of intensities. 
 
 ## Using perplexity scores
 For each noised prompt, we also store its perplexity for GPT2. 
@@ -61,10 +65,4 @@ For this, we need to do the following:
 4) Now, we treat I like a percentile. So if `I=0.5`, we return our 50th percentile prompt. 
 
 This needs to be implemented.
-
-## Using LLMs to generate noised versions
-This needs to be explored. Note that ideally, we do this in a controlled way, i.e. we tell the LLM what kind of noise we need it to produce. 
-Ideally, we are also able to control the "intensity" of the noise, and generate noised prompts over a range of intensities. 
-
-
 
