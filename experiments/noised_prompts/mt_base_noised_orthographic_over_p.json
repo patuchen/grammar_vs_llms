@@ -1,0 +1,970 @@
+[
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.0_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "perplexity": 169.628662109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.0_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "perplexity": 169.628662109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.0_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "perplexity": 80.21586608886719,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.0_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "perplexity": 80.21586608886719,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.0_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "perplexity": 93.32001495361328,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.0_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "perplexity": 93.32001495361328,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.0_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "perplexity": 112.91253662109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.0_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "perplexity": 112.91253662109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.0
+        },
+        "scenario": "orthographic_0.0"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.1_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translatte  this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target::",
+        "perplexity": 493.35198974609375,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.1_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate this sentence from [source language] to [target language], Sourrce:\\n[source sentence]\\n### Target:",
+        "perplexity": 262.38385009765625,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.1_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] translution for this [source language] sentence: [source sentence]\\n",
+        "perplexity": 112.8584976196289,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.1_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] transladion for this [source language] sentence: [source sentence]\\n",
+        "perplexity": 138.8779754638672,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.1_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a machine translation system. Provite the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "perplexity": 132.40036010742188,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.1_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You aro a machine translation system. Provide the [target language] dranslation for this sentence in [source language]: [source sentence]\\n",
+        "perplexity": 215.1355438232422,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.1_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no quotes. What does this [source language] sentence meen yn [target language]? [source sentence]\\n",
+        "perplexity": 204.7776336669922,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.1_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer widh no quotes. What does this [source language] cenyence mean in [target language]? [source sentence]\\\\n",
+        "perplexity": 465.0747375488281,
+        "noise_type_probabilities": {
+            "orthographic": 0.1
+        },
+        "scenario": "orthographic_0.1"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.2_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate thys sentense from [source language] do [target language], Sauca:\\n[source sentence]\\n### Tarrget:",
+        "perplexity": 786.0072021484375,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.2_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate dhis zentence fro m[source language] to  [target language], Source:\\n[source sentence]\\n### Target:",
+        "perplexity": 660.5831909179688,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.2_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] tranclation for this [source language] sentennce: [source sentence]\\nn",
+        "perplexity": 240.00584411621094,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.2_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Pruvide the [target language] trannslation for  dhis [source language] sendence: [source sentence]\\n",
+        "perplexity": 647.917236328125,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.2_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a machine transladion system. Provide the [target language] translattion for this  zendenze in [source language]: [source sentence]\\n",
+        "perplexity": 370.65997314453125,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.2_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a mechine translation system. Provide thha [target language] translatien for this sontenc in [source language]: [source sentence]\\n",
+        "perplexity": 509.00537109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.2_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no quotes. What does thiz [source language] sentence mein in [target language]? [source sentence]\\n",
+        "perplexity": 198.2508544921875,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.2_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no quotos. What does this [source language] sentenva mean in  [target language]? [source sentence]\\n",
+        "perplexity": 429.5761413574219,
+        "noise_type_probabilities": {
+            "orthographic": 0.2
+        },
+        "scenario": "orthographic_0.2"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "#### Translatu this sentence frim [source language] to [target language], Source:\\n[source sentence]\\n### Tirgget:",
+        "perplexity": 937.3360595703125,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translat thes  sentence from [source language] to [target language], Sourse:\\n[source sentence]\\n#### Target:",
+        "perplexity": 553.5448608398438,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] trenclation for this [source language] sentence: [source sentence]\\\\n",
+        "perplexity": 139.49002075195312,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the [target language] translatino for this [source language] sontense:  [source sentence]\\n",
+        "perplexity": 230.77406311035156,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You ar ea machine tranclationn sysdem. Provide the [target language] translation for this sentense in [source language]: [source sentence]\\n",
+        "perplexity": 437.6858825683594,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a mazhini dranslotyun system. Provvita the [target language] dransslation fer this zentinca in [source language]: [source sentence]\\n",
+        "perplexity": 706.297607421875,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer wyth no quotes. What does this [source language] esntenc mean in [target language]? [source sentence]\\n",
+        "perplexity": 277.01458740234375,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answor with no quotuss. What does this [source language] sentense mean inn [target language]? [source sentence]\\n",
+        "perplexity": 650.8800659179688,
+        "noise_type_probabilities": {
+            "orthographic": 0.30000000000000004
+        },
+        "scenario": "orthographic_0.30000000000000004"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.4_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Trunsslti dhis sentenc  from [source language] to [target language], Souci:\\n[source sentence]\\n### Taget:",
+        "perplexity": 675.3439331054688,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.4_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translqt dhiz zentene from [source language] to [target language], Soorca:\\\\n[source sentence]\\n### Targot:",
+        "perplexity": 820.9808349609375,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.4_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provid tha [target language] ttransladyon for thhis [source language] sendence: [source sentence]\\n",
+        "perplexity": 627.1106567382812,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.4_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provite th [target language] transslatiin  for this [source language] senence: [source sentence]\\n",
+        "perplexity": 552.0111083984375,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.4_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You ar a mashine translotyon zyysstam. Provide the [target language] translediun for this sentence yn [source language]: [source sentence]\\n",
+        "perplexity": 661.2210083007812,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.4_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "Ya uare a mechine translatino syyctom. Provvide tha [target language] translatien for thic sentencce  in  [source language]: [source sentence]\\n",
+        "perplexity": 617.0426635742188,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.4_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Ancwur with ne quodes. Whog does thiz [source language] sentenze mena in [target language]? [source sentence]\\n",
+        "perplexity": 535.0734252929688,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.4_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer withh no quotes. Whta toes this [source language] zentencu moan in [target language]? [source sentence]\\n",
+        "perplexity": 826.4337158203125,
+        "noise_type_probabilities": {
+            "orthographic": 0.4
+        },
+        "scenario": "orthographic_0.4"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.5_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Translate dhhic sintence from [source language] to [target language], Soruze:\\n[source sentence]\\n### Tagged:",
+        "perplexity": 389.22406005859375,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.5_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Tranzlad tuis seentince frrum [source language] to [target language], Soasu:\\\\nn[source sentence]\\n### Turget:",
+        "perplexity": 1453.8861083984375,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.5_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provid the  [target language] dranzlation for thas [source language] sendincce: [source sentence]\\n",
+        "perplexity": 789.114013671875,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.5_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Prroviet thhe [target language] translation for dhic [source language]  sendenncce: [source sentence]\\n",
+        "perplexity": 1317.8336181640625,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.5_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You orr a muchino drinslattion syyssedm. Provvide th [target language] translationn for dhhis zentenzu in [source language]: [source sentence]\\n",
+        "perplexity": 1034.057861328125,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.5_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a mazhan trinslotion ssyctem. Provvyd dhe [target language] tronclattyun for hdis senteenze in  [source language]: [source sentence]\\n",
+        "perplexity": 919.0477294921875,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.5_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Ansswer with ni quodes. What daec this [source language] sendennce muan in [target language]? [source sentence]\\n",
+        "perplexity": 766.4148559570312,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.5_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answar wyth no quotez. What toes thus [source language] santonc mean in [target language]? [source sentence]\\\\nn",
+        "perplexity": 928.8114013671875,
+        "noise_type_probabilities": {
+            "orthographic": 0.5
+        },
+        "scenario": "orthographic_0.5"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Trunnslatt thhis  sintence frrom  [source language] da  [target language], Sourcci:\\n[source sentence]\\n### Targed:",
+        "perplexity": 1826.647705078125,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Trranslat dhiss sunttinnce frim  [source language] do [target language], Sourc:\\\\nn[source sentence]\\n#### Turgt::",
+        "perplexity": 2071.27978515625,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Proved th [target language] drenclatiin for thyss [source language] sentenca: [source sentence]\\n",
+        "perplexity": 529.4093017578125,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provite thu [target language]  transslatyon  for  tihs  [source language]  senttoncce: [source sentence]\\n",
+        "perplexity": 491.6151428222656,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "Yoi are a mashine trransletion cystem.. Pradia  the [target language] translattion for yhass sentonce in  [source language]: [source sentence]\\nn",
+        "perplexity": 1552.962158203125,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You arre a machin trranclettion cystem. Lruvidde teh  [target language] trinslation  foe this sendenns y n[source language]: [source sentence]\\n",
+        "perplexity": 1099.2366943359375,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer with no qeodos. Whed dees dhic [source language] sentence mean  in [target language]? [source sentence]\\n",
+        "perplexity": 532.8849487304688,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answor withh no quataz.  What deus thiz [source language] ssentence maan in [target language]? [source sentence]\\nn",
+        "perplexity": 606.8179931640625,
+        "noise_type_probabilities": {
+            "orthographic": 0.6000000000000001
+        },
+        "scenario": "orthographic_0.6000000000000001"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Granslade  this sendonci frum [source language] do [target language], Source:\\n[source sentence]\\n#### Tarrget::",
+        "perplexity": 1505.597412109375,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Grinzlat dhis satnens ffrom [source language] do [target language],, Sourse:\\n[source sentence]\\\\n### Targett:",
+        "perplexity": 1315.8367919921875,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide the  [target language] transllatyon forr this [source language]  sintencca: [source sentence]\\n",
+        "perplexity": 850.630126953125,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Prrovydde the [target language] translationn rorr thaz [source language] sintenze: [source sentence]\\\\n",
+        "perplexity": 692.8836669921875,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You ire a macin dransllatiinn systom. Pruvyte  dhe [target language] dranspadion forr thiss sentens in [source language]:  [source sentence]\\n",
+        "perplexity": 1392.3922119140625,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are  amashine translatyon syyzdem.  Pruvydo dha [target language] trunslateen  for thus  sandence in [source language]: [source sentence]\\nn",
+        "perplexity": 1159.69189453125,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answir  with no quidic. What toes dhis [source language] sendence moan in [target language]?  [source sentence]\\n",
+        "perplexity": 1046.101806640625,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer wyth ni quotess. What doess thic [source language] senenzi meon in [target language] ?[source sentence]\\n",
+        "perplexity": 624.314697265625,
+        "noise_type_probabilities": {
+            "orthographic": 0.7000000000000001
+        },
+        "scenario": "orthographic_0.7000000000000001"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.8_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Transslade thyz snetencca frrim [source language] tu [target language],  Sourcca:\\n[source sentence]\\n### Tarrged:",
+        "perplexity": 2217.75732421875,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.8_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "#### Trrunsslate thus sentonc from [source language] to [target language], Seucr:e\\n[source sentence]\\n####  Tegget::",
+        "perplexity": 738.0059814453125,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.8_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Privid the  [target language] trunssletiun far thic  [source language] centensi:  [source sentence]\\nn",
+        "perplexity": 839.0171508789062,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.8_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Providd the [target language] drenslattyon fer tihc [source language] sendence: [source sentence]\\n",
+        "perplexity": 557.697265625,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.8_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You are a  mazhane dranslationn  sycttem. Prividde the [target language] trrunnclwteann forr thys  sentencu  in [source language]: [source sentence]\\n",
+        "perplexity": 753.5216674804688,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.8_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You ur a muchhine traanslation ssysdumm. Providdi gu [target language]  translatiann for dhiz cantuncca in  [source language]: [source sentence]\\n",
+        "perplexity": 1703.4722900390625,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.8_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Ancwer with no  qaedes. Whott ddoas dhis [source language]  sondenze mean yn [target language]?  [source sentence]\\n",
+        "perplexity": 749.9993896484375,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.8_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Anzwre wwit hno qqeaduss.  Whed does this [source language] sendennze mean in [target language]? [source sentence]\\nn",
+        "perplexity": 1038.9627685546875,
+        "noise_type_probabilities": {
+            "orthographic": 0.8
+        },
+        "scenario": "orthographic_0.8"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.9_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Trencllotto yhys setinc  from  [source language] t o[target language],, Sourzo:\\j[source sentence]\\n#### Teggut:",
+        "perplexity": 1879.4185791015625,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_0.9_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Tranzllati thhes cundenc from [source language]  do [target language], Siurcce:\\n[source sentence]\\n####  Taget:",
+        "perplexity": 1167.7652587890625,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.9_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provide th [target language] transladion fi htyz [source language] sentince: [source sentence]\\\\n",
+        "perplexity": 585.8995971679688,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_0.9_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provvydde the [target language] ttransslidino  for dhys [source language] cintena: [source sentence]\\",
+        "perplexity": 1263.6954345703125,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.9_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "Yoi  aro  a mazbien tronnslation sicdemm. Pruvito the [target language] dranslatiin  forr  this sentenns in [source language]: [source sentence]\\nn",
+        "perplexity": 807.2047119140625,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_0.9_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "Yuu ure a  mashiini tranzlladyonn syystem. Provite tha [target language]  trunzladion forr dhi scenttinc in [source language]:  [source sentence]\\n",
+        "perplexity": 1503.169921875,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.9_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answer witth no qaotuz. What doos this  [source language] zintenze maan in  [target language]? [source sentence]\\n",
+        "perplexity": 438.66705322265625,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_0.9_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Ansswor widh no  qaodec. Whid rees dhys [source language] cintence  mwann inn  [target language]? [source sentence]\\nn",
+        "perplexity": 809.6598510742188,
+        "noise_type_probabilities": {
+            "orthographic": 0.9
+        },
+        "scenario": "orthographic_0.9"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_1.0_noised-0",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Transslatti dhiz contencc rfem [source language]  di [target language],,  Suorrcce:\\n[source sentence]\\n#### Targat:",
+        "perplexity": 1493.5673828125,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-01-src-no_errors",
+        "noised_prompt_id": "prompt-mt-01-src-no_errors_scenario-orthographic_1.0_noised-1",
+        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:",
+        "noised_prompt": "### Trrinsslstt dhis senttence frrom [source language] to  [target language], Suerrsu:\\n[source sentence]\\n### Togat::",
+        "perplexity": 1740.70947265625,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_1.0_noised-0",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Provvidde dh [target language] trensslladion  fur  tbis [source language] conntanse:  [source sentence]\\n",
+        "perplexity": 950.1182861328125,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-02-src-no_errors",
+        "noised_prompt_id": "prompt-mt-02-src-no_errors_scenario-orthographic_1.0_noised-1",
+        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n",
+        "noised_prompt": "Prevido th [target language] trunsslutionnfor thyc [source language] zenndonco: [source sentence]\\n\\",
+        "perplexity": 866.7949829101562,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_1.0_noised-0",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "You irra i  machhyn drranssladian sixdem..  Profid dhe [target language] transsladyon for dhhis sendencce yn [source language]: [source sentence]\\n",
+        "perplexity": 1203.462890625,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-03-src-no_errors",
+        "noised_prompt_id": "prompt-mt-03-src-no_errors_scenario-orthographic_1.0_noised-1",
+        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n",
+        "noised_prompt": "Yooo or a mozhhan dransslationn  sizttim.. Provida  th [target language] tunzlation  fer dhiz senntenze inn [source language]: [source sentence]\\nn",
+        "perplexity": 1374.2352294921875,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_1.0_noised-0",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Ansnwerr withh nu qaodec. What touss this [source language] sentenc  moin unn [target language]? [source sentence]\\nn",
+        "perplexity": 860.5795288085938,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    },
+    {
+        "prompt_id": "mt-04-src-no_errors",
+        "noised_prompt_id": "prompt-mt-04-src-no_errors_scenario-orthographic_1.0_noised-1",
+        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n",
+        "noised_prompt": "Answirr  widh nu quotez. Whhatt tous  thus [source language] sundenc maun in [target language]? [source sentence]\\n",
+        "perplexity": 798.8240966796875,
+        "noise_type_probabilities": {
+            "orthographic": 1.0
+        },
+        "scenario": "orthographic_1.0"
+    }
+]
