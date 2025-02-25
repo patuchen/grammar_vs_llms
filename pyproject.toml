@@ -18,12 +18,12 @@ dependencies = [
   "scikit-learn",
   "tqdm",
   "matplotlib",
-  "requests",
   "sentence-transformers",
-  "unbabel_comet",
+  "unbabel_comet >= 2.2",
   "vllm",
   "openai",
   "anthropic",
+  "subset2evaluate",
 ]
 classifiers = [
   # prevents upload to PyPi
