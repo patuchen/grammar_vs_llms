@@ -58,7 +58,7 @@ Ideally, we are also able to control the "intensity" of the noise, and generate 
 ## Using perplexity scores
 For each noised prompt, we also store its perplexity for GPT2. 
 This is because we want to use perplexity as a proxy for intensity of error I. (See notes on the Overleaf.)
-For niceness, we want I to be in [0,1].
+For niceness, we want I to be in `[0,1]`.
 
 For this, we need to do the following:
 1) Generate a large number of prompts (high `n_samples`), covering the space of `p` when relevant. 
