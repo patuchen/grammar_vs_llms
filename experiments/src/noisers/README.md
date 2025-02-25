@@ -44,10 +44,12 @@ Currently, this has 2 noised prompts per prompt and `p` (but we can generate mor
 
 ## Next steps / TODOs
 
+
 * Refine current noisers in `Orthographic`. I've written these up roughly motivated by [this paper](https://www.tandfonline.com/doi/epdf/10.1080/01434639708666335?needAccess=true), but I definitely need to go through them again. We should also eyeball the noised outputs and refine them based on that. 
 * Implement noise class `Lexical/Phrasal`. This includes lexical/phrasal simplification (e.g. "provide" --> "give"), and lexical dropping ("Please translate from en to fr:" --> "translate en to fr"). The latter is motivated by search-engine like usage of LLMs by potentially lazy users (guilty). We can investigate using LLMs to help us to do these simplifications (see below).
 * Implement noise class `WordOrder`. This reorders things in a plausible way, such as an L2 user might do. For example, "Please translate" --> "Translate please"
 * Implement prompt sampling using perplexity (see below).
+* Integrate with `src/main.py`. We could consider modifying the current way of doing this - instead of noising on the fly, we could decouple these processes, and load all prompts from a file in `src/main.py`. This is just to accommodate new kinds of prompt sampling which doesn't depend on anymore on a single `p`. But obviously - whatever is simplest.
 
 ## Using LLMs to generate noised versions
 This needs to be explored. Note that ideally, we do this in a controlled way, i.e. we tell the LLM what kind of noise we need it to produce. 
