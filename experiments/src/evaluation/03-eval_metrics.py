@@ -1,10 +1,9 @@
 import argparse
 import json
 import langdetect
-import pathlib
 from comet import download_model, load_from_checkpoint
 import sacrebleu
-
+import sentence_transformers
 
 def langdetect_safe(x):
     try:
@@ -31,8 +30,15 @@ scores_chrf = [
     for x in data
 ]
 
+print("Running prompt evaluation")
+score_prompt_chrf = metric.sentence_score(data[0]["prompt"], [data[0]["prompt_src"]]).score
+model = sentence_transformers.SentenceTransformer("MiniLM-L6-v2")
+enc_prompt = model.encode([x["prompt"] for x in data])
+enc_prompt_src = model.encode([x["prompt_src"] for x in data])
+score_prompt_ip = sentence_transformers.util.cos_sim(enc_prompt, enc_prompt_src)
+
 if args.no_comet:
-    scores_comet = []
+    scores_comet = [0 for _ in data]
     print("Skipping COMET")
 else:
     print("Running COMET")
@@ -44,16 +50,24 @@ else:
             "ref": x["ref"],
         }
         for x in data
-    ], gpus=1, batch_size=128)["scores"]
+    ], batch_size=128)["scores"]
 
-# take top 5 languages
 print("Running language detection")
+# take top 5 languages
 langs_out = [langdetect_safe(x) for x in data]
 
-with open(f"computed/evals_comet/{pathlib.Path(args.data).stem}.jsonl", "w") as f:
-    f.write(json.dumps({
-        "fname": args.data,
-        "score_comet": scores_comet,
-        "score_chrf": scores_chrf,
-        "score_langs": langs_out,
-    })+"\n")
+# store
+for line in data:
+    line["eval"] = {
+        "comet": scores_comet.pop(0),
+        "chrf": scores_chrf.pop(0),
+        "langs": langs_out.pop(0),
+    }
+    line["eval_prompt"] = {
+        "ip": score_prompt_ip,
+        "chrf": score_prompt_chrf,
+        "p": data[0]["prompt_p"],
+    }
+
+with open(f"computed/evaluated/{args.data.split('/')[-1]}.jsonl", "w") as f:
+    f.write("\n".join([json.dumps(x) for x in data]))

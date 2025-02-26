@@ -2,90 +2,64 @@ import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
-import scipy.stats
+import pathlib
 
-
-def confidence_interval(data, confidence=0.99):
-    return scipy.stats.t.interval(
-        confidence=confidence,
-        df=len(data)-1,
-        loc=np.mean(data),
-        scale=scipy.stats.sem(data)
-    )
-
-# python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en.jsonl -f mt-01
-# python3 ./scripts/04-plot_basic.py computed/evals/kathy-v1---de-en.jsonl -f prompt_01
-
-# python3 ./scripts/04-plot_basic.py computed/evals_chrf/gpt-4o-mini---mt-01---cs-uk.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_chrf/seth-v1-tower---cs-uk.jsonl -f mt-01
-# python3 ./scripts/04-plot_basic.py computed/evals_chrf/seth-v1-eurollm---cs-uk.jsonl -f mt-01
-
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-01---cs-uk.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-02---cs-uk.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-03---cs-uk.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-04---cs-uk.jsonl
-
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-01---cs-uk.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-01---de-en.jsonl
-# python3 ./scripts/04-plot_basic.py computed/evals_comet/gpt-4o-mini---mt-01---en-zh.jsonl
-
+# python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en
 
 args = argparse.ArgumentParser()
-args.add_argument("jsonl")
-args.add_argument("-f", "--filter", default="")
+args.add_argument("dir")
 args = args.parse_args()
 
-TARGET_LANG = (
-    "uk" if "cs-uk" in args.jsonl else
-    "en" if "de-en" in args.jsonl else
-    "zh" if "en-zh" in args.jsonl else
-    None
-)
 
-data = [
-    json.loads(x) for x in open(args.jsonl)
+# load all data from args.dir
+data_all = [
+    [json.loads(x) for x in open(f)]
+    for f in pathlib.Path(args.dir).glob("*.jsonl")
 ]
-data = [
-    x for x in data
-    if args.filter in x["fname"]
-]
-data = [
-    (
-        int(x["fname"].removesuffix(".csv").split("_")[-1]),
-        np.average(x["score"]),
-        x["langs"]
+
+for langs in {x["langs"] for data in data_all for x in data}:
+    lang1, lang2 = langs.split("-")
+    data_all_local = [
+        [x for x in data if x["langs"] == langs]
+        for data in data_all
+    ]
+
+    data_local = [
+        {
+            "comet": np.average([x["eval"]["comet"] for x in data]),
+            "chrf": np.average([x["eval"]["chrf"] for x in data]),
+            "langs": np.average([x["eval"]["langs"] for x in data]),
+            "prompt_chrf": data[0]["eval_prompt"]["chrf"],
+            "prompt_ip": data[0]["eval_prompt"]["ip"],
+            "prompt_p": data[0]["eval_prompt"]["p"],
+        }
+        for data in data_all_local
+    ]
+
+    plt.plot(
+        [x["chrf"] for x in data_local],
+        [x["prompt_chrf"] for x in data_local],
+        marker=".",
+        markersize=20,
     )
-    for x in data
-]
-data.sort(key=lambda x: x[0])
-
-plt.plot(
-    [x[0] for x in data],
-    [x[1] for x in data],
-    marker=".",
-    markersize=20,
-)
-for line in data:
+    for line in data_local:
+        plt.text(
+            line["chrf"],
+            line["prompt_chrf"],
+            f"{np.average([x[0][0] == lang2 for x in line[2]]):.0%}\n",
+            ha="center", va="center"
+        )
+    plt.ylabel("Translation quality")
+    plt.xlabel("Noise level")
+    plt.title((
+        args.dir.split("/")[-1].removesuffix(".jsonl")
+    ))
+        
     plt.text(
-        line[0],
-        line[1],
-        f"{np.average([x[0][0] == TARGET_LANG for x in line[2]]):.0%}\n",
-        ha="center", va="center"
+        0.05, 0.05, f'% of output in {lang2}',
+        transform = plt.gca().transAxes
     )
-plt.ylabel("ChrF" if "chrf" in args.jsonl else "COMET-22-DA")
-plt.xlabel("Noise level")
-plt.title((
-    args.jsonl.split("/")[-1].removesuffix(".jsonl")
-    + ((" FILTER " + args.filter) if args.filter else "")
-))
-     
-plt.text(
-    0.05, 0.05, f'% of output in {TARGET_LANG}',
-    # horizontalalignment='left',
-    # verticalalignment='center',
-    transform = plt.gca().transAxes
-)
 
-plt.tight_layout()
+    plt.tight_layout()
 
-plt.show()
+    plt.show()
