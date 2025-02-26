@@ -1,0 +1,178 @@
+[
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Rewrite this text from {source_lang} in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Turn this text into {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Put this text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewrite this from {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instruction:\\nChange the Input text from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nConvert Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Change the following line from\\n{source_lang} to {target_lang}.\\nBe exact, do not add extra words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate this line from\\n{source_lang} to {target_lang}.\\nDo not explain, just change words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Rewrite this text in {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "This text you change from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now this {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Put this words in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nYou change Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nYou change Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Turn the sentence be in\\n{target_lang} not {source_lang}.\\nKeep same, not explain: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "You must rewrite this line in\\n{target_lang} from {source_lang}.\\nNo extra, only same words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    }
+]

@@ -1,0 +1,3170 @@
+[
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewrite this text from {source_lang} in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Change this text into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put this text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instruction:\\nSwitch Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nRewrite Input from {source_lang} in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Put the next line into\\n{target_lang} from {source_lang}.\\nDo not change meaning, only words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate exactly this line from\\n{source_lang} to {target_lang}.\\nNo explanations, just change words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now this text {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Rewrite this text in {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put this words in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Change this for {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nSwitch this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nYou change Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now this line from\\n{source_lang} to {target_lang}.\\nDo not put more words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.00_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Turn the sentence be in\\n{target_lang} not {source_lang}.\\nKeep same, not explain: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.0,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.00_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n#### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very ljteral, and only translate the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Convert this texd from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate the given text from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate this sentence from {source_lang} to {target_lang} exactli:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate this sentence from {source_lang} to {target_lang} exactly:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instruction:\\nPut Input into {target_lang} from {source_lang}\\n#### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nChange Inpud from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Wrrite this again in\\n{target_lang} from {source_lang}.\\nDo not explain, only change words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change this line into\\n{target_lang} from {source_lang}.\\nNo extra information, be literal: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put this text in {target_lang} instead {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Put this text in {target_lang} instead {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Make this translation {source_lang} for {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Change this for {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nYou take Input and put it in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nRewrite Input from {source_lang} to {target_lang}  only words\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put the words in\\n{target_lang} from {source_lang}.\\nDo not put more things: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Switch this line into\\n{target_lang} from  {source_lang}.\\nDo not add, only change: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.03,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.03_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translat the following textt from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\nn{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instrruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanationc: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followingg line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations:: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate this sontence from {source_lang} to {target_lang} eexactly:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Write this again in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Insdruction:\\nPut Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Rezponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nChange Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n#### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Rewrite the next line yn\\n{target_lang} from {source_lang}.\\nB exacd, no extra explanationn: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change the following line from\\n{source_lang} to {target_lang}.\\nBe exact, do not add extra wortc: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "You trannzlate this text from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Rewrite this text in {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "You make words in {target_lang}, not in {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translate now this {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nSwitch this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nChange Input into {target_lang} now\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Make the next line into\\n{target_lang} from {source_lang}.\\nOnly words, not explain: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "You must rewrite this line in\\n{target_lang} from {source_lang}.\\nNo extra, only same words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.06,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.06_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translite the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} do {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Inctruction:\\nTranslite Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translatte the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate thhe content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following lene from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate teh content of the lyne, do not addd any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate the given text from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Please dranslate  this text from {source_lang} to {target_lang}.\\\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Change this text into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put this text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instruction:\\nMake Input in {target_lang} from {source_lang}\\nn### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nConvert Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Channge dhe following line from\\n{source_lang} too {target_lang}.\\nBe exact, do not addd exdra words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change the following lyne from\\\\n{source_lang} to {target_lang}.\\nBe exact, do not add extra words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "You translate this text from {source_lang} innto {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "You translate this text from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Swidch the text indo {target_lang}, take from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Change this for {target_lang} from {source_lang}:\\b{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nNoww translate Inpud into {target_lang} fromm {source_lang}\\n###  Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nPut Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Rewrite this line in\\n{target_lang} from {source_lang}..\\nBe very exact, no change: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Switch this line into\\n{target_lang} from {source_lang}.\\nDo not add, only change: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.09,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.09_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following text fromm {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Tronslate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Transslate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instrruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Inpput:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instrruztion:\\nTranslate Input from {source_lang} do {target_lang}\\n### Input:\\n{source_text}\\n### Reesponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translute the following line from\\n{source_lang} to {target_lang}.\\nBe very literral, and only translate the content of the line,, do not add any expllanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followyng line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanationss :{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Chang the following text  from {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Writ this again in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewrite this from {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Inztruction:\\nConvert Inputt from {source_lang} to {target_lang}\\n### Inputt:\\n{source_text}\\n### Response:\\\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nSwitcch Input fromm {source_lang} onto {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate this line from\\n{source_lang} to {target_lang}.\\nDDo not explain, just channge words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate this line fram\\n{source_lang} to {target_lang}.\\nDo not explain, just change words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "You translate this text frum {source_lang} into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Change this text to {target_lang} from  {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Turn this words in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Put this wordc in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "#### Instruction:\\nMake Input translate from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Responsi:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nYou take Input and ptu it in {target_lang}\\n### Inpud:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Now chang this line into\\n{target_lang} from {source_lang}.\\nKeep the same words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Put ghe words in\\n{target_lang} from {source_lang}.\\nDo not put mere things: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.12,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.12_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followyng text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this  from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Tranclate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instrection::\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instricttion:\\nTransllate Input from {source_lang} to {target_lang}\\n### Inpud:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translade the followingg line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only transate th content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Write thhis text agiin but in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewrite this text from {source_lang} in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Change  dhis from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewrite this from {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instrucdion:\\\\nSwitch Innput from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nSwitch Input from {source_lang} into {target_lang}\\n#### Input:\\n{source_text}\\n### Responnse:\\nn",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Converd the following line into\\n{target_lang} from {source_lang}.\\nKeep it the same, do not add anythinng: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Make this sentence in\\n{target_lang} from {source_lang}.\\nBe  vey exact ,no other words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now dhis text {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translade now this text {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Change this for {target_lang} frrom {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "You make worddz in {target_lang}, not in {source_lang}:\\\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Insdruction:\\nTranslate now this Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Recponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nYou channge Input from {source_lang} innto {target_lang}\\n### Input:\\n{source_text}\\n### Responsse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Make senntenze be in\\n{target_lang} from  {source_lang}.\\nOnly words, nothing extra: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translate now this line from\\n{source_lang} do {target_lang}.\\nDo nit put more wwords: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.15,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.15_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translat dhe followyng daxt from {source_lang} do {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate dhis from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to  {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}::",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "#### Incteuction:\\nTranslate Inpud from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Responso:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instrucion:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Responsi:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translete the following line from\\n{source_lang} to {target_lang}.\\nB veryy literal, and only translate the zonttent of te lina, do not add any explanatinos: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Transslate the following line from\\n{source_lang} to {target_lang}.\\nBe very lyteral, and only ttranslate the content of the lino, do notadd anyy explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Rewride this text frrom {source_lang} in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change the follewing text from {source_lang} ynto {target_lang}.\\\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Trannslate this cenntence from {source_lang} to {target_lang} exactly:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Rewritte this frim {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}::",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Insruction:\\nChange the Input text from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Inztruction:\\nMake Input in {target_lang} from {source_lang}\\\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate this  line from\\n{source_lang} to {target_lang}.\\nDo not expplain, just cang words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate exxactly this line from\\n{source_lang} to {target_lang}.\\nNo explanations, just change words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Make translate this texxt from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Make this text innto {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put this wordds in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Rewrite text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instructyon:\\nPut Inputt in {target_lang}  from {source_lang}\\n#### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Innstruction:\\nPut Input inn {target_lang} from {source_lang}\\n### Inpud:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Now chang this line into\\n{target_lang} from {source_lang}.\\nKeep the same words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Make the nex line intu\\n{target_lang} from {source_lang}.\\nOnly words, nott  explain: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.18,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.18_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following  text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followinng text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate thys from {source_lang} to {target_lang}:\\nn{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instruction:\\nnTranslate Inpit from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Ressponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Incrrustion:\\nTranslate Input from {source_lang} to {target_lang}\\\\n### Inputt:\\n{source_text}\\n#### Response:\\\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe veri litteral, and only translade the conntent of th lino, do not add any explanatyons: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following linne from\\n{source_lang} to {target_lang}.\\nBe vary literal, and  only translate th content of the line, do nod add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Tranzlate this text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Convvert this text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Put thiis text into {target_lang} from {source_lang}::\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Switch dhis frrom {source_lang} into {target_lang}:n\\{source_lang}:: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Insdruuction:\\nSSwitcch Inpet frrom {source_lang} into {target_lang}\\n### Inpot:\\\\n{source_text}\\n### Responce:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nCChange Input from  {source_lang} innto {target_lang}\\n### Input:\\n{source_text}\\n#### Respponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Change tihs line into\\n{target_lang} from {source_lang}.\\nNo extra information, be literal: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Switch this line to\\n{target_lang} from {source_lang}.\\nKKeep it the same,, just change language: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translade now ths text {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translade dext from {source_lang}  for {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put this words in {target_lang}, from {source_lang}:\\\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Put this words in {target_lang}, from {source_lang}:\\n{source_lang}:: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\\\nMuke Input translate fromm {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instrucction:\\nSwitch this Inputt to {target_lang}, no more\\n### Input:\\n{source_text}\\n#### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Now change this line indo\\n{target_lang} from {source_lang}.nKeep the same words: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translate now dhis line  from\\n{source_lang} to {target_lang}.\\nDo not put mor worrds: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.21,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.21_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translite the fulllowing text fromm {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Trranslat the following dext from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translite this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Insdructtion:\\nTTranslade Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response::\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translat the following line from\\n{source_lang} to {target_lang}.\\nBe very litteral, and only translaet the content of the linne, do not atd any explanatians: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followwing line  from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translad the content of the line, do not add any explanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate thhis text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put thys dext in {target_lang} instead of {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Switch thic from {source_lang} into  {target_lang:}\\n{source_lang}::  {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate thic zentence fromm {source_lang} to {target_lang} exacctly:\\n{source_lang}:: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Inctruction::\\nPut Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\j### Responsu:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instficdino:\\nTranslate the Inpud into {target_lang} from {source_lang}\\n#### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Rewrite th next line ynn\\n{target_lang} from {source_lang}.\\nBe exact, no extra explanation: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Convert the follewing line into\\\\n{target_lang} frim {source_lang}.\\nKeep it the same, do not addd anydhing: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Change thiz text to {target_lang} from {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Pud this text in {target_lang} insdead {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Make thas text be {target_lang} and not {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Turn thys wordds in  {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction::\\nChange Input into {target_lang} now\\n### Input:\\nn{source_text}\\n### Respnse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Instruction:\\nRawrite Inputt from {source_lang} to {target_lang}  only wods\\n### Input:\\n{source_text}\\n### Rasponse:\\nn",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now this line from\\n{source_lang} to {target_lang}.\\nDo not put mor wordss: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translate now thiz line from\\n{source_lang} do {target_lang}..\\nDo not  put more worts: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.24,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.24_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translade the folllowing texd fromm {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the following etxt from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translat this from {source_lang}to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate dhis from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Instructtionn:\\nTTranclate Input fram {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Resppoonce:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Instructionn:\\nTrqnslat Inpud from {source_lang}tto {target_lang}\\n###  Input:\\n{source_text}\\n###  Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate thhe folllowing line fromm\\n{source_lang} to {target_lang}.\\nB verri  literal, ant only translate the centent of dhe line, do not add any explannatiuns: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate thhe following line from\\n{source_lang} to {target_lang}.\\nB vey literal, and only transllate the conttent og the lyne, do not adt anyy explanadionc: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate this dexd  from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Wriide dhis text again but inn{target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Make this dext in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Translate thys pard from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Inztruction:\\nTranslade the Innput into {target_lang} from {source_lang}\\n### Input:\\n{source_text\\}n### Ressponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction:\\nMuke Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Respponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Swidch thiz line to\\nn{target_lang} from {source_lang}.\\nKKeep id thhe  same, just change languige: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Switch this line do\\n{target_lang} from {source_lang}.\\nKeep yt the samme, just conge language: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Translate now this tetx {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "You translate this text from {source_lang}  into {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Rewrrid text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Rewrite text into {target_lang} ffrom {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction:\\nSwatzh this Inpud to {target_lang}, no mord\\n### Input:\\n{source_text}\\n### Response:\\nn",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Insstruction:\\nYou tak Input and put it in {target_lang}\\n### Input:\\nn{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put dhe wordz in\\n{target_lang} from {source_lang}.\\nDo not put mor things: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Switch thiss line into\\n{target_lang} from {source_lang}.\\nDo not add, only change:  {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.27,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.27_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Trannclate th following texd from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate dhe following text from {source_lang} to {target_lang}\\.n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate this ffrom {source_lang} to  {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "### Inssdructtion:\\nnTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\\\n### Recponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "### Insdrucdion:\\nTranslat Input  from {source_lang} to {target_lang}\\n###  Innpud::\\n{source_text}\\n### Responze:\\nn",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-0",
+        "noised_prompt": "Translate the following line from\\n{source_lang} do {target_lang}..\\nBe very lideral, and  oly translat the cintent of the line, do not add any exxplanations: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_0.00_noised-1",
+        "noised_prompt": "Translate the followwing line from\\n{source_lang} to {target_lang}.\\nGe viry literall, andd only ttransslate the  zomtend of the line, do not add  any explinadions: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 0
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_0.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Translate thys text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Put thiz text inn {target_lang} instead off {source_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Mak this text in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "### Instruction:\\nRewrite Input frum {source_lang} in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "### Instruction\\nWrite Input again in {target_lang}\\n### Innput:\\n{source_text}\\nn### Rezponse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-0",
+        "noised_prompt": "Rewrite the nexxt line yn\\n{target_lang} from {source_lang}.\\nBe exact, no extra explanation: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_1.00_noised-1",
+        "noised_prompt": "Change the following line from\\n{source_lang} to {target_lang}.\\\\nBe exact, do nod add extra wordds: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 1
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Transslade this followyng text from {source_lang} indo  {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Translate this followyng text frum {source_lang} into {target_lang}.\\nn{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "You translatte thiz text to {target_lang} from  {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Make this text be {target_lang} and not {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "### Instruction::\\nYou take Input ant  pud it in {target_lang}\\n### Input:\\n{source_text}\\n### Responsse:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "### Inztruction:\\nSwitchh this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n## Response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-0",
+        "noised_prompt": "Put th words in\\n{target_lang} from {source_lang}.\\nDo jot put more  things: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_lexicalphrasal_2.00_noised-1",
+        "noised_prompt": "Meke the  next lin  into\\n{target_lang} from {source_lang}.\\nOnli worts, not explain: {source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "orthographic": 0.3,
+            "lexicalphrasal": 2
+        },
+        "prompt_noiser": "orthographic_0.30_lexicalphrasal_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    }
+]

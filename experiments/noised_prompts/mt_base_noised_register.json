@@ -1,0 +1,178 @@
+[
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-0",
+        "noised_prompt": "fix this in {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-1",
+        "noised_prompt": "switch lang to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-0",
+        "noised_prompt": "convert to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-1",
+        "noised_prompt": "convert to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-0",
+        "noised_prompt": "### instruction:\\nchange input {source_lang} -> {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-1",
+        "noised_prompt": "### instruction:\\nconvert text {source_lang} to {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-0",
+        "noised_prompt": "change next line to {target_lang}, literal only:\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-1",
+        "noised_prompt": "quick translate, no explain:\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 1
+        },
+        "prompt_noiser": "register_1.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-0",
+        "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-1",
+        "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-01-no_errors",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-0",
+        "noised_prompt": "quick translate {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-1",
+        "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-02-no_errors",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-0",
+        "noised_prompt": "### instruction:\\nfix this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-1",
+        "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-03-no_errors",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-0",
+        "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-1",
+        "noised_prompt": "translate this, no extras:\\n{source_text}",
+        "perplexity": -1,
+        "noise_type_parameters": {
+            "register": 2
+        },
+        "prompt_noiser": "register_2.00",
+        "prompt_id": "mt-04-no_errors",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    }
+]
