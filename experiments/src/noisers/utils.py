@@ -1,3 +1,6 @@
+import numpy as np
+import copy
+
 neighbours = {
     'a': ['q', 'w', 's','z'], 
     'b': ['v',' ','g','h','n'],
@@ -26,6 +29,8 @@ neighbours = {
     'y': ['t', 'u','h','g'],
     'z': ['a','s','x'],
 }
+
+scenarios = ["orthographic", "lexicalphrasal", "register", "L2", "LazyUser"]
 
 def is_vowel(char: str) -> bool:
         '''
@@ -61,22 +66,23 @@ def count_vowels(sentence: str) -> int:
     '''
     return sum([1 for char in sentence if is_vowel(char)]), sum([1 for char in sentence if char in ["a", "e", "i"]])
 
-def define_noise_profiles():
+def define_noise_schemas():
     '''
-    Define noise profiles, with the following structure:
+    Define noise profile schemas, with the following structure:
     {<scenario_key>: {
         <noise_class>: { # like orthographic, lexical, etc.
-            'p': <probability of applying noise type>,
             'subtype_distribution': { # like natural_typos, insertion, etc.
                 <subtype>: <probability of applying subtype> # distribution over subtypes, should sum to 1
             }
         }
     }}
+    Note that this is missing the level of noise for the noiser (parameter p), which may lie in some natural range given a scenario.
     '''
     
-    noise_profiles = {'orthographic': {
+    noise_profiles = {
+        # Individual noise class profiles
+            'orthographic': {
                 'orthographic': {
-                    'p': 0.3,
                     'subtype_distribution': {
                         'natural_typos': 0.03,
                         'insertion': 0.17,
@@ -86,9 +92,19 @@ def define_noise_profiles():
                     }
                 }
             },
+            'lexicalphrasal': {
+                'lexicalphrasal': {
+                    'subtype_distribution': None
+                }
+            },
+            'register': {
+                'register': {
+                    'subtype_distribution': None
+                }
+            },
+            # Composite noise class profiles, corresponding to *scenarios*
             'L2': { 
                 'orthographic': {
-                    'p': 0.2,
                     'subtype_distribution': {
                         'natural_typos': 0.03,
                         'insertion': 0.17,
@@ -98,13 +114,11 @@ def define_noise_profiles():
                     }
                 },
                 'lexicalphrasal': {
-                    'p': 1,
                     'subtype_distribution': None
                 }
             },
             'LazyUser': { 
                 'orthographic': {
-                    'p': 0.03,
                     'subtype_distribution': {
                         'natural_typos': 0.95,
                         'insertion': 0.01,
@@ -114,12 +128,60 @@ def define_noise_profiles():
                     }
                 },
                 'register': {
-                    'p': 2,
                     'subtype_distribution': None
                 }
             }
     }
     return noise_profiles
+
+
+def get_noise_profile_key(noise_profile: dict) -> str:
+    '''
+    Get a key for a noise profile.
+    '''
+    key = [f"{noiser_comp}_{noiser_comp_profile['p']:.2f}" for noiser_comp, noiser_comp_profile in noise_profile.items()]
+    return "_".join(key)
+        
+
+def define_noise_profiles(scenario: str):
+    '''
+    Given a noise profile schema, we generate a list of noise profiles for each scenario, varying over natural ranges of levels of noise per noise class.
+    '''
+    noise_schemas = define_noise_schemas()
+    noise_profiles = []
+    noise_schema = noise_schemas[scenario]
+    if scenario == "orthographic":
+        for p in np.linspace(0.03, 0.3, 10):
+            noise_schema_copy = copy.deepcopy(noise_schema)
+            noise_schema_copy['orthographic']['p'] = p
+            noise_profiles.append(noise_schema_copy)
+    elif scenario == "lexicalphrasal":
+        for level in [1, 2]:
+            noise_schema_copy = copy.deepcopy(noise_schema)
+            noise_schema_copy['lexicalphrasal']['p'] = level
+            noise_profiles.append(noise_schema_copy)
+    elif scenario == "register":
+        for level in [1, 2]:
+            noise_schema_copy = copy.deepcopy(noise_schema)
+            noise_schema_copy['register']['p'] = level
+            noise_profiles.append(noise_schema_copy)
+    elif scenario == "L2":
+        for p in np.linspace(0.0, 0.3, 11):
+            for level in [0, 1, 2]:
+                noise_schema_copy = copy.deepcopy(noise_schema)
+                noise_schema_copy['orthographic']['p'] = p            
+                noise_schema_copy['lexicalphrasal']['p'] = level
+                noise_profiles.append(noise_schema_copy)
+    elif scenario == "LazyUser":
+        for p in np.linspace(0.0, 0.3, 11):
+            for level in [0, 1, 2]:
+                noise_schema_copy = copy.deepcopy(noise_schema)
+                noise_schema_copy['orthographic']['p'] = p            
+                noise_schema_copy['register']['p'] = level
+                noise_profiles.append(noise_schema_copy)
+
+    return noise_profiles
+
 
 def define_lexicalphrasal_database():
     '''
