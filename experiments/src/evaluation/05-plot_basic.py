@@ -2,19 +2,19 @@ import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
-import pathlib
+import glob
 
 # python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en
 
 args = argparse.ArgumentParser()
-args.add_argument("dir")
+args.add_argument("glob")
 args = args.parse_args()
 
 
 # load all data from args.dir
 data_all = [
     [json.loads(x) for x in open(f)]
-    for f in pathlib.Path(args.dir).glob("*.jsonl")
+    for f in glob.glob(args.glob)
 ]
 
 for langs in {x["langs"] for data in data_all for x in data}:
@@ -41,6 +41,7 @@ for langs in {x["langs"] for data in data_all for x in data}:
         [x["prompt_chrf"] for x in data_local],
         marker=".",
         markersize=20,
+        label=langs,
     )
     for line in data_local:
         plt.text(
@@ -51,15 +52,13 @@ for langs in {x["langs"] for data in data_all for x in data}:
         )
     plt.ylabel("Translation quality")
     plt.xlabel("Noise level")
-    plt.title((
-        args.dir.split("/")[-1].removesuffix(".jsonl")
-    ))
-        
-    plt.text(
-        0.05, 0.05, f'% of output in {lang2}',
-        transform = plt.gca().transAxes
-    )
 
-    plt.tight_layout()
+plt.legend()
+plt.title((args.glob.split("/")[-1].removesuffix(".jsonl")))
+plt.tight_layout()
+plt.show()
 
-    plt.show()
+
+"""
+python3 experiments/src/evaluation/05-plot_basic.py data/evaluated/base_micro_test_results.jsonl
+"""

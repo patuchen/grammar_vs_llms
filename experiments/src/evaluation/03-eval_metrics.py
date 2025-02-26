@@ -32,10 +32,10 @@ scores_chrf = [
 
 print("Running prompt evaluation")
 score_prompt_chrf = metric.sentence_score(data[0]["prompt"], [data[0]["prompt_src"]]).score
-model = sentence_transformers.SentenceTransformer("MiniLM-L6-v2")
-enc_prompt = model.encode([x["prompt"] for x in data])
-enc_prompt_src = model.encode([x["prompt_src"] for x in data])
-score_prompt_ip = sentence_transformers.util.cos_sim(enc_prompt, enc_prompt_src)
+model = sentence_transformers.SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
+enc_prompt = model.encode(data[0]["prompt"])
+enc_prompt_src = model.encode(data[0]["prompt_src"])
+score_prompt_ip = sentence_transformers.util.cos_sim(enc_prompt, enc_prompt_src).item()
 
 if args.no_comet:
     scores_comet = [0 for _ in data]
@@ -69,5 +69,10 @@ for line in data:
         "p": data[0]["prompt_p"],
     }
 
-with open(f"computed/evaluated/{args.data.split('/')[-1]}.jsonl", "w") as f:
+with open(f"data/evaluated/{args.data.split('/')[-1]}", "w") as f:
     f.write("\n".join([json.dumps(x) for x in data]))
+
+
+"""
+python3 experiments/src/evaluation/05-plot_basic.py data/evaluated/base_micro_test_results.jsonl
+"""
