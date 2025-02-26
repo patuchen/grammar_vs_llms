@@ -7,7 +7,6 @@ from absl import app, flags
 from gemba.utils import get_gemba_scores
 import json
 import grammar_v_mtllm
-from pprint import pprint
 from gemba.gpt_api import GptApi
 from gemba.gemba_mqm_utils import TEMPLATE_GEMBA_MQM, apply_template, parse_mqm_answer
 from gemba.gemba_esa import TEMPLATE_GEMBA_ESA_ERROR_SPANS, TEMPLATE_GEMBA_ESA_RANKING
@@ -23,7 +22,7 @@ flags.DEFINE_string('subset', "micro_test", 'Subset to use.')
 def main(argv):
     FLAGS = flags.FLAGS
 
-    data = grammar_v_mtllm.utils.load_data(split=FLAGS.subset)
+    data = grammar_v_mtllm.utils.load_data(split=FLAGS.subset, langs=FLAGS.lp)
 
     cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.method}_{FLAGS.subset}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
     gptapi = GptApi()
@@ -36,9 +35,16 @@ def main(argv):
             df.append({"system": system, "source_seg": entry["src"], "target_seg": tgt, "source_lang": CODE_MAP[entry["langs"].split("-")[0]], "target_lang": CODE_MAP[entry["langs"].split("-")[1]]})
     print(df[-1])
     df = pd.DataFrame(df)
+
+    # TODO: modify this to use prompt format instead of prompt file?
     df["prompt"] = df.apply(lambda x: apply_template(prompts[FLAGS.method]['prompt'], x), axis=1)
-    parse_answer = prompts[FLAGS.method]["validate_answer"]
+
+    # parse_answer is always validate_number for our prompts
+    # parse_answer = prompts[FLAGS.method]["validate_answer"]
+    parse_answer = validate_number
+
     answers = gptapi.bulk_request(df, FLAGS.model, parse_answer, cache=cache, max_tokens=500)
+
 
     # answer format:
     #     {
@@ -58,9 +64,9 @@ def main(argv):
     # TODO: save temperature? = number of reruns
 
     # save answers to file
-    with open(f"scores/answers_{FLAGS.method}_{FLAGS.model}_{FLAGS.subset}.jsonl", "w") as f:
-        for answer in answers:
-            f.write(json.dumps(answer, ensure_ascii=False) + "\n")
+    with open(f"system-outputs/{FLAGS.model}/{FLAGS.lp}/{FLAGS.method}_{FLAGS.subset}_results.jsonl", "w", encoding="utf-8") as f:
+        for item in data:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
 
 if __name__ == "__main__":
     app.run(main)
