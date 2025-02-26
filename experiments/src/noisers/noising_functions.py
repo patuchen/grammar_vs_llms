@@ -220,8 +220,8 @@ class Orthographic:
         char_idx = 0
         while char_idx < len(sentence):
             # Do not replace anything in placeholders - there is still the source sentence placeholder
-            if sentence[char_idx] == '[':
-                close_i = sentence.find(']', char_idx)
+            if sentence[char_idx] == '{':
+                close_i = sentence.find('}', char_idx)
                 char_idx = close_i + 1
                 continue
             if np.random.rand() < self.p:
@@ -261,7 +261,7 @@ class Lexical:
 
 class ComposeNoise:
 
-    '''This class accepts a noise *profile* and applies noise according to the profile.'''
+    '''This class accepts a *noise profile* and applies noise according to the profile.'''
     def __init__(self, profile: Dict[str, Dict]):
         '''
         profile: A dictionary that defines the noise profile. e.g. : 
