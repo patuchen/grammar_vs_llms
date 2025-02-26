@@ -1,0 +1,202 @@
+[
+    {
+        "prompt_id": "mt-01-model-A2-Arabic-1",
+        "prompt": "Tranzlate teh follwoing teks from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Arabic-2",
+        "prompt": "Tran-zlate teh fol-oh-wing tekst from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Arabic-1",
+        "prompt": "Tranzlate thees from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Arabic-2",
+        "prompt": "Trenz-late deeis from {source_lang} tu {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Arabic-1",
+        "prompt": "### In-stroo-ku-shun: Tran-slayt In-poot from {source_lang} to {target_lang}\\n### In-poot:\\n{source_text}\\n### Reh-spoh-ns:",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Arabic-2",
+        "prompt": "### Ink-stroo-kshun:\\nTran-slate In-put from {source_lang} to {target_lang}\\n### In-put:\\n{source_text}\\n### Ree-sponse:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Arabic-1",
+        "prompt": "Tranzzlate teh follwoing laeen from\\n{source_lang} to {target_lang}.\\nBee vairy liteerl, and only tranzzlate teh kontent of teh laeen, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Arabic-2",
+        "prompt": "Tranzzlate teh follwoing laeen from\\n{source_lang} to {target_lang}.\\nBe veri litral, and onli tranzzlate teh kontent of teh laeen, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Chinese-1",
+        "prompt": "Tran-slait teh fol-low-ing tek-st frohm {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Chinese-2",
+        "prompt": "Tran-slait de fol-low-ing tex-t from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Chinese-1",
+        "prompt": "Tun-slai-dee deeis frau {source_lang} tu {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:.",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Chinese-2",
+        "prompt": "Trahns-lah-teh dee fuwm {source_lang} tuh {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:.",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Chinese-1",
+        "prompt": "### In-strook-shun: Tran-slay-teh In-put from {source_lang} to {target_lang}\\n### In-put:\\n{source_text}\\n### Reh-spoh-nses:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Chinese-2",
+        "prompt": "### In-stroo-kshun: Trahn-slay-teh In-puut frohm {source_lang} toh {target_lang}\\n### In-puut:\\n{source_text}\\n### Reh-spohn-seh:",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Chinese-1",
+        "prompt": "Tranlate teh folloing lahn from\\n{source_lang} to {target_lang}.\\nBe vewy litewal, and onwy tranlate teh contnt of teh lahn, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Chinese-2",
+        "prompt": "Tran-zlate teh fol-low-ing lahn fron {source_lang} to {target_lang}.\\nBee vely lit-er-al, and on-ly tran-zlate teh con-tent of teh lahn, do not add eni ex-plan-a-shuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-German-1",
+        "prompt": "Tranzlate ze follouing tekst from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-German-2",
+        "prompt": "Tranzlate dee folloing tekst from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-German-1",
+        "prompt": "Tranzlate zis from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-German-2",
+        "prompt": "Trahnslayt diss from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-German-1",
+        "prompt": "Tripple Instrukshun:\\nTranslayt Inpoot from {source_lang} to {target_lang}\\n### Inpoot:\\n{source_text}\\n### Respoons:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-German-2",
+        "prompt": "Tripple Instruktshun:\\nTranslaht Ehnput from {source_lang} to {target_lang}\\n### Ehnput:\\n{source_text}\\n### Responzeh:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-German-1",
+        "prompt": "Trahnslate dee follouwing lahn from\\n{source_lang} to {target_lang}.\\nBe vay litiral, und only traahnslate dee contein ov dee lahn, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-German-2",
+        "prompt": "Tranzlate ze follouing lahn from\\n{source_lang} to {target_lang}.\\nBay vairy leeteral, und only tranzlate ze kontent ov ze lahn, do not add eni eksplanations: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Polish-1",
+        "prompt": "Tranzlate de folloing tekst from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Polish-2",
+        "prompt": "Tranzzle de folloing tekzt from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Polish-1",
+        "prompt": "Trenslate dees frohm {source_lang} tu {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:.",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Polish-2",
+        "prompt": "Tranzlate dis from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Polish-1",
+        "prompt": "### instrukcja: Translejta Inpyt from {source_lang} tu {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Polish-2",
+        "prompt": "###: Tranclate Inpyut from {source_lang} to {target_lang}\\### Inpyut:\\n{source_text}\\n### Rispunsz:",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Polish-1",
+        "prompt": "Tranzlate de folloing lajn from\\n{source_lang} to {target_lang}.\\nBe wery literaw, and onwy tranzlate de kontent of de lajn, do not add eni eksplanashuns: {source_text}",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Polish-2",
+        "prompt": "Tronsleit dee follouing lajn fron {source_lang} to {target_lang}. Bee veeery liteerul, und onli tronsleit dee kontent of dee lajn, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Spanish-1",
+        "prompt": "Tran-slait teh foll-oh-wing tehxt from {source_lang} too {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-01-model-A2-Spanish-2",
+        "prompt": "Tranlate the folloing tekst from {source_lang} to {target_lang}.\\n{source_text}",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Spanish-1",
+        "prompt": "Tran-slah-ee this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:.",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-02-model-A2-Spanish-2",
+        "prompt": "Trans-lah-teh dees from {source_lang} toh {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Spanish-1",
+        "prompt": "### Eestreksiyon: \\nTranlate Einput from {source_lang} to {target_lang}\\n### Einput:\\n{source_text}\\n### Responthe:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-03-model-A2-Spanish-2",
+        "prompt": "### Instrucshun: \\nTranlayte Eeenput from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Spanish-1",
+        "prompt": "Tranlate teh follwoing lahn from\\n{source_lang} to {target_lang}.\\nBe beri literral, and onli tranlate teh contec of teh lahn, do not add eni eksplanashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    },
+    {
+        "prompt_id": "mt-04-model-A2-Spanish-2",
+        "prompt": "Tranzzle the folloing lahn from\\n{source_lang} to {target_lang}.\\nBe beri literral, and onli tranzzle the kontent of the lahn, do not add eni ekspalashuns: {source_text}.",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
+    }
+]
