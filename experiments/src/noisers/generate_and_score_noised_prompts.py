@@ -21,7 +21,7 @@ def format_prompt_entry(prompt_id, prompt, prompt_metadata, noised_prompt, noise
         "noised_prompt": noised_prompt,
         "perplexity": score,
         "noise_type_probabilities": noise_type_probabilities,
-        "scenario": scenario_key
+        "prompt_noiser": scenario_key
     }
     # Check that prompt metadata doesn't contain any keys that are already in the formatted output
     assert not any(k in formatted for k in prompt_metadata)
@@ -73,7 +73,7 @@ def generate_noised_prompts_orthographic_over_p(prompts_file: str, n_samples: in
     all_outputs = []
     for p in np.linspace(0, 1, 11):
         noise_profile["orthographic"]["p"] = p
-        output = noise_and_score_prompts(prompts, noise_profile, f"{scenario_key}_{p}", n_samples, score_perplexity)
+        output = noise_and_score_prompts(prompts, noise_profile, f"{scenario_key}_{p:.1f}", n_samples, score_perplexity)
         all_outputs.extend(output)
     if outfile:
         with open(outfile, "w") as f:
@@ -102,5 +102,5 @@ if __name__ == "__main__":
     prompts_file = "../../prompts/mt_base.json"
     n_samples = 2
     outfile = "../../noised_prompts/mt_base_noised_orthographic_over_p.json"
-    generate_noised_prompts_orthographic_over_p(prompts_file, n_samples, score_perplexity=True, outfile=outfile)
+    generate_noised_prompts_orthographic_over_p(prompts_file, n_samples, score_perplexity=False, outfile=outfile)
 
