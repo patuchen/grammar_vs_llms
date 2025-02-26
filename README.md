@@ -23,6 +23,9 @@ assert len(data) == 100
 data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="all")
 assert len(data) == 1100 # 100 per each language
 
+data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="three")
+assert len(data) == 300
+
 {x["langs"] for x in data}
 > {'en-es', 'en-zh', 'en-de', 'en-hi', 'en-ru', 'en-uk', 'cs-uk', 'en-ja', 'ja-zh', 'en-cs', 'en-is'}
 ```
