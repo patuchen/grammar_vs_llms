@@ -16,7 +16,7 @@
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     }
 ]
