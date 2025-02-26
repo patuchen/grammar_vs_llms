@@ -43,7 +43,7 @@ class TowerModel(Model):
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:        
         # In the documentation from HF they don't use the system prompt
         conversations = [
-            [{"role": "user", "prompt": prompt}]
+            [{"role": "user", "content": prompt}]
             for prompt in prompts
         ]
         responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
