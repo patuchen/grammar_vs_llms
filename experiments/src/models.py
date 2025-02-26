@@ -1,7 +1,7 @@
 import os
 from typing import List, Dict, Any
 from openai import OpenAI
-from anthropic import Anthropic
+from anthropic import Anthropic, AnthropicVertex
 from dotenv import load_dotenv
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
@@ -54,8 +54,9 @@ class AnthropicModel(Model):
         super().__init__(model, gpus, sampling_params, system_prompt)
         load_dotenv()
         # self._api_key = os.getenv("ANTHROPIC_API_KEY")
-        self.llm = Anthropic() # TODO check if the api key is loaded
-
+        # self.llm = Anthropic() # TODO check if the api key is loaded
+        self.llm = AnthropicVertex(region=os.environ["LOCATION"], project_id=os.environ["PROJECT_ID"])
+        
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
         # The system prompt is added by .messages.create
         conversations = [
@@ -83,13 +84,11 @@ class OpenAIModel(Model):
     def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
         super().__init__(model, gpus, sampling_params, system_prompt)
         load_dotenv()
-        # self._api_key = os.getenv("OPENAI_API_KEY")
-        self.llm = OpenAI() # TODO check if the api key is loaded
+        self.llm = OpenAI()
 
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
-        # TODO is it system or developer? Doc ambiguous
+        # Gpt-4o: role "developer" is converted to "system"
         system = {"role": "system", "content": self.system_prompt}
-        # system = {"role": "developer", "content": self._system_prompt}
         
         conversations = [
            [system, {"role": "user", "content": prompt}]
