@@ -9,7 +9,7 @@ def langdetect_safe(x):
     try:
         return [
             (x.lang, x.prob)
-            for x in langdetect.detect_langs(x["translation"])[:5]
+            for x in langdetect.detect_langs(x["tgt"])[:5]
         ]
     except:
         return [("unk", 1.0)]
@@ -74,5 +74,5 @@ with open(f"data/evaluated/{args.data.split('/')[-1]}", "w") as f:
 
 
 """
-python3 experiments/src/evaluation/05-plot_basic.py data/evaluated/base_micro_test_results.jsonl
+python3 experiments/src/evaluation/03-eval_metrics.py data/translated/base_micro_test_results.jsonl
 """

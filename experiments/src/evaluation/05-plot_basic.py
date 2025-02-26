@@ -28,7 +28,8 @@ for langs in {x["langs"] for data in data_all for x in data}:
         {
             "comet": np.average([x["eval"]["comet"] for x in data]),
             "chrf": np.average([x["eval"]["chrf"] for x in data]),
-            "langs": np.average([x["eval"]["langs"] for x in data]),
+            "langs": np.average([x["eval"]["langs"][0][0] == lang2 for x in data]),
+            # np.average([x["eval"]["langs"] for x in data]),
             "prompt_chrf": data[0]["eval_prompt"]["chrf"],
             "prompt_ip": data[0]["eval_prompt"]["ip"],
             "prompt_p": data[0]["eval_prompt"]["p"],
@@ -37,23 +38,26 @@ for langs in {x["langs"] for data in data_all for x in data}:
     ]
 
     plt.plot(
-        [x["chrf"] for x in data_local],
         [x["prompt_chrf"] for x in data_local],
+        [x["chrf"] for x in data_local],
         marker=".",
         markersize=20,
         label=langs,
     )
     for line in data_local:
         plt.text(
-            line["chrf"],
             line["prompt_chrf"],
-            f"{np.average([x[0][0] == lang2 for x in line[2]]):.0%}\n",
+            line["chrf"],
+            f"{line['langs']:.0%}\n",
             ha="center", va="center"
         )
     plt.ylabel("Translation quality")
     plt.xlabel("Noise level")
 
-plt.legend()
+plt.legend(
+    # no frame
+    frameon=False,
+)
 plt.title((args.glob.split("/")[-1].removesuffix(".jsonl")))
 plt.tight_layout()
 plt.show()
