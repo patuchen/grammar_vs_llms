@@ -7,7 +7,7 @@ from vllm import LLM, SamplingParams
 from tqdm import tqdm
 
 class Model:
-    def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str):
+    def __init__(self, model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams, system_prompt: str):
         self.model = model
         self.gpus = gpus
         self.sampling_params = sampling_params
@@ -18,7 +18,7 @@ class Model:
 
         self.llm: LLM | Anthropic | OpenAI = None
         if self.type == "vllm":
-            self.llm = LLM(model=model, tensor_parallel_size=gpus)
+            self.llm = LLM(model=model, tensor_parallel_size=gpus, gpu_memory_utilization=mem_percent)
 
     def __call__(self, prompts: List[str]) -> List[str]:
         return self.generate(prompts)
@@ -127,16 +127,16 @@ class OpenAIModel(Model):
         responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
 
-def load_model(model: str, gpus: int, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
+def load_model(model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
     if sampling_params is None:
         sampling_params = default_sampling_params()
 
     if "gpt" in model.lower():
         return OpenAIModel(model, gpus, sampling_params, system_prompt)
     elif "tower" in model.lower():
-        return TowerModel(model, gpus, sampling_params, system_prompt)
+        return TowerModel(model, gpus, mem_percent, sampling_params, system_prompt)
     elif "euro" in model.lower():
-        return EuroLLMModel(model, gpus, sampling_params, system_prompt)
+        return EuroLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     elif "claude" in model.lower():
         return AnthropicModel(model, gpus, sampling_params, system_prompt)
     else:

@@ -1,6 +1,6 @@
 import subset2evaluate.utils
 
-def load_data(split, langs):
+def load_data(split="tiny_test", langs="three"):
     import random
     import warnings
 
@@ -21,7 +21,12 @@ def load_data(split, langs):
         ]
     }
 
-    if langs != "all":
+    if langs == "three":
+        data = {
+            ("wmt24", langs): data[("wmt24", langs)]
+            for langs in ["cs-uk", "en-de", "en-zh"]
+        }
+    elif langs != "all":
         if ("wmt24", langs) not in data:
             raise ValueError(f"Language pair {langs} not found in WMT24")
         data = {("wmt24", langs): data[("wmt24", langs)]}

@@ -8,6 +8,8 @@ Not released publicly yet.
 ## Instructions
 
 To access data loaders and other nice functions, you need to install the local package, which will also make sure all the dependencies are installed:
+Requires Python 3.11+.
+
 ```bash
 pip install -e .
 ```
@@ -22,6 +24,9 @@ data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="en-cs")
 assert len(data) == 100
 data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="all")
 assert len(data) == 1100 # 100 per each language
+
+data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="three")
+assert len(data) == 300
 
 {x["langs"] for x in data}
 > {'en-es', 'en-zh', 'en-de', 'en-hi', 'en-ru', 'en-uk', 'cs-uk', 'en-ja', 'ja-zh', 'en-cs', 'en-is'}

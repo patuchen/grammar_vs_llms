@@ -114,6 +114,12 @@ def extract_translation(text):
 def parse_arguments():
     parser = argparse.ArgumentParser(description=".")
     parser.add_argument(
+        "--mem_percent",
+        type=float,
+        default=0.9,
+        help="Percentage of memory to use for vLLM engine (default: 0.9).",
+    )
+    parser.add_argument(
         "--lp",
         type=str,
         required=True,

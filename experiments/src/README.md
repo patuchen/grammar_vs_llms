@@ -1,6 +1,9 @@
 # Example usage:
 
+(Prerequisites & dependencies see top-level readme!)
+
 ```bash
+cd experiments/src
 python -m main --lp cs-uk --model Unbabel/TowerInstruct-7B-v0.2 --prompt base --split micro_test --perturbation character_noise
 ```
 
