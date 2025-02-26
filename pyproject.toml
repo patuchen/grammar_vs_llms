@@ -22,8 +22,9 @@ dependencies = [
   "unbabel_comet >= 2.2",
   "vllm",
   "openai",
-  "anthropic",
+  "anthropic[vertex]",
   "subset2evaluate",
+  "google-cloud-aiplatform"
 ]
 classifiers = [
   # prevents upload to PyPi

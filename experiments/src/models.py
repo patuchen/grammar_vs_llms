@@ -52,6 +52,15 @@ class TowerModel(Model):
 class AnthropicModel(Model):
     def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
         """
+        This model requires gcloud:
+        
+        ```
+        curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+        tar -xf google-cloud-cli-linux-x86_64.tar.gz
+        ./google-cloud-sdk/install.sh
+        ./google-cloud-sdk/bin/gcloud init
+        ```
+
         Before using this model run: gcloud auth application-default login
 
         This will create the credential file here:
