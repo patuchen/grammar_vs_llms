@@ -105,6 +105,11 @@ prompts = {
         "validate_answer": lambda x: validate_number(x),
         "use_ref": True},
 
+    "WMT24-DA": {
+        "prompt": 'Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100, where a score of zero means "no meaning preserved" and score of one hundred means "perfect meaning and grammar".\n\n{source_lang} source: "{source_seg}"\n{target_lang} translation: "{target_seg}"\nScore: ',
+        "validate_answer": lambda x: validate_number(x),
+        "use_ref": False},
+
     "GEMBA-SQM": {
         "prompt": 'Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100 that starts on "No meaning preserved", goes through "Some meaning preserved", then "Most meaning preserved and few grammar mistakes", up to "Perfect meaning and grammar".\n\n{source_lang} source: "{source_seg}"\n{target_lang} translation: "{target_seg}"\nScore (0-100): ',
         "validate_answer": lambda x: validate_number(x),
