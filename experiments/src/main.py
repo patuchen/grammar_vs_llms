@@ -17,6 +17,7 @@ def main(args=None):
 
     # load data
     data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
+    data_translated = [{} for _ in data]
     # print(data[0])
 
     # load model
@@ -27,73 +28,45 @@ def main(args=None):
     with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
         prompts = json.load(file)
 
-    # set noising function
-    noising_functions = {
-        "character_noise": make_typos,
-    }
     # noising_function = noising_functions[args.perturbation]
-
-    # set languages
-    # source_language = args.lp.split("-")[0]
-    # target_language = args.lp.split("-")[1]
 
     # run experiments
     for prompt in prompts:
-
         # for synthetic noise, repeat at increasing noise levels
-        if args.perturbation == "character_noise":
-            for i in range(0, 110, 10):
-                model_inputs = []
+                # for non-synthetic noise, generate translations for different prompts
+        model_inputs = []
+        for item in data:
+            # print(item)
+            model_inputs.extend([prompt['prompt'].replace("{target_lang}", CODE_MAP[item['langs'][:2]]).replace("{source_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_line}", item['src'])])
+        print("Model inputs are built. Starting generation")
 
-                experiment_name = f"{model.short}_{args.split}_v2_" + prompt['id'] + f"_{i}"
+        # generate translations
+        translations = model.generate(model_inputs)
 
-                # build model inputs
-                for item in data:
-                    # print(item)
-                    # use the source sentence as seed
-                    template = prompt['prompt'].replace("{target language}", CODE_MAP[item['langs'][:2]]).replace("{source language}", CODE_MAP[item['langs'][3:]])
-                    noised_template = noising_function(template, i/float(100), item["src"])
+        # save translations
+        for idx, translation in enumerate(translations):
+            data_translated[idx]["src"] = data[idx]["src"]
+            data_translated[idx]["ref"] = data[idx]["ref"]
+            data_translated[idx]["langs"] = data[idx]["langs"]
+            data_translated[idx]['model'] = model.short
+            data_translated[idx]['prompt_src'] = prompt["prompt_src"]
+            data_translated[idx]['model_input'] = model_inputs[idx]
+            data_translated[idx]['prompt'] = prompt['prompt']
+            data_translated[idx]['prompt_p'] = prompt.get("prompt_p", None)
+            data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
+            data_translated[idx]['tgt'] = translation
 
-                    # add system prompt
-                    # noised_template = CHAT_INTRO[model.short] + noised_template.replace('[source sentence]', item["src"]) + CHAT_OUTRO[model.short]
-
-                    model_inputs.extend([noised_template])
-
-                print("Model inputs are built. Starting generation")
-
-                # generate translations
-                translations = model.generate(model_inputs)
-
-                # save translations
-                for idx, translation in enumerate(translations):
-                    if "tgts" not in data[idx]:
-                        data[idx]["tgts"] = []
-                    data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": f"{i/float(100)},character_noise", "lp": args.lp})
-
-        # for non-synthetic noise, generate translations for different prompts
-        else:
-            model_inputs = []
-            for item in data:
-                # print(item)
-                model_inputs.extend([prompt['prompt'].replace("{target language}", CODE_MAP[item['langs'][:2]]).replace("{source language}", CODE_MAP[item['langs'][3:]])])
-            print("Model inputs are built. Starting generation")
-
-            # generate translations
-            translations = model.generate(model_inputs)
-
-            # save translations
-            for idx, translation in enumerate(translations):
-                if "tgts" not in data[idx]:
-                    data[idx]["tgts"] = []
-                data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt_src": prompt["prompt_src"], "prompt": prompt['id'], "perturbation": "NA", "prompt_p": prompt.get("prompt_p", "None")})
-
+#             if "tgts" not in data[idx]:
+#                 data[idx]["tgts"] = []
+#             data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt_src": prompt["prompt_src"], "prompt": prompt['id'], "perturbation": "NA", "prompt_p": prompt.get("prompt_p", "None")})
+# 
     if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
         os.makedirs(f'../output_translations/wmt24/system-outputs/{args.lp}')
 
     # save data as jsonl
     with open(f'../output_translations/wmt24/system-outputs/{args.lp}/{args.prompt}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
-        for item in data:
-            f.write(json.dumps(item) + "\n")
+        for item in data_translated:
+            f.write(json.dumps(item, ensure_ascii=False) + "\n")
             
 # %%
 
