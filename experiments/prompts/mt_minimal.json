@@ -1,0 +1,6 @@
+[
+	{
+        "id": "mt-01-minimal-no_errors",
+        "prompt": "{source_lang}: {source_text}\\n{target_lang}:"
+    }
+]

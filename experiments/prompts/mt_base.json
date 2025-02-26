@@ -1,18 +1,18 @@
 [
-    {
-        "id": "mt-01-src-no_errors",
-        "prompt": "### Translate this sentence from [source language] to [target language], Source:\\n[source sentence]\\n### Target:"
+	{
+        "id": "mt-01-no_errors",
+        "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
-        "id": "mt-02-src-no_errors",
-        "prompt": "Provide the [target language] translation for this [source language] sentence: [source sentence]\\n"
+        "id": "mt-02-no_errors",
+        "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
-        "id": "mt-03-src-no_errors",
-        "prompt": "You are a machine translation system. Provide the [target language] translation for this sentence in [source language]: [source sentence]\\n"
+        "id": "mt-03-no_errors",
+        "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
-        "id": "mt-04-src-no_errors",
-        "prompt": "Answer with no quotes. What does this [source language] sentence mean in [target language]? [source sentence]\\n"
+        "id": "mt-04-no_errors",
+        "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     }
 ]
