@@ -17,7 +17,6 @@ def format_prompt_entry(prompt_id, prompt, prompt_metadata, noised_prompt, noise
     formatted = {
         "prompt_id": prompt_id,
         "noised_prompt_id": f"prompt-{prompt_id}_scenario-{scenario_key}_noised-{noised_prompt_id}",
-        "prompt": prompt,
         "noised_prompt": noised_prompt,
         "perplexity": score,
         "noise_type_probabilities": noise_type_probabilities,
@@ -73,7 +72,7 @@ def generate_noised_prompts_orthographic_over_p(prompts_file: str, n_samples: in
     all_outputs = []
     for p in np.linspace(0.03, 0.3, 10):
         noise_profile["orthographic"]["p"] = p
-        output = noise_and_score_prompts(prompts, noise_profile, f"{scenario_key}_{p:.1f}", n_samples, score_perplexity)
+        output = noise_and_score_prompts(prompts, noise_profile, f"{scenario_key}_{p:.2f}", n_samples, score_perplexity)
         all_outputs.extend(output)
     if outfile:
         with open(outfile, "w") as f:
