@@ -25,18 +25,20 @@ def main(args=None):
             prompts = json.load(file)
 
     else:
-        with open(f'../noised_prompts/mt_{args.prompt}_{args.perturbation}.json', 'r') as file:
+        with open(f'../noised_prompts/mt_{args.prompt}_noised_{args.perturbation}.json', 'r') as file:
             prompts = json.load(file)
 
     os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}', exist_ok=True)
     # run experiments
     for prompt in prompts:
         data_translated = [{} for _ in data]
+        prompt_text = prompt['prompt'] if not args.perturbation else prompt['noised_prompt']
+        prompt_id = prompt.get("prompt_id") if not args.perturbation else prompt.get("noised_prompt_id")
 
         model_inputs = []
         for item in data:
             # print(item)
-            model_inputs.extend([prompt['prompt'].replace("{source_lang}", CODE_MAP[item['langs'][:2]]).replace("{target_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_line}", item['src'])])
+            model_inputs.extend([prompt_text.replace("{source_lang}", CODE_MAP[item['langs'][:2]]).replace("{target_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_text}", item['src'])])
         print("Model inputs are built. Starting generation")
 
         # generate translations
@@ -48,15 +50,15 @@ def main(args=None):
             data_translated[idx]["ref"] = data[idx]["ref"]
             data_translated[idx]["langs"] = data[idx]["langs"]
             data_translated[idx]['model'] = model.short
-            data_translated[idx]['prompt_src'] = prompt.get("prompt_src", prompt["prompt"])
+            data_translated[idx]['prompt_src'] = prompt.get("prompt_src")
             data_translated[idx]['model_input'] = model_inputs[idx]
-            data_translated[idx]['prompt'] = prompt['prompt']
+            data_translated[idx]['prompt'] = prompt_text
             data_translated[idx]['prompt_p'] = prompt.get("prompt_p", None)
             data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
             data_translated[idx]['tgt'] = translation
 
         # save data as jsonl
-        with open(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{prompt["prompt_id"]}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
+        with open(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{prompt_id}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
             for item in data_translated:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
             

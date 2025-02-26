@@ -124,7 +124,6 @@ def parse_arguments():
     parser.add_argument(
         "--lp",
         type=str,
-        required=True,
         default="three",
         help="Language pair code from WMT24.",
     )
