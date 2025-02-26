@@ -17,7 +17,7 @@ def main(args=None):
         args = parse_arguments()
 
     # load model
-    model = load_model(args.model, args.gpus)
+    model = load_model(args.model, args.gpus, args.mem_percent)
 
     # load data
     data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
