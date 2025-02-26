@@ -4,967 +4,1055 @@
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.0_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
         "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 33.48038101196289,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.0_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
         "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 33.48038101196289,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.0_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
         "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 25.27745819091797,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.0_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
         "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 25.27745819091797,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.0_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
         "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "perplexity": 115.32608795166016,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.0_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
         "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "perplexity": 115.32608795166016,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.0_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
         "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "perplexity": 55.93095397949219,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.0_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
         "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "perplexity": 55.93095397949219,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.0
         },
-        "scenario": "orthographic_0.0"
+        "prompt_noiser": "orthographic_0.0",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.1_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
         "noised_prompt": "Translate the following textt from {source_lang} to {target_lang}.\\\\n{source_text}",
-        "perplexity": 61.77082824707031,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.1_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
         "noised_prompt": "Trranslade the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 72.77601623535156,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.1_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
         "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 25.27745819091797,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.1_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
         "noised_prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 25.27745819091797,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.1_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
         "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "perplexity": 115.32608795166016,
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.1_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instruction:\\nTranslat Input from {source_lang} to {target_lang}\\n### Inpat:\\n{source_text}\\n### Responze:\\nn",
-        "perplexity": 319.72637939453125,
+        "noised_prompt": "### Instruction:\\nTranslat Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.1_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Transllate the followwinng line from\\n{source_lang} to {target_lang}.\\nBe very literal, and  only transllate the content of tho linni, to not add any explanadions: {source_line}",
-        "perplexity": 238.6148223876953,
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the sontent of the line, do not adt any explanationz: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.1_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translete the following line from\\n{source_lang} to {target_lang}\\.nnBe very literal, and only translato the content of dhe line, do not add ani explanations: {source_line}",
-        "perplexity": 211.1315460205078,
+        "noised_prompt": "Translate the following line from\\b{source_lang} to {target_lang}.\\nBe very lliteral, and only trenslate the contund of th lina, do not add any explanations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.1
         },
-        "scenario": "orthographic_0.1"
+        "prompt_noiser": "orthographic_0.1",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.2_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Translete the followungg taxt from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 257.1518859863281,
+        "noised_prompt": "Tranclate dhe following textt from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.2_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Translato the following text from {source_lang} to  {target_lang}.\\n{source_text}",
-        "perplexity": 123.10285186767578,
+        "noised_prompt": "Translate the follewing  text from  {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.2_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Translate thys from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\nn{target_lang}:",
-        "perplexity": 44.21504592895508,
+        "noised_prompt": "Translate this frrom {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.2_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Trancllote dhhis from {source_lang} do {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 100.97456359863281,
+        "noised_prompt": "Tranclate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.2_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instruction:\\nTranclate Input from {source_lang} to {target_lang}\\n###  Input:\\n{source_text}\\n#### Response:\\n",
-        "perplexity": 208.42098999023438,
+        "noised_prompt": "### Instruction:\\nTranzlate Input from {source_lang}  do {target_lang}\\n### Inpput:\\nn{source_text}\\n### Reslonse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.2_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n#### Input:\\n{source_text}\\n#### Response:\\n",
-        "perplexity": 127.86524963378906,
+        "noised_prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n#### Recpponse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.2_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translaet the following lini from\\n{source_lang} to {target_lang}.\\nB very literal, end only translat the content if the line, du not add any explenitiomz: {source_line}",
-        "perplexity": 428.00299072265625,
+        "noised_prompt": "Tranzlate the following line from\\n{source_lang} to {target_lang}.\\nBBe very literal, and only trannslate dhe contend of the line, do not add any explannations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.2_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Tronslate the  following line from\\n{source_lang} to {target_lang}.\\nBB veryy literal,, and only translatte thhe content of the lina, do not add any exxplanations: {source_line}",
-        "perplexity": 276.839111328125,
+        "noised_prompt": "Translate the oflllowinng line from\\n{source_lang} to {target_lang}.\\nBe very literall, and onlly translate the contennt of the line, do nod add any  explanatyons: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.2
         },
-        "scenario": "orthographic_0.2"
+        "prompt_noiser": "orthographic_0.2",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.3_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Transllute the followingg text from {source_lang} ti {target_lang}.\\n{source_text}",
-        "perplexity": 192.083251953125,
+        "noised_prompt": "Translate  dh following text from {source_lang} do {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.3_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Translate the following  text from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 68.43141174316406,
+        "noised_prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.3_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transltae thys fromm {source_lang} to {target_lang}:\\n{source_lang}:  {source_text}\\n{target_lang}:",
-        "perplexity": 100.6832046508789,
+        "noised_prompt": "Translaet thic from  {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.3_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transslate dhis fram {source_lang} tk {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 98.96611785888672,
+        "noised_prompt": "Transllate this from {source_lang} to {target_lang}::\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.3_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "###  Insdruction:\\nnTranslat Inputt from {source_lang} to {target_lang}\\n### Inpud:\\n{source_text}\\n### Decpanse:\\n",
-        "perplexity": 510.14959716796875,
+        "noised_prompt": "### Instructien:\\nTTranslat Input  from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Reesponse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.3_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instruction:\\nTrranzlade Input  from {source_lang} ta {target_lang}\\n### Input:\\n{source_text}\\n### Rezpince:\\n",
-        "perplexity": 716.45849609375,
+        "noised_prompt": "#### Instruction:\\nTrranslate Input from {source_lang} do {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30000000000000004_noised-0",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.3_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trinslate th following  line rfom\\n{source_lang} to {target_lang}.\\nB very literal, and only transsllate the content of the lyne, do noot adt any  explluadions: {source_line}",
-        "perplexity": 413.3443603515625,
+        "noised_prompt": "Trenslate the following linne fro\\mn{source_lang} to {target_lang}.\\nBe very lideral, and only trunnslate the content of the line, do not add anny exxplanadions: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30000000000000004_noised-1",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.3_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trranslate th follewing line from\\n{source_lang} to {target_lang}.\\nB very literall, ant only translade fhe content of dhe linne, do nod add any ixplenatoons: {source_line}",
-        "perplexity": 493.8118896484375,
+        "noised_prompt": "Trranslate th following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translae the content of the lina to nod add any expllanations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.30000000000000004
         },
-        "scenario": "orthographic_0.30000000000000004"
+        "prompt_noiser": "orthographic_0.3",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.4_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trranclade  the following taxxt frum {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 565.777587890625,
+        "noised_prompt": "Tranzlade  the folllowing text from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.4_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Transladi  the followingtext from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 247.90621948242188,
+        "noised_prompt": "Trransllade the fallowing texd from {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.4_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Translate this from {source_lang} ti {target_lang}:\\\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 41.215667724609375,
+        "noised_prompt": "Translade dhyss  fram {source_lang} to {target_lang}::\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.4_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transllatte thys from {source_lang} tto {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 75.49793243408203,
+        "noised_prompt": "Translade this from {source_lang} fo {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.4_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Knsdructian:\\nTranzlate Inpit from {source_lang} to {target_lang}\\n### Innput:\\n{source_text}\\n###  Responzu:\\n",
-        "perplexity": 575.6886596679688,
+        "noised_prompt": "### Insdructyon:\\nTranslate Input from {source_lang} to {target_lang}\\n### Innput:\\n{source_text}\\n### Responce:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.4_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instructoon:\\nTrennclato Innput frim {source_lang} tu {target_lang}\\n### Input:\\n{source_text}\\n#### Rezponse:\\n",
-        "perplexity": 700.1945190429688,
+        "noised_prompt": "### Instrustion:\\nTrinclate Inputt from {source_lang} to {target_lang}\\n### Inpput:\\n{source_text}\\n### Response:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.4_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Tranclad th followwinng lne froom\\\\n{source_lang} to {target_lang}.\\nBe vrei literal, and  only trunslate the condent af the line, do nod att ony explinations: {source_line}",
-        "perplexity": 814.6952514648438,
+        "noised_prompt": "Translate thee followin gline ffrum\\n{source_lang} to  {target_lang}.\\nBe veri litearl, and only translate the content of the line, to not add any explanations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.4_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translata thh following lin from\\n{source_lang} to  {target_lang}.\\nBe very litteral, ant enly trancllate dh sontent of th linne, du not utd anny explunatiinss: {source_line}",
-        "perplexity": 644.5744018554688,
+        "noised_prompt": "Translate the fullowing line  from\\n{source_lang} to {target_lang}.\\nBe vayy literal, and only translate th conttent of the line, do not atd any explanatios: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.4
         },
-        "scenario": "orthographic_0.4"
+        "prompt_noiser": "orthographic_0.4",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.5_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trannsslata  tha following texd frem {source_lang} to  {target_lang}.\\n{source_text}",
-        "perplexity": 787.7929077148438,
+        "noised_prompt": "Translate the following dext fram {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.5_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Traannslate the following dexd from {source_lang} to {target_lang}..\\\\n{source_text}",
-        "perplexity": 307.9639892578125,
+        "noised_prompt": "Trannslate the following texxtt from {source_lang}  to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.5_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Trannssalte thiss from {source_lang} ta {target_lang}:\\n{source_lang}:  {source_text}\\n{target_lang}:",
-        "perplexity": 110.15164947509766,
+        "noised_prompt": "Translete this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.5_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Translute thys frrom {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 113.23345184326172,
+        "noised_prompt": "Trenslate thiss frim {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.5_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instracdion:\\nTrranslate Innpot  frem {source_lang} to {target_lang}\\\\n#### Input:\\n{source_text}\\n#### Respponsa:\\n",
-        "perplexity": 657.7994995117188,
+        "noised_prompt": "### Instracion:\\\\nTrranslate Input frrom  {source_lang} to {target_lang}\\n### Inpud:\\n{source_text}\\nn### Tesponse::\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.5_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Innsdresdion:\\nTranslade Inputt  from {source_lang} do {target_lang}\\n#### Inpod:\\\\n{source_text}\\n#### Rezponsse:\\n",
-        "perplexity": 466.4659423828125,
+        "noised_prompt": "### Instruztion:\\nTranslate Inpet from {source_lang}  go {target_lang}\\n###  Inputt:\\n{source_text}\\n### Recponse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.5_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translete dhe felllowing lini from\\\\n{source_lang} to {target_lang}.\\nBe verry literal, idn only drunclatte the  conndent of the line, do not  addd anyy explanationns: {source_line}",
-        "perplexity": 551.2261962890625,
+        "noised_prompt": "Translat the following lin fromm\\n{source_lang} do  {target_lang}.\\nB  very literal, andd oonly trranslatt  th condend of  the line, do not atd any explanations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.5_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translade thee fillowyng  lline froj\\n{source_lang} ti {target_lang}.\\nBe gerryy litteral, and  only transslatta the  contend oof the line,, do nod uddd any explannations:  {source_line}",
-        "perplexity": 724.8817749023438,
+        "noised_prompt": "Translaade thhe followwing lone frim\\n{source_lang} to {target_lang}\\nnBBe very literall, and onlyy trranclade dhe content of the line, do nod atd any  explanatyonss: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.5
         },
-        "scenario": "orthographic_0.5"
+        "prompt_noiser": "orthographic_0.5",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.6_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Tranzlate the followwung dext from {source_lang} to {target_lang}.\\n{source_text}",
-        "perplexity": 243.7624969482422,
+        "noised_prompt": "Trransllat the following texd from  {source_lang}  do {target_lang}.\\nn{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.6_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Transllat dhe folllowing  texd from  {source_lang}  da {target_lang}.\\n{source_text}",
-        "perplexity": 562.2901000976562,
+        "noised_prompt": "Translit thh folllowinng texxt from  {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.6_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Translate dyys from {source_lang} do {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 65.3581771850586,
+        "noised_prompt": "Trranslate thys frrom {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.6_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Tranzlati this frrom {source_lang} to {target_lang}:\\n{source_lang}:: {source_text}n\\{target_lang}:",
-        "perplexity": 155.46009826660156,
+        "noised_prompt": "Transslade  thi cfrrom  {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.6_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "####  Inncdracian:\\nnTrunslode Input frem {source_lang} to {target_lang}\\\\nn###  Ipnet:\\n{source_text}\\n### Respanse:\\n",
-        "perplexity": 713.1591186523438,
+        "noised_prompt": "### Ibsdrusdion:\\nTrenslate Innpput fromm {source_lang} do {target_lang}\\n### Inputt:\\nn{source_text}n### Rusponse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.6_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instrucdionn:\\nTrunslat Inpor frum {source_lang} to {target_lang}\\n### Inut:\\n{source_text}\\\\n#### Respponse:\\n",
-        "perplexity": 501.9170227050781,
+        "noised_prompt": "### Instrucion:\\nTranssllat Input from{source_lang} to {target_lang}\\nn#### Inpputt::\\n{source_text}\\n### Responsse:\\nn",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.6000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.6_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translitu dh  following line from\\n{source_lang} to {target_lang}.\\nBe verri litoral, and only translate th conntent of thhe lene, do not otd any oxplenations: {source_line}",
-        "perplexity": 530.4149780273438,
+        "noised_prompt": "Translate the  follwing lyn from\\n{source_lang} do {target_lang}.\\nB very literol, and  onlyy trranslade thhe conntent of the line,, to not atd an exxplanatians:: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.6000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.6_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trazlatu thi followyng line from\\n{source_lang} to {target_lang}.\\\\nBe vury litteral, and only tronnclit tha contennt  of dhe line, di not  add anyy exxplanotiuns: {source_line}",
-        "perplexity": 638.7783813476562,
+        "noised_prompt": "Translate the followwing line from\\n{source_lang} to {target_lang}.\\nBe verri  litteral, and only trrannsslade dh contint off th  line,, do nod atd any explanadions: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.6000000000000001
         },
-        "scenario": "orthographic_0.6000000000000001"
+        "prompt_noiser": "orthographic_0.6",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.7_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Transloto the follluwing duxt from  {source_lang} to {target_lang}.\\\\n{source_text}",
-        "perplexity": 447.77459716796875,
+        "noised_prompt": "Translad the folliwin gtexf frrom  {source_lang} do  {target_lang}.\\nn{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
-        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.7_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Translati  the folllowwing texd frum {source_lang}  to {target_lang}.\\n{source_text}",
-        "perplexity": 628.4061889648438,
+        "noised_prompt": "Translate the  following  txt fromm {source_lang} to {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.7_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Trannsute this from {source_lang} ta {target_lang}:\\nn{source_lang}:: {source_text}\\n{target_lang}:",
-        "perplexity": 97.5009994506836,
+        "noised_prompt": "Trinclode  thac frrom {source_lang} to {target_lang}:\\{source_lang}::  {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
-        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.7_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transleta dhys frum {source_lang} to {target_lang}:\\nn{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 113.95065307617188,
+        "noised_prompt": "Transslat this frem {source_lang}  to {target_lang}:\\n{source_lang}:  {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.7_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Insttrecctiann:\\nTranslad Knputt fram {source_lang} ti {target_lang}\\n#### Inputt::\\\\n{source_text}\\n### Recpoonce:\\n",
-        "perplexity": 1091.40869140625,
+        "noised_prompt": "### Knstrructyon:\\nTransllade  Input from {source_lang} to  {target_lang}\\n###  Input:\\n{source_text}\\n####  Responce::\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
-        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.7_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Insdroztion:\\nTrensslata Input frrim{source_lang} ta  {target_lang}\\n#### Inpat\\n{source_text}\\n#### Response:\\n",
-        "perplexity": 852.21875,
+        "noised_prompt": "###  Innsstrustion:\\nTrannslate Inpot tfrom {source_lang} ot {target_lang}\\n### Input:\\\\nn{source_text}\\\\n### Rupsonse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.7000000000000001_noised-0",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.7_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trenzllete thh collolwing lene from\\n{source_lang} to {target_lang}\\.nNu  vory liderall,, ind only tranzlat thu contont of th lyne,  do nett addt any  explanadaosn: {source_line}",
-        "perplexity": 1014.2474365234375,
+        "noised_prompt": "Tranzltae thhe ofloowing lin frrom\\n{source_lang} to {target_lang}.\\nBe verri lideral, annd onli translate the contend of the line, do  not atdd any  explanadionz: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
-        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.7000000000000001_noised-1",
+        "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.7_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trinsslod  dhe fillloowung linne from\\n{source_lang}  di {target_lang}..\\nBB overi litteral, and onli translat th cunttennt of  dhi  line, do nod atd anny uxplanations: {source_line}",
-        "perplexity": 810.9824829101562,
+        "noised_prompt": "Translade the follownig lyn from\\n{source_lang} do {target_lang}.\\nB virry literal, ant onnly translade the  contant off th lene, do nnod addt  anyy exxpplanattionc: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.7000000000000001
         },
-        "scenario": "orthographic_0.7000000000000001"
+        "prompt_noiser": "orthographic_0.7",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.8_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trranclett th  following dexd from  {source_lang} to {target_lang}.\\nn{source_text}",
-        "perplexity": 491.8292236328125,
+        "noised_prompt": "Translade th following dexd fram {source_lang} doo {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.8_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Translato the follawing text froom {source_lang} do {target_lang}.\\\\n{source_text}",
-        "perplexity": 351.3451843261719,
+        "noised_prompt": "Transllate th  fellowong text frim {source_lang}  do {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.8_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Trrunnclde thhis from {source_lang}  do {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 150.22914123535156,
+        "noised_prompt": "Translate dhys  from {source_lang}  to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}::",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.8_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Tranclad  dhis from {source_lang} to {target_lang}:\\nn{source_lang}: {source_text}\\nn{target_lang}:",
-        "perplexity": 102.26258850097656,
+        "noised_prompt": "Trannsllade dhis from {source_lang}  do {target_lang}:\\n{source_lang}: {source_text}\\nn{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.8_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instrusdio:n\\nTransslette Innpud from {source_lang} do  {target_lang}\\n### Innpud:\\n{source_text}\\n## #Response:\\n",
-        "perplexity": 518.1751098632812,
+        "noised_prompt": "#### Inzdricdyon:\\\\nTrinnslutte Inptu from {source_lang} to {target_lang}\\nn### Input:\\nn{source_text}\\n### Ressponze:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.8_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instructino:\\nTrinslit Inpputt fromm {source_lang} ti {target_lang}\\\\n#### Inpit:\\n{source_text}\\n## Rusopnse:\\n",
-        "perplexity": 992.1234130859375,
+        "noised_prompt": "#### Innztructtionn:\\nTranclad Input frum {source_lang} to {target_lang}\\n### Inpput:\\nn{source_text}\\n##### Respense:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.8_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Transslate dhhe flllowwang  lin fram\\n{source_lang}  do {target_lang}..\\nBe verri  lyderal, and  onlli tranlata teh conttnut of dh line, do nott add any oxplnatyons: {source_line}",
-        "perplexity": 835.66162109375,
+        "noised_prompt": "Trancllade the folllowyng lin from\\nn{source_lang} to {target_lang}.\\Be vey  litearl, ant only translate th conttent of the line, do not adt ani explinationss:  {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.8_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Tranzlatt thh follluwong lino from\\n{source_lang} to  {target_lang}.\\nBu vui lytral,, annt unly drransluet thu zentent  if thhu lyne, to nut add onyy explanuttions:  {source_line}",
-        "perplexity": 823.3416748046875,
+        "noised_prompt": "Transslate th  following lineffrrom\\nn{source_lang} to {target_lang}..\\nBe veri lytoral, an onli tranzlade the contennt of the lina, to nod atc anni  explanadions:  {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.8
         },
-        "scenario": "orthographic_0.8"
+        "prompt_noiser": "orthographic_0.8",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.9_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Transslatte thi follliwing texd  frromm {source_lang} ti {target_lang}.\\n{source_text}",
-        "perplexity": 728.0135498046875,
+        "noised_prompt": "Trnaslatt dhe  follewing text fromm  {source_lang} do {target_lang}.\\\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_0.9_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trranzlet  the falliwwing  duxtt from {source_lang} tu {target_lang}.\\\\n{source_text}",
-        "perplexity": 572.762451171875,
+        "noised_prompt": "Tranzlete th follownig rexd from  {source_lang} do {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.9_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transsllade htic from {source_lang} ti {target_lang}::\\nn{source_lang}:: {source_text}\\\\n{target_lang}::",
-        "perplexity": 76.52108764648438,
+        "noised_prompt": "Translitt dhis from {source_lang} do {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}::",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_0.9_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Traansslad dhis frum {source_lang}  t  {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 198.25367736816406,
+        "noised_prompt": "Trinslad dhys frrom {source_lang} to  {target_lang}:\\n{source_lang}: {source_text}\\\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.9_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Inctruzdien:\\nnTrenclata Inpitt from m{source_lang} do {target_lang}\\n### Inpat:\\n{source_text}\\\\n### Recpponca:\\n",
-        "perplexity": 444.3584289550781,
+        "noised_prompt": "### Insndrusdyon:\\nTransslate Input frrim {source_lang} to {target_lang}\\n### Input:\\\\n{source_text}\\nn#### Response:\\nn",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_0.9_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "####Incdruccdyun:\\nTransllato Innputt frimm  {source_lang} to {target_lang}\\\\n###  Inuptt::\\n{source_text}\\n###  Respinse:\\n",
-        "perplexity": 917.5838623046875,
+        "noised_prompt": "##### Insttrucdion\\:nnTTranslid Inpatt frmo {source_lang} to {target_lang}\\n### Input:\\nn{source_text}\\n#### Recpponse:\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.9_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Translad the following line frum\\n{source_lang}  ta  {target_lang}.\\nBee verry lytural, andd onlyy dronslatto dha zantennd fo  th lyne, do not add ani explannittyonc:: {source_line}",
-        "perplexity": 1449.31494140625,
+        "noised_prompt": "Trannclat the following lyne frim\\n{source_lang} to  {target_lang}.\\nBe veri liderrall, and onlyy dranslat the condennd off dhe line,do not att  any expllantuionz: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.9_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trrannslt dh fellowing lynno  ffrom\\n{source_lang} do {target_lang}.\\nB vayy liderall, and  lnlli transslade thh cinntent of dbo  lyne, doo not addddanyy expkanations: {source_line}",
-        "perplexity": 848.25048828125,
+        "noised_prompt": "Trransslate the followwing lije  from\\n{source_lang}  to {target_lang}..\\nnHe vey literal, ant onnly trennslate dje  zandennt oof thhe linne,  d onot att ani explanations: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.9
         },
-        "scenario": "orthographic_0.9"
+        "prompt_noiser": "orthographic_0.9",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_1.0_noised-0",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trensslat tb follliqeng texxt  from {source_lang}  ti {target_lang}.\\n{source_text}",
-        "perplexity": 598.0542602539062,
+        "noised_prompt": "Tranzlwte teh  flllowwyng text from {source_lang} do {target_lang}..\\\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
         "noised_prompt_id": "prompt-mt-01-no_errors_scenario-orthographic_1.0_noised-1",
         "prompt": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
-        "noised_prompt": "Trannslla  thhi fillawynng daxxt  fram {source_lang} ti  {target_lang}..\\n{source_text}",
-        "perplexity": 512.7060546875,
+        "noised_prompt": "Tranlzad  dhe followang  texd from {source_lang} to  {target_lang}.\\n{source_text}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_1.0_noised-0",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Tranclud this from  {source_lang} tu {target_lang}:\\\\n{source_lang}:: {source_text}\\n{target_lang}:",
-        "perplexity": 105.16975402832031,
+        "noised_prompt": "Tranclatte thhi from {source_lang} do {target_lang}::\\\\nn{source_lang}: {source_text}\\n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-02-no_errors",
         "noised_prompt_id": "prompt-mt-02-no_errors_scenario-orthographic_1.0_noised-1",
         "prompt": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "noised_prompt": "Transllitte thuss frlm {source_lang}  to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-        "perplexity": 162.65972900390625,
+        "noised_prompt": "Translatt thiz from {source_lang}  to {target_lang}:\\n{source_lang}: {source_text\\}n{target_lang}:",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_1.0_noised-0",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Instruztion:\\nTTranslade Innupt frem  {source_lang} de  {target_lang}\\n### Input::\\nn{source_text}\\n### Resopbse:\\n",
-        "perplexity": 587.6578369140625,
+        "noised_prompt": "### Incdruzdionn:\\nTTranssllate Imput from {source_lang} ot  {target_lang}\\nn##### Input:\\n{source_text}\\nn#### Responsse:\\\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-03-no_errors",
         "noised_prompt_id": "prompt-mt-03-no_errors_scenario-orthographic_1.0_noised-1",
         "prompt": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-        "noised_prompt": "### Insstrruzttyen::\\nnTranslado Inupt frrom  {source_lang} di {target_lang}\\nn### Ipnut:\\nn{source_text}\\n#n## Responnez::\\nn",
-        "perplexity": 1238.8558349609375,
+        "noised_prompt": "### Incdruccdino:\\nGrniclltae Input  frromm {source_lang} do {target_lang}\\n## Input:\\nn{source_text}\\n### Respponze:\\\\n",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_1.0_noised-0",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Trranzlotu tteh following liin frrem\\n{source_lang} to {target_lang}..\\\\nBa  verr yllytteral, and enlyy trunclat thu contunt af dh lane,, du not udd anni oxpplonadionz:  {source_line}",
-        "perplexity": 1184.0419921875,
+        "noised_prompt": "Trranclatt dhe folllowing lin  from\\n{source_lang} do  {target_lang}.\\\\nB  vary lyterel, and  onnli dranslate the  sintentt of  dhe line, do not addd any expllenationnc: {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_1.0_noised-1",
         "prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
-        "noised_prompt": "Tronslita thh flolewyng linu from\\n{source_lang} di {target_lang}.\\nBu vuy lidearl,, unt anly transllate thu  zonndent of thh line,, do nat etdd anni ixplanadionns:  {source_line}",
-        "perplexity": 738.5526733398438,
+        "noised_prompt": "Tranclade the fulluwing lyn fromm\\\\n{source_lang}  do {target_lang}.\\nBd viry pitterral, and onli drrannsslade dhs zonduntt of dhe  lyne, do nod  atdd anyy  expplanitynos:  {source_line}",
+        "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 1.0
         },
-        "scenario": "orthographic_1.0"
+        "prompt_noiser": "orthographic_1.0",
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
     }
 ]
