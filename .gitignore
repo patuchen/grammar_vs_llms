@@ -15,7 +15,8 @@ experiments/src/GEMBA/.history*
 experiments/src/GEMBA/.idea
 experiments/src/GEMBA/__pycache__
 experiments/src/GEMBA/cache/*
-experiments/src/GEMBA/credentials.json
+experiments/src/GEMBA/data/*
+
 google-cloud-*
 
 # Byte-compiled / optimized / DLL files
