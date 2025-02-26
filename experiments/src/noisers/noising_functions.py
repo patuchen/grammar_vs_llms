@@ -2,7 +2,7 @@ from typing import Dict, List
 from collections import defaultdict
 import numpy as np
 from utils import neighbours as typo_neighbours
-from utils import is_vowel, is_word_initial, is_word_final
+from utils import is_vowel, is_word_initial, is_word_final, count_vowels
 np.random.seed(42)
 
 class Orthographic:
@@ -134,7 +134,15 @@ class Orthographic:
         if sentence[char_idx] == "i":
             vowels.add("y")
         new_vowel = np.random.choice(list(vowels))
-        sentence = sentence[:char_idx] + new_vowel + sentence[char_idx+1:]
+        # The following simulates the observed error distribution for vowel substitution,
+        # where 66% of errors are confusions of {"a", "e", "i"} and 34% are other pairs.
+        if sentence[char_idx] in {"a", "e", "i"} and new_vowel in {"a", "e", "i"}:
+            change_ratio = 0.66
+        else:
+            change_ratio = 0.34
+        if np.random.rand() < change_ratio:
+            sentence = sentence[:char_idx] + new_vowel + sentence[char_idx+1:]
+
         return sentence, char_idx
 
     
@@ -164,7 +172,7 @@ class Orthographic:
         return False
 
     
-    def find_relevant_subclasses(self, sentence: str, error_class: str, char_idx: int):
+    def find_relevant_subclasses(self, sentence: str, error_class: str, char_idx: int) -> List:
         '''
         Given a character, find relevant subclasses of orthographic errors per class.
         '''
@@ -194,7 +202,7 @@ class Orthographic:
                 subclasses.append(self.transposition_common_pairs)
         elif error_class == 'substitution':
             # Substitution
-            if is_vowel(sentence[char_idx]):
+            if is_vowel(sentence[char_idx]) and not is_word_initial(sentence, char_idx) and not is_word_final(sentence, char_idx):
                 subclasses.append(self.substitution_vowels)
             if self.substitution_consonants_is_valid(sentence, char_idx):
                 subclasses.append(self.substitution_consonants)

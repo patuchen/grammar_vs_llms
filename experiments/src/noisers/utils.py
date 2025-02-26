@@ -55,6 +55,12 @@ def is_word_final(sentence: str, char_idx: int) -> bool:
         return True
     return False
 
+def count_vowels(sentence: str) -> int:
+    '''
+    Count the number of vowels in a sentence. Also return the number of vowels in {"a", "e", "i}.
+    '''
+    return sum([1 for char in sentence if is_vowel(char)]), sum([1 for char in sentence if char in ["a", "e", "i"]])
+
 def define_noise_profiles():
     '''
     Define noise profiles, with the following structure:
