@@ -3,7 +3,6 @@ import os
 import json
 import pandas as pd
 import sys
-
 from models import Model, default_sampling_params, load_model
 from utils import *
 
@@ -16,11 +15,13 @@ def main(args=None):
     if args is None:
         args = parse_arguments()
 
+    # load data
+    data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
+    # print(data[0])
+
     # load model
     model = load_model(args.model, args.gpus, args.mem_percent)
 
-    # load data
-    data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
 
     # load prompts
     with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
@@ -30,11 +31,11 @@ def main(args=None):
     noising_functions = {
         "character_noise": make_typos,
     }
-    noising_function = noising_functions[args.perturbation]
+    # noising_function = noising_functions[args.perturbation]
 
     # set languages
-    source_language = args.lp.split("-")[0]
-    target_language = args.lp.split("-")[1]
+    # source_language = args.lp.split("-")[0]
+    # target_language = args.lp.split("-")[1]
 
     # run experiments
     for prompt in prompts:
@@ -44,12 +45,13 @@ def main(args=None):
             for i in range(0, 110, 10):
                 model_inputs = []
 
-                template = prompt['prompt'].replace("[target language]", CODE_MAP[target_language]).replace("[source language]", CODE_MAP[source_language])
                 experiment_name = f"{model.short}_{args.split}_v2_" + prompt['id'] + f"_{i}"
 
                 # build model inputs
                 for item in data:
+                    # print(item)
                     # use the source sentence as seed
+                    template = prompt['prompt'].replace("{target language}", CODE_MAP[item['langs'][:2]]).replace("{source language}", CODE_MAP[item['langs'][3:]])
                     noised_template = noising_function(template, i/float(100), item["src"])
 
                     # add system prompt
@@ -72,7 +74,8 @@ def main(args=None):
         else:
             model_inputs = []
             for item in data:
-                model_inputs.extend([prompt['prompt'].replace("[target language]", CODE_MAP[target_language]).replace("[source language]", CODE_MAP[source_language])])
+                # print(item)
+                model_inputs.extend([prompt['prompt'].replace("{target language}", CODE_MAP[item['langs'][:2]]).replace("{source language}", CODE_MAP[item['langs'][3:]])])
             print("Model inputs are built. Starting generation")
 
             # generate translations
@@ -82,7 +85,7 @@ def main(args=None):
             for idx, translation in enumerate(translations):
                 if "tgts" not in data[idx]:
                     data[idx]["tgts"] = []
-                data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": "NA", "lp": args.lp})
+                data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt_src": prompt["prompt_src"], "prompt": prompt['id'], "perturbation": "NA", "prompt_p": prompt.get("prompt_p", "None")})
 
     if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
         os.makedirs(f'../output_translations/wmt24/system-outputs/{args.lp}')
