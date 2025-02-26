@@ -8,7 +8,7 @@ assert len(data) == 10
 data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="en-cs")
 assert len(data) == 100
 data = grammar_v_mtllm.utils.load_data(split="tiny_test", langs="all")
-assert len(data) == 1100 # 100 per each language
+assert len(data) == 1100
 
 # %%
 

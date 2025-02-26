@@ -1,6 +1,6 @@
 import subset2evaluate.utils
 
-def load_data(split="micro_test", langs="three"):
+def load_data(split="tiny_test", langs="three"):
     import random
     import warnings
 

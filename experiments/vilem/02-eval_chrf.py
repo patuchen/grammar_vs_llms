@@ -4,7 +4,6 @@ import argparse
 import csv
 import glob
 import numpy as np
-import scipy.stats
 import langdetect
 
 metric = sacrebleu.CHRF()
