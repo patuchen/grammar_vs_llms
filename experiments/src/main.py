@@ -64,6 +64,8 @@ def main(args=None):
 
                 # save translations
                 for idx, translation in enumerate(translations):
+                    if "tgts" not in data[idx]:
+                        data[idx]["tgts"] = []
                     data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": f"{i/float(100)},character_noise", "lp": args.lp})
 
         # for non-synthetic noise, generate translations for different prompts
@@ -78,6 +80,8 @@ def main(args=None):
 
             # save translations
             for idx, translation in enumerate(translations):
+                if "tgts" not in data[idx]:
+                    data[idx]["tgts"] = []
                 data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt": prompt['id'], "perturbation": "NA", "lp": args.lp})
 
     if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
