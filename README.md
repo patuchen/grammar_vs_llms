@@ -8,6 +8,8 @@ Not released publicly yet.
 ## Instructions
 
 To access data loaders and other nice functions, you need to install the local package, which will also make sure all the dependencies are installed:
+Requires Python 3.11+.
+
 ```bash
 pip install -e .
 ```
