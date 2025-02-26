@@ -68,24 +68,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_noised-0",
-        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.03
         },
         "prompt_noiser": "orthographic_0.03",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.03_noised-1",
-        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content  of the line, do not add any explanations: {source_line}",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content  of the line, do not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.03
         },
         "prompt_noiser": "orthographic_0.03",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -156,24 +156,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_noised-0",
-        "noised_prompt": "Translate thhe  following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the lyne, do not add any explanotions: {source_line}",
+        "noised_prompt": "Translate thhe  following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the lyne, do not add any explanotions: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.06
         },
         "prompt_noiser": "orthographic_0.06",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.06_noised-1",
-        "noised_prompt": "Translate the followwing  line from\\n{source_lang} to {target_lang}.\\\\nBe very literal, and only translate the zontent of the line, do not add any explanations: {source_line}",
+        "noised_prompt": "Translate the followwing  line from\\n{source_lang} to {target_lang}.\\\\nBe very literal, and only translate the zontent of the line, do not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.06
         },
         "prompt_noiser": "orthographic_0.06",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -244,24 +244,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_noised-0",
-        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the  line, to not add any explanations: {source_line}",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the  line, to not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.09
         },
         "prompt_noiser": "orthographic_0.09",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.09_noised-1",
-        "noised_prompt": "Translade th following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and oonli dranslate the content of the line, do not add any explanations: {source_line}",
+        "noised_prompt": "Translade th following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and oonli dranslate the content of the line, do not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.09
         },
         "prompt_noiser": "orthographic_0.09",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -332,24 +332,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_noised-0",
-        "noised_prompt": "Translate thhe following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add ani explanations: {source_line}",
+        "noised_prompt": "Translate thhe following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add ani explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.12000000000000001
         },
         "prompt_noiser": "orthographic_0.12",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.12_noised-1",
-        "noised_prompt": "Translate  the following line from\\n{source_lang} to {target_lang}.\\nBe very lideral, and only transslate the content of the line, do not atd any explanationns: {source_line}",
+        "noised_prompt": "Translate  the following line from\\n{source_lang} to {target_lang}.\\nBe very lideral, and only transslate the content of the line, do not atd any explanationns: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.12000000000000001
         },
         "prompt_noiser": "orthographic_0.12",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -420,24 +420,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_noised-0",
-        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe vedy literal, and only translate the content of the line, do  not add any expplanutions: {source_line}",
+        "noised_prompt": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe vedy literal, and only translate the content of the line, do  not add any expplanutions: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.15000000000000002
         },
         "prompt_noiser": "orthographic_0.15",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.15_noised-1",
-        "noised_prompt": "Translate th following line from\\n{source_lang} to {target_lang}.\\nBe very lyteral, and only translate the content of the lyne, do not add any expllanations: {source_line}",
+        "noised_prompt": "Translate th following line from\\n{source_lang} to {target_lang}.\\nBe very lyteral, and only translate the content of the lyne, do not add any expllanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.15000000000000002
         },
         "prompt_noiser": "orthographic_0.15",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -508,24 +508,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_noised-0",
-        "noised_prompt": "Translate  thhe following line from\\n{source_lang} to {target_lang}.\\nBe very lyteral, and only trranslate the content of the line,,  do not atd any explanations: {source_line}",
+        "noised_prompt": "Translate  thhe following line from\\n{source_lang} to {target_lang}.\\nBe very lyteral, and only trranslate the content of the line,,  do not atd any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.18000000000000002
         },
         "prompt_noiser": "orthographic_0.18",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.18_noised-1",
-        "noised_prompt": "Transslat the folllowing line from\\n{source_lang} to {target_lang}.\\nBe veri literal, and only translate the ccontent of the line, do not add any explanationc: {source_line}",
+        "noised_prompt": "Transslat the folllowing line from\\n{source_lang} to {target_lang}.\\nBe veri literal, and only translate the ccontent of the line, do not add any explanationc: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.18000000000000002
         },
         "prompt_noiser": "orthographic_0.18",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -596,24 +596,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_noised-0",
-        "noised_prompt": "Translate  the followinng line from\\n{source_lang} to {target_lang}.\\nBe very litrall, and only trransllate the content of the line, do not  add any explanations: {source_line}",
+        "noised_prompt": "Translate  the followinng line from\\n{source_lang} to {target_lang}.\\nBe very litrall, and only trransllate the content of the line, do not  add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.21000000000000002
         },
         "prompt_noiser": "orthographic_0.21",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.21_noised-1",
-        "noised_prompt": "Translate the  following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only dranslate  the content of the line,  do not addd any exxplinationss: {source_line}",
+        "noised_prompt": "Translate the  following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only dranslate  the content of the line,  do not addd any exxplinationss: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.21000000000000002
         },
         "prompt_noiser": "orthographic_0.21",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -684,24 +684,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_noised-0",
-        "noised_prompt": "Translate the followynng line from\\n{source_lang} to {target_lang}.\\nnB veri literal, and only translate the content of the line, do not ad any explanations: {source_line}",
+        "noised_prompt": "Translate the followynng line from\\n{source_lang} to {target_lang}.\\nnB veri literal, and only translate the content of the line, do not ad any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.24000000000000002
         },
         "prompt_noiser": "orthographic_0.24",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.24_noised-1",
-        "noised_prompt": "Translat the following line frrom\\n{source_lang} do {target_lang}.\\nBe very literal,  and only trranclat the cuntent of the  line, do  not add any explanations: {source_line}",
+        "noised_prompt": "Translat the following line frrom\\n{source_lang} do {target_lang}.\\nBe very literal,  and only trranclat the cuntent of the  line, do  not add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.24000000000000002
         },
         "prompt_noiser": "orthographic_0.24",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -772,24 +772,24 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_noised-0",
-        "noised_prompt": "Translate the following lin from\\n{source_lang} do {target_lang}.\\nBe veri literal, and only transllate dhe  content of the line do not addd ani explannations: {source_line}",
+        "noised_prompt": "Translate the following lin from\\n{source_lang} do {target_lang}.\\nBe veri literal, and only transllate dhe  content of the line do not addd ani explannations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.27
         },
         "prompt_noiser": "orthographic_0.27",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.27_noised-1",
-        "noised_prompt": "Translatte the following lin frrom\\n{source_lang}  to {target_lang}.\\nBe veri lyterel,  annt only trranslade the content of the line, do  ot adt any explunnations: {source_line}",
+        "noised_prompt": "Translatte the following lin frrom\\n{source_lang}  to {target_lang}.\\nBe veri lyterel,  annt only trranslade the content of the line, do  ot adt any explunnations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.27
         },
         "prompt_noiser": "orthographic_0.27",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-01-no_errors",
@@ -860,23 +860,23 @@
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_noised-0",
-        "noised_prompt": "Translatte th following line from\\n{source_lang} to {target_lang}..\\nBe very lyteral, and only translate dhhe content of the line, do not  add any explanations: {source_line}",
+        "noised_prompt": "Translatte th following line from\\n{source_lang} to {target_lang}..\\nBe very lyteral, and only translate dhhe content of the line, do not  add any explanations: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.3
         },
         "prompt_noiser": "orthographic_0.30",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
         "prompt_id": "mt-04-no_errors",
         "noised_prompt_id": "prompt-mt-04-no_errors_scenario-orthographic_0.30_noised-1",
-        "noised_prompt": "Translate the followyng linnefrrom\\n{source_lang}  to {target_lang}.\\nBe veri literal, and only translate the content of th line, do not atd any explanationns: {source_line}",
+        "noised_prompt": "Translate the followyng linnefrrom\\n{source_lang}  to {target_lang}.\\nBe veri literal, and only translate the content of th line, do not atd any explanationns: {source_text}",
         "perplexity": -1,
         "noise_type_probabilities": {
             "orthographic": 0.3
         },
         "prompt_noiser": "orthographic_0.30",
-        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_line}"
+        "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     }
 ]
