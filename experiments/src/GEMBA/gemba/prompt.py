@@ -106,7 +106,7 @@ prompts = {
         "use_ref": True},
 
     "WMT24-DA": {
-        "prompt": 'Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100, where a score of zero means "no meaning preserved" and score of one hundred means "perfect meaning and grammar".\n\n{source_lang} source: "{source_seg}"\n{target_lang} translation: "{target_seg}"\nScore: ',
+        "prompt": 'Please analyze the given source and translated sentences and output a translation quality score on a continuous scale ranging from 0 to 100. Translation quality should be evaluated based on both fluency and adequacy. A score close to 0 indicates a low quality translation, while a score close to 100 indicates a high quality translation. Do not provide any explanations or text apart from the score.\n{source_lang} Sentence: {source_seg}\n{target_lang} Sentence: {target_seg}\nScore:',
         "validate_answer": lambda x: validate_number(x),
         "use_ref": False},
 
