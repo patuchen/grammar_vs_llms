@@ -12,6 +12,11 @@ assert len(data) == 1100 # 100 per each language
 
 # %%
 
+data = grammar_v_mtllm.utils.load_data(langs="three")
+print(len(data))
+
+# %%
+
 data_by_lang = collections.defaultdict(list)
 data = grammar_v_mtllm.utils.load_data(split="all", langs="all")
 for line in data:
