@@ -7,6 +7,15 @@ new_translations/
 output_translations/
 .venv
 .set_env.sh
+experiments/src/GEMBA/mt-metrics-eval*
+experiments/src/GEMBA/set_env.sh
+experiments/src/GEMBA/cache/*
+experiments/src/GEMBA/gemba/cache/*
+experiments/src/GEMBA/.history*
+experiments/src/GEMBA/.idea
+experiments/src/GEMBA/__pycache__
+experiments/src/GEMBA/cache/*
+experiments/src/GEMBA/credentials.json
 
 
 # Byte-compiled / optimized / DLL files
