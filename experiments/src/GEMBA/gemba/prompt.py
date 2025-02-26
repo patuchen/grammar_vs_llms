@@ -1,6 +1,7 @@
 import re
 from termcolor import colored
-
+import json
+import os
 
 def parse_and_check_numerical_answer(answer, min=None, max=None):
     attempt = parse_numerical_answer(answer, min, max)
@@ -142,3 +143,11 @@ prompts = {
         "validate_answer": lambda x, classes=["No meaning preserved", "Some meaning preserved, but not understandable", "Some meaning preserved and understandable", "Most meaning preserved, minor issues", "Perfect translation"]: parse_classes(x, classes),
         "max_tokens": 100},
 }
+
+
+# # TODO: load perturbed prompts
+
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+# prompts_path = os.path.join(current_dir, "prompts", "gemba-base-prompts_noised_orthographic_over_p.json")
+
+# perturbed_prompts = json.load(open(prompts_path))

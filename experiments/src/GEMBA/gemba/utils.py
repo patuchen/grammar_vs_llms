@@ -6,6 +6,15 @@ from gemba.gemba_mqm_utils import TEMPLATE_GEMBA_MQM, apply_template, parse_mqm_
 from gemba.gemba_esa import TEMPLATE_GEMBA_ESA_ERROR_SPANS, TEMPLATE_GEMBA_ESA_RANKING
 from gemba.prompt import prompts, validate_number
 
+CODE_MAP = {
+    "cs": "Czech",
+    "uk": "Ukrainian",
+    "de": "German",
+    "en": "English",
+    "he": "Hebrew",
+    "ru": "Russian",
+    "zh": "Chinese",
+}
 
 def get_gemba_scores(source, hypothesis, source_lang, target_lang, method, model):
     df = pd.DataFrame({'source_seg': source, 'target_seg': hypothesis})
@@ -20,11 +29,6 @@ def get_gemba_scores(source, hypothesis, source_lang, target_lang, method, model
         parse_answer = lambda x: parse_mqm_answer(x, list_mqm_errors=False, full_desc=True)
         answers = gptapi.bulk_request(df, model, parse_answer, cache=cache, max_tokens=500)
     elif method in ["GEMBA-DA", "GEMBA-DA_ref", "GEMBA-SQM", "GEMBA-SQM_ref", "GEMBA-stars", "GEMBA-stars_ref", "GEMBA-classes", "GEMBA-classes_ref"]:
-        df["prompt"] = df.apply(lambda x: apply_template(prompts[method]['prompt'], x), axis=1)
-        parse_answer = prompts[method]["validate_answer"]
-        answers = gptapi.bulk_request(df, model, parse_answer, cache=cache, max_tokens=500)
-    elif method in ["GEMBA-DA_noise"]:
-        
         df["prompt"] = df.apply(lambda x: apply_template(prompts[method]['prompt'], x), axis=1)
         parse_answer = prompts[method]["validate_answer"]
         answers = gptapi.bulk_request(df, model, parse_answer, cache=cache, max_tokens=500)
