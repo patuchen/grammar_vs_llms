@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import argparse
 import numpy as np
 import glob
+import collections
 
 # python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en
 
@@ -10,14 +11,23 @@ args = argparse.ArgumentParser()
 args.add_argument("glob")
 args = args.parse_args()
 
-
 # load all data from args.dir
 data_all = [
     [json.loads(x) for x in open(f)]
     for f in glob.glob(args.glob)
 ]
 
-for langs in {x["langs"] for data in data_all for x in data}:
+KEY_X = "prompt_chrf"
+KEY_Y = "chrf"
+
+data_all_joined = collections.defaultdict(list)
+for data in data_all:
+    for x in data:
+        data_all_joined[x["prompt_noiser"]].append(x)
+data_all = list(data_all_joined.values())
+
+for langs in sorted({x["langs"] for data in data_all for x in data}):
+    print(langs)
     lang1, lang2 = langs.split("-")
     data_all_local = [
         [x for x in data if x["langs"] == langs]
@@ -28,41 +38,53 @@ for langs in {x["langs"] for data in data_all for x in data}:
         {
             "comet": np.average([x["eval"]["comet"] for x in data]),
             "chrf": np.average([x["eval"]["chrf"] for x in data]),
-            "langs": np.average([x["eval"]["langs"][0][0] == lang2 for x in data]),
-            # np.average([x["eval"]["langs"] for x in data]),
+            "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
             "prompt_chrf": data[0]["eval_prompt"]["chrf"],
             "prompt_ip": data[0]["eval_prompt"]["ip"],
             "prompt_p": data[0]["eval_prompt"]["p"],
         }
         for data in data_all_local
     ]
+    # data_local.sort(key=lambda x: x["prompt_chrf"])
 
-    plt.plot(
-        [x["prompt_chrf"] for x in data_local],
-        [x["chrf"] for x in data_local],
-        marker=".",
-        markersize=20,
-        label=langs,
+
+
+    # linear line
+    x = np.linspace(
+        min([x[KEY_X] for x in data_local]),
+        max([x[KEY_X] for x in data_local]),
+        10
     )
+    y = np.poly1d(np.polyfit([x[KEY_X] for x in data_local], [x[KEY_Y] for x in data_local], 1))
+    plt.plot(x, y(x))
+    plt.scatter(
+        [x[KEY_X] for x in data_local],
+        [x[KEY_Y] for x in data_local],
+        marker=".",
+        s=70,
+        # plot lang and slope
+        label=langs + f" ({y[1]:.2f})",
+    )
+
+
     for line in data_local:
+        if line[KEY_X] >= max([x[KEY_X] for x in data_local])*0.99:
+            continue
+        if line[KEY_X] <= min([x[KEY_X] for x in data_local])*1.01:
+            continue
         plt.text(
-            line["prompt_chrf"],
-            line["chrf"],
+            line[KEY_X],
+            line[KEY_Y],
             f"{line['langs']:.0%}\n",
             ha="center", va="center"
         )
     plt.ylabel("Translation quality")
-    plt.xlabel("Noise level")
+    plt.xlabel("Similarity to original prompt")
 
 plt.legend(
     # no frame
     frameon=False,
 )
-plt.title((args.glob.split("/")[-1].removesuffix(".jsonl")))
+plt.title((args.glob.removeprefix("data/evaluated/").removesuffix(".jsonl")))
 plt.tight_layout()
 plt.show()
-
-
-"""
-python3 experiments/src/evaluation/05-plot_basic.py data/evaluated/base_micro_test_results.jsonl
-"""

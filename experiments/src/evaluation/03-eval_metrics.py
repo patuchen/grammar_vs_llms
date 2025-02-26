@@ -69,10 +69,5 @@ for line in data:
         "p": data[0]["prompt_p"],
     }
 
-with open(f"data/evaluated/{args.data.split('/')[-1]}", "w") as f:
+with open(args.data.replace('/translated/', '/evaluated/'), "w") as f:
     f.write("\n".join([json.dumps(x) for x in data]))
-
-
-"""
-python3 experiments/src/evaluation/03-eval_metrics.py data/translated/base_micro_test_results.jsonl
-"""
