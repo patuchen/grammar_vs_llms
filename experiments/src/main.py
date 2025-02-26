@@ -17,27 +17,26 @@ def main(args=None):
 
     # load data
     data = grammar_v_mtllm.utils.load_data(split=args.split, langs=f"{args.lp}")
-    data_translated = [{} for _ in data]
-    # print(data[0])
-
     # load model
     model = load_model(args.model, args.gpus, args.mem_percent)
 
+    if not args.perturbation:
+        with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
+            prompts = json.load(file)
 
-    # load prompts
-    with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
-        prompts = json.load(file)
+    else:
+        with open(f'../noised_prompts/mt_{args.prompt}_{args.perturbation}.json', 'r') as file:
+            prompts = json.load(file)
 
-    # noising_function = noising_functions[args.perturbation]
-
+    os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}', exist_ok=True)
     # run experiments
     for prompt in prompts:
-        # for synthetic noise, repeat at increasing noise levels
-                # for non-synthetic noise, generate translations for different prompts
+        data_translated = [{} for _ in data]
+
         model_inputs = []
         for item in data:
             # print(item)
-            model_inputs.extend([prompt['prompt'].replace("{target_lang}", CODE_MAP[item['langs'][:2]]).replace("{source_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_line}", item['src'])])
+            model_inputs.extend([prompt['prompt'].replace("{source_lang}", CODE_MAP[item['langs'][:2]]).replace("{target_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_line}", item['src'])])
         print("Model inputs are built. Starting generation")
 
         # generate translations
@@ -49,24 +48,17 @@ def main(args=None):
             data_translated[idx]["ref"] = data[idx]["ref"]
             data_translated[idx]["langs"] = data[idx]["langs"]
             data_translated[idx]['model'] = model.short
-            data_translated[idx]['prompt_src'] = prompt["prompt_src"]
+            data_translated[idx]['prompt_src'] = prompt.get("prompt_src", prompt["prompt"])
             data_translated[idx]['model_input'] = model_inputs[idx]
             data_translated[idx]['prompt'] = prompt['prompt']
             data_translated[idx]['prompt_p'] = prompt.get("prompt_p", None)
             data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
             data_translated[idx]['tgt'] = translation
 
-#             if "tgts" not in data[idx]:
-#                 data[idx]["tgts"] = []
-#             data[idx]["tgts"].append({"tgt": translation, "model": model.short, "prompt_src": prompt["prompt_src"], "prompt": prompt['id'], "perturbation": "NA", "prompt_p": prompt.get("prompt_p", "None")})
-# 
-    if not os.path.exists(f'../output_translations/wmt24/system-outputs/{args.lp}'):
-        os.makedirs(f'../output_translations/wmt24/system-outputs/{args.lp}')
-
-    # save data as jsonl
-    with open(f'../output_translations/wmt24/system-outputs/{args.lp}/{args.prompt}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
-        for item in data_translated:
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
+        # save data as jsonl
+        with open(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{prompt["prompt_id"]}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
+            for item in data_translated:
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
             
 # %%
 

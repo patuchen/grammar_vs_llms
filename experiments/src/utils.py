@@ -53,6 +53,7 @@ def load_sample(path, sample):
             i += 1
     return loaded
 
+
 # TODO: add other noising functions
 def make_typos(sentence, prob_threshold=0.1, seed=42):
     new_sentence = ""
@@ -78,6 +79,7 @@ def make_typos(sentence, prob_threshold=0.1, seed=42):
             new_sentence += sentence[i]
         i += 1
     return new_sentence
+
 
 def make_natural_typo(sentence, probs, seed=42):
     new_sentence = ""
@@ -123,6 +125,7 @@ def parse_arguments():
         "--lp",
         type=str,
         required=True,
+        default="three",
         help="Language pair code from WMT24.",
     )
     parser.add_argument(
@@ -145,7 +148,8 @@ def parse_arguments():
         "--prompt",
         type=str,
         default="base",
-        help="Prompt to use for generation.",
+        choices=["base", "minimal"],
+        help="'Pristine' prompt to use for generation.",
     )
     parser.add_argument(
         "--split",
@@ -156,7 +160,8 @@ def parse_arguments():
     parser.add_argument(
         "--perturbation",
         type=str,
-        default="character_noise",
+        default=None,
+        choices=[None, "orthographic_over_p"],
         help="Perturbation to use for generation.",
     )
     return parser.parse_args()
