@@ -76,7 +76,7 @@ def define_noise_profiles():
     
     noise_profiles = {'orthographic': {
                 'orthographic': {
-                    'p': 0.5,
+                    'p': 0.3,
                     'subtype_distribution': {
                         'natural_typos': 0.03,
                         'insertion': 0.17,
@@ -86,9 +86,9 @@ def define_noise_profiles():
                     }
                 }
             },
-            'L2': { # THIS IS JUST AN EXAMPLE!
+            'L2': { 
                 'orthographic': {
-                    'p': 0.5,
+                    'p': 0.2,
                     'subtype_distribution': {
                         'natural_typos': 0.03,
                         'insertion': 0.17,
@@ -97,15 +97,12 @@ def define_noise_profiles():
                         'substitution': 0.38
                     }
                 },
-                'lexical': {
-                    'p': 0.5,
-                    'subtype_distribution': {
-                        'synonym': 0.5,
-                        'antonym': 0.5
-                    }
+                'lexicalphrasal': {
+                    'p': 1,
+                    'subtype_distribution': None
                 }
             },
-            'TeenUser': { # THIS IS JUST AN EXAMPLE! 
+            'LazyUser': { 
                 'orthographic': {
                     'p': 0.03,
                     'subtype_distribution': {
@@ -117,13 +114,240 @@ def define_noise_profiles():
                     }
                 },
                 'register': {
-                    'p': 1,
-                    'subtype_distribution': {
-                        'formal': 0.5,
-                        'informal': 0.5
-                    }
+                    'p': 2,
+                    'subtype_distribution': None
                 }
             }
     }
     return noise_profiles
+
+def define_lexicalphrasal_database():
+    '''
+    This is our curated list of noised prompts per prompt.
+    '''
+    database_level1 = {
+        "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}": [
+            "Translate this text from {source_lang} to {target_lang}.\\n{source_text}",
+            "Change the following text from {source_lang} into {target_lang}.\\n{source_text}",
+            "Please translate this text from {source_lang} to {target_lang}.\\n{source_text}",
+            "Rewrite this text from {source_lang} in {target_lang}.\\n{source_text}",
+            "Convert this text from {source_lang} to {target_lang}.\\n{source_text}",
+            "Make this text in {source_lang} into {target_lang}.\\n{source_text}",
+            "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
+            "Turn this text into {target_lang} from {source_lang}.\\n{source_text}",
+            "Write this text again but in {target_lang}.\\n{source_text}",
+            "Translate the given text from {source_lang} into {target_lang}.\\n{source_text}"
+        ],
+        
+        "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:": [
+            "Change this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Translate this part from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Rewrite this from {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Convert this sentence from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Make this text in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Switch this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Write this again in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Put this text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Change this text into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Translate this sentence from {source_lang} to {target_lang} exactly:\\n{source_lang}: {source_text}\\n{target_lang}:"
+        ],
+
+        "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
+            "### Instruction:\\nChange Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nRewrite Input from {source_lang} in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nConvert Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nMake Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nSwitch Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nWrite Input again in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nPut Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nTranslate the Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nChange the Input text from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nRewrite this Input in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+        ],
+
+        "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}": [
+            "Change the following line from\\n{source_lang} to {target_lang}.\\nBe exact, do not add extra words: {source_text}",
+            "Translate this line from\\n{source_lang} to {target_lang}.\\nDo not explain, just change words: {source_text}",
+            "Convert the following line into\\n{target_lang} from {source_lang}.\\nKeep it the same, do not add anything: {source_text}",
+            "Rewrite the next line in\\n{target_lang} from {source_lang}.\\nBe exact, no extra explanation: {source_text}",
+            "Put the next line into\\n{target_lang} from {source_lang}.\\nDo not change meaning, only words: {source_text}",
+            "Make this sentence in\\n{target_lang} from {source_lang}.\\nBe very exact, no other words: {source_text}",
+            "Switch this line to\\n{target_lang} from {source_lang}.\\nKeep it the same, just change language: {source_text}",
+            "Write this again in\\n{target_lang} from {source_lang}.\\nDo not explain, only change words: {source_text}",
+            "Change this line into\\n{target_lang} from {source_lang}.\\nNo extra information, be literal: {source_text}",
+            "Translate exactly this line from\\n{source_lang} to {target_lang}.\\nNo explanations, just change words: {source_text}"
+        ]
+    }
+
+    # Level 2 is more noised 
+    database_level2 = {
+        "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}": [
+            "Translate this following text from {source_lang} into {target_lang}.\\n{source_text}",
+            "Make translate this text from {source_lang} to {target_lang}.\\n{source_text}",
+            "You translate this text from {source_lang} into {target_lang}.\\n{source_text}",
+            "Change this text to {target_lang} from {source_lang}.\\n{source_text}",
+            "Translate text from {source_lang} for {target_lang}.\\n{source_text}",
+            "Rewrite this text in {target_lang} from {source_lang}.\\n{source_text}",
+            "Put this text in {target_lang} instead {source_lang}.\\n{source_text}",
+            "Make this text into {target_lang} from {source_lang}.\\n{source_text}",
+            "Translate now this text {source_lang} to {target_lang}.\\n{source_text}",
+            "This text you change from {source_lang} into {target_lang}.\\n{source_text}"
+        ],
+
+        "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:": [
+            "Change this for {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Translate now this {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Make this translation {source_lang} for {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "You translate this text to {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Rewrite text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Put this words in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Make this text be {target_lang} and not {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Switch the text into {target_lang}, take from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "You make words in {target_lang}, not in {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "Turn this words in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
+        ],
+
+        "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
+            "### Instruction:\\nYou change Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nMake Input translate from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nNow translate Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nRewrite Input from {source_lang} to {target_lang} only words\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nTranslate now this Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nPut Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nMake this Input in {target_lang}, not {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nChange Input into {target_lang} now\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nSwitch this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n### Response:\\n",
+            "### Instruction:\\nYou take Input and put it in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
+        ],
+
+        "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}": [
+            "Change the next line from\\n{source_lang} into {target_lang}.\\nBe exact, no more: {source_text}",
+            "Translate now this line from\\n{source_lang} to {target_lang}.\\nDo not put more words: {source_text}",
+            "Make the next line into\\n{target_lang} from {source_lang}.\\nOnly words, not explain: {source_text}",
+            "Rewrite this line in\\n{target_lang} from {source_lang}.\\nBe very exact, no change: {source_text}",
+            "Turn the sentence be in\\n{target_lang} not {source_lang}.\\nKeep same, not explain: {source_text}",
+            "Put the words in\\n{target_lang} from {source_lang}.\\nDo not put more things: {source_text}",
+            "Make sentence be in\\n{target_lang} from {source_lang}.\\nOnly words, nothing extra: {source_text}",
+            "Switch this line into\\n{target_lang} from {source_lang}.\\nDo not add, only change: {source_text}",
+            "Now change this line into\\n{target_lang} from {source_lang}.\\nKeep the same words: {source_text}",
+            "You must rewrite this line in\\n{target_lang} from {source_lang}.\\nNo extra, only same words: {source_text}"
+        ]
+    }
+    database = {1: database_level1, 2: database_level2}
+
+
+    return database
+
+
+def define_register_database():
+
+    database_level1 = {
+        "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}": [
+            "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+            "change text from {source_lang} to {target_lang}.\\n{source_text}",
+            "convert {source_lang} to {target_lang}.\\n{source_text}",
+            "rewrite in {target_lang}, from {source_lang}.\\n{source_text}",
+            "make this {target_lang} instead.\\n{source_text}",
+            "turn into {target_lang} from {source_lang}.\\n{source_text}",
+            "need this in {target_lang}.\\n{source_text}",
+            "switch lang to {target_lang}.\\n{source_text}",
+            "fix this in {target_lang}.\\n{source_text}",
+            "translate {source_text} to {target_lang}"
+        ],
+
+        "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:": [
+            "change lang {source_lang} -> {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+            "convert to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "fix text in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "swap {source_lang} for {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "turn this into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "quick translate {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:"
+        ],
+
+        "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
+            "### instruction:\\nchange input {source_lang} -> {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nconvert text {source_lang} to {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nfix this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nput this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nquick swap to {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n"
+        ],
+
+        "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}": [
+            "change next line to {target_lang}, literal only:\\n{source_text}",
+            "translate this, no extras:\\n{source_text}",
+            "make this {target_lang}, exact:\\n{source_text}",
+            "fix text in {target_lang}, nothing else:\\n{source_text}",
+            "swap to {target_lang}, just words:\\n{source_text}",
+            "put this in {target_lang}, no more:\\n{source_text}",
+            "rewrite {source_text} in {target_lang}, keep same",
+            "quick translate, no explain:\\n{source_text}",
+            "need {target_lang} version, literal:\\n{source_text}",
+            "turn this into {target_lang}, no changes:\\n{source_text}"
+        ]
+    }
+    database_level2 = {
+        "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}": [
+            "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+            "change text from {source_lang} to {target_lang}.\\n{source_text}",
+            "convert {source_lang} to {target_lang}.\\n{source_text}",
+            "rewrite in {target_lang}, from {source_lang}.\\n{source_text}",
+            "make this {target_lang} instead.\\n{source_text}",
+            "turn into {target_lang} from {source_lang}.\\n{source_text}",
+            "need this in {target_lang}.\\n{source_text}",
+            "switch lang to {target_lang}.\\n{source_text}",
+            "fix this in {target_lang}.\\n{source_text}",
+            "translate {source_text} to {target_lang}"
+        ],
+
+        "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:": [
+            "change lang {source_lang} -> {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+            "convert to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "fix text in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "swap {source_lang} for {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "turn this into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "quick translate {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:"
+        ],
+
+        "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
+            "### instruction:\\nchange input {source_lang} -> {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nconvert text {source_lang} to {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nfix this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nput this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nquick swap to {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+            "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n"
+        ],
+
+        "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}": [
+            "change next line to {target_lang}, literal only:\\n{source_text}",
+            "translate this, no extras:\\n{source_text}",
+            "make this {target_lang}, exact:\\n{source_text}",
+            "fix text in {target_lang}, nothing else:\\n{source_text}",
+            "swap to {target_lang}, just words:\\n{source_text}",
+            "put this in {target_lang}, no more:\\n{source_text}",
+            "rewrite {source_text} in {target_lang}, keep same",
+            "quick translate, no explain:\\n{source_text}",
+            "need {target_lang} version, literal:\\n{source_text}",
+            "turn this into {target_lang}, no changes:\\n{source_text}"
+        ]
+    }
+    database = {1: database_level1, 2: database_level2}
+
+    return database
 

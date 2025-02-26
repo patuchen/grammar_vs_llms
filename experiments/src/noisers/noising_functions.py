@@ -2,7 +2,7 @@ from typing import Dict, List
 from collections import defaultdict
 import numpy as np
 from utils import neighbours as typo_neighbours
-from utils import is_vowel, is_word_initial, is_word_final, count_vowels
+from utils import is_vowel, is_word_initial, is_word_final, count_vowels, define_lexicalphrasal_database, define_register_database
 np.random.seed(42)
 
 class Orthographic:
@@ -246,26 +246,50 @@ class Orthographic:
         return sentence
 
                 
-class Lexical:
+class LexicalPhrasal:
 
-    def __init__(self, subtype_distribution: Dict[str, float], p: float):
+    def __init__(self, subtype_distribution: Dict[str, float], p: int):
         '''
+        p: Level of noise, should be in {0,1,2}
         subtype_distribution (Dict[str, float]): Defines a distribution over the different classes of lexical errors.
         '''
         self.subtype_distribution = subtype_distribution
         self.p = p
+        self.database = define_lexicalphrasal_database()
 
     def noise(self, sentence: str) -> str:
         '''
-        Given a sentence, apply lexical errors on words with probability p.
-        For each word:
-        1. Sample a class of error, 
-        2. Find relevant subclasses for the word. If none exist, skip the word.
-        3. Sample a subclass
-        4. Noise the word according to the subclass
+        We have a pre-curated list of noised prompts per prompt that we want to experiment with, for each level of noise.
+        Given a sentence, we simply look it up in our database and sample uniformly from the noised prompts.
         '''
-        raise NotImplementedError
+        if self.p == 0:
+            return sentence
+        noised_prompts = self.database[self.p][sentence]
+        return np.random.choice(noised_prompts)
     
+
+class Register:
+
+    def __init__(self, subtype_distribution: Dict[str, float], p: int):
+        '''
+        p: Level of noise, should be in {0,1,2}
+        subtype_distribution (Dict[str, float]): Defines a distribution over the different classes of lexical errors.
+        '''
+        self.subtype_distribution = subtype_distribution
+        self.p = p
+        self.database = define_register_database()
+
+    def noise(self, sentence: str) -> str:
+        '''
+        We have a pre-curated list of noised prompts per prompt that we want to experiment with, for each level of noise.
+        Given a sentence, we simply look it up in our database and sample uniformly from the noised prompts.
+        '''
+        if self.p == 0:
+            return sentence
+        noised_prompts = self.database[self.p][sentence]
+        return np.random.choice(noised_prompts)
+
+
 
 class ComposeNoise:
 
@@ -280,15 +304,20 @@ class ComposeNoise:
         for noiser_type, noiser_profile in profile.items():
             if noiser_type == 'orthographic':
                 self.noisers[noiser_type] = Orthographic(noiser_profile['subtype_distribution'], noiser_profile['p'])
-            elif noiser_type == 'lexical':
-                self.noisers[noiser_type] = Lexical(noiser_profile['subtype_distribution'], noiser_profile['p'])
+            elif noiser_type == 'lexicalphrasal':
+                self.noisers[noiser_type] = LexicalPhrasal(noiser_profile['subtype_distribution'], noiser_profile['p'])
+            elif noiser_type == 'register':
+                self.noisers[noiser_type] = Register(noiser_profile['subtype_distribution'], noiser_profile['p'])
     
     def noise(self, sentence: str) -> str:
         '''
-        Apply noise in the following order: Syntactic -> Lexical -> Orthographic
+        Apply noise in the following order: lexicalphrasal / register -> orthographic.
+        Note that we cannot currently compose lexicalphrasal and register errors. 
         '''
-        for noiser_type, noiser in self.noisers.items():
-            sentence = noiser.noise(sentence)
+        order = ['lexicalphrasal', 'register', 'orthographic']
+        for noiser_type in order:
+            if noiser_type in self.noisers:
+                sentence = self.noisers[noiser_type].noise(sentence)
         return sentence
     
 
