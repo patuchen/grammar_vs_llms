@@ -30,10 +30,10 @@ class EuroLLMModel(Model):
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
         system = {
             "role": "system",
-            "prompt": self.system_prompt
+            "content": self.system_prompt
         }
         conversations = [
-            [system, {"role": "user", "prompt": prompt}]
+            [system, {"role": "user", "content": prompt}]
             for prompt in prompts
         ]
         responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
@@ -51,12 +51,19 @@ class TowerModel(Model):
 
 class AnthropicModel(Model):
     def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
+        """
+        Before using this model run: gcloud auth application-default login
+
+        This will create the credential file here:
+        - Linux: $HOME/.config/gcloud/application_default_credentials.json
+        - Windows: %APPDATA%\gcloud\application_default_credentials.json
+        """
         super().__init__(model, gpus, sampling_params, system_prompt)
         load_dotenv()
         # self._api_key = os.getenv("ANTHROPIC_API_KEY")
         # self.llm = Anthropic() # TODO check if the api key is loaded
         self.llm = AnthropicVertex(region=os.environ["LOCATION"], project_id=os.environ["PROJECT_ID"])
-        
+
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
         # The system prompt is added by .messages.create
         conversations = [
