@@ -40,6 +40,19 @@ class EuroLLMModel(Model):
         responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
         return [response.outputs[0].text.strip().replace('\n', ' ').replace('\t', ' ') for response in responses]
 
+class QwenLLMModel(Model):
+    def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
+        system = {
+            "role": "system",
+            "content": self.system_prompt
+        }
+        conversations = [
+            [system, {"role": "user", "content": prompt}]
+            for prompt in prompts
+        ]
+        responses = self.llm.chat(messages=conversations, sampling_params=self.sampling_params)        
+        return [response.outputs[0].text.strip().replace('\n', ' ').replace('\t', ' ') for response in responses]
+
 class TowerModel(Model):
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:        
         # In the documentation from HF they don't use the system prompt
@@ -143,6 +156,8 @@ def load_model(model: str, gpus: int, mem_percent: float, sampling_params: Sampl
         return EuroLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     elif "claude" in model.lower():
         return AnthropicModel(model, gpus, sampling_params, system_prompt)
+    elif "Qwen" in model.lower():
+        return QwenLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     else:
         raise ValueError(f"Model {model} not supported")
     
