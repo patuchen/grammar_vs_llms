@@ -8,5 +8,10 @@
         "prompt_id": "GEMBA-SQM",
         "prompt": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100 that starts on 'No meaning preserved', goes through 'Some meaning preserved', then 'Most meaning preserved and few grammar mistakes', up to 'Perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore (0-100): ",
         "prompt_src": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100 that starts on 'No meaning preserved', goes through 'Some meaning preserved', then 'Most meaning preserved and few grammar mistakes', up to 'Perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore (0-100): "
+    },
+    {
+        "prompt_id": "WMT24-DA",
+        "prompt": "Please analyze the given source and translated sentences and output a translation quality score on a continuous scale ranging from 0 to 100. Translation quality should be evaluated based on both fluency and adequacy. A score close to 0 indicates a low quality translation, while a score close to 100 indicates a high quality translation. Do not provide any explanations or text apart from the score.\n{source_lang} Sentence: {source_seg}\n{target_lang} Sentence: {target_seg}\nScore: ",
+        "prompt_src": "Please analyze the given source and translated sentences and output a translation quality score on a continuous scale ranging from 0 to 100. Translation quality should be evaluated based on both fluency and adequacy. A score close to 0 indicates a low quality translation, while a score close to 100 indicates a high quality translation. Do not provide any explanations or text apart from the score.\n{source_lang} Sentence: {source_seg}\n{target_lang} Sentence: {target_seg}\nScore: "
     }
 ]
