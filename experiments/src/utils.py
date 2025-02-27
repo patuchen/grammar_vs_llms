@@ -160,7 +160,7 @@ def parse_arguments():
         "--perturbation",
         type=str,
         default=None,
-        choices=[None, "orthographic_over_p"],
+        choices=[None, "orthographic_over_p", "orthographic", "llm"],
         help="Perturbation to use for generation.",
     )
     return parser.parse_args()

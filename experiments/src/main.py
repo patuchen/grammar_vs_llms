@@ -43,7 +43,6 @@ def main(args=None):
 
         # generate translations
         translations = model.generate(model_inputs)
-
         # save translations
         for idx, translation in enumerate(translations):
             data_translated[idx]["src"] = data[idx]["src"]
@@ -93,4 +92,4 @@ if __name__ == "__main__":
 # Unbabel/EuroLLM-1.7B-Instruct
 # meta-llama/Meta-Llama-3.1-8B-Instruct
 # gpt-4o-mini
-# claude-3-5-haiku-latest
+# gemini-2.0-flash-001

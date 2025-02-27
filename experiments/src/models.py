@@ -6,6 +6,9 @@ from dotenv import load_dotenv
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
 import httpx
+from google import genai
+from google.genai.types import HttpOptions, GenerateContentConfig
+
 
 class Model:
     def __init__(self, model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams, system_prompt: str):
@@ -17,7 +20,7 @@ class Model:
         self.short = model.split("/")[1].split("-")[0] if "/" in model else model.split("-")[0]
         self.type = "vllm" if "/" in model else "openai"
 
-        self.llm: LLM | Anthropic | OpenAI = None
+        self.llm: LLM | Anthropic | OpenAI | genai.Client = None
         if self.type == "vllm":
             self.llm = LLM(model=model, tensor_parallel_size=gpus, gpu_memory_utilization=mem_percent)
 
@@ -130,6 +133,28 @@ class OpenAIModel(Model):
 
         responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
+    
+class GeminiModel(Model):
+    def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
+        super().__init__(model, gpus, 1, sampling_params, system_prompt)
+        self.llm = genai.Client(http_options=HttpOptions(api_version="v1"))
+
+    def generate(self, model_inputs, *, quiet = False):
+        responses = [self.llm.models.generate_content(
+            # model="gemini-2.0-flash-001",
+            model=self.model,
+            contents=prompt,
+            config=GenerateContentConfig(
+                system_instruction=self.system_prompt,                
+                max_output_tokens=self.sampling_params.max_tokens,
+                temperature=self.sampling_params.temperature,
+                stop_sequences=self.sampling_params.stop,
+                seed=self.sampling_params.seed,
+            )
+        ) for prompt in tqdm(model_inputs, disable=quiet)]
+        return [response.text for response in responses]
+
+     
 
 def load_model(model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams = None, system_prompt: str = "You are a helpful machine translation assistant.") -> Model:    
     if sampling_params is None:
@@ -139,10 +164,12 @@ def load_model(model: str, gpus: int, mem_percent: float, sampling_params: Sampl
         return OpenAIModel(model, gpus, sampling_params, system_prompt)
     elif "tower" in model.lower():
         return TowerModel(model, gpus, mem_percent, sampling_params, system_prompt)
-    elif "euro" in model.lower() or "llama" in model.lower():
+    elif "euro" in model.lower() or "llama" in model.lower() or "qwen" in model.lower():
         return EuroLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     elif "claude" in model.lower():
         return AnthropicModel(model, gpus, sampling_params, system_prompt)
+    elif "gemini" in model.lower():
+        return GeminiModel(model, gpus, sampling_params, system_prompt)
     else:
         raise ValueError(f"Model {model} not supported")
     
