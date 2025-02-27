@@ -4,6 +4,7 @@ import numpy as np
 # from evaluate import load
 import json 
 from utils import define_noise_profiles, get_noise_profile_key, scenarios
+from sampling_prompts_by_similarity import bucket_prompts_by_chrf
 
 np.random.seed(42)
 # perplexity = load("perplexity", module_type="metric")
@@ -58,7 +59,7 @@ def generate_noised_prompts_for_scenario(scenario_key: str, prompts_file: str, n
     all_outputs = []
     for noise_profile in noise_profiles:
         key = get_noise_profile_key(noise_profile)
-        print(key)
+        # print(key)
         output = noise_and_score_prompts(prompts, noise_profile, key, n_samples, score_perplexity)
         all_outputs.extend(output)
 
@@ -78,11 +79,16 @@ if __name__ == "__main__":
     # print(*noised_prompts, sep="\n")
 
     ## Generating noised versions of mt_base.json with scenario "orthographic" over different values of probability p
-    scenarios = ["typos_synthetic"]
+    # scenarios = ["orthographic"]
     for scenario in scenarios:
-        print(scenario)
+        print(f"Generating noised prompts for scenario {scenario}")
         prompts_file = "../../prompts/mt_base.json"
-        n_samples = 5
+        n_samples = 20
         outfile = f"../../noised_prompts/mt_base_noised_{scenario}.json"
         generate_noised_prompts_for_scenario(scenario, prompts_file, n_samples, score_perplexity=False, outfile=outfile)
+
+        print(f"Bucketing noised prompts for scenario {scenario}")
+        bucketed_outfile = f"../../bucketed_noised_prompts/mt_base_noised_{scenario}_bucketed.json"
+        num_buckets = 10
+        bucket_prompts_by_chrf(outfile, bucketed_outfile, num_buckets)
 
