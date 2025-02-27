@@ -11,19 +11,19 @@
 
 python -m test \
         --lp en-de \
-        --method GEMBA-DA \
+        --base_prompt GEMBA-DA \
         --model gpt-4o-mini \
         --subset tiny_test
 
 python -m test \
         --lp cs-uk \
-        --method GEMBA-DA \
+        --base_prompt GEMBA-DA \
         --model gpt-4o-mini \
         --subset tiny_test
 
 python -m test \
         --lp en-zh \
-        --method GEMBA-DA \
+        --base_prompt GEMBA-DA \
         --model gpt-4o-mini \
         --subset tiny_test
 
@@ -36,3 +36,5 @@ python -m test \
 #     --subset="tiny"
 
     # --hypothesis=/home/saycock/personal/grammar_vs_llms/data/mt-metrics-eval-v2/wmt24/references/cs-uk.refA.txt \
+
+# python -m test --lp en-de --base_prompt GEMBA-DA --model gpt-4o-mini --subset micro_test
