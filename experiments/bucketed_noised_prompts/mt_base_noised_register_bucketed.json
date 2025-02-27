@@ -1,0 +1,1658 @@
+{
+    "mt-01-no_errors": [
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-5",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-6",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-16",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-5",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-10",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-11",
+                "noised_prompt": "make this {target_lang} instead.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-4",
+                "noised_prompt": "need this in {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-13",
+                "noised_prompt": "need this in {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-17",
+                "noised_prompt": "need this in {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-15",
+                "noised_prompt": "need this in {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-18",
+                "noised_prompt": "need this in {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-0",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-3",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-8",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-0",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-3",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-4",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-16",
+                "noised_prompt": "translate {source_text} to {target_lang}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-11",
+                "noised_prompt": "rewrite in {target_lang}, from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-12",
+                "noised_prompt": "rewrite in {target_lang}, from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-2",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-7",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-10",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-6",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-12",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-17",
+                "noised_prompt": "turn into {target_lang} from {source_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-1",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-14",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-18",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_1.00_noised-19",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-13",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-14",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-01-no_errors_scenario-register_2.00_noised-19",
+                "noised_prompt": "translate this text {source_lang} to {target_lang}.\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-01-no_errors",
+                "prompt_src": "Translate the following text from {source_lang} to {target_lang}.\\n{source_text}",
+                "bucket_id": "bucket_id-5_prompt_id-mt-01-no_errors_scenario-register_2.00"
+            }
+        ]
+    ],
+    "mt-03-no_errors": [
+        [
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-9",
+                "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-0_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-11",
+                "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-0_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-18",
+                "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-0_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-10",
+                "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-0_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-17",
+                "noised_prompt": "### instruction:\\nneed {target_lang} version\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-0_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-1",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-2",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-14",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-15",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-2",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-4",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-6",
+                "noised_prompt": "### instruction:\\ntranslate input to {target_lang}, no extra\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-1_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-3",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-7",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-16",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-3",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-5",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-8",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-9",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-12",
+                "noised_prompt": "### instruction:\\nrewrite in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-2_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-4",
+                "noised_prompt": "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-0",
+                "noised_prompt": "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-11",
+                "noised_prompt": "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-14",
+                "noised_prompt": "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-16",
+                "noised_prompt": "### instruction:\\nmake input {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-5",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-17",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-1",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-15",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-18",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-19",
+                "noised_prompt": "### instruction:\\nturn input into {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_1.00_noised-13",
+                "noised_prompt": "### instruction:\\nput this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-03-no_errors_scenario-register_2.00_noised-13",
+                "noised_prompt": "### instruction:\\nput this in {target_lang}\\n### input:\\n{source_text}\\n### response:\\n",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-03-no_errors",
+                "prompt_src": "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+                "bucket_id": "bucket_id-3_prompt_id-mt-03-no_errors_scenario-register_2.00"
+            }
+        ]
+    ],
+    "mt-04-no_errors": [
+        [
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-3",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-16",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-17",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-10",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-12",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-16",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-17",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-19",
+                "noised_prompt": "quick translate, no explain:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-18",
+                "noised_prompt": "rewrite {source_text} in {target_lang}, keep same",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-8",
+                "noised_prompt": "rewrite {source_text} in {target_lang}, keep same",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-0_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-11",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-12",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-14",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-1",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-5",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-7",
+                "noised_prompt": "translate this, no extras:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-1_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-2",
+                "noised_prompt": "make this {target_lang}, exact:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-6",
+                "noised_prompt": "put this in {target_lang}, no more:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-18",
+                "noised_prompt": "put this in {target_lang}, no more:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-2_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-5",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-7",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-15",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-2",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-9",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-14",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-15",
+                "noised_prompt": "turn this into {target_lang}, no changes:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-3_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-0",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-6",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-9",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_1.00_noised-13",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-3",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-4",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-04-no_errors_scenario-register_2.00_noised-11",
+                "noised_prompt": "need {target_lang} version, literal:\\n{source_text}",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-04-no_errors",
+                "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}",
+                "bucket_id": "bucket_id-4_prompt_id-mt-04-no_errors_scenario-register_2.00"
+            }
+        ]
+    ],
+    "mt-02-no_errors": [
+        [
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-5",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-9",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-17",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-9",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-13",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-17",
+                "noised_prompt": "{target_lang} version of this pls: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-0_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-6",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-10",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-15",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-18",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-0",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-7",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-8",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-10",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-16",
+                "noised_prompt": "rewrite {source_text} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-11",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-12",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-13",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-19",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-5",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-11",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-14",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-18",
+                "noised_prompt": "need {target_lang} for this: \\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-1_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-2",
+                "noised_prompt": "change lang {source_lang} -> {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-2_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-12",
+                "noised_prompt": "change lang {source_lang} -> {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-2_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-4",
+                "noised_prompt": "turn this into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-3_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-8",
+                "noised_prompt": "turn this into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-3_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            }
+        ],
+        [
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-2",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-3",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-7",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_1.00_noised-14",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 1
+                },
+                "prompt_noiser": "register_1.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_1.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-3",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-4",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-6",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            },
+            {
+                "noised_prompt_id": "prompt-mt-02-no_errors_scenario-register_2.00_noised-15",
+                "noised_prompt": "make this {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "perplexity": -1,
+                "noise_type_parameters": {
+                    "register": 2
+                },
+                "prompt_noiser": "register_2.00",
+                "prompt_id": "mt-02-no_errors",
+                "prompt_src": "Translate this from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+                "bucket_id": "bucket_id-4_prompt_id-mt-02-no_errors_scenario-register_2.00"
+            }
+        ]
+    ]
+}
