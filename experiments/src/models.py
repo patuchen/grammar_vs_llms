@@ -1,4 +1,5 @@
 import os
+import time
 from typing import List, Dict, Any
 from openai import OpenAI
 from anthropic import Anthropic, AnthropicVertex
@@ -8,7 +9,7 @@ from tqdm import tqdm
 import httpx
 from google import genai
 from google.genai.types import HttpOptions, GenerateContentConfig
-
+import google.genai.errors
 
 class Model:
     def __init__(self, model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams, system_prompt: str):
@@ -153,18 +154,34 @@ class GeminiModel(Model):
         self.llm = genai.Client(http_options=HttpOptions(api_version="v1"))
 
     def generate(self, model_inputs, *, quiet = False):
-        responses = [self.llm.models.generate_content(
-            # model="gemini-2.0-flash-001",
-            model=self.model,
-            contents=prompt,
-            config=GenerateContentConfig(
-                system_instruction=self.system_prompt,                
-                max_output_tokens=self.sampling_params.max_tokens,
-                temperature=self.sampling_params.temperature,
-                stop_sequences=self.sampling_params.stop,
-                seed=self.sampling_params.seed,
-            )
-        ) for prompt in tqdm(model_inputs, disable=quiet)]
+
+        responses = []
+
+        for prompt in tqdm(model_inputs, disable=quiet):
+            ok = False
+            while not ok:
+                try:
+                    response = self.llm.models.generate_content(
+                        # model="gemini-2.0-flash-001",
+                        model=self.model,
+                        contents=prompt,
+                        config=GenerateContentConfig(
+                            system_instruction=self.system_prompt,                
+                            max_output_tokens=self.sampling_params.max_tokens,
+                            temperature=self.sampling_params.temperature,
+                            stop_sequences=self.sampling_params.stop,
+                            seed=self.sampling_params.seed,
+                        )
+                    )
+                    responses.append(response)
+                    ok = True
+                except google.genai.errors.ClientError as re:
+                    if re.code == 429:
+                        print("ResourceExhausted exception occurred")
+                        time.sleep(30)
+                    else:
+                        raise re
+
         return [response.text for response in responses]
 
      
