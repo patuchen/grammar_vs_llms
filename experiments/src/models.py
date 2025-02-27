@@ -5,6 +5,7 @@ from anthropic import Anthropic, AnthropicVertex
 from dotenv import load_dotenv
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
+import httpx
 
 class Model:
     def __init__(self, model: str, gpus: int, mem_percent: float, sampling_params: SamplingParams, system_prompt: str):
@@ -65,13 +66,16 @@ class AnthropicModel(Model):
 
         This will create the credential file here:
         - Linux: $HOME/.config/gcloud/application_default_credentials.json
-        - Windows: %APPDATA%\gcloud\application_default_credentials.json
+        - Windows: %APPDATA%\\gcloud\\application_default_credentials.json
         """
-        super().__init__(model, gpus, sampling_params, system_prompt)
+        super().__init__(model, gpus, 1, sampling_params, system_prompt)
         load_dotenv()
-        # self._api_key = os.getenv("ANTHROPIC_API_KEY")
-        # self.llm = Anthropic() # TODO check if the api key is loaded
-        self.llm = AnthropicVertex(region=os.environ["LOCATION"], project_id=os.environ["PROJECT_ID"])
+        self.llm = AnthropicVertex(
+            region=os.environ["LOCATION"], 
+            project_id=os.environ["PROJECT_ID"],
+            max_retries=10,
+            timeout=httpx.Timeout(300, connect=300, read=300, write=300),
+        )
 
     def generate(self, prompts: list[str], *, quiet: bool = False) -> list[str]:
         # The system prompt is added by .messages.create
@@ -87,7 +91,7 @@ class AnthropicModel(Model):
                 temperature=self.sampling_params.temperature,
                 system=self.system_prompt,
                 messages=conversation,
-                stop_sequences=self.sampling_params.stop
+                stop_sequences=self.sampling_params.stop,                
             ) 
             for conversation in tqdm(conversations, disable=quiet)
         ]
@@ -98,7 +102,7 @@ class AnthropicModel(Model):
 
 class OpenAIModel(Model):
     def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
-        super().__init__(model, gpus, sampling_params, system_prompt)
+        super().__init__(model, gpus, 1, sampling_params, system_prompt)
         load_dotenv()
         self.llm = OpenAI()
 
