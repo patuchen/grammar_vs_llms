@@ -63,6 +63,7 @@ class GptApi:
             if self.verbose or temperature > 0:
                 print(f"Answer (t={temperature}): " + colored(answer, "yellow") + " (" + colored(full_answer, "blue") + ")", file=sys.stderr)
             if answer is None:
+                print(finish_reason)
                 continue
             parsed_answers.append(
                 {
@@ -113,7 +114,10 @@ class GptApi:
                 answer = choice.text.strip()
                 
             # one of the responses didn't finish, we need to request more tokens
-            if choice.finish_reason != "stop":
+
+            # actually don't rerun if the answer is not finished
+            
+            if choice.finish_reason != "stop" and choice.finish_reason != "length":
                 if self.verbose:
                     print(colored(f"Increasing max tokens to fit answers.", "red") + colored(answer, "blue"), file=sys.stderr)
                 print(f"Finish reason: {choice.finish_reason}", file=sys.stderr)
