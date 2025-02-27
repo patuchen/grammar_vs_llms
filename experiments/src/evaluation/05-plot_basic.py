@@ -4,6 +4,7 @@ import argparse
 import numpy as np
 import glob
 import collections
+import grammar_v_mtllm.utils_fig
 
 # python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en
 

@@ -16,9 +16,17 @@ def langdetect_safe(x):
 
 
 args = argparse.ArgumentParser()
-args.add_argument("data", default="data/test.jsonl")
-args.add_argument("--no-comet", action="store_true", help="Don't run COMET evaluation (useful for local no GPU environment)")
-args.add_argument("--no-ip", action="store_true", help="Don't run inner product with sentence transformers (useful for local no GPU environment)")
+args.add_argument("data")
+args.add_argument(
+    "--no-comet",
+    action="store_true",
+    help="Don't run COMET evaluation (useful for local no GPU environment)"
+)
+args.add_argument(
+    "--no-ip",
+    action="store_true",
+    help="Don't run inner product with sentence transformers (useful for local no GPU environment)"
+)
 args = args.parse_args()
 
 with open(args.data, "r") as f:
