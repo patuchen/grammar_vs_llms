@@ -220,7 +220,7 @@
         "noised_prompt_id": "mt-04-model-A2-Polish-1",
 		"prompt_id": "mt-04-no_errors",
 		"prompt_noiser": "llm",
-        "noised_prompt": "Tronsleit dee follouing lajn fron {source_lang} to {target_lang}. Bee veeery liteerul, und onli tronsleit dee kontent of dee lajn, do not add eni eksplanashuns: {source_text}.",
+        "noised_prompt": "Translejt de follouing lajn from {source_lang} tu {target_lang}. Bee veeery liteerul, und onli tronsleit dee kontent of dee lajn, do not add eni eksplanashuns: {source_text}.",
         "prompt_src": "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}"
     },
     {
