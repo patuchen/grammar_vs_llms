@@ -176,6 +176,13 @@ class Orthographic:
         '''
         Given a character, find relevant subclasses of orthographic errors per class.
         '''
+        # Ignore punctuation, newlines, and spaces
+        if sentence[char_idx] in {".", ",", "!", "?", " ", "'", "\\"}:
+            return []
+        if sentence[char_idx] == "n" and char_idx > 0 and sentence[char_idx-1] == "\\":
+            return []
+        
+
         subclasses = []
         if error_class == 'natural_typos':
             # Natural typos
