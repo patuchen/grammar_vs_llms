@@ -209,7 +209,7 @@ def define_lexicalphrasal_database():
             "Change the following text from {source_lang} into {target_lang}.\\n{source_text}",
             "Please translate this text from {source_lang} to {target_lang}.\\n{source_text}",
             "Rewrite this text from {source_lang} in {target_lang}.\\n{source_text}",
-            "Convert this text from {source_lang} to {target_lang}.\\n{source_text}",
+            #"Convert this text from {source_lang} to {target_lang}.\\n{source_text}",
             "Make this text in {source_lang} into {target_lang}.\\n{source_text}",
             "Put this text in {target_lang} instead of {source_lang}.\\n{source_text}",
             "Turn this text into {target_lang} from {source_lang}.\\n{source_text}",
@@ -221,9 +221,9 @@ def define_lexicalphrasal_database():
             "Change this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Translate this part from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Rewrite this from {source_lang} in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-            "Convert this sentence from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            #"Convert this sentence from {source_lang} to {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Make this text in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-            "Switch this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            #"Switch this from {source_lang} into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Write this again in {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Put this text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Change this text into {target_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
@@ -233,9 +233,9 @@ def define_lexicalphrasal_database():
         "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
             "### Instruction:\\nChange Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nRewrite Input from {source_lang} in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-            "### Instruction:\\nConvert Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            #"### Instruction:\\nConvert Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nMake Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-            "### Instruction:\\nSwitch Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            #"### Instruction:\\nSwitch Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nWrite Input again in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nPut Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nTranslate the Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
@@ -246,11 +246,11 @@ def define_lexicalphrasal_database():
         "Translate the following line from\\n{source_lang} to {target_lang}.\\nBe very literal, and only translate the content of the line, do not add any explanations: {source_text}": [
             "Change the following line from\\n{source_lang} to {target_lang}.\\nBe exact, do not add extra words: {source_text}",
             "Translate this line from\\n{source_lang} to {target_lang}.\\nDo not explain, just change words: {source_text}",
-            "Convert the following line into\\n{target_lang} from {source_lang}.\\nKeep it the same, do not add anything: {source_text}",
+            #"Convert the following line into\\n{target_lang} from {source_lang}.\\nKeep it the same, do not add anything: {source_text}",
             "Rewrite the next line in\\n{target_lang} from {source_lang}.\\nBe exact, no extra explanation: {source_text}",
             "Put the next line into\\n{target_lang} from {source_lang}.\\nDo not change meaning, only words: {source_text}",
             "Make this sentence in\\n{target_lang} from {source_lang}.\\nBe very exact, no other words: {source_text}",
-            "Switch this line to\\n{target_lang} from {source_lang}.\\nKeep it the same, just change language: {source_text}",
+            #"Switch this line to\\n{target_lang} from {source_lang}.\\nKeep it the same, just change language: {source_text}",
             "Write this again in\\n{target_lang} from {source_lang}.\\nDo not explain, only change words: {source_text}",
             "Change this line into\\n{target_lang} from {source_lang}.\\nNo extra information, be literal: {source_text}",
             "Translate exactly this line from\\n{source_lang} to {target_lang}.\\nNo explanations, just change words: {source_text}"
@@ -280,21 +280,21 @@ def define_lexicalphrasal_database():
             "Rewrite text into {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Put this words in {target_lang}, from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Make this text be {target_lang} and not {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
-            "Switch the text into {target_lang}, take from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
+            #"Switch the text into {target_lang}, take from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "You make words in {target_lang}, not in {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:",
             "Turn this words in {target_lang} from {source_lang}:\\n{source_lang}: {source_text}\\n{target_lang}:"
         ],
 
         "### Instruction:\\nTranslate Input from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n": [
             "### Instruction:\\nYou change Input from {source_lang} into {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
-            "### Instruction:\\nMake Input translate from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
+            #"### Instruction:\\nMake Input translate from {source_lang} to {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nNow translate Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nRewrite Input from {source_lang} to {target_lang} only words\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nTranslate now this Input into {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nPut Input in {target_lang} from {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nMake this Input in {target_lang}, not {source_lang}\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nChange Input into {target_lang} now\\n### Input:\\n{source_text}\\n### Response:\\n",
-            "### Instruction:\\nSwitch this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n### Response:\\n",
+            #"### Instruction:\\nSwitch this Input to {target_lang}, no more\\n### Input:\\n{source_text}\\n### Response:\\n",
             "### Instruction:\\nYou take Input and put it in {target_lang}\\n### Input:\\n{source_text}\\n### Response:\\n"
         ],
 
@@ -306,7 +306,7 @@ def define_lexicalphrasal_database():
             "Turn the sentence be in\\n{target_lang} not {source_lang}.\\nKeep same, not explain: {source_text}",
             "Put the words in\\n{target_lang} from {source_lang}.\\nDo not put more things: {source_text}",
             "Make sentence be in\\n{target_lang} from {source_lang}.\\nOnly words, nothing extra: {source_text}",
-            "Switch this line into\\n{target_lang} from {source_lang}.\\nDo not add, only change: {source_text}",
+            #"Switch this line into\\n{target_lang} from {source_lang}.\\nDo not add, only change: {source_text}",
             "Now change this line into\\n{target_lang} from {source_lang}.\\nKeep the same words: {source_text}",
             "You must rewrite this line in\\n{target_lang} from {source_lang}.\\nNo extra, only same words: {source_text}"
         ]
