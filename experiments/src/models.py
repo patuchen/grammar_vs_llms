@@ -139,7 +139,7 @@ def load_model(model: str, gpus: int, mem_percent: float, sampling_params: Sampl
         return OpenAIModel(model, gpus, sampling_params, system_prompt)
     elif "tower" in model.lower():
         return TowerModel(model, gpus, mem_percent, sampling_params, system_prompt)
-    elif "euro" in model.lower():
+    elif "euro" in model.lower() or "llama" in model.lower():
         return EuroLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     elif "claude" in model.lower():
         return AnthropicModel(model, gpus, sampling_params, system_prompt)
