@@ -100,7 +100,6 @@ plt.savefig("figures/08-hydrogen.pdf")
 plt.show()
 
 # statistics
-
 print("avg variance within each prompt", np.average(stats_var_in_prompts))
 print("variance across averages in each prompt", np.var(stats_avg_in_prompts))
 

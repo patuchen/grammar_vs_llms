@@ -19,6 +19,19 @@ def parse_numerical_answer(answer, min=None, max=None):
     if len(numbers) == 1:
         return int(numbers[0])
 
+    # handle cases like "85 out of 100"
+    if len(numbers) == 2 and numbers[1] == "100":
+        return int(numbers[0])
+    
+    # handle cases where output says e.g. "Score: 100, explanation, that's why it's a 100 score".
+    if len(numbers) == 2 and numbers[0] == numbers[1]:
+        return int(numbers[0])
+
+    # check if answer in format: Score: 70
+    r2 = re.match(r"^Score: \d+$", answer)
+    if r2 is not None and r2.group(0) == numbers[0]:
+        return int(numbers[0])
+
     # check if the answer is in form ['100'] and extract the number
     r1 = re.match(r"^\[['\"][0-9]*['\"]\]$", answer)
     if r1 is not None:

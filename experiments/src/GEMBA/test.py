@@ -13,7 +13,7 @@ from gemba.gemba_esa import TEMPLATE_GEMBA_ESA_ERROR_SPANS, TEMPLATE_GEMBA_ESA_R
 from gemba.prompt import prompts, validate_number
 from gemba.utils import CODE_MAP
 
-flags.DEFINE_string('base_prompt', "GEMBA-DA", 'prompt')
+# flags.DEFINE_string('base_prompt', "GEMBA-DA", 'prompt')
 flags.DEFINE_string('model', "gpt-4", 'OpenAI model')
 flags.DEFINE_string('lp', None, 'Language pair.')
 flags.DEFINE_string('subset', "micro_test", 'Subset to use.')
@@ -23,11 +23,6 @@ def main(argv):
     FLAGS = flags.FLAGS
 
     data = grammar_v_mtllm.utils.load_data(split=FLAGS.subset, langs=FLAGS.lp)
-
-    # write data to file
-    # with open(f'scores/{FLAGS.model}/{FLAGS.lp}/scores_{FLAGS.subset}.jsonl', 'w') as file:
-    #     for item in data:
-    #         file.write(json.dumps(item, ensure_ascii=False) + "\n")
     
     gptapi = GptApi()
 
@@ -39,20 +34,16 @@ def main(argv):
             prompts = json.load(file)
 
     # runs all prompts in file
+    # TODO: updated noised prompts
     for prompt in prompts:
-        cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.base_prompt}_{FLAGS.lp}_{FLAGS.subset}_{prompt["prompt_id"]}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
+        cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.lp}_{FLAGS.subset}_{prompt["prompt_id"]}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
 
         prompt_text = prompt['prompt'] if not FLAGS.perturbation else prompt.get("noised_prompt")
         prompt_id = prompt.get("prompt_id") if not FLAGS.perturbation else prompt.get("noised_prompt_id")
 
-        print(prompt_id)
         if prompt_id == "GEMBA-SQM":
             print("skipping SQM during testing")
             continue
-
-        # open scores file
-        # with open(f'scores/{FLAGS.lp}/scores_{FLAGS.subset}.jsonl', 'r') as file:
-        #     data = [json.loads(line) for line in file]
 
         df = []
         for entry in data:
@@ -61,19 +52,13 @@ def main(argv):
         
         df = pd.DataFrame(df)
 
-        # TODO: modify this to use prompt format instead of prompt file?
-        # df["prompt"] = df.apply(lambda x: apply_template(prompts[FLAGS.method]['prompt'], x), axis=1)
-
         df["prompt"] = df.apply(lambda x: apply_template(prompt_text, x), axis=1)
         df["prompt_id"] = prompt_id
-        print(df.iloc[-1]['prompt_id'])
 
         # parse_answer is always validate_number for our prompts
-        # parse_answer = prompts[FLAGS.method]["validate_answer"]
         parse_answer = validate_number
 
-        answers = gptapi.bulk_request(df, FLAGS.model, parse_answer, cache=cache, max_tokens=250)
-
+        answers = gptapi.bulk_request(df, FLAGS.model, parse_answer, cache=cache, max_tokens=100)
 
         # answer format:
         #     {
