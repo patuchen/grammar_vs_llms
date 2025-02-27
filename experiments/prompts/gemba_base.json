@@ -1,0 +1,12 @@
+[
+	{
+        "prompt_id": "GEMBA-DA",
+        "prompt": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100, where a score of zero means 'no meaning preserved' and score of one hundred means 'perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore: ",
+        "prompt_src": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100, where a score of zero means 'no meaning preserved' and score of one hundred means 'perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore: "
+    },
+    {
+        "prompt_id": "GEMBA-SQM",
+        "prompt": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100 that starts on 'No meaning preserved', goes through 'Some meaning preserved', then 'Most meaning preserved and few grammar mistakes', up to 'Perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore (0-100): ",
+        "prompt_src": "Score the following translation from {source_lang} to {target_lang} on a continuous scale from 0 to 100 that starts on 'No meaning preserved', goes through 'Some meaning preserved', then 'Most meaning preserved and few grammar mistakes', up to 'Perfect meaning and grammar'.\\n{source_lang} source: '{source_seg}'\\n{target_lang} translation: '{target_seg}'\\nScore (0-100): "
+    }
+]

@@ -24,7 +24,7 @@ def main(argv):
 
     data = grammar_v_mtllm.utils.load_data(split=FLAGS.subset, langs=FLAGS.lp)
 
-    cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.method}_{FLAGS.subset}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
+    cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.method}_{FLAGS.lp}_{FLAGS.subset}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
     gptapi = GptApi()
 
     # TODO: handle noised prompts
@@ -56,15 +56,20 @@ def main(argv):
     #     "model": model,
     # }
 
-
     # update data dict with scores
-    for i, answer in enumerate(answers):
-        data[i]['scores'][answer['system']][f'GEMBA_{FLAGS.model}_{FLAGS.method}'] = answer['answer']
-
-    # TODO: save temperature? = number of reruns
+    for answer in answers:
+        # find data entry with same source
+        for j, data_entry in enumerate(data):
+            if data_entry['src'] == answer['source']:
+                data[j]['scores'][answer['system']][f'GEMBA_{FLAGS.model}_{FLAGS.method}'] = (answer['answer'], answer['answer_id'])
+                break
+        
+        # data[i]['scores'][answer['system']][f'GEMBA_{FLAGS.model}_{FLAGS.method}'] = (answer['answer'], answer['temperature'])
 
     # save answers to file
-    with open(f"system-outputs/{FLAGS.model}/{FLAGS.lp}/{FLAGS.method}_{FLAGS.subset}_results.jsonl", "w", encoding="utf-8") as f:
+    output_path = f"scores/{FLAGS.model}/{FLAGS.lp}/{FLAGS.method}_{FLAGS.subset}_results.jsonl"
+    os.makedirs(os.path.dirname(output_path), exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
         for item in data:
             f.write(json.dumps(item, ensure_ascii=False) + "\n")
 

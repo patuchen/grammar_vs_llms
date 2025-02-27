@@ -16,6 +16,7 @@ experiments/src/GEMBA/.idea
 experiments/src/GEMBA/__pycache__
 experiments/src/GEMBA/cache/*
 experiments/src/GEMBA/data/*
+experiments/src/GEMBA/jobs/*
 
 google-cloud-*
 
