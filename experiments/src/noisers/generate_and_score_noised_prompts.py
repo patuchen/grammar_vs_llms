@@ -78,10 +78,11 @@ if __name__ == "__main__":
     # print(*noised_prompts, sep="\n")
 
     ## Generating noised versions of mt_base.json with scenario "orthographic" over different values of probability p
+    scenarios = ["typos_synthetic"]
     for scenario in scenarios:
         print(scenario)
         prompts_file = "../../prompts/mt_base.json"
-        n_samples = 2
+        n_samples = 5
         outfile = f"../../noised_prompts/mt_base_noised_{scenario}.json"
         generate_noised_prompts_for_scenario(scenario, prompts_file, n_samples, score_perplexity=False, outfile=outfile)
 

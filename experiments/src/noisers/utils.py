@@ -92,6 +92,17 @@ def define_noise_schemas():
                     }
                 }
             },
+            'typos_synthetic': {
+                'orthographic': {
+                    'subtype_distribution': {
+                        'natural_typos': 1,
+                        'insertion': 0,
+                        'omission': 0,
+                        'transposition': 0,
+                        'substitution': 0
+                    }
+                }
+            },
             'lexicalphrasal': {
                 'lexicalphrasal': {
                     'subtype_distribution': None
@@ -150,6 +161,11 @@ def define_noise_profiles(scenario: str):
     noise_schemas = define_noise_schemas()
     noise_profiles = []
     noise_schema = noise_schemas[scenario]
+    if scenario == "typos_synthetic":
+        for p in np.linspace(0.01, 1, 10):
+            noise_schema_copy = copy.deepcopy(noise_schema)
+            noise_schema_copy['orthographic']['p'] = p
+            noise_profiles.append(noise_schema_copy)
     if scenario == "orthographic":
         for p in np.linspace(0.03, 0.3, 10):
             noise_schema_copy = copy.deepcopy(noise_schema)
