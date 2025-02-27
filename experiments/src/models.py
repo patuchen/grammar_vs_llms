@@ -200,7 +200,7 @@ def load_model(model: str, gpus: int, mem_percent: float, sampling_params: Sampl
         return AnthropicModel(model, gpus, sampling_params, system_prompt)
     elif "gemini" in model.lower():
         return GeminiModel(model, gpus, sampling_params, system_prompt)
-    elif "Qwen" in model.lower():
+    elif "qwen" in model.lower():
         return QwenLLMModel(model, gpus, mem_percent, sampling_params, system_prompt)
     else:
         raise ValueError(f"Model {model} not supported")

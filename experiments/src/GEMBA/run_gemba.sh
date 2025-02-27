@@ -8,24 +8,28 @@
 #SBATCH --partition=cpu
 #SBATCH --cpus-per-task=8
 
+# Usage: sbatch run_gemba.sh en-de
+
+source activate gvllm
+. set_env.sh
 
 python -m test \
-        --lp en-de \
-        --base_prompt GEMBA-DA \
-        --model gpt-4o-mini \
-        --subset tiny_test
+        --lp $1 \
+        --model $2 \
+        --subset $3 \
+        # --perturbation orthographic
 
-python -m test \
-        --lp cs-uk \
-        --base_prompt GEMBA-DA \
-        --model gpt-4o-mini \
-        --subset tiny_test
+# python -m test \
+#         --lp cs-uk \
+#         --base_prompt GEMBA-DA \
+#         --model gpt-4o-mini \
+#         --subset tiny_test
 
-python -m test \
-        --lp en-zh \
-        --base_prompt GEMBA-DA \
-        --model gpt-4o-mini \
-        --subset tiny_test
+# python -m test \
+#         --lp en-zh \
+#         --base_prompt GEMBA-DA \
+#         --model gpt-4o-mini \
+#         --subset tiny_test
 
 # python -m main --source=/home/saycock/personal/grammar_vs_llms/data/mt-metrics-eval-v2/wmt24/sources/cs-uk.txt \
 #     --hypothesis=/home/saycock/personal/grammar_vs_llms/data/mt-metrics-eval-v2/wmt24/system-outputs/cs-uk/GPT-4.txt \

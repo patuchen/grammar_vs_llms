@@ -34,6 +34,7 @@ def main(argv):
             prompts = json.load(file)
 
     # runs all prompts in file
+    # TODO: updated noised prompts
     for prompt in prompts:
         cache = dc.Cache(f'cache/{FLAGS.model}_{FLAGS.lp}_{FLAGS.subset}_{prompt["prompt_id"]}', expire=None, size_limit=int(10e10), cull_limit=0, eviction_policy='none')
 

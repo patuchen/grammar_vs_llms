@@ -25,7 +25,8 @@ dependencies = [
   "anthropic[vertex]",
   "subset2evaluate",
   "google-cloud-aiplatform",
-  "google-genai"
+  "google-genai",
+  "langdetect",
 ]
 classifiers = [
   # prevents upload to PyPi
