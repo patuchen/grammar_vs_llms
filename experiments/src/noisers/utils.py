@@ -167,7 +167,7 @@ def define_noise_profiles(scenario: str):
             noise_schema_copy['orthographic']['p'] = p
             noise_profiles.append(noise_schema_copy)
     if scenario == "orthographic":
-        for p in np.linspace(0.03, 0.3, 10):
+        for p in np.linspace(0.04, 0.4, 10):
             noise_schema_copy = copy.deepcopy(noise_schema)
             noise_schema_copy['orthographic']['p'] = p
             noise_profiles.append(noise_schema_copy)
@@ -182,14 +182,14 @@ def define_noise_profiles(scenario: str):
             noise_schema_copy['register']['p'] = level
             noise_profiles.append(noise_schema_copy)
     elif scenario == "L2":
-        for p in np.linspace(0.0, 0.3, 11):
+        for p in np.linspace(0.0, 0.4, 11):
             for level in [0, 1, 2]:
                 noise_schema_copy = copy.deepcopy(noise_schema)
                 noise_schema_copy['orthographic']['p'] = p            
                 noise_schema_copy['lexicalphrasal']['p'] = level
                 noise_profiles.append(noise_schema_copy)
     elif scenario == "LazyUser":
-        for p in np.linspace(0.0, 0.3, 11):
+        for p in np.linspace(0.0, 0.4, 11):
             for level in [0, 1, 2]:
                 noise_schema_copy = copy.deepcopy(noise_schema)
                 noise_schema_copy['orthographic']['p'] = p            
