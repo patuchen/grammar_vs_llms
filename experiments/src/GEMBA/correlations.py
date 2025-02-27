@@ -78,14 +78,8 @@ def main():
     parser.add_argument('--results_dir', default="scores/wmt24", type=str, required=False, help='Path to the folder containing scores')
     args = parser.parse_args()
 
-    # Calculate correlations
+    # Calculate correlations, save results for each lp, model
     correlations = calculate_correlations(args.results_dir)
-
-    # # Print results
-    # print(f"Segment correlation: {correlations['segment_correlation']:.4f}, p={correlations['segment_p_value']:.4f}")    
-    # print(f"System correlation: {correlations['system_correlation']:.4f}, p={correlations['system_p_value']:.4f}")
-
-    # save results for each lp, model
 
 
 if __name__ == "__main__":
