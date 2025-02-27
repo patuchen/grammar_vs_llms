@@ -82,7 +82,7 @@ class GptApi:
         return parsed_answers
 
     def request_api(self, prompt, model, temperature=0, max_tokens=None):
-        if temperature > 10:
+        if temperature > 5:
             return []
 
         while True:
@@ -164,6 +164,8 @@ class GptApi:
         answers = []
         for i, row in tqdm.tqdm(df.iterrows(), total=len(df), file=sys.stderr):
             prompt = row["prompt"]
+            system = row["system"]
             parsed_answers = self.request(prompt, model, parse_mqm_answer, cache=cache, max_tokens=max_tokens)
+            parsed_answers = [{**answer, "system": system, "source": row["source_seg"], "target": row["target_seg"]} for answer in parsed_answers]
             answers += parsed_answers
         return answers

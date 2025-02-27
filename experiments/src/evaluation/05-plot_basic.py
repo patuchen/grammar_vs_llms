@@ -17,7 +17,7 @@ data_all = [
     for f in glob.glob(args.glob)
 ]
 
-KEY_X = "prompt_chrf"
+KEY_X = "prompt_p"
 KEY_Y = "chrf"
 
 data_all_joined = collections.defaultdict(list)
@@ -79,10 +79,9 @@ for langs in sorted({x["langs"] for data in data_all for x in data}):
             ha="center", va="center"
         )
     plt.ylabel("Translation quality")
-    plt.xlabel("Similarity to original prompt")
+    plt.xlabel("Noising p")
 
 plt.legend(
-    # no frame
     frameon=False,
 )
 plt.title((args.glob.removeprefix("data/evaluated/").removesuffix(".jsonl")))
