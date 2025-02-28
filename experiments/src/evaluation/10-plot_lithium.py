@@ -1,3 +1,5 @@
+raise Exception("Not implemented")
+
 import json
 import matplotlib.pyplot as plt
 import argparse
