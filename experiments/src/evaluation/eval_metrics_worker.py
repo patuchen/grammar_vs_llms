@@ -1,6 +1,7 @@
 import langdetect
 import sacrebleu
 import os
+from multiprocessing.pool import ThreadPool
 
 # load models if they're requested
 if not os.environ.get("NO_IP", False):
@@ -22,10 +23,11 @@ def langdetect_safe(x):
 metric_chrf = sacrebleu.CHRF()
 
 def evaluate_data(data):
-    scores_chrf = [
-        metric_chrf.sentence_score(x["tgt"], [x["ref"]]).score
-        for x in data
-    ]
+    with ThreadPool(16) as p:
+        scores_chrf = list(p.map(
+            lambda x: metric_chrf.sentence_score(x["tgt"], [x["ref"]]).score,
+            data
+        ))
 
     score_prompt_chrf = [
         (
@@ -54,8 +56,8 @@ def evaluate_data(data):
     else:
         scores_comet = [0 for _ in data]
 
-    # take top 5 languages
-    langs_out = [langdetect_safe(x) for x in data]
+    with ThreadPool(16) as p:
+        langs_out = list(p.map(langdetect_safe, data))
 
     # store
     for line in data:
