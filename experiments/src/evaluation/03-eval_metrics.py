@@ -21,4 +21,4 @@ for fname in tqdm.tqdm(args.data):
     foutname = fname.replace('/translated/', '/evaluated/')
     os.makedirs(os.path.dirname(foutname), exist_ok=True)
     with open(foutname, "w") as f:
-        f.write("\n".join([json.dumps(x) for x in data]))
+        f.write("\n".join([json.dumps(x, ensure_ascii=False) for x in data]))

@@ -40,7 +40,10 @@ def evaluate_data(data):
     if not os.environ.get("NO_IP", False):
         enc_prompt = model_embd.encode([line["prompt"] for line in data])
         enc_prompt_src = model_embd.encode([line["prompt_src"] for line in data])
-        score_prompt_ip = sentence_transformers.util.cos_sim(enc_prompt, enc_prompt_src).tolist()
+        score_prompt_ip = [
+            sentence_transformers.util.cos_sim(enc_prompt, enc_prompt_src).item()
+            for enc_prompt, enc_prompt_src in zip(enc_prompt, enc_prompt_src)
+        ]
     else:
         score_prompt_ip = [0 for _ in data]
 
@@ -52,7 +55,7 @@ def evaluate_data(data):
                 "ref": x["ref"],
             }
             for x in data
-        ], batch_size=128)["scores"]
+        ], batch_size=64)["scores"]
     else:
         scores_comet = [0 for _ in data]
 
