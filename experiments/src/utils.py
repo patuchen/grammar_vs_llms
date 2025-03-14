@@ -59,6 +59,8 @@ def load_prompts(args):
     # sort into actual buckets
     bucketed_prompts = defaultdict(list)
     for prompt in prompts:
+        if prompt["noised_prompt"] == prompt["prompt_src"]:  # happens in lexicalphrasal
+            continue
         bucketed_prompts[prompt["prompt_id"] + prompt["prompt_noiser"]].append(prompt)
     # sample one prompt per bucket
     final_prompts = []
