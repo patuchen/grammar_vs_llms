@@ -1,16 +1,17 @@
-#%%
-import os
+# %%
 import json
-import pandas as pd
+import os
 import sys
-from models import Model, default_sampling_params, load_model
-from utils import *
-
-import grammar_v_mtllm
 from argparse import Namespace
 
+import pandas as pd
 
-#%%
+import grammar_v_mtllm
+from models import load_model
+from utils import parse_arguments, load_prompts, CODE_MAP
+
+
+# %%
 def main(args=None):
     if args is None:
         args = parse_arguments()
@@ -20,13 +21,7 @@ def main(args=None):
     # load model
     model = load_model(args.model, args.gpus, args.mem_percent)
 
-    if not args.perturbation:
-        with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
-            prompts = json.load(file)
-
-    else:
-        with open(f'../noised_prompts/mt_{args.prompt}_noised_{args.perturbation}.json', 'r') as file:
-            prompts = json.load(file)
+    prompts = load_prompts(args)
 
     os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}', exist_ok=True)
     # run experiments
@@ -38,7 +33,8 @@ def main(args=None):
         model_inputs = []
         for item in data:
             # print(item)
-            model_inputs.extend([prompt_text.replace("{source_lang}", CODE_MAP[item['langs'][:2]]).replace("{target_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_text}", item['src'])])
+            model_inputs.extend([prompt_text.replace("{source_lang}", CODE_MAP[item['langs'][:2]]).replace(
+                "{target_lang}", CODE_MAP[item['langs'][3:]]).replace("{source_text}", item['src'])])
         print("Model inputs are built. Starting generation")
 
         # generate translations
@@ -52,20 +48,22 @@ def main(args=None):
             data_translated[idx]['prompt_src'] = prompt.get("prompt_src")
             data_translated[idx]['model_input'] = model_inputs[idx]
             data_translated[idx]['prompt'] = prompt_text
-            data_translated[idx]['prompt_p'] = prompt.get("prompt_p", None)
+            data_translated[idx]['prompt_p'] = prompt.get("noise_type_parameters", None)
             data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
             data_translated[idx]['tgt'] = translation
 
         # save data as jsonl
-        with open(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{prompt_id}_{args.split}_results.jsonl', 'w', encoding='utf-8') as f:
+        with open(
+                f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}/{prompt_id}_{args.split}_results.jsonl',
+                'w', encoding='utf-8') as f:
             for item in data_translated:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
-            
+
+
 # %%
 
 if __name__ == "__main__":
 
-    
     # if command line arguments are provided, use those
     if len(sys.argv) > 1:
         args = parse_arguments()
@@ -82,7 +80,6 @@ if __name__ == "__main__":
         )
 
     main(args)
-
 
 # usage:
 # python -m main --lp cs-uk --model Unbabel/TowerInstruct-7B-v0.2 --prompt base --split micro_test
