@@ -53,17 +53,6 @@ def load_prompts(args):
         with open(f'../noised_prompts/mt_base_noised_llm.json', 'r') as file:
             return json.load(file)
 
-    elif args.perturbation == "typos_synthetic":
-        with open(f'../noised_prompts/mt_base_noised_{args.perturbation}.json', 'r') as file:
-            prompts = json.load(file)
-        # sorting into buckets after loading from flat list...
-        bucketed_prompts = defaultdict(lambda: defaultdict(list))
-        for prompt in prompts:
-            bucketed_prompts[prompt["prompt_id"]][prompt["prompt_noiser"]].append(prompt)
-        for prompt_id, buckets in bucketed_prompts.items():
-            list_of_lists = [noised_prompts for noised_prompts in buckets.values()]
-            bucketed_prompts[prompt_id] = list_of_lists
-
     else:
         with open(f'../bucketed_noised_prompts/mt_{args.prompt}_noised_{args.perturbation}_bucketed.json', 'r') as file:
             bucketed_prompts = json.load(file)
