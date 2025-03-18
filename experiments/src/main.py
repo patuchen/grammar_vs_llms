@@ -4,8 +4,6 @@ import os
 import sys
 from argparse import Namespace
 
-import pandas as pd
-
 import grammar_v_mtllm
 from models import load_model
 from utils import parse_arguments, load_prompts, CODE_MAP
@@ -22,8 +20,6 @@ def main(args=None):
     model = load_model(args.model, args.gpus, args.mem_percent)
 
     prompts = load_prompts(args)
-
-    os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}', exist_ok=True)
     # run experiments
     for prompt in prompts:
         data_translated = [{} for _ in data]
@@ -51,11 +47,13 @@ def main(args=None):
             data_translated[idx]['prompt_p'] = prompt.get("noise_type_parameters", None)
             data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
             data_translated[idx]['bucket_id'] = prompt.get("bucket_id", None)
+            data_translated[idx]['prompt_id'] = prompt_id
             data_translated[idx]['tgt'] = translation
 
         # save data as jsonl
+        os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}', exist_ok=True)
         with open(
-                f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}/{args.perturbation}_{prompt.get("bucket_id")}_{args.split}_results.jsonl',
+                f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}/noising_{args.perturbation}_{prompt_id}_{args.split}_results.jsonl',
                 'w', encoding='utf-8') as f:
             for item in data_translated:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
