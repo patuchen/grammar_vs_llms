@@ -49,25 +49,27 @@ def load_prompts(args):
         with open(f'../prompts/mt_{args.prompt}.json', 'r') as file:
             return json.load(file)
 
+    elif args.perturbation == "llm":
+        with open(f'../noised_prompts/mt_base_noised_llm.json', 'r') as file:
+            return json.load(file)
+
     else:
-        with open(f'../noised_prompts/mt_{args.prompt}_noised_{args.perturbation}.json', 'r') as file:
-            prompts = json.load(file)
+        with open(f'../bucketed_noised_prompts/mt_{args.prompt}_noised_{args.perturbation}_bucketed.json', 'r') as file:
+            bucketed_prompts = json.load(file)
 
-    if args.perturbation == "llm":
-        return prompts
+    # sorting into buckets if loading from flat list...
+    # bucketed_prompts = defaultdict(list)
+    # for prompt in prompts:
+    #     if prompt["noised_prompt"] == prompt["prompt_src"]:  # happens in lexicalphrasal
+    #         continue
+    #     bucketed_prompts[prompt["prompt_id"] + prompt["prompt_noiser"]].append(prompt)
 
-    # sort into actual buckets
-    bucketed_prompts = defaultdict(list)
-    for prompt in prompts:
-        if prompt["noised_prompt"] == prompt["prompt_src"]:  # happens in lexicalphrasal
-            continue
-        bucketed_prompts[prompt["prompt_id"] + prompt["prompt_noiser"]].append(prompt)
     # sample one prompt per bucket
     final_prompts = []
     for bucket in bucketed_prompts.values():
         final_prompts.append(random.sample(bucket, 1)[0])
 
-    return prompts
+    return final_prompts
 
 
 def load_sample(path, sample):

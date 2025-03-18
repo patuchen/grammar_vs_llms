@@ -23,7 +23,7 @@ def main(args=None):
 
     prompts = load_prompts(args)
 
-    os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}', exist_ok=True)
+    os.makedirs(f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}', exist_ok=True)
     # run experiments
     for prompt in prompts:
         data_translated = [{} for _ in data]
@@ -50,11 +50,12 @@ def main(args=None):
             data_translated[idx]['prompt'] = prompt_text
             data_translated[idx]['prompt_p'] = prompt.get("noise_type_parameters", None)
             data_translated[idx]['prompt_noiser'] = prompt.get("prompt_noiser", None)
+            data_translated[idx]['bucket_id'] = prompt.get("bucket_id", None)
             data_translated[idx]['tgt'] = translation
 
         # save data as jsonl
         with open(
-                f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}/{prompt_id}_{args.split}_results.jsonl',
+                f'../output_translations/wmt24/system-outputs/{model.short}/{args.lp}/{args.split}/{args.perturbation}_{prompt.get("bucket_id")}_{args.split}_results.jsonl',
                 'w', encoding='utf-8') as f:
             for item in data_translated:
                 f.write(json.dumps(item, ensure_ascii=False) + "\n")
