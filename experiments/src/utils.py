@@ -70,7 +70,7 @@ def load_prompts(args):
 
     # sample one prompt per bucket
     final_prompts = []
-    for prompt_id, buckets in bucketed_prompts.values():
+    for buckets in bucketed_prompts.values():
         for bucket in buckets:
             final_prompts.append(random.sample(bucket, 1)[0])
 
