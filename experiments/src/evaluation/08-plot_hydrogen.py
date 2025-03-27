@@ -15,8 +15,8 @@ data_all = [
     for f in args.data
 ]
 
-KEY_X = "prompt_chrf"
-KEY_Y = "chrf"
+KEY_X = "prompt_ip"
+KEY_Y = "comet"
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:

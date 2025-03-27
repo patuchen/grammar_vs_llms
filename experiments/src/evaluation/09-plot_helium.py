@@ -15,7 +15,7 @@ data_all = [
     for f in args.data
 ]
 
-KEY_Y = "chrf"
+KEY_Y = "comet"
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
