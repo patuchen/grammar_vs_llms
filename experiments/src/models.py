@@ -151,6 +151,7 @@ class OpenAIModel(Model):
 class GeminiModel(Model):
     def __init__(self, model: str, gpus: int, sampling_params: SamplingParams, system_prompt: str) -> None:
         super().__init__(model, gpus, 1, sampling_params, system_prompt)
+        load_dotenv()
         self.llm = genai.Client(http_options=HttpOptions(api_version="v1"))
 
     def generate(self, model_inputs, *, quiet = False):

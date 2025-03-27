@@ -1,5 +1,6 @@
 figures/
 data/
+data.bak/
 computed/
 json_convert.py
 augmenter.py
@@ -20,7 +21,8 @@ experiments/src/GEMBA/data/*
 experiments/src/GEMBA/jobs/*
 
 google-cloud-*
-
+.vscode
+slurm*.out
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
