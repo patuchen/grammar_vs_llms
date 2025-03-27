@@ -55,7 +55,7 @@ def evaluate_data(data):
                 "ref": x["ref"],
             }
             for x in data
-        ], batch_size=64)["scores"]
+        ], batch_size=32)["scores"]
     else:
         scores_comet = [0 for _ in data]
 

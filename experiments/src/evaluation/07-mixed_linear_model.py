@@ -1,19 +1,18 @@
 import statsmodels.formula.api as smf
 import argparse
 import json
-import glob
 import collections
 import numpy as np
 import pandas as pd
 
 args = argparse.ArgumentParser()
-args.add_argument("glob")
+args.add_argument("data", nargs="+")
 args = args.parse_args()
 
 # load all data from args.dir
 data_all = [
     [json.loads(x) for x in open(f)]
-    for f in glob.glob(args.glob)
+    for f in args.data
 ]
 
 data_all_joined = collections.defaultdict(list)

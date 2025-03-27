@@ -40,7 +40,7 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
                 "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
                 "prompt_chrf": np.average([line["eval_prompt"]["chrf"] for line in data]),
                 "prompt_ip": np.average([line["eval_prompt"]["ip"] for line in data]),
-                "prompt_p": np.average([line["prompt_p"] for line in data]),
+                "prompt_p": np.average([line["prompt_p"]["orthographic"] for line in data]),
             }
             for data in data_all_local
         ]
