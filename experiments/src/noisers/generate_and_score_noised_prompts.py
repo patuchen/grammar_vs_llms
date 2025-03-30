@@ -79,16 +79,20 @@ if __name__ == "__main__":
     # print(*noised_prompts, sep="\n")
 
     ## Generating noised versions of mt_base.json with scenario "orthographic" over different values of probability p
-    # scenarios = ["orthographic"]
+    # scenarios = ["typos_synthetic", "orthographic", "lexicalphrasal", "L2"]
+
+    # By default, scenarios contains all 6 scenarios as defined in utils.py
     for scenario in scenarios:
         print(f"Generating noised prompts for scenario {scenario}")
-        prompts_file = "../../prompts/mt_base.json"
+        # prompts_file = "../../prompts/mt_base.json"
+        filename = "gemba_base"
+        prompts_file = f"../../prompts/{filename}.json"
         n_samples = 20
-        outfile = f"../../noised_prompts/mt_base_noised_{scenario}.json"
+        outfile = f"../../noised_prompts/{filename}_noised_{scenario}.json"
         generate_noised_prompts_for_scenario(scenario, prompts_file, n_samples, score_perplexity=False, outfile=outfile)
 
         print(f"Bucketing noised prompts for scenario {scenario}")
-        bucketed_outfile = f"../../bucketed_noised_prompts/mt_base_noised_{scenario}_bucketed.json"
+        bucketed_outfile = f"../../bucketed_noised_prompts/{filename}_noised_{scenario}_bucketed.json"
         num_buckets = 10
         bucket_prompts_by_chrf(outfile, bucketed_outfile, num_buckets)
 

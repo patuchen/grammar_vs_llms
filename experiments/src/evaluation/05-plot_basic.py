@@ -2,20 +2,17 @@ import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
-import glob
 import collections
 import grammar_v_mtllm.utils_fig
 
-# python3 ./scripts/04-plot_basic.py computed/evals/seth-v1-tower---de-en
-
 args = argparse.ArgumentParser()
-args.add_argument("glob")
+args.add_argument("data", nargs="+")
 args = args.parse_args()
 
 # load all data from args.dir
 data_all = [
     [json.loads(x) for x in open(f)]
-    for f in glob.glob(args.glob)
+    for f in args.data
 ]
 
 KEY_X = "prompt_p"
@@ -42,13 +39,11 @@ for langs in sorted({x["langs"] for data in data_all for x in data}):
             "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
             "prompt_chrf": data[0]["eval_prompt"]["chrf"],
             "prompt_ip": data[0]["eval_prompt"]["ip"],
-            "prompt_p": data[0]["eval_prompt"]["p"],
+            "prompt_p": data[0]["prompt_p"]["orthographic"],
         }
         for data in data_all_local
     ]
     # data_local.sort(key=lambda x: x["prompt_chrf"])
-
-
 
     # linear line
     x = np.linspace(
@@ -80,11 +75,10 @@ for langs in sorted({x["langs"] for data in data_all for x in data}):
             ha="center", va="center"
         )
     plt.ylabel("Translation quality")
-    plt.xlabel("Noising p")
+    plt.xlabel(KEY_X)
 
 plt.legend(
     frameon=False,
 )
-plt.title((args.glob.removeprefix("data/evaluated/").removesuffix(".jsonl")))
 plt.tight_layout()
 plt.show()

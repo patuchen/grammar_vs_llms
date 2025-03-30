@@ -2,7 +2,6 @@ import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
-import glob
 import collections
 import grammar_v_mtllm.utils_fig
 
@@ -16,8 +15,8 @@ data_all = [
     for f in args.data
 ]
 
-KEY_X = "prompt_chrf"
-KEY_Y = "chrf"
+KEY_X = "prompt_ip"
+KEY_Y = "comet"
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
@@ -32,6 +31,7 @@ def get_prompt_id(x):
     return prompt_to_id[x]
 
 
+# each file is an individual bucket = one point
 data_local = [
     {
         "comet": np.average([x["eval"]["comet"] for x in data]),
@@ -39,7 +39,7 @@ data_local = [
         # "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
         "prompt_chrf": np.average([line["eval_prompt"]["chrf"] for line in data]),
         "prompt_ip": np.average([line["eval_prompt"]["ip"] for line in data]),
-        "prompt_p": np.average([line["prompt_p"] for line in data]),
+        "prompt_p": np.average([line["prompt_p"]["orthographic"] for line in data]),
         # ERROR
         # TODO: this is not true because each file can contain multiple prompt_src?
         "prompt": get_prompt_id(data[0]["prompt_src"]),
@@ -55,7 +55,7 @@ prompts = {x["prompt"] for x in data_local}
 stats_var_in_prompts = []
 stats_avg_in_prompts = []
 
-for prompt in sorted(list(prompts)):
+for prompt_i, prompt in enumerate(sorted(list(prompts))):
     data_local_prompt = [x for x in data_local if x["prompt"] == prompt]
     x = np.linspace(
         min([x[KEY_X] for x in data_local_prompt]),
@@ -67,18 +67,20 @@ for prompt in sorted(list(prompts)):
         [x[KEY_Y] for x in data_local_prompt],
         deg=1
     ))
-    ax.plot(
-        x,
-        y(x),
-        color="black",
-        zorder=-10,
-    )
     ax.scatter(
         [x[KEY_X] for x in data_local_prompt],
         [x[KEY_Y] for x in data_local_prompt],
         marker=".",
-        s=70,
+        s=50,
+        color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
         label=prompt
+    )
+    ax.plot(
+        x,
+        y(x),
+        color="black",
+        zorder=10,
+        alpha=0.5,
     )
     stats_var_in_prompts.append(np.var([x[KEY_Y] for x in data_local_prompt]))
     stats_avg_in_prompts.append(np.average([x[KEY_Y] for x in data_local_prompt]))
