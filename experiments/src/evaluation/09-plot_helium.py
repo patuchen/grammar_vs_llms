@@ -15,6 +15,7 @@ data_all = [
     for f in args.data
 ]
 
+
 KEY_Y = "comet"
 
 data_all_joined = collections.defaultdict(list)
@@ -26,7 +27,7 @@ data_all = list(data_all_joined.values())
 fig, axs = plt.subplots(1, 3, figsize=(9, 2.5), sharey=True)
 
 for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
-    for langs in sorted({x["langs"] for data in data_all for x in data}):
+    for langs_i, langs in enumerate(sorted({x["langs"] for data in data_all for x in data})):
         lang1, lang2 = langs.split("-")
         data_all_local = [
             [x for x in data if x["langs"] == langs]
@@ -50,20 +51,42 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
             [x[KEY_X] for x in data_local],
             [x[KEY_Y] for x in data_local],
             marker=".",
-            s=70,
+            linewidth=0,
+            alpha=0.5,
+            s=20,
+            color=grammar_v_mtllm.utils_fig.LANG_TO_COLOR[langs],
         )
 
-        ax.text(
-            x=[x[KEY_X] for x in data_local][-1],
-            y=[x[KEY_Y] for x in data_local][-1],
-            s=langs,
-            fontsize=8,
-            ha="right",
-            va="bottom",
+        # plot linear fit
+        x = np.linspace(
+            min([x[KEY_X] for x in data_local]),
+            max([x[KEY_X] for x in data_local]),
+            10
+        )
+        y = np.poly1d(np.polyfit(
+            [x[KEY_X] for x in data_local],
+            [x[KEY_Y] for x in data_local],
+            deg=1
+        ))
+        ax.plot(
+            x,
+            y(x),
+            zorder=10,
+            color=grammar_v_mtllm.utils_fig.LANG_TO_COLOR[langs],
+            label=grammar_v_mtllm.utils_fig.LANG_TO_NAME[langs] if ax == axs[1] else None,
         )
 
         if ax == axs[0]:
             ax.set_ylabel("Translation quality")
+        elif ax == axs[1]:
+            ax.legend(
+                frameon=False,            
+                handletextpad=0.2,
+                loc="upper center",
+                bbox_to_anchor=(0.5, 1.2),
+                ncol=3,
+            )
+
         ax.set_xlabel({
             "prompt_p": "Perturbation probability",
             "prompt_chrf": "Prompt distance (surface)",
@@ -73,7 +96,12 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
 
         # plot language for the last point
 
-plt.tight_layout()
+plt.tight_layout(
+    rect=[0, 0, 1, 1.05]
+)
+plt.subplots_adjust(
+    wspace=0.05,
+)
 plt.savefig("figures/09-helium.pdf")
 plt.show()
 
