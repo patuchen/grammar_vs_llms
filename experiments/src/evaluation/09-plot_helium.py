@@ -106,5 +106,5 @@ plt.savefig("figures/09-helium.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/09-plot_helium.py data/evaluated/*/three/test/noising_orthographic_*.jsonl
+python3 experiments/src/evaluation/09-plot_helium.py data/evaluated/*/three/test/*-orthographic_*.jsonl
 """

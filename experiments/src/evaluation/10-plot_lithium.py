@@ -44,8 +44,8 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
             ax.set_ylabel("COMET")
     ax.set_xlabel({
         "prompt_p": "Perturbation probability",
-        "prompt_chrf": "Prompt distance (surface)",
-        "prompt_ip": "Prompt distance (semantic)",
+        "prompt_chrf": "Prompt similarity (surface)",
+        "prompt_ip": "Prompt similarity (semantic)",
     }[KEY_X])
     grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
     lang1, lang2 = langs.split("-")
@@ -122,6 +122,6 @@ plt.savefig(f"figures/10-lithium_{args.key_y}.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/noising_orthographic_*.jsonl
-python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/noising_orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/*orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/*orthographic_*.jsonl
 """
