@@ -2,6 +2,7 @@ import json
 import argparse
 import numpy as np
 import collections
+import sys
 
 args = argparse.ArgumentParser()
 args.add_argument("data", nargs="+")
@@ -61,6 +62,14 @@ for KEY_Y in ["comet", "chrf"]:
             )[0]
             stats_a_in_prompts.append(a)
             stats_avg.append(np.average([x[KEY_Y] for x in data_local_prompt]))
+            print(json.dumps({
+                "prompt": f"prompt{prompt_i}",
+                "key_x": KEY_X,
+                "key_y": KEY_Y,
+                "slope": a,
+                "data_x": [x[KEY_X] for x in data_local_prompt],
+                "data_y": [x[KEY_Y] for x in data_local_prompt],
+            }), file=sys.stderr)
 
         if KEY_Y == "comet":
             print(f"{KEY_X:>15} slope -{KEY_Y:>7} --- {np.average(stats_a_in_prompts)*100:.1f}")
@@ -73,12 +82,13 @@ for KEY_Y in ["comet", "chrf"]:
         print(f"{KEY_Y:>15} avg --- {np.average(stats_avg):.1f}")
 
 """
-rm -f figures/07-stat_beryllium.out
+rm -f figures/07-stat_beryllium.{out,err}
 for key in "noising_typos_synthetic" "noising_orthographic" "noising_register" "noising_llm" "noising_lexicalphrasal" "noising_LazyUser" "noising_L2"; do
     echo $key;
     echo $key >> figures/07-stat_beryllium.out;
+    echo $key >> figures/07-stat_beryllium.err;
     ls data/evaluated/*/three/test/${key}_*.jsonl | wc -l;
-    python3 experiments/src/evaluation/07-stat_beryllium.py data/evaluated/*/three/test/${key}_*.jsonl >> figures/07-stat_beryllium.out;
+    python3 experiments/src/evaluation/07-stat_beryllium.py data/evaluated/*/three/test/${key}_*.jsonl 1>> figures/07-stat_beryllium.out 2>> figures/07-stat_beryllium.err;
 done;
 """
 
