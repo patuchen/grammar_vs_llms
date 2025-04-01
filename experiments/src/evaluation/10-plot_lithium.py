@@ -122,6 +122,6 @@ plt.savefig(f"figures/10-lithium_{args.key_y}.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/*-orthographic_*.jsonl
-python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/*-orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/noising_orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/noising_orthographic_*.jsonl
 """

@@ -89,8 +89,8 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
 
         ax.set_xlabel({
             "prompt_p": "Perturbation probability",
-            "prompt_chrf": "Prompt distance (surface)",
-            "prompt_ip": "Prompt distance (semantic)",
+            "prompt_chrf": "Prompt similarity (surface)",
+            "prompt_ip": "Prompt similarity (semantic)",
         }[KEY_X])
         grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
 
@@ -106,5 +106,5 @@ plt.savefig("figures/09-helium.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/09-plot_helium.py data/evaluated/*/three/test/*-orthographic_*.jsonl
+python3 experiments/src/evaluation/09-plot_helium.py data/evaluated/*/three/test/noising_orthographic_*.jsonl
 """
