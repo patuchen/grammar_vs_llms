@@ -39,7 +39,7 @@ data_local = [
         # "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
         "prompt_chrf": np.average([line["eval_prompt"]["chrf"] for line in data]),
         "prompt_ip": np.average([line["eval_prompt"]["ip"] for line in data]),
-        "prompt_p": np.average([line["prompt_p"]["orthographic"] for line in data]),
+        # "prompt_p": np.average([line["prompt_p"]["orthographic"] for line in data]),
         # ERROR
         # TODO: this is not true because each file can contain multiple prompt_src?
         "prompt": get_prompt_id(data[0]["prompt_src"]),
@@ -56,6 +56,9 @@ stats_var_in_prompts = []
 stats_avg_in_prompts = []
 
 for prompt_i, prompt in enumerate(sorted(list(prompts))):
+    # disregard this outlier
+    if prompt_i >= 4:
+        continue
     data_local_prompt = [x for x in data_local if x["prompt"] == prompt]
     x = np.linspace(
         min([x[KEY_X] for x in data_local_prompt]),
@@ -71,16 +74,17 @@ for prompt_i, prompt in enumerate(sorted(list(prompts))):
         [x[KEY_X] for x in data_local_prompt],
         [x[KEY_Y] for x in data_local_prompt],
         marker=".",
-        s=50,
+        linewidth=0,
+        s=20,
+        alpha=0.5,
         color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
-        label=prompt
     )
     ax.plot(
         x,
         y(x),
-        color="black",
         zorder=10,
-        alpha=0.5,
+        color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
+        label=prompt.capitalize()
     )
     stats_var_in_prompts.append(np.var([x[KEY_Y] for x in data_local_prompt]))
     stats_avg_in_prompts.append(np.average([x[KEY_Y] for x in data_local_prompt]))
@@ -92,10 +96,13 @@ grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
 
 plt.legend(
     frameon=False,
-    handletextpad=0.2,
+    handletextpad=0.1,
+    handlelength=0.7,
+
     loc="upper center",
-    bbox_to_anchor=(0.5, 1.4),
-    ncol=2,
+    bbox_to_anchor=(0.4, 1.4),
+    ncol=4,
+    columnspacing=0.5,
 )
 plt.tight_layout(
     rect=[0, 0, 1, 1.1]
@@ -108,5 +115,15 @@ print("avg variance within each prompt", np.average(stats_var_in_prompts))
 print("variance across averages in each prompt", np.var(stats_avg_in_prompts))
 
 """
-python3 experiments/src/evaluation/08-plot_hydrogen.py data/evaluated/*/three/test/*-orthographic_*.jsonl
+# use all
+python3 experiments/src/evaluation/08-plot_hydrogen.py data/evaluated/*/three/test/*.jsonl
+
+noising_typos_synthetic
+noising_orthographic
+noising_register
+noising_llm
+noising_lexicalphrasal
+noising_LazyUser
+noising_L2
 """
+

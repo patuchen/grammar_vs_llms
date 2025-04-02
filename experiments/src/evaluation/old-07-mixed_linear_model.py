@@ -77,5 +77,5 @@ model = smf.mixedlm(
 print(model.fit().summary())
 
 """
-python3 experiments/src/evaluation/07-mixed_linear_model.py 'data/evaluated/*/three/test/*-orthographic_*.jsonl'
+python3 experiments/src/evaluation/07-mixed_linear_model.py 'data/evaluated/*/three/test/noising_orthographic_*.jsonl'
 """

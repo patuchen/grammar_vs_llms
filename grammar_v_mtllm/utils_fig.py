@@ -6,10 +6,21 @@ COLORS = [
     "#bc272d",  # red
     "#50ad9f",  # green
     "#0000a2",  # blue
+    "#954ead",  # purple
     "#e9c716",  # yellow
-    "#8c6e96",  # purple
+    "#e67e22",  # orange
 ]
 
+LANG_TO_COLOR = {
+    "cs-uk": "#0057B7",
+    "en-de": "#000000",
+    "en-zh": "#B22222",
+}
+LANG_TO_NAME = {
+    "cs-uk": r"Czech$\rightarrow$Ukrainian",
+    "en-de": r"English$\rightarrow$German",
+    "en-zh": r"English$\rightarrow$Chinese",
+}
 
 mpl.rcParams["font.family"] = "serif"
 mpl.rcParams["axes.prop_cycle"] = plt.cycler(color=COLORS)
