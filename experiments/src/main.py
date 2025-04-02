@@ -20,6 +20,9 @@ def main(args=None):
     model = load_model(args.model, args.gpus, args.mem_percent)
 
     prompts = load_prompts(args)
+    if args.rerun_last is not None:
+        # rerun the last N experiments
+        prompts = prompts[-args.rerun_last:]
     # run experiments
     for prompt in prompts:
         data_translated = [{} for _ in data]

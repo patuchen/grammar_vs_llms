@@ -1,4 +1,5 @@
 import os
+import sys
 import time
 from typing import List, Dict, Any
 from openai import OpenAI
@@ -131,19 +132,25 @@ class OpenAIModel(Model):
            [system, {"role": "user", "content": prompt}]
             for prompt in prompts
         ]
-        # TODO add top_p if used, top_k not supported
-        responses = [
-            self.llm.chat.completions.create(
-                model=self.model,
-                messages=conversation,      
-                n=self.sampling_params.n,
-                max_tokens=self.sampling_params.max_tokens,
-                temperature=self.sampling_params.temperature,
-                seed=self.sampling_params.seed,
-                stop=self.sampling_params.stop
-            ) 
-            for conversation in tqdm(conversations, disable=quiet)
-        ]
+        responses = []
+        for conversation in tqdm(conversations, disable=quiet):
+            ok = False
+            while not ok:
+                try:
+                    response = self.llm.chat.completions.create(
+                        model=self.model,
+                        messages=conversation,
+                        n=self.sampling_params.n,
+                        max_tokens=self.sampling_params.max_tokens,
+                        temperature=self.sampling_params.temperature,
+                        seed=self.sampling_params.seed,
+                        stop=self.sampling_params.stop
+                    )
+                    responses.append(response.choices[0].message.content.replace('\n', ' ').replace('\t', ' '))
+                    ok = True
+                except: # openai.NotFoundError, openai.PermissionDeniedError
+                    pass
+        
 
         responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
@@ -178,10 +185,19 @@ class GeminiModel(Model):
                     ok = True
                 except google.genai.errors.ClientError as re:
                     if re.code == 429:
-                        print("ResourceExhausted exception occurred")
+                        print("\nResourceExhausted exception occurred\n", file=sys.stderr)
                         time.sleep(30)
                     else:
                         raise re
+                except google.genai.errors.ServerError as se:
+                    if se.code == 503:
+                        print("\nService unavailable\n", file=sys.stderr)
+                        time.sleep(60)
+                    elif se.code == 500:
+                        print("\nInternal server error\n", file=sys.stderr)
+                        time.sleep(60)
+                    else:
+                        raise se
 
         return [response.text for response in responses]
 

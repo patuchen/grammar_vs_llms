@@ -187,6 +187,12 @@ def parse_arguments():
         choices=[None, "orthographic", "llm", "L2", "LazyUser", "lexicalphrasal", "register", "typos_synthetic"],
         help="Perturbation to use for generation.",
     )
+    parser.add_argument(
+        "--rerun-last",
+        type=int,
+        default=None,
+        help="Rerun the last N experiments.",
+    )
     return parser.parse_args()
 
 
