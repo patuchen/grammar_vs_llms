@@ -5,6 +5,7 @@ from typing import List, Dict, Any
 from openai import OpenAI
 from anthropic import Anthropic, AnthropicVertex
 from dotenv import load_dotenv
+import openai
 from vllm import LLM, SamplingParams
 from tqdm import tqdm
 import httpx
@@ -148,11 +149,16 @@ class OpenAIModel(Model):
                     )
                     responses.append(response.choices[0].message.content.replace('\n', ' ').replace('\t', ' '))
                     ok = True
-                except: # openai.NotFoundError, openai.PermissionDeniedError
-                    pass
+                except openai.NotFoundError:                                        
+                    print("\nopenai.NotFoundError, retry\n", file=sys.stderr)
+                    time.sleep(60)
+                except openai.PermissionDeniedError:
+                    print("\nopenai.PermissionDeniedError, retry\n", file=sys.stderr)
+                    time.sleep(60)
+
         
 
-        responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
+        # responses = [response.choices[0].message.content.replace('\n', ' ').replace('\t', ' ') for response in responses]
         return responses
     
 class GeminiModel(Model):
