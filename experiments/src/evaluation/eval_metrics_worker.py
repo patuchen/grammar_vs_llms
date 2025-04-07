@@ -23,6 +23,11 @@ def langdetect_safe(x):
 metric_chrf = sacrebleu.CHRF()
 
 def evaluate_data(data):
+    # if model refused to answer, just set it to empty string
+    for line in data:
+        if type(line["tgt"]) != str:
+            line["tgt"] = ""
+
     with ThreadPool(16) as p:
         scores_chrf = list(p.map(
             lambda x: metric_chrf.sentence_score(x["tgt"], [x["ref"]]).score,
