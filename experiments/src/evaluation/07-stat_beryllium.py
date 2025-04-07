@@ -14,11 +14,20 @@ data_all = [
     for f in args.data
 ]
 
+def get_bucket_id(bucket_id_value):
+    if not bucket_id_value:
+        return 0
+    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    return bucket_id_value.split("-")[1].split("_")[0]
+
+
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[(x["prompt_noiser"], x["prompt_src"])].append(x)
+        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
+
+
 
 prompt_to_id = {}
 def get_prompt_id(x):
@@ -54,6 +63,7 @@ for KEY_Y in ["comet", "chrf"]:
             if prompt_i >= 4:
                 continue
             data_local_prompt = [x for x in data_local if x["prompt"] == prompt]
+            # print(f"Number of data points for {KEY_X} - {KEY_Y}: {len(data_local_prompt)}")
             # coefficient
             a = np.polyfit(
                 [x[KEY_X] for x in data_local_prompt],
