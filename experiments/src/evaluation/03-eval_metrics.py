@@ -13,6 +13,7 @@ args.add_argument("data", nargs="+")
 args = args.parse_args()
 
 for fname in tqdm.tqdm(args.data):
+    print(fname)
     with open(fname, "r") as f:
         data = [json.loads(x) for x in f]
 

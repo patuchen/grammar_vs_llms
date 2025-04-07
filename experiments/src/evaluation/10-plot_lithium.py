@@ -41,7 +41,7 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
         if KEY_Y == "langs":
             ax.set_ylabel("Output in target language")
         elif KEY_Y == "comet":
-            ax.set_ylabel("COMET")
+            ax.set_ylabel("Translation Quality (COMET)")
     ax.set_xlabel({
         "prompt_p": "Perturbation probability",
         "prompt_chrf": "Prompt similarity (surface)",
@@ -95,13 +95,16 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
             data_y,
             deg=1
         ))
+        model_name = model.replace("gemini", "Gemini").replace("gpt", "GPT4o")
         ax.plot(
             x,
             y(x),
             zorder=10,
             color=grammar_v_mtllm.utils_fig.COLORS[model_i],
-            label=model if ax == axs[1] else None,
+            label=model_name if ax == axs[1] else None,
         )
+
+        ax.set_xlim(0.65, None)
 
         if ax == axs[1]:
             ax.legend(
@@ -109,7 +112,7 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
                 handletextpad=0.2,
                 loc="upper center",
                 bbox_to_anchor=(0.5, 1.2),
-                ncol=4,
+                ncol=6,
             )
 
 plt.tight_layout(

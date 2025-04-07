@@ -94,6 +94,7 @@ ax.set_xlabel("Similarity to original prompt")
 
 grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
 
+plt.xlim(0.6, None)
 plt.legend(
     frameon=False,
     handletextpad=0.1,

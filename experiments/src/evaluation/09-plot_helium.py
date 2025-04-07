@@ -47,6 +47,15 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
         ]
         data_local.sort(key=lambda x: x[KEY_X])
 
+        # ax.set_xlim(
+        #     {
+        #         "prompt_ip": 0.6,
+        #         "prompt_ip": 0.6,
+        #         "prompt_ip": 0.6,
+        #     }[KEY_X],
+        #     None,
+        # )
+
         ax.scatter(
             [x[KEY_X] for x in data_local],
             [x[KEY_Y] for x in data_local],
