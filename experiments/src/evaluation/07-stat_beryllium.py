@@ -14,20 +14,21 @@ data_all = [
     for f in args.data
 ]
 
-def get_bucket_id(bucket_id_value):
-    if not bucket_id_value:
-        return 0
-    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
-    return bucket_id_value.split("-")[1].split("_")[0]
+
+def get_bucket_id(x):
+    if not x["bucket_id"]: 
+        # This is only for `llm` noise. We don't have buckets for it, so we treat 
+        # every noised version of a prompt as a separate bucket.
+        return x["prompt"]
+    # We want to extract bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    return x["bucket_id"].split("-")[1].split("_")[0]
 
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
+        data_all_joined[(get_bucket_id(x), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
-
-
 
 prompt_to_id = {}
 def get_prompt_id(x):
