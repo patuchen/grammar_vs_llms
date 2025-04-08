@@ -10,7 +10,7 @@ args = args.parse_args()
 
 # load all data from args.dir
 data_all = [
-    [json.loads(x) for x in open(f)]
+    [json.loads(x) for x in open(f, "r")]
     for f in args.data
 ]
 
@@ -55,7 +55,6 @@ data_local = [
 prompts = {x["prompt"] for x in data_local}
 
 for KEY_Y in ["comet", "chrf"]:
-    stats_avg = []
     for KEY_X in ["prompt_chrf", "prompt_ip"]:
         stats_a_in_prompts = []
         for prompt_i, prompt in enumerate(sorted(list(prompts))):
@@ -65,13 +64,13 @@ for KEY_Y in ["comet", "chrf"]:
             data_local_prompt = [x for x in data_local if x["prompt"] == prompt]
             # print(f"Number of data points for {KEY_X} - {KEY_Y}: {len(data_local_prompt)}")
             # coefficient
-            a = np.polyfit(
-                [x[KEY_X] for x in data_local_prompt],
-                [x[KEY_Y] for x in data_local_prompt],
-                deg=1
-            )[0]
+            # a = np.polyfit(
+            #     [x[KEY_X] for x in data_local_prompt],
+            #     [x[KEY_Y] for x in data_local_prompt],
+            #     deg=1
+            # )[0]
+            a = np.corrcoef([x[KEY_X] for x in data_local_prompt], [x[KEY_Y] for x in data_local_prompt])[0, 1]
             stats_a_in_prompts.append(a)
-            stats_avg.append(np.average([x[KEY_Y] for x in data_local_prompt]))
             print(json.dumps({
                 "prompt": f"prompt{prompt_i}",
                 "key_x": KEY_X,
@@ -81,15 +80,13 @@ for KEY_Y in ["comet", "chrf"]:
                 "data_y": [x[KEY_Y] for x in data_local_prompt],
             }), file=sys.stderr)
 
-        if KEY_Y == "comet":
-            print(f"{KEY_X:>15} slope -{KEY_Y:>7} --- {np.average(stats_a_in_prompts)*100:.1f}")
-        else:
-            print(f"{KEY_X:>15} slope -{KEY_Y:>7} --- {np.average(stats_a_in_prompts):.1f}")
+        # if KEY_Y == "comet":
+        #     stats_a_in_prompts = np.array(stats_a_in_prompts) * 100
 
-    if KEY_Y == "comet":
-        print(f"{KEY_Y:>15} avg --- {np.average(stats_avg)*100:.1f}")
-    else:
-        print(f"{KEY_Y:>15} avg --- {np.average(stats_avg):.1f}")
+        print(f"{KEY_X:>15} slope -{KEY_Y:>7} --- {np.average(stats_a_in_prompts):.2f}")
+        # if KEY_X == "prompt_chrf":
+        # if KEY_X == "prompt_ip":
+        #     print(f"{KEY_X:>15} slope -{KEY_Y:>7} --- {np.average(stats_a_in_prompts):.1f}")
 
 """
 rm -f figures/07-stat_beryllium.{out,err}

@@ -11,19 +11,25 @@ args = args.parse_args()
 
 # load all data from args.dir
 data_all = [
-    [json.loads(x) for x in open(f)]
+    [json.loads(x) for x in open(f, "r")]
     for f in args.data
 ]
 
 
 KEY_Y = "comet"
 
+
+def get_bucket_id(bucket_id_value):
+    if not bucket_id_value:
+        return 0
+    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    return bucket_id_value.split("-")[1].split("_")[0]
+
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[x["prompt_noiser"]].append(x)
+        data_all_joined[get_bucket_id(x["bucket_id"])].append(x)
 data_all = list(data_all_joined.values())
-
 fig, axs = plt.subplots(1, 3, figsize=(9, 2.5), sharey=True)
 
 for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
@@ -62,7 +68,7 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
             marker=".",
             linewidth=0,
             alpha=0.5,
-            s=20,
+            s=40,
             color=grammar_v_mtllm.utils_fig.LANG_TO_COLOR[langs],
         )
 

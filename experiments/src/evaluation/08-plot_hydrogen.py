@@ -11,17 +11,23 @@ args = args.parse_args()
 
 # load all data from args.dir
 data_all = [
-    [json.loads(x) for x in open(f)]
+    [json.loads(x) for x in open(f, "r")]
     for f in args.data
 ]
 
 KEY_X = "prompt_ip"
 KEY_Y = "comet"
 
+def get_bucket_id(bucket_id_value):
+    if not bucket_id_value:
+        return 0
+    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    return bucket_id_value.split("-")[1].split("_")[0]
+
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[(x["prompt_noiser"], x["prompt_src"])].append(x)
+        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
 
 prompt_to_id = {}
@@ -36,12 +42,11 @@ data_local = [
     {
         "comet": np.average([x["eval"]["comet"] for x in data]),
         "chrf": np.average([x["eval"]["chrf"] for x in data]),
-        # "langs": np.average([x["eval"]["langs"][0][0][:2] == lang2 for x in data]),
         "prompt_chrf": np.average([line["eval_prompt"]["chrf"] for line in data]),
         "prompt_ip": np.average([line["eval_prompt"]["ip"] for line in data]),
-        # "prompt_p": np.average([line["prompt_p"]["orthographic"] for line in data]),
         # ERROR
-        # TODO: this is not true because each file can contain multiple prompt_src?
+        # NOTE: this seems to not be true because each file can contain multiple prompt_src?
+        # NOTE: this is fine because we are no long at the file level but collated
         "prompt": get_prompt_id(data[0]["prompt_src"]),
     }
     for data in data_all
@@ -75,7 +80,7 @@ for prompt_i, prompt in enumerate(sorted(list(prompts))):
         [x[KEY_Y] for x in data_local_prompt],
         marker=".",
         linewidth=0,
-        s=20,
+        s=40,
         alpha=0.5,
         color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
     )
@@ -94,7 +99,6 @@ ax.set_xlabel("Similarity to original prompt")
 
 grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
 
-plt.xlim(0.6, None)
 plt.legend(
     frameon=False,
     handletextpad=0.1,
@@ -112,8 +116,8 @@ plt.savefig("figures/08-hydrogen.pdf")
 plt.show()
 
 # statistics
-print("avg variance within each prompt", np.average(stats_var_in_prompts))
-print("variance across averages in each prompt", np.var(stats_avg_in_prompts))
+print("avg variance within each prompt", np.average(stats_var_in_prompts)*100)
+print("variance across averages in each prompt", np.var(stats_avg_in_prompts)*100)
 
 """
 # use all
@@ -127,4 +131,3 @@ noising_lexicalphrasal
 noising_LazyUser
 noising_L2
 """
-
