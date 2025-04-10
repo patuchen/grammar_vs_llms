@@ -1,19 +1,24 @@
+# %%
 import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
+import pickle
 
-args = argparse.ArgumentParser()
-args.add_argument("data", nargs="+")
-args = args.parse_args()
+# args = argparse.ArgumentParser()
+# args.add_argument("data", nargs="+")
+# args = args.parse_args()
+# data_all = [
+#     [json.loads(x) for x in open(f, "r")]
+#     for f in args.data
+# ]
+# with open("cache_hydrogen.pkl", "wb") as f:
+#     pickle.dump(data_all, f)
 
-# load all data from args.dir
-data_all = [
-    [json.loads(x) for x in open(f, "r")]
-    for f in args.data
-]
+with open("cache_hydrogen.pkl", "rb") as f:
+    data_all = pickle.load(f)
 
 KEY_X = "prompt_ip"
 KEY_Y = "comet"
@@ -33,7 +38,10 @@ data_all = list(data_all_joined.values())
 prompt_to_id = {}
 def get_prompt_id(x):
     if x not in prompt_to_id:
-        prompt_to_id[x] = f"prompt {len(prompt_to_id)+1}"
+        if x == "{source_lang}: {source_text}\\n{target_lang}:":
+            prompt_to_id[x] = f"prompt minimal"
+        else:
+            prompt_to_id[x] = f"prompt {len(prompt_to_id)+1}"
     return prompt_to_id[x]
 
 
@@ -52,6 +60,7 @@ data_local = [
     for data in data_all
 ]
 
+# %%
 plt.figure(figsize=(3.5, 2.5))
 ax = plt.gca()
 
@@ -62,9 +71,8 @@ stats_avg_in_prompts = []
 
 for prompt_i, prompt in enumerate(sorted(list(prompts))):
     # disregard this outlier
-    if prompt_i >= 4:
-        continue
     data_local_prompt = [x for x in data_local if x["prompt"] == prompt]
+
     x = np.linspace(
         min([x[KEY_X] for x in data_local_prompt]),
         max([x[KEY_X] for x in data_local_prompt]),
@@ -75,26 +83,45 @@ for prompt_i, prompt in enumerate(sorted(list(prompts))):
         [x[KEY_Y] for x in data_local_prompt],
         deg=1
     ))
-    ax.scatter(
-        [x[KEY_X] for x in data_local_prompt],
-        [x[KEY_Y] for x in data_local_prompt],
-        marker=".",
-        linewidth=0,
-        s=40,
-        alpha=0.5,
-        color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
-    )
-    ax.plot(
-        x,
-        y(x),
-        zorder=10,
-        color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
-        label=prompt.capitalize()
-    )
-    stats_var_in_prompts.append(np.var([x[KEY_Y] for x in data_local_prompt]))
-    stats_avg_in_prompts.append(np.average([x[KEY_Y] for x in data_local_prompt]))
 
-ax.set_ylabel("Translation quality")
+    if prompt == "prompt minimal":
+        ax.axhline(
+            y=np.average([x[KEY_Y] for x in data_local_prompt]),
+            color="gray",
+            linestyle="--",
+        )
+        ax.text(
+            x=0.01,
+            y=np.average([x[KEY_Y] for x in data_local_prompt])-0.14,
+            s="Minimal\n prompt",
+            fontsize=8,
+            color="#222",
+            ha="left",
+            va="bottom",
+            # in ax coordinates
+            transform=ax.transAxes,
+        )
+    else:
+        ax.scatter(
+            [x[KEY_X] for x in data_local_prompt],
+            [x[KEY_Y] for x in data_local_prompt],
+            marker=".",
+            linewidth=0,
+            s=40,
+            alpha=0.5,
+            color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
+        )
+        ax.plot(
+            x,
+            y(x),
+            zorder=10,
+            color=grammar_v_mtllm.utils_fig.COLORS[prompt_i],
+            label=prompt.capitalize()
+        )
+        stats_var_in_prompts.append(np.var([x[KEY_Y] for x in data_local_prompt]))
+        stats_avg_in_prompts.append(np.average([x[KEY_Y] for x in data_local_prompt]))
+
+ax.set_ylabel("Quality (COMET)")
 ax.set_xlabel("Similarity to original prompt")
 
 grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)

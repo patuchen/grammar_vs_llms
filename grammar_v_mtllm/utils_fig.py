@@ -9,6 +9,7 @@ COLORS = [
     "#954ead",  # purple
     "#e9c716",  # yellow
     "#e67e22",  # orange
+    "#ff69b4",  # pink
 ]
 
 LANG_TO_COLOR = {

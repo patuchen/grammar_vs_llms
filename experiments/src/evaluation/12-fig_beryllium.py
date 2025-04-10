@@ -8,20 +8,18 @@ import collections
 import grammar_v_mtllm.utils_fig
 import pickle
 
-args = argparse.ArgumentParser()
-args.add_argument("data", nargs="+")
-args = args.parse_args()
+# args = argparse.ArgumentParser()
+# args.add_argument("data", nargs="+")
+# args = args.parse_args()
 
-# load all data from args.dir
-data_all = [
-    (f, [json.loads(x) for x in open(f, "r")])
-    for f in args.data
-]
+# data_all = [
+#     (f, [json.loads(x) for x in open(f, "r")])
+#     for f in args.data
+# ]
+# with open("cache_beryllium.pkl", "wb") as f:
+#     pickle.dump(data_all, f)
 
-with open("tmp.pkl", "wb") as f:
-    pickle.dump(data_all, f)
-
-with open("../../../tmp.pkl", "rb") as f:
+with open("../../../cache_beryllium.pkl", "rb") as f:
     data_all = pickle.load(f)
 
 def get_bucket_id(bucket_id_value):
@@ -75,29 +73,53 @@ data_local = {
 KEY_X = "prompt_ip"
 KEY_Y = "comet"
 
-for noiser, noiser_data in data_local.items():
-    # disregard prompt information
-    data_x = [x[KEY_X] for x in noiser_data]
-    data_y = [x[KEY_Y] for x in noiser_data]
-    a = np.polyfit(
-        data_x,
-        data_y,
-        deg=1
-    )[0]
-    plt.scatter(
-        data_x,
-        data_y,
-        label=noiser,
-        alpha=0.5,
-        s=40,
-        linewidth=0,
-    )
+# %%
 
-plt.xlabel(KEY_X)
-plt.ylabel(KEY_Y)
-plt.legend()
-grammar_v_mtllm.utils_fig.turn_off_spines()
+NOISER_TO_STYLE = {
+    'noising_L2': (grammar_v_mtllm.utils_fig.COLORS[0], "."),
+    'noising_LazyUser': (grammar_v_mtllm.utils_fig.COLORS[1], "."),
+    'noising_lexicalphrasal': (grammar_v_mtllm.utils_fig.COLORS[2], "."),
+    'noising_llm': (grammar_v_mtllm.utils_fig.COLORS[3], "."),
+    'noising_orthographic': (grammar_v_mtllm.utils_fig.COLORS[4], "."),
+    'noising_register': (grammar_v_mtllm.utils_fig.COLORS[5], "."),
+    'noising_typos_synthetic': (grammar_v_mtllm.utils_fig.COLORS[6], ".")
+}
+
+fig, axs = plt.subplots(1, 2, figsize=(8, 3), sharex=True, sharey=True)
+for ax, noisers in zip(axs, [["noising_L2", "noising_LazyUser", "noising_lexicalphrasal", "noising_llm"], ["noising_orthographic", "noising_register", "noising_typos_synthetic"]]):
+    grammar_v_mtllm.utils_fig.turn_off_spines(ax=ax)
+    for noiser in noisers:
+        noiser_data = data_local[noiser]
+        # disregard prompt information
+        data_x = [x[KEY_X] for x in noiser_data]
+        data_y = [x[KEY_Y] for x in noiser_data]
+        a = np.polyfit(
+            data_x,
+            data_y,
+            deg=1
+        )[0]
+        ax.scatter(
+            data_x,
+            data_y,
+            label=noiser,
+            color=NOISER_TO_STYLE[noiser][0],
+            marker=NOISER_TO_STYLE[noiser][1],
+        )
+        ax.plot(
+            data_x,
+            np.poly1d(np.polyfit(data_x, data_y, deg=1))(data_x),
+            color=NOISER_TO_STYLE[noiser][0],
+        )
+        ax.legend(ncol=1)
+        ax.set_xlabel(KEY_X)
+        if KEY_Y == "comet" and ax == axs[0]:
+            ax.set_ylabel("Translation quality (COMET)")
+        if KEY_X == "prompt_ip":
+            ax.set_xlabel("Similarity to original prompt (semantic)")
+
+
 plt.tight_layout()
+plt.savefig("../../../figures/12-beryllium.pdf")
 plt.show()
 
         

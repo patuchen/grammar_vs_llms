@@ -17,7 +17,6 @@ data_all = [
 ]
 
 KEY_X = "prompt_ip"
-KEY_Y = args.key_y
 
 def get_bucket_id(bucket_id_value):
     if not bucket_id_value:
@@ -44,10 +43,12 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
     )
 
     if ax == axs[0]:
-        if KEY_Y == "langs":
+        if args.key_y == "langs":
             ax.set_ylabel("Output in target language")
-        elif KEY_Y == "comet":
-            ax.set_ylabel("Translation Quality")
+        elif args.key_y == "comet":
+            ax.set_ylabel("Translation Quality (COMET)")
+        elif args.key_y == "chrf":
+            ax.set_ylabel("Translation Quality (ChrF)")
     ax.set_xlabel({
         "prompt_p": "Perturbation probability",
         "prompt_chrf": "Prompt similarity (surface)",
@@ -78,14 +79,14 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
 
         ax.scatter(
             [x[KEY_X] for x in data_local],
-            [x[KEY_Y] for x in data_local],
+            [x[args.key_y] for x in data_local],
             marker=".",
             s=40,
             alpha=0.5,
             linewidth=0,
         )
 
-        data_xy = list(zip([x[KEY_X] for x in data_local], [x[KEY_Y] for x in data_local]))
+        data_xy = list(zip([x[KEY_X] for x in data_local], [x[args.key_y] for x in data_local]))
         data_xy = [(x, y) for x,y in data_xy if not np.isnan(x) and not np.isnan(y) and x >= 0.76]
         data_x, data_y = zip(*data_xy)
 
@@ -132,4 +133,5 @@ plt.show()
 """
 python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/*orthographic_*.jsonl
 python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/*orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py chrf data/evaluated/*/three/test/*orthographic_*.jsonl
 """

@@ -6,6 +6,7 @@ import collections
 import grammar_v_mtllm.utils_fig
 
 args = argparse.ArgumentParser()
+args.add_argument("key_y", choices=["comet", "chrf"])
 args.add_argument("data", nargs="+")
 args = args.parse_args()
 
@@ -16,7 +17,6 @@ data_all = [
 ]
 
 
-KEY_Y = "comet"
 
 
 def get_bucket_id(bucket_id_value):
@@ -64,7 +64,7 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
 
         ax.scatter(
             [x[KEY_X] for x in data_local],
-            [x[KEY_Y] for x in data_local],
+            [x[args.key_y] for x in data_local],
             marker=".",
             linewidth=0,
             alpha=0.5,
@@ -80,7 +80,7 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
         )
         y = np.poly1d(np.polyfit(
             [x[KEY_X] for x in data_local],
-            [x[KEY_Y] for x in data_local],
+            [x[args.key_y] for x in data_local],
             deg=1
         ))
         ax.plot(
@@ -92,7 +92,7 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
         )
 
         if ax == axs[0]:
-            ax.set_ylabel("Translation quality")
+            ax.set_ylabel("Translation quality " + {"comet": "(COMET)", "chrf": "(ChrF)"}[args.key_y])
         elif ax == axs[1]:
             ax.legend(
                 frameon=False,            
@@ -117,9 +117,10 @@ plt.tight_layout(
 plt.subplots_adjust(
     wspace=0.05,
 )
-plt.savefig("figures/09-helium.pdf")
+plt.savefig(f"figures/09-helium_{args.key_y}.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/09-plot_helium.py data/evaluated/*/three/test/*-orthographic_*.jsonl
+python3 experiments/src/evaluation/09-plot_helium.py chrf data/evaluated/*/three/test/*-orthographic_*.jsonl
+python3 experiments/src/evaluation/09-plot_helium.py comet data/evaluated/*/three/test/*-orthographic_*.jsonl
 """
