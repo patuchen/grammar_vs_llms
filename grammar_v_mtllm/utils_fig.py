@@ -23,6 +23,16 @@ LANG_TO_NAME = {
     "en-zh": r"English$\rightarrow$Chinese",
 }
 
+NOISER_TO_NAME = {
+    "noising_L2": "L2",
+    "noising_LazyUser": "Lazy user",
+    "noising_lexicalphrasal": "Lexicophrasal",
+    "noising_llm": "LLM",
+    "noising_orthographic": "Orthographic",
+    "noising_register": "Register",
+    "noising_typos_synthetic": "Typos/synthetic",
+}
+
 mpl.rcParams["font.family"] = "serif"
 mpl.rcParams["axes.prop_cycle"] = plt.cycler(color=COLORS)
 mpl.rcParams["legend.fancybox"] = False
