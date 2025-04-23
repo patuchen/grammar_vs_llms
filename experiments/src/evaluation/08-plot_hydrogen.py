@@ -6,7 +6,6 @@ import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
 import grammar_v_mtllm.utils
-import pickle
 
 args = argparse.ArgumentParser()
 args.add_argument("data", nargs="+")
