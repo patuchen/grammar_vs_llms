@@ -24,13 +24,13 @@ LANG_TO_NAME = {
 }
 
 NOISER_TO_NAME = {
-    "noising_L2": "L2",
-    "noising_LazyUser": "Lazy user",
-    "noising_lexicalphrasal": "Lexicophrasal",
-    "noising_llm": "LLM",
-    "noising_orthographic": "Orthographic",
-    "noising_register": "Register",
     "noising_typos_synthetic": "Typos/synthetic",
+    "noising_llm": "LLM",
+    "noising_LazyUser": "Lazy user",
+    "noising_orthographic": "Orthographic",
+    "noising_L2": "L2",
+    "noising_register": "Register",
+    "noising_lexicalphrasal": "Lexicophrasal",
 }
 
 mpl.rcParams["font.family"] = "serif"

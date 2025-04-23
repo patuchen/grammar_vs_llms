@@ -1,5 +1,4 @@
 # %%
-import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
@@ -35,6 +34,10 @@ def get_prompt_id(x):
             prompt_to_id[x] = f"prompt minimal"
         else:
             prompt_to_id[x] = f"prompt {len(prompt_to_id)+1}"
+            if prompt_to_id[x] == "prompt 3":
+                prompt_to_id[x] = "prompt 4"
+            elif prompt_to_id[x] == "prompt 4":
+                prompt_to_id[x] = "prompt 3"
     return prompt_to_id[x]
 
 
