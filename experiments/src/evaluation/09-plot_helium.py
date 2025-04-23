@@ -1,22 +1,16 @@
-import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
+import grammar_v_mtllm.utils
 
 args = argparse.ArgumentParser()
 args.add_argument("key_y", choices=["comet", "chrf"])
 args.add_argument("data", nargs="+")
 args = args.parse_args()
 
-# load all data from args.dir
-data_all = [
-    [json.loads(x) for x in open(f, "r")]
-    for f in args.data
-]
-
-
+data_all = grammar_v_mtllm.utils.cache_guard("helium", args.data)
 
 
 def get_bucket_id(bucket_id_value):
@@ -28,7 +22,7 @@ def get_bucket_id(bucket_id_value):
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[get_bucket_id(x["bucket_id"])].append(x)
+        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
 fig, axs = plt.subplots(1, 3, figsize=(9, 2.5), sharey=True)
 
@@ -62,25 +56,29 @@ for KEY_X, ax in zip(["prompt_p", "prompt_ip", "prompt_chrf"], axs):
         #     None,
         # )
 
+        data_xy = list(zip([x[KEY_X] for x in data_local], [x[args.key_y] for x in data_local]))
+        data_xy = [(x, y) for x,y in data_xy if not np.isnan(x) and not np.isnan(y)]
+        data_x, data_y = zip(*data_xy)
+
         ax.scatter(
-            [x[KEY_X] for x in data_local],
-            [x[args.key_y] for x in data_local],
+            data_x,
+            data_y,
             marker=".",
             linewidth=0,
-            alpha=0.5,
-            s=40,
+            s=30,
+            alpha=0.7,
             color=grammar_v_mtllm.utils_fig.LANG_TO_COLOR[langs],
         )
 
         # plot linear fit
         x = np.linspace(
-            min([x[KEY_X] for x in data_local]),
-            max([x[KEY_X] for x in data_local]),
+            min(data_x),
+            max(data_x),
             10
         )
         y = np.poly1d(np.polyfit(
-            [x[KEY_X] for x in data_local],
-            [x[args.key_y] for x in data_local],
+            data_x,
+            data_y,
             deg=1
         ))
         ax.plot(
@@ -121,6 +119,6 @@ plt.savefig(f"figures/09-helium_{args.key_y}.pdf")
 plt.show()
 
 """
-python3 experiments/src/evaluation/09-plot_helium.py chrf data/evaluated/*/three/test/*-orthographic_*.jsonl
+python3 experiments/src/evaluation/09-plot_helium.py chrf  data/evaluated/*/three/test/*-orthographic_*.jsonl
 python3 experiments/src/evaluation/09-plot_helium.py comet data/evaluated/*/three/test/*-orthographic_*.jsonl
 """

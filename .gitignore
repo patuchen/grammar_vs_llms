@@ -1,5 +1,6 @@
 *.pkl
 *.pickle
+cache/
 figures/
 data/
 data.bak/

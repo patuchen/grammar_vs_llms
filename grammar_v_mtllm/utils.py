@@ -1,5 +1,25 @@
 import subset2evaluate.utils
 
+def cache_guard(name, fnames):
+    import os
+    import pickle
+    import json
+
+    os.makedirs("cache", exist_ok=True)
+    if os.path.exists(f"cache/{name}.pkl"):
+        with open(f"cache/{name}.pkl", "rb") as f:
+            return pickle.load(f)
+        
+    data_all = [
+        [json.loads(x) for x in open(f, "r")]
+        for f in fnames
+    ]
+
+    with open(f"cache/{name}.pkl", "wb") as f:
+        pickle.dump(data_all, f)
+    
+    return data_all
+
 def load_data(split="tiny_test", langs="three"):
     import random
     import warnings

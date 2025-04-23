@@ -1,33 +1,32 @@
-import json
 import matplotlib.pyplot as plt
 import argparse
 import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
+import grammar_v_mtllm.utils
 
 args = argparse.ArgumentParser()
 args.add_argument("key_y", choices=["langs", "comet", "chrf"])
 args.add_argument("data", nargs="+")
 args = args.parse_args()
 
-# load all data from args.dir
-data_all = [
-    [json.loads(x) for x in open(f, "r")]
-    for f in args.data
-]
+
+data_all = grammar_v_mtllm.utils.cache_guard("lithium", args.data)
+
+print("finished reading data")
 
 KEY_X = "prompt_ip"
 
 def get_bucket_id(bucket_id_value):
     if not bucket_id_value:
         return 0
-    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    # we want to extract bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
     return bucket_id_value.split("-")[1].split("_")[0]
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[get_bucket_id(x["bucket_id"])].append(x)
+        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
 
 fig, axs = plt.subplots(1, 3, figsize=(9, 2.5), sharey=True)
@@ -77,19 +76,19 @@ for langs, ax in zip(sorted({x["langs"] for data in data_all for x in data}), ax
         ]
         data_local.sort(key=lambda x: x[KEY_X])
 
-        ax.scatter(
-            [x[KEY_X] for x in data_local],
-            [x[args.key_y] for x in data_local],
-            marker=".",
-            s=40,
-            alpha=0.5,
-            linewidth=0,
-        )
 
         data_xy = list(zip([x[KEY_X] for x in data_local], [x[args.key_y] for x in data_local]))
         data_xy = [(x, y) for x,y in data_xy if not np.isnan(x) and not np.isnan(y) and x >= 0.76]
         data_x, data_y = zip(*data_xy)
 
+        ax.scatter(
+            data_x,
+            data_y,
+            marker=".",
+            s=30,
+            alpha=0.7,
+            linewidth=0,
+        )
 
         # plot linear fit
         x = np.linspace(
@@ -133,5 +132,5 @@ plt.show()
 """
 python3 experiments/src/evaluation/10-plot_lithium.py langs data/evaluated/*/three/test/*orthographic_*.jsonl
 python3 experiments/src/evaluation/10-plot_lithium.py comet data/evaluated/*/three/test/*orthographic_*.jsonl
-python3 experiments/src/evaluation/10-plot_lithium.py chrf data/evaluated/*/three/test/*orthographic_*.jsonl
+python3 experiments/src/evaluation/10-plot_lithium.py chrf  data/evaluated/*/three/test/*orthographic_*.jsonl
 """

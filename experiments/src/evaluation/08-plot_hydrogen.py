@@ -5,20 +5,14 @@ import argparse
 import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
+import grammar_v_mtllm.utils
 import pickle
 
-# args = argparse.ArgumentParser()
-# args.add_argument("data", nargs="+")
-# args = args.parse_args()
-# data_all = [
-#     [json.loads(x) for x in open(f, "r")]
-#     for f in args.data
-# ]
-# with open("cache_hydrogen.pkl", "wb") as f:
-#     pickle.dump(data_all, f)
+args = argparse.ArgumentParser()
+args.add_argument("data", nargs="+")
+args = args.parse_args()
 
-with open("cache_hydrogen.pkl", "rb") as f:
-    data_all = pickle.load(f)
+data_all = grammar_v_mtllm.utils.cache_guard("hydrogen", args.data)
 
 KEY_X = "prompt_ip"
 KEY_Y = "comet"

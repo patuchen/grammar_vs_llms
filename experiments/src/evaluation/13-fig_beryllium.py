@@ -1,26 +1,17 @@
 # %%
 
-import json
 import argparse
 import matplotlib.pyplot as plt
 import numpy as np
 import collections
 import grammar_v_mtllm.utils_fig
-import pickle
+import grammar_v_mtllm.utils
 
-# args = argparse.ArgumentParser()
-# args.add_argument("data", nargs="+")
-# args = args.parse_args()
+args = argparse.ArgumentParser()
+args.add_argument("data", nargs="+")
+args = args.parse_args()
 
-# data_all = [
-#     (f, [json.loads(x) for x in open(f, "r")])
-#     for f in args.data
-# ]
-# with open("cache_beryllium.pkl", "wb") as f:
-#     pickle.dump(data_all, f)
-
-with open("cache_beryllium.pkl", "rb") as f:
-    data_all = pickle.load(f)
+data_all = grammar_v_mtllm.utils.cache_guard("beryllium", args.data)
 
 def get_bucket_id(x):
     if not x["bucket_id"]: 
@@ -56,7 +47,6 @@ data_all = {
 }
 
 # %%
-
 
 # each file is an individual bucket = one point
 data_local = {
@@ -130,4 +120,3 @@ plt.show()
 """
 python3 experiments/src/evaluation/12-fig_beryllium.py data/evaluated/*/three/test/*.jsonl
 """
-
