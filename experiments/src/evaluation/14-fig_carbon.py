@@ -54,6 +54,7 @@ for fname, data in data_all:
 
 prompts = sorted(data_all_joined["noising_typos_synthetic"].keys())
 prompt2id = {prompt: i for i, prompt in enumerate(prompts)}
+print(f"Prompts: {prompt2id}")
 
 data_all = {
     noiser: {

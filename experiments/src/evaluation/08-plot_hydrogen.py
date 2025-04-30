@@ -15,30 +15,49 @@ data_all = grammar_v_mtllm.utils.cache_guard("hydrogen", args.data)
 KEY_X = "prompt_ip"
 KEY_Y = "comet"
 
-def get_bucket_id(bucket_id_value):
-    if not bucket_id_value:
-        return 0
-    # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
-    return bucket_id_value.split("-")[1].split("_")[0]
+
+# NB: Replace this with the following:
+def get_bucket_id(x):
+    if not x["bucket_id"]: 
+        # This is only for `llm` noise. We don't have buckets for it, so we treat 
+        # every noised version of a prompt as a separate bucket.
+        return x["prompt"]
+    # We want to extract bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+    return x["bucket_id"].split("-")[1].split("_")[0]
+
+# def get_bucket_id(bucket_id_value):
+#     if not bucket_id_value:
+#         return 0
+#     # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
+#     return bucket_id_value.split("-")[1].split("_")[0]
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
     for x in data:
-        data_all_joined[(get_bucket_id(x["bucket_id"]), x["prompt_src"])].append(x)
+        data_all_joined[(get_bucket_id(x), x["prompt_src"])].append(x)
 data_all = list(data_all_joined.values())
 
-prompt_to_id = {}
-def get_prompt_id(x):
-    if x not in prompt_to_id:
-        if x == "{source_lang}: {source_text}\\n{target_lang}:":
-            prompt_to_id[x] = f"prompt minimal"
-        else:
-            prompt_to_id[x] = f"prompt {len(prompt_to_id)+1}"
-            if prompt_to_id[x] == "prompt 3":
-                prompt_to_id[x] = "prompt 4"
-            elif prompt_to_id[x] == "prompt 4":
-                prompt_to_id[x] = "prompt 3"
-    return prompt_to_id[x]
+prompts = sorted(list(set(key[1] for key in data_all_joined.keys())))
+prompt_to_id = {prompt: f"prompt {i+1}" for i, prompt in enumerate(prompts)}
+prompt_to_id["{source_lang}: {source_text}\\n{target_lang}:"] = f"prompt minimal"
+id_to_prompt = {v: k for k, v in prompt_to_id.items()}
+prompt_to_id[id_to_prompt["prompt 3"]] = "prompt 4"
+prompt_to_id[id_to_prompt["prompt 4"]] = "prompt 3"
+
+# prompt_to_id = {}
+# def get_prompt_id(x):
+#     if x not in prompt_to_id:
+#         if x == "{source_lang}: {source_text}\\n{target_lang}:":
+#             prompt_to_id[x] = f"prompt minimal"
+#         else:
+#             prompt_to_id[x] = f"prompt {len(prompt_to_id)+1}"
+#             if prompt_to_id[x] == "prompt 3":
+#                 prompt_to_id[x] = "prompt 4"
+#             elif prompt_to_id[x] == "prompt 4":
+#                 prompt_to_id[x] = "prompt 3"
+#     return prompt_to_id[x]
+
+
 
 
 # each file is an individual bucket = one point
@@ -51,7 +70,7 @@ data_local = [
         # ERROR
         # NOTE: this seems to not be true because each file can contain multiple prompt_src?
         # NOTE: this is fine because we are no long at the file level but collated
-        "prompt": get_prompt_id(data[0]["prompt_src"]),
+        "prompt": prompt_to_id[data[0]["prompt_src"]],
     }
     for data in data_all
 ]
