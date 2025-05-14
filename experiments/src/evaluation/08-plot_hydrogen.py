@@ -9,7 +9,6 @@ import grammar_v_mtllm.utils
 args = argparse.ArgumentParser()
 args.add_argument("data", nargs="+")
 args = args.parse_args()
-
 data_all = grammar_v_mtllm.utils.cache_guard("hydrogen", args.data)
 
 KEY_X = "prompt_ip"
@@ -30,6 +29,8 @@ def get_bucket_id(x):
 #         return 0
 #     # We want to extrack bucket id from something like bucket_id-1_prompt_id-mt-03-no_errors_scenario...
 #     return bucket_id_value.split("-")[1].split("_")[0]
+
+print("total", sum([len(data) for data in data_all]))
 
 data_all_joined = collections.defaultdict(list)
 for data in data_all:
@@ -107,7 +108,7 @@ for prompt_i, prompt in enumerate(sorted(list(prompts))):
         )
         ax.text(
             x=0.01,
-            y=np.average([x[KEY_Y] for x in data_local_prompt])-0.14,
+            y=np.average([x[KEY_Y] for x in data_local_prompt])-0.05,
             s="Minimal\n prompt",
             fontsize=8,
             color="#222",
